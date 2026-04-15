@@ -4,12 +4,12 @@ This repository contains the public website for ConnectedNature.
 
 ## Project purpose
 
-ConnectedNature is a research-oriented website about connectedness in nature, society, knowledge, history, and human systems.
+ConnectedNature is an experimental website for AI-assisted validation of selected statements and ideas about connectedness in nature, society, knowledge, history, and human systems.
 
 It is not an opinion blog. Each article should begin with a statement, question, or claim, then proceed through evidence, source evaluation, competing interpretations, and critical synthesis.
 
 The public website is distinct from COIN:
-- **ConnectedNature** is the public-facing site
+- **ConnectedNature** is the public site for AI-assisted inquiry
 - **COIN** is the research engine, workflow, and provenance trail behind it
 
 The site should make this distinction clear without becoming overly technical.

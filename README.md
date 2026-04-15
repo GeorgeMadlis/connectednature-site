@@ -2,7 +2,7 @@
 
 Public website for **ConnectedNature**.
 
-ConnectedNature is a research-oriented website about connectedness across nature, ecology, society, knowledge, history, and human systems. It is designed as a public-facing layer for carefully structured inquiry rather than opinion writing.
+ConnectedNature is an experimental website for AI-assisted validation of selected statements and ideas about connectedness across nature, ecology, society, knowledge, history, and human systems. It is designed as a public-facing layer for structured inquiry rather than opinion writing.
 
 The website is separate from **COIN**, which serves as the research engine and provenance workflow behind the project.
 
@@ -22,7 +22,7 @@ Each article should begin with an originating statement or question, then move t
 3. competing interpretations
 4. critical synthesis
 
-The goal is not to assert a worldview, but to investigate structured questions carefully and transparently.
+The goal is not to assert a worldview, but to make human inquiry visible and readable using AI-based tools with care and transparency.
 
 ## Relationship to COIN
 
@@ -93,16 +93,40 @@ Recommended workflow:
 4. let Cloudflare Pages generate preview deployments
 5. publish from the main branch when ready
 
-## Deployment
+## Deploying to Cloudflare Pages
 
-Recommended hosting setup:
+This repository is already structured for a simple Cloudflare Pages deployment:
 
-- domain: `connectednature.org`
-- DNS: Cloudflare
-- hosting: Cloudflare Pages
-- source: GitHub repository
+```text
+README.md
+site/
+  index.html
+  about.html
+  method.html
+  posts/
+    complexity-threshold.html
+  style.css
+```
 
-A simple static deployment is enough for the first version.
+Use these Cloudflare Pages settings:
+
+- source: GitHub
+- root directory: `/` (repository root)
+- framework preset: `None`
+- build command: none
+- build output directory: `site`
+- production branch: `main` (or your chosen default branch)
+
+This project should stay framework-free. No bundler, package manager, or build tooling is
+required as long as the deployable files remain in `site/`.
+
+For static hosting, keep internal links and asset references relative:
+
+- top-level pages inside `site/` should link like `about.html`, `method.html`, `style.css`
+- pages inside `site/posts/` should link back up like `../index.html` and `../style.css`
+
+The current site follows that pattern, so it can be deployed directly from GitHub to Cloudflare
+Pages without a build step.
 
 ## Editorial Principles
 
