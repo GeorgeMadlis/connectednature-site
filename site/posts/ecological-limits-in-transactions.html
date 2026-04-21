@@ -45,6 +45,39 @@
     }
     nav a:hover { color: #000; }
 
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-toggle {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: #444;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .nav-dropdown-toggle.active { color: #000; font-weight: 600; }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 0.4rem);
+      right: 0;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0.3rem 0;
+      min-width: 220px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      z-index: 100;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+    .nav-dropdown-menu a[aria-current="page"] { font-weight: 600; color: #000; }
+
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -150,8 +183,13 @@
     <a href="https://connectednature-site.jsildam.workers.dev/index.html">Home</a>
     <a href="https://connectednature-site.jsildam.workers.dev/about.html">About</a>
     <a href="https://connectednature-site.jsildam.workers.dev/method.html">Method</a>
-    <a href="https://connectednature-site.jsildam.workers.dev/posts/complexity-threshold.html">First Post</a>
-    <a href="https://connectednature-site.jsildam.workers.dev/posts/ecological-limits-in-transactions.html" aria-current="page">Second Post</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle active">Posts ▾</button>
+      <div class="nav-dropdown-menu">
+        <a href="https://connectednature-site.jsildam.workers.dev/posts/complexity-threshold.html">Civilization Complexity Threshold</a>
+        <a href="https://connectednature-site.jsildam.workers.dev/posts/ecological-limits-in-transactions.html" aria-current="page">Ecological Limits in Transactions</a>
+      </div>
+    </div>
   </nav>
 </header>
 
