@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecological Limits in Transactions | ConnectedNature</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #fafaf8;
+    }
+
+    /* Nav */
+    header {
+      border-bottom: 1px solid #ddd;
+      padding: 0.75rem 2rem;
+      background: #fff;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 820px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .site-name {
+      font-family: system-ui, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      text-decoration: none;
+      margin-right: auto;
+    }
+    nav a {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: #444;
+      text-decoration: none;
+    }
+    nav a:hover { color: #000; }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+    }
+    .skip-link:focus { left: 1rem; }
+
+    /* Label above title */
+    .article-label {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #666;
+      text-align: center;
+      padding: 2rem 2rem 0;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      line-height: 1.3;
+      margin: 1.5rem 0 2rem;
+      font-weight: normal;
+    }
+
+    h2 {
+      font-family: system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #444;
+      margin: 2.5rem 0 0.75rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e4e4e0;
+    }
+    h2:first-of-type { border-top: none; }
+
+    p { margin-bottom: 1rem; }
+
+    ul, ol {
+      margin: 0.5rem 0 1rem 1.5rem;
+    }
+    li { margin-bottom: 0.4rem; }
+
+    /* Originating statement block */
+    blockquote.statement {
+      border-left: 3px solid #2d6a4f;
+      margin: 1.25rem 0;
+      padding: 0.8rem 1.25rem;
+      background: #f4f8f5;
+      font-style: italic;
+      color: #1a3a28;
+    }
+
+    /* Research trail definition list */
+    dl {
+      margin: 0.75rem 0 1rem;
+    }
+    dt {
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333;
+      margin-top: 1rem;
+    }
+    dd {
+      margin-left: 0;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+    }
+    dd a {
+      color: #2d6a4f;
+      text-decoration: underline;
+    }
+    dd a:hover { color: #1a3a28; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 2rem;
+      text-align: center;
+      font-family: system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: #666;
+    }
+    footer a { color: #444; text-decoration: none; margin: 0 0.5rem; }
+    footer p { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header>
+  <nav>
+    <a href="https://connectednature-site.jsildam.workers.dev/index.html" class="site-name">ConnectedNature</a>
+    <a href="https://connectednature-site.jsildam.workers.dev/index.html">Home</a>
+    <a href="https://connectednature-site.jsildam.workers.dev/about.html">About</a>
+    <a href="https://connectednature-site.jsildam.workers.dev/method.html">Method</a>
+    <a href="https://connectednature-site.jsildam.workers.dev/posts/complexity-threshold.html">First Post</a>
+    <a href="https://connectednature-site.jsildam.workers.dev/posts/ecological-limits-in-transactions.html" aria-current="page">Second Post</a>
+  </nav>
+</header>
+
+<div class="article-label">Second Inquiry</div>
+
+<main id="main">
+
+  <h1>Ecological Limits Will Remain Politically Weak Until Built Into Transactions Themselves</h1>
+
+  <p>
+    This article tests a strong claim drawn from recent work in ecological economics: that
+    environmental constraints cannot be made durable through taxes, standards, or reporting
+    alone. If the claim is right, it points toward a fundamentally different kind of
+    institutional design. If it is wrong, or overstated, that matters too.
+  </p>
+
+  <h2>Originating Statement</h2>
+
+  <blockquote class="statement">
+    &#8220;Ecological limits will remain politically weak and economically secondary until they
+    are built into transactions themselves rather than handled afterward by taxes, standards,
+    and reporting.&#8221;
+  </blockquote>
+
+  <p>
+    The statement comes from the logic of a working paper by Merit Valdsalu and Andrus Aaslaid
+    of the Single.Earth Foundation (2026), which proposes a regeneration-linked accounting
+    mechanism: unit issuance tied to ecosystem regeneration, with each economic transaction
+    triggering a proportional ecological burn. The paper does not make the political claim
+    explicitly, but it supplies the mechanism design argument that underlies it. The broader
+    claim&#8202;&#8212;&#8202;that ex post instruments are structurally insufficient&#8202;&#8212;&#8202;is
+    the testable proposition here.
+  </p>
+
+  <h2>Why This Matters</h2>
+
+  <p>
+    Societies have been applying environmental policy tools for decades. Carbon taxes, cap-and-trade
+    systems, regulatory standards, and disclosure requirements all attempt to connect economic
+    incentives with ecological outcomes. Yet global material throughput has continued to grow,
+    biodiversity loss has accelerated, and planetary boundary assessments suggest that several
+    Earth-system limits have already been crossed.
+  </p>
+  <p>
+    If the originating statement is correct, the problem is not insufficient ambition within
+    the existing toolkit but a structural flaw in how the toolkit is designed. Instruments
+    that operate after a transaction is decided cannot compete with the real-time logic of
+    prices, credit, and contract. An ecological constraint embedded in the transaction itself
+    would operate before the decision is made, not afterward.
+  </p>
+  <p>
+    The stakes of getting this right are high. If ex post tools can be made adequate, then
+    reform should focus on strengthening and broadening them. If they cannot, the effort is
+    better directed toward different mechanism design.
+  </p>
+
+  <h2>Research Question</h2>
+
+  <p>
+    Does the historical and theoretical record support the claim that ex post environmental
+    policy instruments are structurally unable to make ecological limits economically binding,
+    or is underperformance better explained by calibration, political economy, and coverage
+    gaps that are in principle fixable within the existing approach?
+  </p>
+
+  <h2>Evidence Base</h2>
+
+  <p>
+    Several kinds of evidence bear on this question. Empirical records of carbon price
+    trajectories, emissions trading volumes, and actual emissions paths in jurisdictions with
+    mature policies provide the most direct test. The EU Emissions Trading System is the
+    longest-running large-scale experiment. Studies comparing emissions in regulated and
+    unregulated sectors, and comparing matched firms within and outside trading schemes,
+    offer the clearest causal evidence.
+  </p>
+  <p>
+    Theoretical work in ecological economics, particularly Daly&#8217;s steady-state framing and
+    the planetary boundaries scholarship of Rockstr&#246;m and colleagues (2009), provides the
+    intellectual foundation for the claim that throughput cannot be governed by price signals
+    alone when the signals are partial and delayed. The Dasgupta Review (2021) adds the
+    public-goods dimension: natural capital is underpriced structurally because ownership,
+    measurement, and political representation are all weak.
+  </p>
+  <p>
+    The Valdsalu and Aaslaid paper itself contributes a formal mechanism design: ecological
+    burn per transaction defined as B&#8202;=&#8202;V&#8202;&times;&#8202;E&#8202;&times;&#8202;&alpha;,
+    with aggregate flow and stock constraints ensuring consumption stays within regeneration.
+    This is not evidence in itself, but it makes the structural claim precise enough to test
+    through simulation.
+  </p>
+
+  <h2>Source Evaluation</h2>
+
+  <p>
+    Empirical studies of carbon pricing generally show modest, real, but partial effects on
+    emissions. The EU ETS reduced covered-sector emissions, but effects were concentrated in
+    periods when carbon prices were high enough to change the merit order of electricity
+    generation. When prices were low&#8202;&#8212;&#8202;through overallocation of permits or
+    economic contraction&#8202;&#8212;&#8202;the instrument was substantially inert. This is
+    consistent with the critique in the originating statement: an ex post instrument that
+    can be neutralized by political calibration is not structurally binding.
+  </p>
+  <p>
+    However, the same evidence also supports an alternative reading. Carbon pricing did work
+    when the price was high enough. The mechanism was not broken; it was miscalibrated, or
+    subject to political interference that could in principle be corrected by stronger
+    institutional design. On this reading, the failure is political economy, not mechanism
+    category.
+  </p>
+  <p>
+    The Valdsalu and Aaslaid paper is exploratory and honest about its limitations. It
+    acknowledges that ecological intensity coefficients are currently only estimable at
+    coarse sector level, that double-counting across supply chains is a serious measurement
+    problem, and that the mechanism is not implementation-ready. It should be read as a
+    mechanism design proposal, not as an empirical claim about what will work in practice.
+    The paper&#8217;s contribution is to define the design space precisely enough to be testable.
+  </p>
+  <p>
+    Caution is needed in two directions. The critique of ex post instruments can be
+    overstated: many environmental harms have been significantly reduced through regulation
+    and taxation, and some planetary-scale risks (ozone depletion, leaded petrol) were
+    addressed through ex post instruments. The claim that nothing short of transaction-level
+    embedding will work is harder to support than the claim that existing tools have been
+    insufficient at current scope and ambition. Equally, the transaction-embedding proposal
+    faces real feasibility constraints that should not be minimized.
+  </p>
+
+  <h2>Competing Interpretations</h2>
+
+  <p>
+    The first interpretation holds that existing instruments are structurally inadequate.
+    Environmental taxes are set in legislatures and adjusted slowly. Reporting requirements
+    produce information but not binding costs. Standards can be weakened or delayed. None
+    of these instruments operates at the speed, granularity, or automaticity of price
+    signals in markets. A constraint that is embedded in a transaction cannot be
+    retrospectively bargained away the way a regulatory standard can.
+  </p>
+  <p>
+    The second interpretation holds that the problem is calibration and political will,
+    not instrument category. A sufficiently high and broad carbon price could in principle
+    achieve the same effect as a transaction-level burn. The reason it has not is not
+    inherent to the instrument but to political economy: concentrated industrial interests,
+    distributional concerns, and coordination problems across jurisdictions have kept prices
+    low. These same political economy problems would also confront any attempt to implement
+    a transaction-level ecological accounting system.
+  </p>
+  <p>
+    A third interpretation focuses on the measurement problem. The Valdsalu and Aaslaid paper
+    itself acknowledges that ecological intensity is currently estimable only at coarse
+    sector level. If ecological burn rates must be approximated from sector-level lifecycle
+    assessments, the practical difference between a transaction-level burn and a sector-level
+    tax may be smaller than the structural argument implies. The accuracy of the constraint
+    depends on the resolution of the measurement.
+  </p>
+
+  <h2>Critical Synthesis</h2>
+
+  <p>
+    The originating statement captures something real. Ex post instruments have consistently
+    failed to match the speed and granularity of market coordination. There is a structural
+    asymmetry between a constraint that operates before a transaction and one that adjusts
+    prices or imposes costs afterward. The intuition that ecological limits need to be
+    embedded at the point of decision&#8202;&#8212;&#8202;not handled downstream through
+    reporting and adjustment&#8202;&#8212;&#8202;has theoretical support in ecological economics
+    and some empirical support from the pattern of policy underperformance.
+  </p>
+  <p>
+    However, the claim is stronger than the evidence can currently sustain in its most
+    absolute form. Existing instruments have done real work in specific domains. The failure
+    to keep aggregate throughput within planetary limits reflects partial coverage, political
+    interference, and insufficient ambition as much as instrument category. A transaction-level
+    constraint would face the same political economy it claims to avoid: measurement systems
+    must be built, calibration parameters must be set, and the governance of both is subject
+    to the same pressures as any other environmental instrument.
+  </p>
+  <p>
+    The more defensible synthesis is narrower: ex post instruments are structurally
+    vulnerable to being made economically inconsequential through low pricing, narrow scope,
+    and delayed adjustment. Transaction-level ecological accounting is a conceptually coherent
+    alternative that would change where in the decision sequence the ecological constraint
+    operates. Whether it would be effective in practice depends on measurement accuracy,
+    governance design, and distributional management&#8202;&#8212;&#8202;none of which is resolved
+    by the mechanism design alone. The claim motivates a research agenda rather than settling one.
+  </p>
+
+  <h2>Limits</h2>
+
+  <p>
+    This article does not quantify the emissions reductions attributable to specific
+    instruments across jurisdictions in a way that would fully test the ex ante versus ex
+    post distinction. It does not model the Valdsalu&#8211;Aaslaid mechanism computationally to
+    assess what calibration conditions would be needed for convergence. It does not evaluate
+    the distributional effects of transaction-level ecological burns relative to carbon taxes
+    with redistribution. These remain open tasks.
+  </p>
+
+  <h2>Open Questions</h2>
+
+  <ul>
+    <li>Under what measurement accuracy conditions does a transaction-level ecological
+        burn outperform a well-calibrated sector tax in keeping aggregate throughput within
+        regenerative limits?</li>
+    <li>What governance model for calibration parameters (&alpha;) could resist the same
+        political economy pressures that have kept carbon prices low?</li>
+    <li>How large are the distributional effects of embedding ecological intensity into
+        transaction costs, and what compensatory mechanisms are adequate?</li>
+    <li>Can current lifecycle assessment and input-output data support ecological intensity
+        estimates at sufficient resolution to make the burn mechanism more accurate than
+        sector-level taxation?</li>
+    <li>Is there a hybrid design in which transaction-level accounting and sector-level
+        taxation are complementary rather than alternatives?</li>
+  </ul>
+
+  <h2>Research Trail</h2>
+
+  <p>
+    This section links the published article to its working materials on GitHub.
+  </p>
+
+  <dl>
+    <dt>Repository</dt>
+    <dd>
+      <a href="https://github.com/GeorgeMadlis/coin">COIN on GitHub</a><br />
+      The versioned record in which the inquiry, revisions, and related materials sit.
+    </dd>
+
+    <dt>Research folder</dt>
+    <dd>
+      <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/ecological-limits-in-transactions">ecological-limits-in-transactions folder</a><br />
+      The working directory holding the source notes, claims ledger, critical overview,
+      and Claude Code test prompts for this inquiry.
+    </dd>
+
+    <dt>Source paper</dt>
+    <dd>
+      <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6554358">Valdsalu &amp; Aaslaid (2026) &#8212; Ecological limits in economic systems: A regeneration-linked constraint mechanism</a><br />
+      Single.Earth Foundation Working Paper No. 1. The primary source for the mechanism
+      design and the structural argument behind the originating statement.
+    </dd>
+
+    <dt>Claims ledger</dt>
+    <dd>
+      <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/ecological-limits-in-transactions/claims.md">claims.md</a><br />
+      A structured list of claims drawn from the source, marked as sourced, inferential,
+      or flagged for further verification.
+    </dd>
+
+    <dt>Critical overview</dt>
+    <dd>
+      <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/ecological-limits-in-transactions/critical-overview.md">critical-overview.md</a><br />
+      The working evaluation of what the evidence supports, where the paper overstates,
+      and which parts of the case remain contested.
+    </dd>
+
+    <dt>Claude Code prompts</dt>
+    <dd>
+      <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/ecological-limits-in-transactions/claude-code-prompts.md">claude-code-prompts.md</a><br />
+      A set of prompts designed for Claude Code to test the mechanism design claim through
+      simulation, empirical data retrieval, and comparative policy analysis.
+    </dd>
+
+    <dt>Compiled output</dt>
+    <dd>
+      <a href="https://connectednature-site.jsildam.workers.dev/posts/ecological-limits-in-transactions.html">Public article</a><br />
+      The current published synthesis prepared for general readers.
+    </dd>
+
+    <dt>Last updated</dt>
+    <dd>21 April 2026</dd>
+  </dl>
+
+</main>
+
+<footer>
+  <p>ConnectedNature &#8212; Public synthesis linked back to its working trail.</p>
+  <a href="https://connectednature-site.jsildam.workers.dev/index.html">Home</a>
+  <a href="https://connectednature-site.jsildam.workers.dev/about.html">About</a>
+  <a href="https://connectednature-site.jsildam.workers.dev/method.html">Method</a>
+</footer>
+
+</body>
+</html>
