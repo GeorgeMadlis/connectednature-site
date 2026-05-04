@@ -78,32 +78,9 @@
       padding: 0.5rem 1rem;
       white-space: nowrap;
     }
-    .nav-dropdown-menu a[aria-current="page"] { font-weight: 600; color: #000; }
-
-    .language-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.12rem;
-      padding: 0.12rem;
-      border: 1px solid #ddd;
-      border-radius: 999px;
-      background: #fafaf8;
-    }
-    .language-switch a {
-      min-width: 2.1rem;
-      padding: 0.18rem 0.48rem;
-      border-radius: 999px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      line-height: 1.35;
-      text-align: center;
-    }
-    .language-switch a:hover,
-    .language-switch a:focus-visible,
-    .language-switch a.is-active {
-      color: #fff;
-      background: #1a3a28;
-    }
+    .nav-dropdown-menu a[aria-current="page"],
+    .nav-dropdown-menu a[aria-current="true"] { font-weight: 600; color: #000; }
+    .language-dropdown-menu { min-width: 7rem; }
 
     .skip-link {
       position: absolute;
@@ -218,9 +195,12 @@
         <a href="ancient-traditions-quantum-field.html">Ancient Traditions And The Quantum Field</a>
       </div>
     </div>
-    <div class="language-switch" aria-label="Language">
-      <a class="is-active" href="ecological-limits-in-transactions.html" aria-current="true">EN</a>
-      <a href="../et/posts/ecological-limits-in-transactions.html">ET</a>
+    <div class="nav-dropdown language-dropdown">
+      <button class="nav-dropdown-toggle language-dropdown-toggle" aria-label="Language: English">EN ▾</button>
+      <div class="nav-dropdown-menu language-dropdown-menu" aria-label="Language">
+        <a href="ecological-limits-in-transactions.html" aria-current="true">English</a>
+        <a href="../et/posts/ecological-limits-in-transactions.html">Eesti</a>
+      </div>
     </div>
   </nav>
 </header>

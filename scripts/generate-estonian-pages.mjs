@@ -230,9 +230,12 @@ function navEt(current, depth = 0) {
             <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
           </div>
         </div>
-        <div class="language-switch" aria-label="Keel">
-          <a href="${englishPath(current, depth)}">EN</a>
-          <a class="is-active" href="${currentEtPath(current, depth)}" aria-current="true">ET</a>
+        <div class="nav-dropdown language-dropdown">
+          <button class="nav-dropdown-toggle language-dropdown-toggle" aria-label="Keel: eesti">ET ▾</button>
+          <div class="nav-dropdown-menu language-dropdown-menu" aria-label="Keel">
+            <a href="${englishPath(current, depth)}">English</a>
+            <a href="${currentEtPath(current, depth)}" aria-current="true">Eesti</a>
+          </div>
         </div>
       </nav>`;
 }
@@ -367,8 +370,8 @@ function homePage() {
         </div>
 
         ${featureCard("complexity-threshold", "On olemas keerukuse lävi, mida ükski tsivilisatsioon pole kunagi üle elanud", "Esimene artikkel küsib, kas ajaloolised ühiskonnad seisavad korduvalt silmitsi haldusliku, energeetilise, informatsioonilise või ökoloogilise keerukuse lävedega.", "On olemas keerukuse lävi, mida ükski tsivilisatsioon pole kunagi üle elanud.", "Ajaloolised juhtumid, ökoloogilised piirid, allikate hindamine ja konkureerivad käsitlused.", "Tõendusrajale vastav uurimistööl põhinev järeldus.")}
-        ${featureCard("ecological-limits-in-transactions", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse", "Teine artikkel kontrollib väidet, et keskkonnapiiranguid ei saa muuta püsivaks üksnes maksude, standardite või aruandluse kaudu.", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse.", "ELi heitkogustega kauplemise süsteemi kogemus, mehhanismidisain ja valitsemise stressitestimine.", "Süntees, mis kitsendab väidet, ilma et heidaks kõrvale selle struktuurset taipamist.")}
-        ${featureCard("ancient-traditions-quantum-field", "Kas muistsed traditsioonid kirjeldasid kvantvälja?", "Kolmas artikkel eristab tegelikku filosoofilist kõla ajalooliselt ja teaduslikult põhjendamata samasusväidetest.", "Muistsed traditsioonid olid juba kaardistanud territooriumi, kuhu füüsika alles nüüd sisenes.", "Kvantväljateooria, mõõtmine, muistsed allikad ja füüsikute kronoloogia.", "Süntees, mis säilitab kõla, kuid lükkab tagasi ülepingutatud tõendusväited.")}
+        ${featureCard("ecological-limits-in-transactions", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse", "Teine artikkel kontrollib väidet, et keskkonnapiiranguid ei saa muuta püsivaks üksnes maksude, standardite või aruandluse kaudu.", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse.", "ELi heitkogustega kauplemise süsteemi kogemus, mehhanismidisain ja valitsemise stressitestimine.", "Süntees, mis konkretiseerib väidet, loobumata selle struktuursest tōlgenduses")}
+        ${featureCard("ancient-traditions-quantum-field", "Kas muistsed traditsioonid kirjeldasid kvantvälja?", "Kolmas artikkel eristab tegelikku filosoofilist kõla ajalooliselt ja teaduslikult põhjendamata samasusväidetest.", "Iidsed traditsioonid olid juba kaardistanud ala, kuhu füüsika oli alles nüüd sisenemas.", "Kvantväljateooria, mõõtmine, muistsed allikad ja füüsikute kronoloogia.", "Süntees, mis säilitab tähendusliku seose, kuid välistab põhjendamatud tõestusnõuded.")}
       </div>
     </section>
 
