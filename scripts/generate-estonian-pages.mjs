@@ -427,7 +427,7 @@ function aboutPage() {
     main: `  <main id="main" class="page-main">
     <div class="wrap page-intro">
       <p class="eyebrow">Lähemalt</p>
-      <h1>ConnectedNature on avalik uurimisjälg seotuse kohta.</h1>
+      <h1>ConnectedNature on seotuse olemust käsitlev avalik uurimisarvamus.</h1>
       <p class="lead">Leht uurib, kuidas süsteemid suhestuvad: ökoloogilised võrgustikud, sotsiaalne koordineerimine, ajalooline muutus, teadmise kujunemine, taristu ning tingimused, mille all seotusest saab vastupanuvõime, haprus, läbipaistmatus või lagunemine.</p>
     </div>
 
