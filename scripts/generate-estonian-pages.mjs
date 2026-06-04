@@ -227,6 +227,8 @@ function navEt(current, depth = 0) {
           <div class="nav-dropdown-menu">
             <a href="${prefix}posts/complexity-threshold.html">Tsivilisatsiooni keerukuse lävi</a>
             <a href="${prefix}posts/ecological-limits-in-transactions.html">Ökoloogilised piirid tehingutes</a>
+            <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
+            <a href="${prefix}posts/evidence-first-consensus-later.html">Kõigepealt tõendid, konsensus hiljem</a>
             <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
           </div>
         </div>
@@ -297,6 +299,8 @@ ${main}
         <a href="${prefix}method.html">Meetod</a>
         <a href="${prefix}posts/complexity-threshold.html">Tsivilisatsiooni keerukuse lävi</a>
         <a href="${prefix}posts/ecological-limits-in-transactions.html">Ökoloogilised piirid tehingutes</a>
+        <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
+        <a href="${prefix}posts/evidence-first-consensus-later.html">Kõigepealt tõendid, konsensus hiljem</a>
         <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
       </nav>
     </div>
