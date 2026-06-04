@@ -228,7 +228,7 @@ function navEt(current, depth = 0) {
             <a href="${prefix}posts/complexity-threshold.html">Tsivilisatsiooni keerukuse lävi</a>
             <a href="${prefix}posts/ecological-limits-in-transactions.html">Ökoloogilised piirid tehingutes</a>
             <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
-            <a href="${prefix}posts/evidence-first-consensus-later.html">Kõigepealt tõendid, konsensus hiljem</a>
+            <a href="${prefix}posts/evidence-first-consensus-later.html">Tõendus kõigepealt, konsensus hiljem</a>
             <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
           </div>
         </div>
@@ -300,7 +300,7 @@ ${main}
         <a href="${prefix}posts/complexity-threshold.html">Tsivilisatsiooni keerukuse lävi</a>
         <a href="${prefix}posts/ecological-limits-in-transactions.html">Ökoloogilised piirid tehingutes</a>
         <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
-        <a href="${prefix}posts/evidence-first-consensus-later.html">Kõigepealt tõendid, konsensus hiljem</a>
+        <a href="${prefix}posts/evidence-first-consensus-later.html">Tõendus kõigepealt, konsensus hiljem</a>
         <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
       </nav>
     </div>
@@ -369,12 +369,14 @@ function homePage() {
       <div class="wrap">
         <div class="section-heading">
           <p class="eyebrow">Esiletõstetud postitused</p>
-          <h2>Kolm uurimust seotuse, piiride ja tähenduse kohta</h2>
+          <h2>Viis uurimust seotuse, piiride, tõenduse ja tähenduse kohta</h2>
           <p class="section-intro">Iga artikkel käsitleb algset väidet uuritava propositsioonina, mitte teesina, mida lihtsalt korrata.</p>
         </div>
 
         ${featureCard("complexity-threshold", "On olemas keerukuse lävi, mida ükski tsivilisatsioon pole kunagi üle elanud", "Esimene artikkel küsib, kas ajaloolised ühiskonnad seisavad korduvalt silmitsi haldusliku, energeetilise, informatsioonilise või ökoloogilise keerukuse lävedega.", "On olemas keerukuse lävi, mida ükski tsivilisatsioon pole kunagi üle elanud.", "Ajaloolised juhtumid, ökoloogilised piirid, allikate hindamine ja konkureerivad käsitlused.", "Tõendusrajale vastav uurimistööl põhinev järeldus.")}
         ${featureCard("ecological-limits-in-transactions", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse", "Teine artikkel kontrollib väidet, et keskkonnapiiranguid ei saa muuta püsivaks üksnes maksude, standardite või aruandluse kaudu.", "Ökoloogilised piirid jäävad poliitiliselt nõrgaks, kuni need ehitatakse tehingutesse endisse.", "ELi heitkogustega kauplemise süsteemi kogemus, mehhanismidisain ja valitsemise stressitestimine.", "Süntees, mis konkretiseerib väidet, loobumata selle struktuursest tōlgenduses")}
+        ${featureCard("evidence-first-currency-later", "Tõendus kõigepealt, valuuta hiljem", "Neljas artikkel küsib, mis peab olema tõsi enne, kui finantsinstrument saab usutavalt väita, et see on loodusega tagatud. See käsitleb regeneratiivset rahandust (ReFi) tänapäevase probleemiväljana ning väidab, et tokeniseeritud ökoloogilised väited vajavad esmalt deterministlikku, kontrollitavat ja eraldi valitsetud tõenduskihti.", "Kas ökoloogilised piirid võivad muutuda tehingupõhisteks piiranguteks enne reguleeritud tõendusmaterjali olemasolu?", "Regeneratiivne rahandus (ReFi), ökoloogiline arvestus, Euroopa Liidu raadamisvabade toodete määruse (EUDR) tõenduspaketid, protseduuriline detsentraliseeritud autonoomse organisatsiooni (DAO) valitsemine ja plokiahela päritolujälg.", "Kitsendatud väide: tõendus saab muutuda protseduuriliselt siduvaks enne, kui see tõendab planeedimõõtmelist tõhusust.")}
+        ${featureCard("evidence-first-consensus-later", "Tõendus kõigepealt, konsensus hiljem", "Viies artikkel küsib, kas Maa süsteemide digitaalsed kaksikud, tehisintellekti agendid ja plokiahelapõhised päritolukirjed saavad muuta keskkonnajuhtimise üle peetavad erimeelsused paremini kontrollitavaks — mitte neid automaatselt lahendades, vaid dokumenteerides neid piisava rangusega, et nende struktuur muutuks nähtavaks, stabiilseks ja vaidlustatavaks.", "Kas Maa süsteemide digitaalsed kaksikud, tõendikogumid, plokiahelapõhised päritolukirjed ja tehisintellekti agendid saavad pakkuda praktilist taristut keskkonnaotsuseid puudutavate juhtimiskonfliktide rangemaks dokumenteerimiseks, väitmata, et nad suudavad neid automaatselt lahendada?", "Maa süsteemide digitaalsed kaksikud, tõendikogumid ja konfliktikogumid, agentne tehisintellekt, plokiahelapõhine päritolujälg, keskkonnajuhtimine, Eesti metsamajanduse vaidlus ja kliimamuutuse omistamise näide.", "Süntees, mis näitab, et digitaalsed kaksikud ei lahenda keskkonnajuhtimise konflikte automaatselt, kuid võivad muuta erimeelsused struktureeritumaks, kontrollitavamaks ja ausamalt vaidlustatavaks.")}
         ${featureCard("ancient-traditions-quantum-field", "Kas muistsed traditsioonid kirjeldasid kvantvälja?", "Kolmas artikkel eristab tegelikku filosoofilist kõla ajalooliselt ja teaduslikult põhjendamata samasusväidetest.", "Iidsed traditsioonid olid juba kaardistanud ala, kuhu füüsika oli alles nüüd sisenemas.", "Kvantväljateooria, mõõtmine, muistsed allikad ja füüsikute kronoloogia.", "Süntees, mis säilitab tähendusliku seose, kuid välistab põhjendamatud tõestusnõuded.")}
       </div>
     </section>
