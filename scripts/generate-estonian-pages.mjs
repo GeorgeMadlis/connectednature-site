@@ -428,7 +428,7 @@ function featureCard(slug, title, summary, statement, pathText, follows) {
 function aboutPage() {
   return pageTemplate({
     title: "Lähemalt",
-    description: "Lähemalt ConnectedNature'ist, selle uurimisküsimustest ja COINi rollist avaliku uurimistöö voos.",
+    description: "Lähemalt ConnectedNature'ist, selle avalikust uurimistöö voost ja autorist Jüri Sildamist.",
     current: "about",
     footerNote: "Uurimus avalikuks tehtud hoolika sõnastuse, tõendite, hindamise ja sünteesi kaudu.",
     main: `  <main id="main" class="page-main">
@@ -467,6 +467,14 @@ function aboutPage() {
         <h2>Kuidas COIN seostub avaliku veebilehega</h2>
         <p>COIN on ConnectedNature'i taga olev uurimismootor ja päritolu jälgimise töövoog. Avalik leht on koht, kus töö muutub loetavaks; COIN on koht, kus tööjälg jääb kontrollitavaks.</p>
         <p>Praktikas tähendab see, et avalik artikkel saab viidata GitHubis olevale uurimisjäljele: küsimuselogidele, allikaregistritele, hindamismärkmetele ja muudatuste ajaloole.</p>
+      </section>
+
+      <section id="autor" class="panel panel-wide">
+        <h2>Autorist</h2>
+        <p>Jüri Sildam on andmeteadlane, kellel on üle 25 aasta kogemust masinõppe, georuumilise analüüsi, kaugseire, akustiliste ja muude sensoriandmete analüüsi, füüsikapõhise modelleerimise ning teaduslike andmesüsteemide alal. Tal on doktorikraad füüsika-matemaatikateadustes ja teadustöö taust füüsikalises okeanograafias. Ta on töötanud rahvusvahelistes teadus-, avaliku ja erasektori keskkondades.</p>
+        <p>Tema viimase aja töö keskendub metsaseirele, satelliit- ja georuumiandmetele, EUDR-iga seotud töövoogudele ning jälgitavate ja auditeeritavate digitaalsete tõendisüsteemide kujundamisele. Ta on <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6672878" target="_blank" rel="noopener noreferrer">SSRN-is avaldatud tööpaberi</a> autor. Paber pakub EUDR-i nõuetele vastavuse jaoks välja kolmekihilise arhitektuuri, mis ühendab digitaalse kaksiku, privaatse andmekihi ja protseduurilise valitsemise.</p>
+        <p>ConnectedNature'is uurib ta struktureeritud, tõenduspõhise meetodi abil valitud väiteid ökoloogiliste ja majandussüsteemide kohta. Artiklid on koostatud nii, et väited oleksid kontrollitavad, reprodutseeritavad, vaidlustatavad ja ajakohastatavad ning seotud nähtava uurimisjäljega avalikus <a href="https://github.com/GeorgeMadlis/coin" target="_blank" rel="noopener noreferrer">COIN-i GitHubi repositooriumis</a>.</p>
+        <p>Ta on vabatahtlikuna 2026. aastal Tallinnas asutatud mittetulundusühingu Single.Earth Foundation nõukogu liige.</p>
       </section>
     </div>
   </main>`,
