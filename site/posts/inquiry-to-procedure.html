@@ -122,15 +122,16 @@
         <h2>Evidence base</h2>
         <p>
           The evidence here is not a literature but two recorded human–AI trajectories held under
-          version control. Because both source repositories are private, the trajectories are
-          published as two self-contained bundles committed into the COIN research folder — each a
-          flattened export carrying its own round ledger, per-round records, and, in the first case,
-          a metrics table and a retrospective classification. The first bundle describes the
-          observer-disagreement framework itself: a general and partly self-referential case in which
-          the inquiry examines its own recording, across twenty rounds contributed by two agents. The
-          second is an applied geospatial bundle built for evidence work under the EU Deforestation
-          Regulation (EUDR). What matters in each is not the number of rounds but the transitions
-          that produced a more general rule, a tool, a specification, a test, or an instruction.
+          version control. They are published as two self-contained bundles committed into the COIN
+          research folder — each a flattened export carrying its own round ledger, per-round
+          records, and, in the first case, a metrics table and a retrospective classification. The
+          first bundle describes the observer-disagreement framework itself: a general and partly
+          self-referential case in which the inquiry examines its own recording, across twenty rounds
+          contributed by two agents. The second is a public reading snapshot of an applied
+          geospatial bundle for Fazenda Sucuri coffee screening under the EU Deforestation Regulation
+          (EUDR), with generated PDF, JSON, GeoJSON, and report artefacts omitted from COIN. What
+          matters in each is not the number of rounds but the transitions that produced a more
+          general rule, a tool, a specification, a test, or an instruction.
         </p>
         <p>
           The self-referential bundle records the article's central move directly. At round four,
@@ -146,18 +147,17 @@
           rather than left to good intentions.
         </p>
         <p>
-          The EUDR bundle offers the clearest worked example of a corrected decomposition. Its
-          imported lineage records that applied work on Liberian wood exposed a coffee-shaped parent
-          method that could not represent wood without semantic distortion, because forest
-          degradation and source geometry are separate evidence dimensions rather than a single
-          commodity mask; the parent method was then consolidated into separate wood
-          deforestation and degradation streams with explicit production-geometry and source-linkage
-          status. A further question exposes a level of reduction still available. The regulation
-          defines a deforestation-free condition common across the relevant commodities in terms of
-          whether goods were produced on land not subject to deforestation after
-          31&nbsp;December&nbsp;2020, and Article&nbsp;3 prohibits placing such commodities on the
-          Union market unless that condition is met. Read this way, the method decomposes more
-          cleanly than either “coffee method” or “wood method” allows:
+          The EUDR bundle offers a public worked example of corrected decomposition inside an
+          applied screening task. Its rounds show review findings becoming concrete repairs: a
+          Sentinel-2 visual defect is fixed, AOI administrative labels and report-map behavior are
+          corrected, the coffee temporal mask is repaired so current coffee preserves the baseline
+          footprint while “new commodity since baseline” remains separate, and a recurring regional
+          overview gap is pushed down into the renderer and publish contract. A further question
+          exposes a level of reduction still available. The regulation defines a deforestation-free
+          condition common across the relevant commodities in terms of whether goods were produced on
+          land not subject to deforestation after 31&nbsp;December&nbsp;2020, and Article&nbsp;3
+          prohibits placing such commodities on the Union market unless that condition is met. Read
+          this way, the method decomposes more cleanly than a one-piece “coffee mask” allows:
         </p>
         <ul>
           <li>
@@ -171,26 +171,22 @@
             occurred somewhere is not sufficient on its own.
           </li>
           <li>
-            <strong>Layer C — commodity-specific evidence.</strong> For wood, harvesting without
-            inducing forest degradation after the cutoff additionally matters; other commodities can
-            require different linkage evidence even though the basic deforestation test is shared.
+            <strong>Layer C — commodity-specific evidence.</strong> For coffee, the source-specific
+            commodity evidence matters: FDP-only, MapBiomas-only, and both-source agreement cannot
+            be collapsed into the same warrant merely because they all describe coffee.
           </li>
         </ul>
         <p>
-          This is a good case precisely because the human researcher originally supplied a narrower
-          decomposition, the AI worked within it, later experience exposed its inadequacy, and
-          further inquiry now points to a more general structure. The recorded sequence lets one
-          inspect how a commodity-specific assumption entered the method, why it propagated, what
-          evidence challenged it, and what more general instruction should replace it — none of which
-          is visible from the present architecture alone. The correction is visible in the bundle's
-          own artefacts: a wood evidence-state schema that keeps deforestation, degradation,
-          production geometry, and source linkage as separate fields, populated with per-source areas
-          reported as dataset disagreement rather than averaged into a single number; and a written
-          frame declaration with a scope-change protocol that names silent generalisation of the
-          Liberia-specific finding, and coffee commodity-mask semantics, as out of scope. What the
-          schema still records as unresolved — the production plot, the harvesting block, the chain
-          of custody — is left explicitly missing and marked for human review, not filled by
-          assumption.
+          This is a good case precisely because it refuses to turn a screening signal into more than
+          the evidence supports. The recorded sequence lets one inspect how a source-specific coffee
+          assumption was corrected, why visual and report defects mattered, and how those findings
+          were converted into more durable method constraints. The correction is visible in the
+          bundle's own artefacts: FDP reports 0.27 hectares of post-2020 baseline-forest loss
+          intersecting new coffee, while MapBiomas and the both-source agreement layer report
+          0.0 hectares for the same conversion intersection. The bundle keeps those as source
+          disagreement, not as a number to average away. Its current answer remains
+          human-review-required and pinned-not-reproduced, and it states plainly that the result is a
+          screening flag, not a legal non-compliance determination.
         </p>
       </section>
 
@@ -362,8 +358,8 @@
             This section keeps the published article connected to the materials behind it. For this
             inquiry the trail exposes not only the rounds but what each important sequence eventually
             produced: code, tests, specifications, agent rules, retained uncertainty, or rejection of
-            an earlier framing. Because both source repositories are private, the two trajectories are
-            committed here as self-contained bundles, which are the public evidence for this inquiry.
+            an earlier framing. The trajectories are committed here as self-contained bundles; the
+            applied EUDR copy intentionally omits generated PDF, JSON, GeoJSON, and report artefacts.
           </p>
         </div>
 
@@ -410,15 +406,15 @@
           <div class="research-trail-item">
             <dt>Applied trajectory (bundle)</dt>
             <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-wood-liberia-fmc-area-k" target="_blank" rel="noopener noreferrer">
-                eudr-wood-liberia-fmc-area-k bundle
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">
+                eudr-coffee-brazil-fazenda-sucuri bundle
               </a>
             </dd>
             <dd class="research-trail-note">
-              The applied case: the coffee → wood correction and the frame declaration that
-              constrains silent generalisation. The source repository is private; this committed
-              bundle references its private counterpart only by commit and checksum, not by copied
-              data, and its evidence state is human-review-required and pinned-not-reproduced.
+              The applied case: Fazenda Sucuri coffee screening, source-specific overlap evidence,
+              temporal-mask correction, and retained human review. This COIN copy mirrors the public
+              source bundle's reading files while omitting generated PDF, JSON, GeoJSON, and
+              canonical report files.
             </dd>
           </div>
 
