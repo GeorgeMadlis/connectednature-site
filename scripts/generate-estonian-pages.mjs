@@ -230,6 +230,7 @@ function navEt(current, depth = 0) {
             <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
             <a href="${prefix}posts/evidence-first-consensus-later.html">Tõendus kõigepealt, konsensus hiljem</a>
             <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
+            <a href="${prefix}posts/inquiry-to-procedure.html">Uurimusest protseduurini</a>
           </div>
         </div>
         <div class="nav-dropdown language-dropdown">
@@ -302,6 +303,7 @@ ${main}
         <a href="${prefix}posts/evidence-first-currency-later.html">Tõendus kõigepealt, valuuta hiljem</a>
         <a href="${prefix}posts/evidence-first-consensus-later.html">Tõendus kõigepealt, konsensus hiljem</a>
         <a href="${prefix}posts/ancient-traditions-quantum-field.html">Muistsed traditsioonid ja kvantväli</a>
+        <a href="${prefix}posts/inquiry-to-procedure.html">Uurimusest protseduurini</a>
       </nav>
     </div>
   </footer>
@@ -369,7 +371,7 @@ function homePage() {
       <div class="wrap">
         <div class="section-heading">
           <p class="eyebrow">Esiletõstetud postitused</p>
-          <h2>Viis uurimust seotuse, piiride, tõenduse ja tähenduse kohta</h2>
+          <h2>Kuus uurimust seotuse, piiride, tõenduse ja tähenduse kohta</h2>
           <p class="section-intro">Iga artikkel käsitleb algset väidet uuritava propositsioonina, mitte teesina, mida lihtsalt korrata.</p>
         </div>
 
@@ -378,6 +380,7 @@ function homePage() {
         ${featureCard("evidence-first-currency-later", "Tõendus kõigepealt, valuuta hiljem", "Neljas artikkel küsib, mis peab olema tõsi enne, kui finantsinstrument saab usutavalt väita, et see on loodusega tagatud. See käsitleb regeneratiivset rahandust (ReFi) tänapäevase probleemiväljana ning väidab, et tokeniseeritud ökoloogilised väited vajavad esmalt deterministlikku, kontrollitavat ja eraldi valitsetud tõenduskihti.", "Kas ökoloogilised piirid võivad muutuda tehingupõhisteks piiranguteks enne reguleeritud tõendusmaterjali olemasolu?", "Regeneratiivne rahandus (ReFi), ökoloogiline arvestus, Euroopa Liidu raadamisvabade toodete määruse (EUDR) tõenduspaketid, protseduuriline detsentraliseeritud autonoomse organisatsiooni (DAO) valitsemine ja plokiahela päritolujälg.", "Kitsendatud väide: tõendus saab muutuda protseduuriliselt siduvaks enne, kui see tõendab planeedimõõtmelist tõhusust.")}
         ${featureCard("evidence-first-consensus-later", "Tõendus kõigepealt, konsensus hiljem", "Viies artikkel küsib, kas Maa süsteemide digitaalsed kaksikud, tehisintellekti agendid ja plokiahelapõhised päritolukirjed saavad muuta keskkonnajuhtimise üle peetavad erimeelsused paremini kontrollitavaks — mitte neid automaatselt lahendades, vaid dokumenteerides neid piisava rangusega, et nende struktuur muutuks nähtavaks, stabiilseks ja vaidlustatavaks.", "Kas Maa süsteemide digitaalsed kaksikud, tõendikogumid, plokiahelapõhised päritolukirjed ja tehisintellekti agendid saavad pakkuda praktilist taristut keskkonnaotsuste üle peetavate juhtimiskonfliktide rangemaks dokumenteerimiseks, väitmata, et nad suudavad neid automaatselt lahendada?", "Maa süsteemide digitaalsed kaksikud, tõendikogumid ja konfliktikogumid, agentne tehisintellekt, plokiahelapõhine päritolujälg, keskkonnajuhtimine, Eesti metsamajanduse vaidlus ja kliimamuutuse omistamise näide.", "Süntees, mis näitab, et digitaalsed kaksikud ei lahenda keskkonnajuhtimise üle peetavaid konflikte automaatselt, kuid võivad muuta erimeelsused struktureeritumaks, kontrollitavamaks ja ausamalt vaidlustatavaks.")}
         ${featureCard("ancient-traditions-quantum-field", "Kas muistsed traditsioonid kirjeldasid kvantvälja?", "Kolmas artikkel eristab tegelikku filosoofilist kõla ajalooliselt ja teaduslikult põhjendamata samasusväidetest.", "Iidsed traditsioonid olid juba kaardistanud ala, kuhu füüsika oli alles nüüd sisenemas.", "Kvantväljateooria, mõõtmine, muistsed allikad ja füüsikute kronoloogia.", "Süntees, mis säilitab tähendusliku seose, kuid välistab põhjendamatud tõestusnõuded.")}
+        ${placeholderFeatureCard("inquiry-to-procedure", "Uurimusest protseduurini")}
       </div>
     </section>
 
@@ -420,6 +423,22 @@ function featureCard(slug, title, summary, statement, pathText, follows) {
             <div class="feature-tag-group">
               <p class="feature-tag-label">Mis järgneb</p>
               <p>${follows}</p>
+            </div>
+          </div>
+        </article>`;
+}
+
+function placeholderFeatureCard(slug, title) {
+  return `<article class="feature-card">
+          <div class="feature-copy">
+            <p class="meta">Tõlge ilmub peagi</p>
+            <h3><a href="posts/${slug}.html">${title}</a></h3>
+            <p>Kuues artikkel on inglise keeles olemas. Eestikeelne tõlge lisatakse peagi.</p>
+          </div>
+          <div class="feature-tags" aria-label="Postituse struktuur">
+            <div class="feature-tag-group">
+              <p class="feature-tag-label">Staatus</p>
+              <p>Tõlge ilmub peagi.</p>
             </div>
           </div>
         </article>`;
@@ -538,6 +557,24 @@ function methodPage() {
 write("et/index.html", homePage());
 write("et/about.html", aboutPage());
 write("et/method.html", methodPage());
+
+currentPostSlug = "inquiry-to-procedure";
+write("et/posts/inquiry-to-procedure.html", pageTemplate({
+  title: "Uurimusest protseduurini",
+  description: "Uurimusest protseduurini - eestikeelne tõlge ilmub peagi.",
+  current: "posts",
+  depth: 1,
+  footerNote: "Avalik süntees, mis on seotud oma tööjäljega.",
+  main: `  <main id="main" class="page-main article-main">
+    <article class="wrap article">
+      <header class="article-header">
+        <p class="eyebrow">Kuues uurimus</p>
+        <h1>Uurimusest protseduurini</h1>
+        <p class="lead">Eestikeelne tõlge ilmub peagi.</p>
+      </header>
+    </article>
+  </main>`,
+}));
 
 for (const post of posts) {
   currentPostSlug = post.slug;
