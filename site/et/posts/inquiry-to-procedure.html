@@ -183,6 +183,100 @@
       </section>
 
       <section class="article-section">
+        <h2>Mida täpselt salvestatakse?</h2>
+        <p>
+          Väljend „salvestatud trajektoor” peidab mitu kihti, mida tuleb eraldi hoida. Kogum ei
+          ole tunnetuse transkript ega ka miski, mida pakub üksnes Google OKF. See on kihiline kirje,
+          milles eri tehnilised ja mõistelised alused teevad eri tööd.
+        </p>
+        <p>
+          <strong>Kiht 1 — esituslik alus.</strong>
+          <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+            Open Knowledge Format
+          </a>
+          annab portatiivse esitusliku aluse: inimesele ja agendile loetavad Markdowni mõisted,
+          YAML-esiploki, hierarhia ja lingid. Selle projekti OKF-FC ja kogumitavad algasid OKF
+          v0.1 profiili ja laiendusena. Google'i ülesvoolu OKF on nüüd v0.2, mis muudab päritolu,
+          usalduse, elutsükli ja atesteerimise selgemaks ning esmaklassilisemaks, jäädes samal ajal
+          sihilikult minimaalselt ettekirjutavaks. See lubab ka tootjapõhiseid laiendusi. Seega
+          struktureerib OKF portatiivset teadmuseobjekti, kuid ei defineeri selle projekti
+          uurimuse arenemise teooriat ega määra välju <code>fc-round</code>,
+          <code>fc-stage</code>, <code>fc-party</code>, <code>fc-supersedes</code>,
+          vaidlustusetappe, vaatleja-erimeelsuse semantikat või projekti meetodi arenemise
+          protokolli.
+        </p>
+        <p>
+          <strong>Kiht 2 — versiooni- ja päritolualus.</strong> Git annab
+          versiooniaadressitavad seisundid, omistuse, erinevused ja ajaloo. Räsid ning avaldatud
+          hetktõmmised teevad konkreetsed seisundid kontrollitavaks ja kinnitavad, millele hilisemad
+          lugejad või agendid viitavad. Lihtsalt öeldes: OKF struktureerib teadmuseobjekti; Git
+          salvestab ja versiooniaadressib selle objekti muudatused. Kumbki üksi ei selgita muutuse
+          epistemilist tähendust.
+        </p>
+        <p>
+          <strong>Kiht 3 — uurimuse arenemise semantika.</strong> Vaatleja-erimeelsuse ja OKF-FC
+          raamistik lisab OKF-i ja Giti peale uurimisspetsiifilise semantika. Olemasolevad projekti
+          tavad hõlmavad kohaldataval juhul välju <code>fc-round</code>, <code>fc-stage</code>,
+          <code>fc-party</code>, <code>fc-supersedes</code>, voorupõhiseid uurimiskirjeid, kogumi-
+          ja repositooriumiregistreid, agendi osalemisreegleid, selgeid raamimuutusi ja asendamist.
+          Praegune kogumi arengu analüüs pakub lisaks rikkamat seoste sõnavara, mis eristab vähemalt
+          seoseid <em>asendab</em>, <em>on vastuolus</em>, <em>raamib ümber</em>,
+          <em>avab uuesti</em> ja <em>asendab eelduste alusel</em>. See tüübitud seoste sõnavara on
+          käesoleva uurimuse ettepanek, mitte kõigis kogumites täielikult rakendatud tava. Eristus
+          on oluline, sest lineaarne <code>supersedes</code>-ahel võib varjata, kas hilisem seisund
+          muutus seetõttu, et tõendus muutus, eeldused või ulatus muutusid või protseduur ise
+          muutus.
+        </p>
+        <p>
+          <strong>Kiht 4 — meetodi arenemise protokoll.</strong> Viimane kiht on protseduuriline,
+          mitte esituslik. Meetodi arenemise protokoll otsustab, mida salvestatud leidudega teha:
+          säilitada need päritoluna, koondada koodiks, koondada testiks või validaatoriks, muuta
+          spetsifikatsiooni, muuta tehisintellekti juhist, säilitada selgesõnaline määramatus,
+          säilitada konflikt, avada varasem küsimus uuesti või teha mõni muu põhjendatud
+          operatiivne parandus. Siin muutub artikli eristus salvestatud trajektoori, meetodi
+          arenemise protokolli ja operatiivse meetodi vahel operatiivselt tähenduslikuks.
+        </p>
+        <p>
+          Praeguse uurimismudeli saab kirjutada nii:
+        </p>
+        <p class="statement-block"><code>D_t = f(E_t, F_t, P_t)</code></p>
+        <p>
+          Siin on <code>D_t</code> määrang või tulemus uurimisseisundis <code>t</code>;
+          <code>E_t</code> on tõendus ja asjakohased tõendusversioonid; <code>F_t</code> on raam,
+          eeldused, ulatus ja definitsioonid; ning <code>P_t</code> on protseduuri-, meetodi- või
+          juhiseseisund, millega määrang toodeti. Tähistusliku kokkupõrke vältimiseks:
+          <code>P_t</code> selles võrrandis tähendab operatiivset protseduuri- või juhiseseisundit
+          ajal <code>t</code>, mitte kõrgema tasandi meetodi arenemise protokolli, mis otsustab,
+          kuidas kirje peaks operatiivset meetodit muutma. Seetõttu ei saa kaht vastuolulist
+          määrangut õigesti võrrelda pelgalt nende otsuseid vaadates; hilisem uurija peab teadma,
+          kas muutus <code>E</code>, <code>F</code> või <code>P</code>.
+        </p>
+        <p>
+          Selle uurimuse kandidaatne minimaalne rekonstrueeritav seisund on:
+        </p>
+        <p class="statement-block"><code>R_t = {C_t, E_t, F_t, P_t, V_t, Δ_t}</code></p>
+        <p>
+          Selles kandidaatses kirjes on <code>C_t</code> väiteseisund; <code>E_t</code> viidatud
+          ja versioonitud tõendus; <code>F_t</code> asjakohane raam, eeldused, ulatus ja
+          definitsioonid; <code>P_t</code> protseduuri- või juhiseseisund; <code>V_t</code>
+          otsus või määrang; ning <code>Δ_t</code> siirde sõnastatud põhjus. See on käesoleva
+          uurimuse kandidaatne minimaalne rekonstrueeritav seisund, mitte valideeritud universaalne
+          standard.
+        </p>
+        <p>
+          Eesmärk ei ole säilitada iga prompti, transkripti, vahemõtet või ajutist artefakti.
+          Eesmärk on säilitada piisavalt seisundit, et hiljem rekonstrueerida sisuliselt oluline
+          siire, eriti seal, kus üks järeldus läheb teisega vastuollu, muudab selle kehtetuks või
+          raamib selle ümber. OKF annab esitusliku aluse; Git annab versioonitud ajaloo;
+          projektispetsiifiline kogumiprofiil annab uurimuse arenemise semantika; ning meetodi
+          arenemise protokoll annab reeglid selle ajaloo kasutamiseks. Ajalooline kirje on
+          päritolu. Selle distsiplineeritud kasutamine rekonstrueerimiseks, võrdlemiseks,
+          eristamiseks, asendamiseks, konflikti säilitamiseks, uuesti avamiseks või
+          meetodirevisjoniks on meetod.
+        </p>
+      </section>
+
+      <section class="article-section">
         <h2>Tõendusbaas</h2>
         <p>
           Siinne tõendus ei ole kirjandusülevaade, vaid kaks versioonihalduses hoitud inimese ja
@@ -366,17 +460,15 @@
           Arhiveerimiseks tekib täiendav põhjus siis, kui hilisem uurimus varasema järeldusega
           sisuliselt vastuollu läheb, selle kehtetuks teeb või selle ümber raamib. Ahel võib olla
           rutiinse täitmise jaoks taandatav, jäädes samal ajal auditi jaoks mittekõrvaldatavaks.
-          Kui üks uurimisseisund võttis väite vastu tõenduse E<sub>1</sub>, raami F<sub>1</sub> ja
-          protseduuri P<sub>1</sub> alusel, samas kui hilisem seisund lükkas selle tagasi tõenduse
-          E<sub>2</sub>, raami F<sub>2</sub> ja protseduuri P<sub>2</sub> alusel, ei pruugi lõplik
-          seisund üksi näidata, kas muutus tulenes muutunud tõendusest, parandatud protseduurist,
-          muutunud eeldustest või ulatusest või muutumatu tõenduse teistsugusest tõlgendusest.
-          Piisava ülemineku säilitamine mõlema seisundi rekonstrueerimiseks võimaldab epistemilist
-          rekonstrueeritavust: arutlusseisundeid saab läbida ja uuesti käivitada — hilisem osaline
-          saab faktikontrolli konkureeriva tõenduse, eelduste ja protseduuri alusel uuesti teha,
+          Eespool toodud rekonstrueeritava seisundi mudel selgitab, miks: kui üks seisund võttis
+          väite vastu ühe tõenduse, raami ja protseduuri konfiguratsiooni alusel, samas kui hilisem
+          seisund lükkas selle tagasi teise konfiguratsiooni alusel, ei pruugi lõplik seisund üksi
+          näidata, mis muutust ajendas. Piisava ülemineku säilitamine mõlema seisundi
+          rekonstrueerimiseks võimaldab epistemilist rekonstrueeritavust: hilisem osaline saab
+          faktikontrolli konkureeriva tõenduse, eelduste ja protseduuri alusel uuesti teha,
           tuvastada, mis muutust ajendas, ning otsida tõendust, mis suudaks tõlgenduste vahel
-          eristada — ilma et asendatud järeldus taastataks võrdsele staatusele. See ei nõua, et
-          iga asendatud artefakt jääks aktiivsesse konteksti. See nõuab sisuliselt vaidlustatud
+          eristada, taastamata asendatud järeldust võrdsele staatusele. See ei nõua, et iga
+          asendatud artefakt jääks aktiivsesse konteksti. See nõuab sisuliselt vaidlustatud
           üleminekute taastatavat kirjet.
         </p>
         <p>
@@ -397,10 +489,10 @@
           mis suudaks nende vahel eristada, ning seejärel kinnitada asendus, säilitada konflikt või
           avada varasem seisund uuesti. See nõuab, et säilitatud ajalugu eristaks asendust
           vastuolust ja ümberraamimisest, mitte ei suruks neid kokku ühte lineaarsesse ahelasse,
-          sest paljas „asendab” link kodeerib vaikimisi viimase seisundi raami edenemisena.
-          Ajalooline kirje on päritolu; selle kirje distsiplineeritud kasutamine
-          rekonstrueerimiseks, võrdlemiseks, eristamiseks, asendamiseks, konflikti säilitamiseks
-          või uuesti avamiseks on meetod.
+          nagu pakutud tüübitud seoste sõnavara on mõeldud tegema. Paljas <code>supersedes</code>-link
+          kodeerib vaikimisi viimase seisundi raami edenemisena. Ajalooline kirje on päritolu;
+          selle kirje distsiplineeritud kasutamine rekonstrueerimiseks, võrdlemiseks,
+          eristamiseks, asendamiseks, konflikti säilitamiseks või uuesti avamiseks on meetod.
         </p>
         <p>
           Sama tõendus ei näita, et trajektoori salvestamine annab parema meetodi, kui oleks
@@ -553,9 +645,9 @@
         </p>
         <p>
           Kui hilisem uurimus läheb varasema järeldusega sisuliselt vastuollu, teeb selle kehtetuks
-          või raamib selle ümber, milline minimaalne ajalooline seisund tuleb säilitada, et
-          eristada tõenduspõhist, protseduuripõhist ja raamipõhist muutust ilma kogu trajektoori
-          säilitamata?
+          või raamib selle ümber, kuidas tuleks kandidaatset minimaalset rekonstrueeritavat
+          seisundit testida tegelike tõenduspõhiste, protseduuripõhiste ja raamipõhiste muutuste
+          suhtes ilma kogu trajektoori säilitamata?
         </p>
       </section>
 
@@ -611,6 +703,21 @@
             <dd class="research-trail-note">
               Töökataloog, mis sisaldab selle uurimuse väidete registrit, kriitilist ülevaadet ja
               trajektoorimärkmeid.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Esitusvorming</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+                Google Open Knowledge Format spetsifikatsioon
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              OKF on portatiivne esituslik alus. See projekt lisab oma uurimuse arenemise profiili
+              ja laiendused, mille võtab kokku commit'itud
+              <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/s/specification.md" target="_blank" rel="noopener noreferrer">framework-self spetsifikatsiooniviit</a>;
+              projektispetsiifilist <code>fc-*</code> semantikat ei tohiks omistada Google OKF-ile.
             </dd>
           </div>
 
@@ -710,7 +817,7 @@
           <div class="research-trail-item">
             <dt>Viimati uuendatud</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-20">20. august 2026</time>
+              <time datetime="2026-08-21">21. august 2026</time>
             </dd>
             <dd class="research-trail-note">
               Selle mustandversiooni viimane nähtav muutmiskuupäev.

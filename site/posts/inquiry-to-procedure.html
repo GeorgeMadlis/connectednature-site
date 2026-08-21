@@ -178,6 +178,99 @@
       </section>
 
       <section class="article-section">
+        <h2>What exactly is being recorded?</h2>
+        <p>
+          The phrase “recorded trajectory” hides several layers that need to be kept distinct. The
+          bundle is not a transcript of cognition, and it is not something supplied by Google OKF
+          alone. It is a layered record in which different technical and conceptual substrates do
+          different work.
+        </p>
+        <p>
+          <strong>Layer 1 — representation substrate.</strong>
+          <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+            Open Knowledge Format
+          </a>
+          supplies the portable representation substrate: human- and agent-readable Markdown
+          concepts, YAML frontmatter, hierarchy, and links. This project’s OKF-FC and bundle
+          conventions originated as a profile and extension of OKF v0.1. Upstream Google OKF is now
+          v0.2, which makes provenance, trust, lifecycle, and attestation more explicit and
+          first-class while remaining deliberately minimally opinionated. It also permits
+          producer-specific extensions. OKF therefore structures a portable knowledge object, but it
+          does not define this project’s theory of research evolution, nor does it define
+          <code>fc-round</code>, <code>fc-stage</code>, <code>fc-party</code>,
+          <code>fc-supersedes</code>, contestation stages, observer-disagreement semantics, or the
+          project’s method-evolution protocol.
+        </p>
+        <p>
+          <strong>Layer 2 — version/provenance substrate.</strong> Git supplies
+          version-addressable states, attribution, diffs, and history. Hashes and published snapshots
+          make particular states inspectable and pin what later readers or agents are referring to.
+          Put simply: OKF structures the knowledge object; Git records and version-addresses changes
+          to that object. Neither alone explains the epistemic meaning of a change.
+        </p>
+        <p>
+          <strong>Layer 3 — research-evolution semantics.</strong> The observer-disagreement and
+          OKF-FC framework adds research-specific semantics on top of OKF and Git. Existing project
+          conventions include, where applicable, <code>fc-round</code>, <code>fc-stage</code>,
+          <code>fc-party</code>, <code>fc-supersedes</code>, per-round inquiry records,
+          bundle/repository ledgers, agent participation rules, explicit frame changes, and
+          supersession. The current bundle-evolution analysis further proposes a richer relation
+          vocabulary distinguishing at least <em>supersedes</em>, <em>contradicts</em>,
+          <em>reframes</em>, <em>reopens</em>, and <em>supersedes-under-assumptions</em>. That typed
+          relation set is a proposal from the current inquiry, not a fully implemented convention
+          across all bundles. The distinction matters because a linear <code>supersedes</code> chain
+          can hide whether a later state changed because the evidence changed, because assumptions
+          or scope changed, or because the procedure itself changed.
+        </p>
+        <p>
+          <strong>Layer 4 — method-evolution protocol.</strong> The final layer is procedural rather
+          than representational. The method-evolution protocol decides what to do with recorded
+          findings: retain them as provenance, compile them into code, compile them into a test or
+          validator, change a specification, change an AI instruction, retain explicit uncertainty,
+          retain a conflict, reopen an earlier issue, or make some other justified operational
+          revision. This is where the article’s distinction among recorded trajectory,
+          method-evolution protocol, and operational method becomes operationally meaningful.
+        </p>
+        <p>
+          The current research model can be written as:
+        </p>
+        <p class="statement-block"><code>D_t = f(E_t, F_t, P_t)</code></p>
+        <p>
+          Here <code>D_t</code> is the determination or result at research state <code>t</code>;
+          <code>E_t</code> is the evidence and relevant evidence versions; <code>F_t</code> is the
+          frame, assumptions, scope, and definitions; and <code>P_t</code> is the procedure, method,
+          or instruction state used to produce the determination. To avoid a notation collision:
+          <code>P_t</code> in this equation means the operational procedure/instruction state at
+          time <code>t</code>, not the higher-level method-evolution protocol that decides how the
+          record should change the operational method. Two contradictory determinations therefore
+          cannot be properly compared merely by looking at their verdicts; a later investigator
+          needs to know whether <code>E</code>, <code>F</code>, or <code>P</code> changed.
+        </p>
+        <p>
+          The candidate minimum reconstructible state from this inquiry is:
+        </p>
+        <p class="statement-block"><code>R_t = {C_t, E_t, F_t, P_t, V_t, Δ_t}</code></p>
+        <p>
+          In that candidate record, <code>C_t</code> is the claim state; <code>E_t</code> is the
+          referenced and versioned evidence; <code>F_t</code> is the relevant frame, assumptions,
+          scope, and definitions; <code>P_t</code> is the procedure or instruction state;
+          <code>V_t</code> is the verdict or determination; and <code>Δ_t</code> is the stated
+          reason for the transition. This is a candidate minimum reconstructible state from the
+          current inquiry, not a validated universal standard.
+        </p>
+        <p>
+          The objective is not to preserve every prompt, transcript, intermediate thought, or
+          temporary artifact. It is to preserve enough state to reconstruct a materially important
+          transition later, especially where one conclusion contradicts, invalidates, or reframes
+          another. OKF supplies the representation substrate; Git supplies versioned history; the
+          project-specific bundle profile supplies research-evolution semantics; and the
+          method-evolution protocol supplies the rules for using that history. The historical record
+          is provenance. Its disciplined use for reconstruction, comparison, discrimination,
+          supersession, conflict retention, reopening, or method revision is method.
+        </p>
+      </section>
+
+      <section class="article-section">
         <h2>Evidence base</h2>
         <p>
           The evidence here is not a literature but two recorded human–AI trajectories held under
@@ -356,18 +449,16 @@
         <p>
           A further reason for archival retention arises when a later inquiry materially contradicts,
           invalidates, or reframes an earlier conclusion. A chain may be reducible for routine
-          execution while remaining non-disposable for audit. If one research state accepted a claim
-          under evidence E<sub>1</sub>, frame F<sub>1</sub>, and procedure P<sub>1</sub>, while a
-          later state rejected it under E<sub>2</sub>, F<sub>2</sub>, and P<sub>2</sub>, the final
-          state alone may not reveal whether the change resulted from changed evidence, a corrected
-          procedure, changed assumptions or scope, or a different interpretation of unchanged
-          evidence. Preserving enough of the transition to reconstruct both states permits epistemic
-          reconstructibility: the reasoning states can be traversed and replayed — a later
-          participant can rerun the fact-check under the competing evidence, assumptions, and
-          procedure, identify what drove the change, and seek evidence capable of discriminating
-          between the interpretations — without the superseded conclusion being restored to equal
-          standing. This does not require every superseded artefact to remain in active context. It
-          requires a recoverable record of materially contested transitions.
+          execution while remaining non-disposable for audit. The reconstructible-state model above
+          clarifies why: if one state accepted a claim under one configuration of evidence, frame,
+          and procedure, while a later state rejected it under another, the final state alone may not
+          reveal what drove the change. Preserving enough of the transition to reconstruct both
+          states permits epistemic reconstructibility: a later participant can rerun the fact-check
+          under the competing evidence, assumptions, and procedure, identify what drove the change,
+          and seek evidence capable of discriminating between the interpretations without restoring
+          the superseded conclusion to equal standing. This does not require every superseded
+          artefact to remain in active context. It requires a recoverable record of materially
+          contested transitions.
         </p>
         <p>
           This gives bundle history a function the current head cannot supply. A conflict bundle can
@@ -386,10 +477,10 @@
           procedure, seek evidence capable of discriminating between them, and then confirm
           supersession, retain the conflict, or reopen the earlier state. This requires that preserved
           history distinguish supersession from contradiction and reframing rather than collapse them
-          into a single linear chain, since a bare 'supersedes' link silently encodes the latest
-          state's frame as progress. The historical record is provenance; the disciplined use of that
-          record to reconstruct, compare, discriminate, supersede, retain conflict, or reopen is
-          method.
+          into a single linear chain, as the proposed typed relation vocabulary is meant to do. A
+          bare <code>supersedes</code> link silently encodes the latest state's frame as progress.
+          The historical record is provenance; the disciplined use of that record to reconstruct,
+          compare, discriminate, supersede, retain conflict, or reopen is method.
         </p>
         <p>
           The same evidence does not show that recording the trajectory produces a better method than
@@ -540,8 +631,9 @@
         </p>
         <p>
           When a later inquiry materially contradicts, invalidates, or reframes an earlier conclusion,
-          what minimum historical state must be retained to distinguish evidence-driven,
-          procedure-driven, and frame-driven change without preserving the entire trajectory?
+          how should the candidate minimum reconstructible state be tested against real
+          evidence-driven, procedure-driven, and frame-driven change without preserving the entire
+          trajectory?
         </p>
       </section>
 
@@ -598,6 +690,21 @@
             <dd class="research-trail-note">
               The working directory holding the claims ledger, critical overview, and trajectory
               notes for this inquiry.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Representation format</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+                Google Open Knowledge Format specification
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              OKF is the portable representation substrate. This project adds its own
+              research-evolution profile and extensions, summarized in the committed
+              <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/s/specification.md" target="_blank" rel="noopener noreferrer">framework-self specification pointer</a>;
+              project-specific <code>fc-*</code> semantics should not be attributed to Google OKF.
             </dd>
           </div>
 
@@ -697,7 +804,7 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-20">20 August 2026</time>
+              <time datetime="2026-08-21">21 August 2026</time>
             </dd>
             <dd class="research-trail-note">
               The latest visible revision date for this draft version.
