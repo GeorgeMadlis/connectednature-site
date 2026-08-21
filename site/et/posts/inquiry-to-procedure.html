@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Uurimusest protseduurini | ConnectedNature</title>
-  <meta name="description" content="Uurimusest protseduurini - eestikeelne tõlge ilmub peagi.">
+  <title>Uurimusest protseduurini: inimese ja tehisintellekti uurimistöö kui järkjärguline taandamine | ConnectedNature</title>
+  <meta
+    name="description"
+    content="ConnectedNature'i artikkel, mis eristab inimese ja tehisintellekti tõendustöös salvestatud uurimispäritolu, meetodi arenemise protokolle ja operatiivseid uurimismeetodeid."
+  >
   <link rel="alternate" hreflang="en" href="../../posts/inquiry-to-procedure.html">
   <link rel="alternate" hreflang="et" href="inquiry-to-procedure.html">
-  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../style.css" onerror="this.onerror=null;this.href='https://connectednature.org/style.css';">
 </head>
 <body>
   <a class="skip-link" href="#main">Liigu sisu juurde</a>
   <header class="site-header">
     <div class="wrap site-header-inner">
       <div class="brand-block">
-        <p class="eyebrow">Eksperimentaalne uurimiskeskkond</p>
+        <p class="eyebrow">Töös olev artikkel</p>
         <a class="site-title" href="../index.html">ConnectedNature</a>
       </div>
       <nav class="site-nav" aria-label="Peamine">
@@ -47,9 +50,674 @@
     <article class="wrap article">
       <header class="article-header">
         <p class="eyebrow">Kuues uurimus</p>
-        <h1>Uurimusest protseduurini</h1>
-        <p class="lead">Eestikeelne tõlge ilmub peagi.</p>
+        <h1>Uurimusest protseduurini: inimese ja tehisintellekti uurimistöö kui järkjärguline taandamine</h1>
+        <p class="lead">
+          Kuidas salvestatud uurimistöö areng saab dokumenteerida meetodi kujunemist, kuidas
+          valitud õppetunnid saab teisendada koodiks, testideks, spetsifikatsioonideks, juhisteks
+          ja selgelt väljendatud määramatuseks ning miks sellest tulenev operatiivne meetod peaks
+          tavaliselt toimima ilma kogu seda ajalugu uuesti läbi mängimata, mis aitas tal tekkida.
+        </p>
       </header>
+
+      <section class="article-section">
+        <h2>Lähteväide</h2>
+        <p class="statement-block">
+          „Inimese ja tehisintellekti ühises uurimistöös on salvestatud uurimistrajektoor eeskätt
+          meetodi kujunemise päritolujälg. Selle võimalik metodoloogiline väärtus seisneb selles,
+          kas distsiplineeritud meetodi arenemise protsess suudab sellest päritolust õppida ja
+          koondada valitud leiud praegusesse operatiivsesse meetodisse: koodi, testidesse,
+          validaatoritesse, spetsifikatsioonidesse, tehisintellekti juhistesse, tõenduse
+          semantikasse ja selgelt sõnastatud lahendamata küsimustesse. Õnnestunud taandamised
+          peaksid võimaluse korral jätma aktiivseks ajaloolise konteksti õppetunnid, samas kui
+          arhiveeritud ajalugu jääb kättesaadavaks auditi ja hilisema meetodiparanduse jaoks.”
+        </p>
+        <p>
+          See väide on sihilikult ettevaatlikum kui artikli varasem versioon. See eristab kolme
+          objekti, mida on lihtne kokku sulatada. Salvestatud trajektoor on ajalugu: parandused,
+          asendused, raamimuutused, tõendusmuutused, läbikukkunud eeldused ja ajalooliselt
+          täheldatud teisendused. Meetodi arenemise protokoll on protseduur, mis hindab selle
+          ajaloo leide ja otsustab, kas neist peaksid saama operatiivsed artefaktid või jäävad nad
+          ainult päritolujäljeks. Operatiivne meetod on praegune spetsifikatsioonide,
+          protseduuride, koodi, testide, validaatorite, juhiste, tõenduse semantika ja selgelt
+          lahendamata küsimuste kogum, mida on vaja uurimisülesande täitmiseks nüüd.
+        </p>
+        <p>
+          Otsustav eristus on järgmine: meetodi avastamise ajalooline sõltuvus ei ole sama mis
+          meetodi täitmise operatiivne sõltuvus. Ajalugu võis anda olulise panuse protseduuri
+          avastamisse, olemata enam vajalik selle protseduuri rakendamiseks. Vastupidi, kui
+          lõplikku protseduuri saab käivitada ilma selle ajaloolise logita, ei tõesta see, et
+          ajalugu oli selle avastamisel kasutu.
+        </p>
+        <p>
+          Seetõttu tuleb negatiivne tulemus lahutada kaheks. <strong>Kujunemise negatiivne</strong>
+          kehtiks siis, kui uurija, kellel trajektoori ei ole, suudaks lõplikust tõendusest ja
+          probleemiseisust üksi usaldusväärselt tuletada sama või parema operatiivse meetodi; sel
+          juhul ei oleks trajektoor näidanud lisaväärtust meetodi kujunemisel peale päritolu ja
+          auditeeritavuse. <strong>Revisjoni negatiivne</strong> kehtiks siis, kui arhiveeritud
+          päritolujälg ei annaks ka hilisemate meetoditõrgete diagnoosimisel ja parandamisel
+          olulist eelist; sel juhul oleks selle püsiv roll peamiselt päritolu. Kaks siin uuritud
+          kogumijuhtumit ei testi kumbagi kontrafaktilist olukorda eksperimentaalselt. Ka rutiinne
+          täitmine ilma ajalooga ei oleks negatiivne tulemus. See on õnnestunud taandamise
+          ootuspärane kuju: praegusest operatiivsest meetodist koos uue tõendusega peaks piisama
+          tulemuse saamiseks, arhiveeritud päritolu avatakse uuesti siis, kui revisjon muutub
+          vajalikuks.
+        </p>
+        <p>
+          See artikkel ei alusta tühjast tõendiarhitektuurist. Selle jada eelmine uurimus,
+          „Tõendus kõigepealt, konsensus hiljem”, väitis, et Maa süsteemide digitaalsed kaksikud,
+          tehisintellekti agendid, plokiahelapõhised päritolumehhanismid ja DAO-laadsed
+          juhtimiskihid ei tohiks vaidlustatud keskkonnaväiteid vaikselt autoriteetseteks
+          järeldusteks teisendada ning et kontrollitav tõendus ja struktureeritud erimeelsus
+          peaksid seisma konsensusest ülesvoolu. See jättis avatuks teistsuguse probleemi:
+          tõendiarhitektuur, mille kaudu see kontroll ja erimeelsus peaks kulgema, ei pruugi olla
+          ette õigesti määratud. Kategooriad, kogumipiirid, valideerimisreeglid, allikarollid ja
+          agendijuhised võivad alguses olla valed. Käesolev artikkel uurib, kuidas inimese ja
+          tehisintellekti ühine uurimine saab selle arhitektuuri avastada, parandada ja vormistada
+          — metodoloogiline küsimus omaenda ulatusega, mitte varasema küsimuse rakendus.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Miks see on oluline</h2>
+        <p>
+          Nii inimlik kui ka tehisintellekti tehtav uurimine on piiratud, ja need piirangud
+          kuhjuvad. Andurid ja andmestikud hõlmavad ainult osa maailmast. Teaduslik teadmine ise
+          on puudulik. Konkreetne uurija valdab vaid murdosa asjakohasest teadusest: keegi, kes
+          tunneb hästi georuumilist töötlust, ei pruugi tunda konkreetset regulatiivset eristust,
+          samas kui õigust tundev inimene võib kaugseire määramatust valesti hinnata.
+          Tehisintellekti süsteem töötab talle antud konteksti, tööriistade ja allikate piires ning
+          omaenda arutluspiiride sees.
+        </p>
+        <p>
+          Need piirid mõjutavad üksteist. Inimene annab esialgse jaotuse, mis kannab vaikimisi
+          eeldusi, ebatäiuslikku liigendust või mitmetähenduslikku terminoloogiat. Mudel tegutseb
+          selle raami sees ja võib seda võimendada, mitte küsitavaks teha. Tulemuseks on
+          süsteemne ulatuse nihkumine, mida kumbki osapool üksi ei loonud. Kui see on tavaline
+          tõrkerežiim, siis on uurimise salvestamisel kujunemise või revisjoni jaoks
+          metodoloogiline väärtus ainult siis, kui protsess oskab kirjet kasutada raami nähtavaks
+          tegemiseks ja parandamiseks, mitte siis, kui kirje seda lihtsalt säilitab. Vahe logi
+          vahel, mis dokumenteerib vea, ja logi vahel, mis aitab seda parandada, on selle artikli
+          praktiline panus.
+        </p>
+        <p>
+          Tõendus-esmase juhtimise jaoks on tagajärg piirang, mitte tõestus. „Tõendus kõigepealt”
+          ei tähenda, et tõendusskeem on antud esimesena. Arhitektuur, millega tõendust
+          klassifitseeritakse, kogumiteks jaotatakse, valideeritakse, võrreldakse ja vaidlustatakse,
+          on ise ajutine uurimistulemus ning võib sisaldada raamivigu, ulatuse nihkumist,
+          sobimatuid kogumipiire, ekslikke allikaliigitusi või kehtetuid otsustusreegleid —
+          selgesõnaline tõendusskeem ei ole seetõttu veel õige skeem. Seetõttu peab see olema
+          parandatav, versioonitav ja vaidlustatav samamoodi nagu väited, mida see struktureerib.
+          Kaks kogumit näitavad, et niisugune parandamine ei piirdu andmete parandamisega: see
+          hõlmab ka avastust, et piir, vaatlejakategooria või väiteklass oli valesti määratud —
+          nagu siis, kui enesele viitava kogumi uurimisobjekti tuli neljandas voorus laiendada,
+          alandades erimeelsuse üheks viiest etapist — ning avastust, et korratav, räsiga
+          kontrollitud päritolu oli ekslikult samastatud allika autentsusega, nagu näitab hiljem
+          käsitletav fabritseeritud sisendi episood. Kumbki ei olnud õige skeemi rakendamise viga;
+          mõlemad olid skeemi enda vead. Järeldus on konkreetne: enne kui tõenditaristu saab
+          toetada vaidlustatavat juhtimist, peab ka masinavärk, millega tõendust struktureeritakse,
+          olema parandustele avatud. See ei nõua, et iga selline parandus jääks püsivalt aktiivseks;
+          arhitektuur jääb ajutiseks seal, kus see ei ole veel kontrollile vastu pidanud, mitte
+          vaikimisi lõputult.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Uurimisküsimus</h2>
+        <p>
+          Kas salvestatud inimese ja tehisintellekti uurimistrajektoor saab parandada operatiivse
+          uurimismeetodi kujunemist ja hilisemat revisjoni rohkem, kui on võimalik tuletada
+          üksnes praegusest tõendusest ja probleemiseisust, lubades samal ajal õnnestunult
+          taandatud õppetundidel lahkuda aktiivsest ajaloolisest kontekstist ja püsida selle asemel
+          koodina, testidena, spetsifikatsioonidena, juhistena, tõenduse semantikana ja selgelt
+          lahendamata küsimustena?
+        </p>
+        <p>
+          Neli alaküsimust teravdavad seda. Esiteks: kas ajalooteadlik meetodikujundus annab
+          parema operatiivse meetodi kui ajaloopime tuletus lõppseisust? Teiseks: millal võib
+          ajalugu lahkuda tehisintellekti aktiivsest operatiivsest kontekstist, sest selle
+          õppetunnid on koondatud mujale? Kolmandaks: millal tuleks arhiveeritud päritolu
+          meetodirevisjoniks taasaktiveerida? Neljandaks: kas ulatuse ja raami vead saab
+          teisendada püsivateks kaitsepiireteks ilma neid tekitanud kohalikke asjaolusid üle
+          üldistamata?
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Tõendusbaas</h2>
+        <p>
+          Siinne tõendus ei ole kirjandusülevaade, vaid kaks versioonihalduses hoitud inimese ja
+          tehisintellekti trajektoori. Need on avaldatud kahe iseseisva kogumina COINi
+          uurimiskaustas — mõlemad lamendatud eksportidena, millel on oma vooruregister ja
+          voorupõhised kirjed, esimesel juhul ka mõõdikute tabel ja retrospektiivne liigitus.
+          Esimene kogum kirjeldab vaatleja-erimeelsuse raamistikku ennast: üldist ja osaliselt
+          enesele viitavat juhtumit, kus uurimus vaatleb omaenda salvestamist kahekümne vooru
+          jooksul, millesse panustasid kaks agenti. Teine on avalik lugemiskope rakenduslikust
+          georuumilisest kogumist Fazenda Sucuri kohvisõelumiseks Euroopa Liidu raadamisvabade
+          toodete määruse (EUDR) alusel; COINi koopiast on välja jäetud genereeritud PDF-, JSON-,
+          GeoJSON- ja raportiartefaktid. Oluline ei ole kummaski voorude arv, vaid nähtavad
+          teisendused: ajalooliselt salvestatud leiud, mida hiljem esitatakse koodi, testide,
+          spetsifikatsioonide, validaatorite, agendijuhiste, tõenduse semantika või selge
+          määramatusena.
+        </p>
+        <p>
+          Enesele viitav kogum salvestab meetodi kujunemise päritolu otse. Neljandas voorus ütleb
+          logi, et inimjuhis laiendas uurimisobjekti vaatleja erimeelsuselt väite arenemisele,
+          muutes erimeelsuse viieastmelise trajektoori üheks etapiks; muudatus on kirja pandud
+          raamisiirdena koos sisuräside ja asenduslinkidega igal mõjutatud failil. Inimese enda
+          raam ei olnud fikseeritud sisend, vaid miski, mida uurimus pidi parandama, ning see
+          parandus on kontrollitav, mitte lihtsalt jutustatud. Hilisemad voorud näitavad, kuidas
+          leiud suunati operatiivsetesse sihtkohtadesse: ajutised tavad muutuvad normatiivseks ja
+          seejärel käivitatavaks generaatori ja validaatorina ning pärast alusauditit parandatakse
+          spetsifikatsiooni nii, et iga tulevane kogum peab avalikustama Wolframi vaatleja-teooria
+          kasutamise formaalse analoogiana, mida jõustavad validaatori tagasilükkamistingimused,
+          mitte hea tahe.
+        </p>
+        <p>
+          EUDR-i kogum pakub avaliku töönäite parandatud dekompositsioonist rakenduslikus
+          sõelumisülesandes. Selle voorud näitavad, kuidas ülevaatuseleiud muutuvad konkreetseteks
+          parandusteks: Sentinel-2 visuaalne defekt parandatakse, AOI haldussildid ja raportikaardi
+          käitumine korrigeeritakse, kohvi ajaline mask parandatakse nii, et praegune kohv säilitab
+          lähtejalajälje, samal ajal kui „uus kultuur pärast lähteperioodi” jääb eraldi, ning
+          korduv piirkondliku ülevaate lünk viiakse renderdajasse ja avaldamislepingusse. Veel üks
+          küsimus paljastab taandamistasandi, mis on endiselt saadaval. Määrus määratleb
+          raadamisvaba tingimuse kõigi asjakohaste kaupade jaoks selle järgi, kas kaubad toodeti
+          maal, mida ei ole pärast 31.&nbsp;detsembrit&nbsp;2020 raadatud, ning artikkel&nbsp;3
+          keelab selliste kaupade liidu turule laskmise, kui see tingimus ei ole täidetud. Nii
+          loetuna laguneb meetod puhtamalt kui üheosaline „kohvimask” lubab:
+        </p>
+        <ul>
+          <li>
+            <strong>Kiht A — kaubast sõltumatu maatõendus.</strong> Kas maa oli mets? Kas pärast
+            piirkuupäeva toimus raadamine? Millised andmestikud seda toetavad või vaidlustavad?
+          </li>
+          <li>
+            <strong>Kiht B — tootmisseos.</strong> Kas see on maatükk või tootmisüksus, kus
+            tootega seotud asjaomane kaup tegelikult toodeti? EUDR-i hoolsuskohustus nõuab
+            tootmiskoha geolokatsiooni, seega ei piisa üksnes tähelepanekust, et kusagil toimus
+            raadamine.
+          </li>
+          <li>
+            <strong>Kiht C — kaubaspetsiifiline tõendus.</strong> Kohvi puhul on allikapõhine
+            kaubatõendus oluline: ainult FDP, ainult MapBiomas ja mõlema allika kokkulangevus ei
+            saa anda sama garantiid pelgalt seetõttu, et kõik kirjeldavad kohvi.
+          </li>
+        </ul>
+        <p>
+          See on hea juhtum just seetõttu, et keeldub muutmast sõelumissignaali enamaks, kui
+          tõendus toetab. Salvestatud jada laseb kontrollida, kuidas allikaspetsiifilist
+          kohvieeldust parandati, miks visuaalsed ja raportivead olid olulised ning kuidas need
+          leiud teisendati püsivamateks operatiivseteks piiranguteks. Parandus on nähtav kogumi
+          enda artefaktides: FDP teatab 0,27 hektarist pärast 2020. aastat tekkinud lähteperioodi
+          metsa kadu, mis lõikub uue kohviga, samas kui MapBiomas ja mõlema allika kokkulangevuse
+          kiht teatavad sama teisenduslõike puhul 0,0 hektarit. Kogum hoiab neid allikate
+          erimeelsusena, mitte arvuna, mis keskmistatakse ära. Selle praegune vastus jääb
+          <code>human_review_required</code> ja <code>pinned-not-reproduced</code> ning see ütleb
+          otse, et tulemus on sõelumislipp, mitte õiguslik mittevastavuse määrang.
+        </p>
+        <p>
+          Siin võtab uurimus üle nõude, mille ajendas varasem uurimus, mitte ei leiuta seda uuesti.
+          FDP, MapBiomase ja mõlema allika kihtide säilitamine erimeelsusena — mitte nende
+          keskmistamine üheks arvuks — ning keeldumine lasta sõelumislipul asendada õiguslikku
+          määrangut on näited dokumenteeritud ja kokkusurumata erimeelsusest, mida „Tõendus
+          kõigepealt, konsensus hiljem” järgi peaks konfliktikogum säilitama. Too uurimus annab
+          epistemilise surve; käesolev uurib, kuidas korduv uurimistöö saab muuta sellise surve
+          käivitatavaks meetodiks — allikate eraldamiseks, ajalise maskimise reegliteks,
+          validaatoriteks, sõelumisloogikaks, inimülevaatuse väravateks ja agendijuhisteks, mis
+          hoiavad kihid ehituslikult eraldi, mitte lihtsalt meeldetuletuse najal. See, et tulemusena
+          tekkiv kood käivitub deterministlikult, ei tõesta iseenesest, et kihid on õigesti
+          tõmmatud; deterministlik protseduur ja korrektne tõendusskeem on eraldi omadused ning
+          kui raam ise on vale, on kaalul ainult teine.
+        </p>
+        <p>
+          Seega toetab tõendus kitsast väidet: teatud ajalukku salvestatud leiud esitati hiljem
+          operatiivsetes artefaktides. See ei tõesta tugevamat kontrafaktilist väidet, et samu
+          artefakte ei oleks saanud tuletada lõplikust tõendusest ja probleemiseisust ilma
+          salvestatud trajektoorita.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Allikate hindamine</h2>
+        <p>
+          Kaks commit'itud kogumit on mõne väite jaoks tugev tõendus ja teiste jaoks nõrk tõendus
+          ning seda erinevust tuleb hoida selgesõnalisena. Logid salvestavad nähtavad
+          seisundisiirded: asendused, parandused, piirimuutused ja artefaktid, mida iga voor
+          tekitas. Need ei sisalda kogu inimese mõttekäiku ega mudeli sisemist arutlust. Need on
+          uurimisseisundi arenemise kirjed, mitte tunnetuse transkriptid.
+        </p>
+        <p>
+          See piirab seda, mida tõendus saab toetada. See saab toetada väiteid selle kohta, kuidas
+          meetod muutus ja mida iga muutus andis. See ei saa toetada täielikku rekonstruktsiooni
+          sellest, miks kumbki osapool igas sammus midagi uskus, ega tõendada, et ligipääs
+          trajektoorile oli praeguse operatiivse meetodi tuletamiseks vajalik. Iga järeldus, mis
+          toetub neile tugevamatele väidetele, loeb logist rohkem välja, kui logi sisaldab.
+        </p>
+        <p>
+          Enesele viitav kogum on selle piiri suhtes ebatavaliselt avameelne, mis tugevdab seda
+          tõendusena, mitte ei nõrgesta. Selle mõõdikute tabel arvutab üleminekud, mida ta saab
+          mõõta, ning märgib terve vaatlejatevaheliste kaugusmõõdikute perekonna mõõtmatuks,
+          andes igal juhul põhjuse: olemas on ainult üks vaidlustusvoor, ajatempliga konkureerivaid
+          ennustusi ei salvestatud, ühise üksuste kogumi sõltumatuid paarismärgiseid ei hoitud.
+          See jätab isegi ühe vooru oma mõõtmissihist välja, et vältida iseenda ringikujulist
+          mõõtmist. Kirje, mis keeldub väidetest, mida ta toetada ei saa, on usaldusväärsem nende
+          väidete suhtes, mida ta toetab. Rakenduslik kogum näitab sama distsipliini teisel teljel:
+          selle praegune vastus on märgitud inimülevaatust vajavaks ja selle päritolu kinnitatuks,
+          kuid mitte taasesitatuks — artefaktid ja räsid kontrolliti, kuid kvalifitseeruvat
+          sõltumatut korduskäivitust ei tehtud — nii et lugejale öeldakse täpselt, kui kaugele
+          tõendus on kontrollitud.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Konkureerivad tõlgendused</h2>
+        <p>
+          Päritolu, väline mälu ja koondamise alusmaterjal ei peaks olema sama objekti üksteist
+          välistavad tõlgendused. Need kirjeldavad eri tasanditel eri funktsioone.
+          <strong>Päritolu</strong> nimetab seda, mis salvestatud trajektoor on: ajalooline kirje
+          sellest, kuidas praegune seisund tekkis. <strong>Väline mälu</strong> nimetab üht viisi,
+          kuidas hilisem osaline võib seda kirjet kasutada: varasemate seisundite, eelduste,
+          tagasilükatud alternatiivide või lahendamata küsimuste vaatamiseks.
+          <strong>Sisend koondamiseks või revisjoniks</strong> nimetab täiendavat rolli: materjali,
+          mida meetodi arenemise protsess tarbib, kui otsustab, mis kuulub praegusesse
+          operatiivsesse meetodisse.
+        </p>
+        <p>
+          Metodoloogiline objekt ei ole seega ajaloo pelk olemasolu. Pikk logi ei ole meetod
+          lihtsalt seetõttu, et seda saab uuesti lugeda. Ka deterministlik protsess ei ole
+          valideeritud pelgalt seetõttu, et mõni varasem voor selle tekitas. Kandidaatne
+          metametood on teisendusprotokoll: liigita leid, otsusta, kas see üldistub, vali selle
+          sihtkoht, testi seda enne normatiivseks muutmist, arhiveeri ülejäänu ning ava päritolu
+          uuesti, kui hilisem tõrge teeb meetodi algupära taas asjakohaseks.
+        </p>
+        <p>
+          See lahendab varasema mustandi mitmetähenduslikkuse. Küsimus ei ole selles, kas
+          trajektoor on päritolu või meetod. See on päritolu. Küsimus on selles, kas
+          distsiplineeritud protsess saab kasutada seda päritolu parema operatiivse meetodi
+          kujundamiseks või parandamiseks, kui oleks võimalik luua ainult praegusest lõppseisust.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Kriitiline süntees</h2>
+        <p>
+          Salvestatud trajektoorid toetavad väite kitsamat ja kaitstavamat versiooni, kui varasem
+          artikkel eeldas. Kaks kogumit näitavad, et salvestatud uurimine saab dokumenteerida
+          meetodi kujunemist ja parandamist ning et selle ajaloo leide saab hiljem esitada koodi,
+          testide, spetsifikatsioonide, validaatorite, juhiste, tõenduse semantika ja selge
+          määramatusena. EUDR-i jada annab sisulise operatiivse tulemuse: allikate eraldamise,
+          ajalise maski reeglid, raportivalideerimise, inimülevaatuse väravad ning kihi A / kihi B /
+          kihi C dekompositsiooni.
+        </p>
+        <p class="statement-block">
+          uurimus &rarr; salvestatud päritolu &rarr; meetodi arenemine/revisjon &rarr; operatiivne
+          meetod<br>
+          operatiivne meetod + uus tõendus &rarr; tulemus
+        </p>
+        <p>
+          See jada on keskne mudel. Salvestatud trajektoor kuulub meetodi kujunemise päritolu
+          juurde. Meetodi arenemise või revisjoni samm otsustab, mida saab vastutustundlikult
+          operatiivsesse meetodisse üle viia. Rutiinne täitmine peaks tavaliselt lähtuma
+          operatiivsest meetodist ja praegusest või uuest tõendusest, mitte kogu uurimise
+          taasläbimängimisest. Arhiveeritud päritolu jääb kättesaadavaks siis, kui vastuolu,
+          raamimuutus, allika autentsuse tõrge, seletamata piirang või uus juhtumiklass muudab
+          revisjoni vajalikuks.
+        </p>
+        <p>
+          Arhiveerimiseks tekib täiendav põhjus siis, kui hilisem uurimus varasema järeldusega
+          sisuliselt vastuollu läheb, selle kehtetuks teeb või selle ümber raamib. Ahel võib olla
+          rutiinse täitmise jaoks taandatav, jäädes samal ajal auditi jaoks mittekõrvaldatavaks.
+          Kui üks uurimisseisund võttis väite vastu tõenduse E<sub>1</sub>, raami F<sub>1</sub> ja
+          protseduuri P<sub>1</sub> alusel, samas kui hilisem seisund lükkas selle tagasi tõenduse
+          E<sub>2</sub>, raami F<sub>2</sub> ja protseduuri P<sub>2</sub> alusel, ei pruugi lõplik
+          seisund üksi näidata, kas muutus tulenes muutunud tõendusest, parandatud protseduurist,
+          muutunud eeldustest või ulatusest või muutumatu tõenduse teistsugusest tõlgendusest.
+          Piisava ülemineku säilitamine mõlema seisundi rekonstrueerimiseks võimaldab epistemilist
+          rekonstrueeritavust: arutlusseisundeid saab läbida ja uuesti käivitada — hilisem osaline
+          saab faktikontrolli konkureeriva tõenduse, eelduste ja protseduuri alusel uuesti teha,
+          tuvastada, mis muutust ajendas, ning otsida tõendust, mis suudaks tõlgenduste vahel
+          eristada — ilma et asendatud järeldus taastataks võrdsele staatusele. See ei nõua, et
+          iga asendatud artefakt jääks aktiivsesse konteksti. See nõuab sisuliselt vaidlustatud
+          üleminekute taastatavat kirjet.
+        </p>
+        <p>
+          See annab kogumiajaloo funktsiooni, mida praegune peaseis ei saa pakkuda. Konfliktikogum
+          saab säilitada lahendamata erimeelsuse vaatlejate vahel ühes uurimisseisundis;
+          versioonitud kogumiajalugu saab säilitada sisuliselt asjakohase erimeelsuse
+          uurimisseisundite vahel, kui asendatud seisundid ja ülemineku põhjused jäävad
+          rekonstrueeritavaks. Ilma selle tingimuseta on ajalugu lihtsalt jada, milles viimane
+          seisund kirjutab varasema epistemilise tähenduse üle, ning siis ei takista kumbki vorm
+          hilisemat konsensust või deterministlikku rakendust kustutamast argumente, millest see
+          tekkis.
+        </p>
+        <p>
+          Säilitamine üksi ei muuda kogumiajalugu meetodiks. Paljas asendatud seisundite jada on
+          päritolu — see salvestab, kuidas praegune seisund tekkis. Metodoloogiliseks teeb selle
+          distsipliin, mis juhib, mida teha seisunditevahelise sisulise vastuoluga: rekonstrueerida
+          konkureerivad väited, eraldada erinev tõendus, eeldused ja protseduur, otsida tõendust,
+          mis suudaks nende vahel eristada, ning seejärel kinnitada asendus, säilitada konflikt või
+          avada varasem seisund uuesti. See nõuab, et säilitatud ajalugu eristaks asendust
+          vastuolust ja ümberraamimisest, mitte ei suruks neid kokku ühte lineaarsesse ahelasse,
+          sest paljas „asendab” link kodeerib vaikimisi viimase seisundi raami edenemisena.
+          Ajalooline kirje on päritolu; selle kirje distsiplineeritud kasutamine
+          rekonstrueerimiseks, võrdlemiseks, eristamiseks, asendamiseks, konflikti säilitamiseks
+          või uuesti avamiseks on meetod.
+        </p>
+        <p>
+          Sama tõendus ei näita, et trajektoori salvestamine annab parema meetodi, kui oleks
+          võimalik tuletada lõplikust tõendusest üksi. Samuti ei näita see, et arhiveeritud
+          päritolu parandab hilisemat diagnoosi või remonti sisuliselt. Olemasolev tõendus ei
+          erista seega kujunemisväidet selle kontrafaktilisest negatiivsest vastest. See on piir,
+          kuid viljakas piir: negatiivne muutub empiiriliselt testitavaks, mitte pelgalt retooriliselt
+          kättesaadavaks.
+        </p>
+        <p>
+          Järeldus on seetõttu tagasihoidlik. Trajektoori tuleks mõista eeskätt meetodi kujunemise
+          päritoluna. Kandidaatne metodoloogiline panus on distsiplineeritud protsess, mis muudab
+          valitud ajaloolised leiud praeguseks operatiivseks meetodiks ja avab selle ajaloo uuesti,
+          kui revisjon muutub vajalikuks.
+        </p>
+        <p>
+          Koos „Tõendus kõigepealt, konsensus hiljem” artikliga loetuna osutavad kaks juhtumit
+          kahele seotud, kuid eristatud tasandile, mitte ühele. Objektitasand, mida too uurimus
+          määratleb, kulgeb nii: keskkonnaväide → tõendus → erimeelsus ja vaidlustamine → ülevaatus
+          → juhtimisotsus või võimalik konsensus. Meetoditasand, mida uuritakse siin, kulgeb nii:
+          inimese ja tehisintellekti uurimus → raami-, skeemi- või rakendusvea tuvastamine →
+          parandatud tõendiarhitektuur → juhised, testid, spetsifikatsioonid või deterministlik
+          protseduur seal, kus parandus on piisavalt kontrollile vastu pidanud, et seda õigustada.
+          Neid kahte tasandit ei tohi kokku sulatada. Tõenditaristu piirab, mida juhtimine saab
+          vastutustundlikult otsustada; uurimine ja parandus piiravad, mida tõenditaristu ise tohib
+          eeldada. Koos ei moodusta arhitektuur pöördumatut torujuhet, vaid iteratiivse sõltuvuse:
+          inimese ja tehisintellekti uurimine ja parandamine → parandatav tõendiarhitektuur →
+          kontrollitav tõendus ja erimeelsus → ülevaatus ja vaidlustamine → juhtimisotsus või
+          võimalik konsensus. Allavoolu tõenduskonfliktid võivad paljastada arhitektuuri defekte,
+          avades uurimise uuesti ning muutes reegleid, skeeme, juhiseid, teste või
+          deterministlikke protseduure. EUDR-i kogumi enda praegune seis —
+          <code>human_review_required</code> ja <code>pinned-not-reproduced</code> — näitab, et
+          jada peatati tahtlikult ülevaatusel, mitte ei viidud otsuseni.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Kontrafaktilised testid</h2>
+        <p>
+          COINi uurimiskaust määratleb kolm tulevast testi. Neid ei ole veel käivitatud.
+        </p>
+        <ul>
+          <li>
+            <strong>Ajalooteadlik versus ajaloopime meetodikujundus.</strong> Anda võrreldavatele
+            uurijatele sama probleem ja lõplik tõendus, kuid ainult ühele tingimusele salvestatud
+            trajektoor. Võrrelda dekompositsiooni, protseduure, valideerimisreegleid, juhiseid,
+            kaitsepiirdeid ja avatud küsimusi, mida nad tuletavad.
+          </li>
+          <li>
+            <strong>Ainult praeguse meetodiga operatiivne täitmine.</strong> Anda agendile praegune
+            operatiivne meetod koos uue tõendusega, ilma ajalooliste voorudeta, ja testida, kas
+            ülesannet saab õigesti täita. Positiivne tulemus näitaks õnnestunud koondamist, mitte
+            seda, et ajalugu ei omanud avastamisväärtust.
+          </li>
+          <li>
+            <strong>Meetodirevisjon arhiveeritud päritoluga ja ilma selleta.</strong> Tuua sisse
+            vastuolu, raamitõrge, allika autentsuse probleem, seletamata reegel või uus
+            juhtumiklass. Võrrelda revisjoni ainult praeguse meetodiga revisjoniga, mis kasutab
+            praegust meetodit koos arhiveeritud päritoluga.
+          </li>
+        </ul>
+      </section>
+
+      <section class="article-section">
+        <h2>Rakendustee</h2>
+        <p>
+          Väide eeldab operatiivset elutsüklit. Esiteks salvesta seisundisiire. Teiseks liigita
+          leid: tõendus, raam, eeldus, protseduur, allikasemantika, juhis, määramatus või allika
+          autentsuse mure. Kolmandaks otsusta, kas see üldistub, jääb kohalikuks või on
+          üldistamiseks ebaturvaline. Neljandaks kaardista see operatiivsesse sihtkohta: kood,
+          test, validaator, spetsifikatsioon, tehisintellekti juhis, tõenduse semantiline reegel,
+          selgelt lahendamata küsimus või ainult päritolukirje.
+        </p>
+        <p>
+          Viiendaks kontrolli enne, kui muudad taandamise normatiivseks. Deterministlik koondamine
+          ei tõenda epistemilist korrektsust; fabritseeritud sisendi ja allika autentsuse õppetund
+          seisnebki selles, et korratavus võib säilitada kehtetu tõendusseisundi. Kuuendaks eemalda
+          edukalt koondatud ajalugu võimaluse korral rutiinsest tehisintellekti kontekstist.
+          Seitsmendaks arhiveeri trajektoor päritoluna. Kaheksandaks ava see uuesti, kui tõrked,
+          raamimuutused, vastuolud, allika autentsuse probleemid või seletamata operatiivsed
+          piirangud õigustavad meetodirevisjoni.
+        </p>
+        <p>
+          Raami- ja skeemiparandused vajavad selles elutsüklis erilist hoolt. Need muudavad seda,
+          mida süsteem käsitleb kogumi, allika, väite, vaatleja, tõenduskihi, valideerimispiiri või
+          sõelumiskategooriana, mitte ei muuda pelgalt väärtust olemasolevas kategoorias. Enesele
+          viitava kogumi neljanda vooru uurimisobjekti laiendamine kvalifitseerub. Kohvi ajalise
+          maski parandus kvalifitseerub ainult selles kitsamas tähenduses: see muutis suhet
+          lähteperioodi kohvi, praeguse kohvi ja pärast lähteperioodi tekkinud uue kohvi vahel.
+          Sellised parandused peaksid jääma uurimisjäljes kontrollitavaks, kui need selgitavad
+          sisuliselt, miks praegune meetod näeb välja nii, nagu näeb, isegi pärast seda, kui nende
+          õppetunnid on liikunud praegustesse operatiivsetesse artefaktidesse.
+        </p>
+        <p>
+          Tehisintellekti rolli kohta järgneb kaasnev disainipõhimõte. See ei peaks piirduma
+          probleemi lahendamisega nii, nagu see on püstitatud. See peaks ka testima, kas püstitatud
+          dekompositsiooni toetab valitsev tõendus ja kas vaja on üldisemat või täpsemat sõnastust.
+          Georuumiline repositoorium liigub juba selles suunas: selle agendileping nõuab
+          sõsaraajaloo läbivaatust, keelates samal ajal andmestikuspetsiifiliste lävendite,
+          kaubaspetsiifilise järeldamise, huviala eelduste, allikahierarhiate, õigusliku tõlgenduse
+          või tõenduse semantika vaikse üldistamise.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Piirangud</h2>
+        <p>
+          See artikkel ei mõõda, kas ligipääs salvestatud ajaloole parandab meetodikujundust
+          võrreldes ajaloopimeda tuletusega, kas arhiveeritud päritolu parandab hilisemat
+          meetodirevisjoni, mitu ajaloolist vooru tehisintellekt veel vajab pärast heade juhiste
+          olemasolu või kas ühest trajektoorist tuletatud juhised kanduvad üle teisele. See tugineb
+          kahele juhtumile ega saa neist üldistada meetodiseadust.
+        </p>
+        <p>
+          Samuti hoiab see tahtlikku distantsi Wolframi sõnavarast. Sellised mõisted nagu
+          arvutuslik taandamatus ja piiratud vaatleja on kasulikud nimetamiseks, miks protsess võib
+          lühendamisele vastu seista ja miks osaline vaatleja näeb jämedateralist maailma. Siin
+          kasutatakse neid sõnavarana, mitte tõendatud seletusena. Eriti ei ole avastatud
+          deterministliku taandamise puudumine tõend tegelikust taandamatusest; see võib tähendada
+          ainult seda, et taandamist ei ole veel leitud. Deterministlik täitmine ja epistemiline
+          korrektsus on eraldi omadused ning neid käsitletakse kogu artiklis sellistena.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Avatud küsimused</h2>
+        <p>
+          Kas ajalooteadlik meetodikujundus saab ületada ajaloopimedat tuletust lõplikust
+          tõendusest ja probleemiseisust?
+        </p>
+        <p>
+          Kui operatiivne meetod on olemas, millised ajaloolised materjalid võivad lahkuda
+          aktiivsest tehisintellekti kontekstist ilma täitmiskvaliteeti langetamata?
+        </p>
+        <p>
+          Kui meetod ebaõnnestub, kas arhiveeritud päritolu parandab diagnoosi ja remonti
+          sisuliselt?
+        </p>
+        <p>
+          Kas ühest trajektoorist destilleeritud juhised kanduvad kasulikult üle teistsugusele
+          probleemile või kodeerivad need konteksti, mis ei rända?
+        </p>
+        <p>
+          Kuidas saab tuvastada, kui kuhjunud juhised ise on hakanud kodeerima aegunud eeldusi?
+        </p>
+        <p>
+          Kas agent saab usaldusväärselt pakkuda, et korduv arutlustoiming peaks nüüd muutuma
+          deterministlikuks koodiks — ning kas teda saab usaldada otsustama, millal see ei peaks
+          nii minema?
+        </p>
+        <p>
+          Kui hilisem uurimus läheb varasema järeldusega sisuliselt vastuollu, teeb selle kehtetuks
+          või raamib selle ümber, milline minimaalne ajalooline seisund tuleb säilitada, et
+          eristada tõenduspõhist, protseduuripõhist ja raamipõhist muutust ilma kogu trajektoori
+          säilitamata?
+        </p>
+      </section>
+
+      <section class="article-section research-trail" aria-labelledby="research-trail-title">
+        <div class="research-trail-header">
+          <h2 id="research-trail-title">Uurimisjälg</h2>
+          <p class="research-trail-intro">
+            See osa hoiab avaldatud artikli seotuna selle taga olevate materjalidega. Selle
+            uurimuse puhul näitab jälg lisaks voorudele ka seda, mida iga oluline jada lõpuks
+            tekitas: koodi, teste, spetsifikatsioone, agendireegleid, säilitatud määramatust või
+            varasema raami tagasilükkamist. Samuti salvestab see kontrafaktilised testid, mida
+            oleks vaja päritolu eristamiseks tõendatud meetodikujunduslikust eelisest. Trajektoorid
+            on siin commit'itud iseseisvate kogumitena; rakenduslik EUDR-i koopia jätab tahtlikult
+            välja genereeritud PDF-, JSON-, GeoJSON- ja raportiartefaktid.
+          </p>
+        </div>
+
+        <dl class="research-trail-list">
+          <div class="research-trail-item">
+            <dt>Repositoorium</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin" target="_blank" rel="noopener noreferrer">
+                COIN GitHubis
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Versioonitud kirje, milles paiknevad uurimus, revisjonid ja seotud materjalid.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Seotud uurimus</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="evidence-first-consensus-later.html">
+                Tõendus kõigepealt, konsensus hiljem
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Väidab tõendus-esmase juhtimise nõuet — kontrollitav tõendus ja struktureeritud
+              erimeelsus enne konsensust — mis motiveerib osa käesoleva uurimuse metodoloogilisest
+              küsimusest: kuidas tõendiarhitektuuri ennast saab inimese ja tehisintellekti
+              uurimise kaudu avastada, parandada ja vormistada.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Uurimiskaust</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure" target="_blank" rel="noopener noreferrer">
+                inquiry-to-procedure kaust
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Töökataloog, mis sisaldab selle uurimuse väidete registrit, kriitilist ülevaadet ja
+              trajektoorimärkmeid.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Üldine trajektoor (kogum)</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer">
+                framework-self kogum
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Üldine, osaliselt enesele viitav juhtum. Lähterepositoorium on privaatne, seega on
+              kahekümnevooruline enesekirjelduskogum — register, voorupõhised kirjed ja mõõdikud —
+              commit'itud siia avaliku tõendusena.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Rakenduslik trajektoor (kogum)</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">
+                eudr-coffee-brazil-fazenda-sucuri kogum
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Rakenduslik juhtum: Fazenda Sucuri kohvisõelumine, allikaspetsiifiline kattuvustõendus,
+              ajalise maski parandus ja säilitatud inimülevaatus. See COINi koopia peegeldab
+              avaliku lähtekogumi lugemisfaile, jättes välja genereeritud PDF-, JSON-, GeoJSON- ja
+              kanoonilised raportifailid.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Kogumi arengu analüüs</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundle-evolution-analysis.md" target="_blank" rel="noopener noreferrer">
+                bundle-evolution-analysis.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Kahe trajektoori kogumipõhine lugemine: millised siirded tekitasid koodi, millised
+              püsivaid juhiseid ja millised jäävad lahendamata.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Väidete register</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/claims.md" target="_blank" rel="noopener noreferrer">
+                claims.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Uurimusest tuletatud väidete struktureeritud loend, kus väited on märgitud
+              allikapõhiseks, järelduslikuks või edasist kontrolli vajavaks.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Kriitiline ülevaade</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/critical-overview.md" target="_blank" rel="noopener noreferrer">
+                critical-overview.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Tööhinnang sellele, mida kaks juhtumit toetavad, kus väide liialdab ja millised
+              juhtumi osad jäävad vaidlustatuks.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Kontrafaktilised testid</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">
+                counterfactual-tests.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Pakutud, kuid veel käivitamata testid ajalooteadliku kujunemise, operatiivse
+              piisavuse ja arhiveeritud päritoluga revisjoni kohta.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Koostatud väljund</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="inquiry-to-procedure.html">
+                Avalik artikkel
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Käesolev avaldatud süntees, mis on ette valmistatud üldlugejale.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Viimati uuendatud</dt>
+            <dd class="research-trail-value research-trail-date">
+              <time datetime="2026-08-20">20. august 2026</time>
+            </dd>
+            <dd class="research-trail-note">
+              Selle mustandversiooni viimane nähtav muutmiskuupäev.
+            </dd>
+          </div>
+        </dl>
+      </section>
     </article>
   </main>
 
@@ -57,7 +725,9 @@
     <div class="wrap footer-grid">
       <div>
         <p class="eyebrow">ConnectedNature</p>
-        <p class="footer-note">Avalik süntees, mis on seotud oma tööjäljega.</p>
+        <p class="footer-note">
+          Avalik süntees, mis on seotud oma tööjäljega.
+        </p>
       </div>
       <nav class="footer-nav" aria-label="Jalus">
         <a href="../index.html">Avaleht</a>
