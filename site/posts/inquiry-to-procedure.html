@@ -66,9 +66,9 @@
           formation. Its possible methodological value lies in whether a disciplined
           method-evolution process can learn from that provenance and compile selected findings into
           a current operational method: code, tests, validators, specifications, AI instructions,
-          evidence semantics, and explicit unresolved questions. Successful reductions should leave
-          active historical context where possible, while the archived history remains available for
-          audit and later method revision.”
+          evidence semantics, and explicit unresolved questions. Successful reductions should allow
+          reduced lessons to leave active historical context where possible, while the archived
+          history remains available for audit and later method revision.”
         </p>
         <p>
           The statement is deliberately more careful than the earlier version of this article. It
@@ -102,16 +102,15 @@
         </p>
         <p>
           This article does not start from a blank evidence architecture. The preceding inquiry in
-          this sequence, Evidence First, Consensus Later, argued that Earth-system digital twins,
-          AI agents, blockchain-based provenance mechanisms, and DAO-style governance layers should
-          not silently convert contested environmental claims into authoritative conclusions, and
-          that inspectable evidence and structured disagreement should stand upstream of consensus.
-          It left open a different problem: the evidence architecture through which that inspection
-          and disagreement are supposed to run is not necessarily correct in advance. Categories,
-          bundle boundaries, validation rules, source roles, and agent instructions may initially be
-          wrong. This article investigates how human–AI inquiry can discover, correct, and formalise
-          that architecture — a methodological question with its own scope, not an application of
-          the earlier one.
+          this sequence, Evidence First, Consensus Later, examined the object- or world-facing
+          level: how environmental observations, evidence, claims, disagreement, review, and
+          governance can be represented without prematurely converting contestation into authority
+          or consensus. This inquiry moves one level upstream. The evidence architecture that
+          produces that representation is itself provisional and corrigible. Categories, bundle
+          boundaries, validation rules, source roles, and agent instructions may initially be wrong,
+          and making an incorrect architecture reproducible, deterministic, or inspectable does not
+          make it correct. This article therefore asks how human–AI inquiry can discover, repair,
+          and formalise that architecture as operational method.
         </p>
       </section>
 
@@ -257,6 +256,33 @@
           <code>V_t</code> is the verdict or determination; and <code>Δ_t</code> is the stated
           reason for the transition. This is a candidate minimum reconstructible state from the
           current inquiry, not a validated universal standard.
+        </p>
+        <p>
+          A current bundle state can therefore be read, in the deliberately cautious and
+          non-real-time sense used here, as a twin-like representation of the inquiry at that point.
+          It represents a research state: claim, evidence, frame, procedure, determination, and
+          transition rationale. It is not a literal copy of cognition, and it is not a copy of the
+          physical world. The analogy is structural. The
+          <a href="https://www.digitaltwinconsortium.org/initiatives/the-definition-of-a-digital-twin/" target="_blank" rel="noopener noreferrer">Digital Twin Consortium's definition</a>
+          links digital twins to integrated data-driven representations with synchronization at a
+          specified frequency and fidelity; no claim is made here that an OKF bundle satisfies that
+          industrial definition, and no automatic real-time synchronization is assumed.
+        </p>
+        <p>
+          The versioned sequence connecting such states is closer to a
+          <a href="https://www.digitaltwinconsortium.org/2020/12/the-case-for-the-digital-thread/" target="_blank" rel="noopener noreferrer">digital-thread-like trajectory</a>:
+          it preserves how the representation changes across successive human–AI interactions.
+          Human–AI inquiry is part of the update mechanism. It can discover new data, revise a
+          method, expose a frame error, alter source semantics, or reopen a previous conclusion.
+          The point is not to introduce Digital Twin theory as another foundation of this inquiry,
+          but to name the representational pattern that motivated the question.
+        </p>
+        <p>
+          This also clarifies the bridge from the Fifth Inquiry to this one. The world-facing
+          evidence representation and the research-facing method representation are coupled:
+          object-level evidence conflicts or validation failures can reopen method-level inquiry,
+          while method-level corrections change how later object-level evidence is selected,
+          processed, represented, and interpreted.
         </p>
         <p>
           The objective is not to preserve every prompt, transcript, intermediate thought, or
@@ -498,20 +524,31 @@
         </p>
         <p>
           Read alongside Evidence First, Consensus Later, the two cases point to two related but
-          distinct levels rather than one. The object level, which that inquiry specifies, runs:
-          environmental claim → evidence → disagreement and contestation → review → governance
-          decision or possible consensus. The method level, examined here, runs: human–AI inquiry →
-          detection of framing, schema, or implementation error → revised evidence architecture →
-          instructions, tests, specifications, or deterministic procedure where the correction has
-          survived enough scrutiny to justify it. The two levels must not be collapsed. Evidence
-          infrastructure constrains what governance can responsibly decide; inquiry and correction
-          constrain what the evidence infrastructure itself is permitted to assume. Put together,
-          the combined architecture is not an irreversible pipeline but an iterative dependency:
-          human–AI inquiry and correction → corrigible evidence architecture → inspectable
-          evidence and disagreement → review and contestation → governance decision or possible
-          consensus. Downstream evidence conflicts can expose defects in the architecture, reopening
-          inquiry and changing rules, schemas, instructions, tests, or deterministic procedures. The
-          EUDR bundle's own current position — <code>human_review_required</code> and
+          distinct levels rather than one. At the object level, the sequence is world or
+          environmental claim → observations and evidence → inspectable evidence state →
+          disagreement and contestation → review → governance decision or possible consensus. At
+          the method level, the sequence is human–AI inquiry → detection of evidence, frame, schema,
+          or procedure error → revised method or evidence architecture → tests, validators,
+          specifications, instructions, and deterministic procedures where justified.
+        </p>
+        <p>
+          The two levels are feedback-coupled rather than merely sequential. Object-level conflict,
+          new evidence, or validation failure can reopen method-level inquiry. Method-level
+          correction then changes future object-level evidence construction, processing, and
+          interpretation. That is why a deterministic pipeline is not enough: if the wrong frame has
+          been made reproducible, reproducibility stabilizes the error. Evidence infrastructure
+          constrains what governance can responsibly decide, while inquiry and correction constrain
+          what the evidence infrastructure itself is permitted to assume.
+        </p>
+        <p>
+          The architecture also keeps different forms of “settled” outcome apart. An empirical issue
+          may be resolved when discriminating evidence or a defensible reference observation strongly
+          settles it. A reasoning pattern may be methodologically reduced when repeated inquiry has
+          been compiled into a sufficiently reliable operational procedure. A governance question
+          may be institutionally or normatively settled when a decision is adopted despite residual
+          value trade-offs or underdetermination. Method reduction, empirical convergence, and
+          governance consensus are related, but they are not the same process. The EUDR bundle's own
+          current position — <code>human_review_required</code> and
           <code>pinned-not-reproduced</code> — shows the sequence deliberately stalled at review
           rather than carried through to a decision.
         </p>
@@ -520,7 +557,8 @@
       <section class="article-section">
         <h2>Counterfactual tests</h2>
         <p>
-          The COIN research folder defines three future tests. They have not yet been run.
+          The COIN research folder defines three future tests for the history effect. They have not
+          yet been run.
         </p>
         <ul>
           <li>
@@ -542,6 +580,48 @@
             current method plus archived provenance.
           </li>
         </ul>
+        <p>
+          These tests address one validation target only: whether access to the recorded trajectory
+          changes or improves method formation and revision compared with a history-blind condition.
+          They do not by themselves establish observer generality. Multiple Claude, Codex, or GPT
+          runs selected, framed, prompted, and evaluated by one human investigator can show
+          within-investigator robustness, but they are not independent human-observer replication.
+          A stronger design would use different human investigators, <code>H_1, H_2, ..., H_n</code>,
+          ideally allowing them to generate or frame their own trajectories rather than merely
+          execute prompts authored by the framework's originator.
+        </p>
+        <p>
+          A separate validation axis is external-reference correspondence. Where a defensible
+          independent reference state exists, successive bundle determinations can be compared
+          against it:
+        </p>
+        <p class="statement-block"><code>ε_t = d(D_t, G)</code></p>
+        <p>
+          Here <code>D_t</code> is the determination at research state <code>t</code>,
+          <code>G</code> is an independently obtained reference state or observation, and
+          <code>d</code> is a task-appropriate distance or error measure. A transition for which
+          <code>ε_(t+1) &lt; ε_t</code> is evidence of movement toward the reference state, subject
+          to the uncertainty of both the bundle determination and the reference. Real research need
+          not improve monotonically: convergence, temporary regression, recovery, and divergence are
+          all possible. In a geospatial case, the reference might be independently collected
+          in-situ measurements or independently validated field observations, with quantities such as
+          area error, classification accuracy, precision, recall, F1, or spatial overlap used where
+          appropriate.
+        </p>
+        <p>
+          This distinction connects directly back to Evidence First, Consensus Later. External
+          reference convergence is available only for some classes of claims. For an empirical
+          geospatial claim, such as whether land cover changed at a location during a specified
+          period, an independent reference observation may sometimes exist. For normative, legal,
+          governance, or value conflicts, there may be no equivalent observer-independent
+          <code>G</code>. Consensus later therefore does not mean never converge. It means converge
+          where discriminating evidence supports convergence, and preserve structured disagreement
+          where it does not. One important failure mode is false consolidation: several observers
+          may converge on the same determination while an independent reference indicates that the
+          determination remains materially off. In notation, observers can converge on
+          <code>D*</code> while <code>d(D*, G)</code> remains materially non-zero. Observer
+          convergence is not the same as reference-state convergence.
+        </p>
       </section>
 
       <section class="article-section">
@@ -589,9 +669,20 @@
         <p>
           This article does not measure whether access to recorded history improves method formation
           over history-blind derivation, whether archived provenance improves later method revision,
-          how many historical rounds an AI still needs once good instructions exist, or whether
-          instructions derived from one trajectory transfer to another. It rests on two cases and
-          cannot generalise from them to a law of method.
+          how many historical rounds an AI still needs once good instructions exist, whether
+          instructions derived from one trajectory transfer to another, or whether the observed
+          pattern generalises across domains. It rests on two cases and cannot generalise from them
+          to a law of method.
+        </p>
+        <p>
+          The cases also do not establish generality across independent human observers, convergence
+          toward an independently measured reference state, monotonic improvement, or the proposition
+          that consensus among observers implies factual correctness. Multiple agent runs under one
+          human's framing would remain weaker than independent human-observer replication, and a
+          shared determination would still need comparison with an independent reference observation
+          where such a reference exists. A reference state is not metaphysically infallible either:
+          field and validation observations can carry positional, temporal, measurement, sampling,
+          and classification uncertainty.
         </p>
         <p>
           It also keeps a deliberate distance from Wolfram's vocabulary. Terms such as computational
@@ -634,6 +725,21 @@
           how should the candidate minimum reconstructible state be tested against real
           evidence-driven, procedure-driven, and frame-driven change without preserving the entire
           trajectory?
+        </p>
+        <p>
+          Do effects observed in history-aware/history-blind experiments persist when trajectories,
+          prompts, decompositions, and evaluations are generated by independent human investigators
+          rather than one investigator using multiple AI agents?
+        </p>
+        <p>
+          Where an independent reference state exists, does the recorded bundle trajectory converge
+          toward it, and which evidence, frame, or procedure changes produce improvement, regression,
+          or recovery?
+        </p>
+        <p>
+          How should the framework distinguish empirical convergence toward a reference state from
+          institutional or normative consolidation where no equivalent observer-independent reference
+          exists?
         </p>
       </section>
 
@@ -804,7 +910,7 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-21">21 August 2026</time>
+              <time datetime="2026-08-23">23 August 2026</time>
             </dd>
             <dd class="research-trail-note">
               The latest visible revision date for this draft version.
