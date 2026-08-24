@@ -52,10 +52,11 @@
         <p class="eyebrow">Sixth Inquiry</p>
         <h1>From Inquiry to Procedure: Human–AI Research as Progressive Reduction</h1>
         <p class="lead">
-          How recorded research evolution can document the formation of a method, how selected
-          lessons can be converted into code, tests, specifications, instructions, and explicit
-          uncertainty, and why the resulting operational method should normally work without
-          replaying the whole history that helped produce it.
+          How a recorded project-specific inquiry trajectory can add an external layer to prior
+          knowledge, literature, documentation, and current project state; how selected lessons can
+          be converted into code, tests, specifications, instructions, and explicit uncertainty; and
+          why the resulting operational method should normally work without replaying the whole
+          history that helped produce it.
         </p>
       </header>
 
@@ -63,9 +64,13 @@
         <h2>Originating statement</h2>
         <p class="statement-block">
           “In human–AI research, a recorded inquiry trajectory is primarily provenance of method
-          formation. Its possible methodological value lies in whether a disciplined
-          method-evolution process can learn from that provenance and compile selected findings into
-          a current operational method: code, tests, validators, specifications, AI instructions,
+          formation. Its possible methodological value lies in whether the project-specific
+          evolution of an inquiry provides information needed for reliable continuation,
+          correction, interpretation, revision, or transfer that is not already supplied by
+          participants' prior knowledge, established literature and other explicitly communicated
+          prior knowledge, and a sufficiently explicit current project state. Where that value
+          exists, a disciplined method-evolution process should compile selected findings into a
+          current operational method: code, tests, validators, specifications, AI instructions,
           evidence semantics, and explicit unresolved questions. Successful reductions should allow
           reduced lessons to leave active historical context where possible, while the archived
           history remains available for audit and later method revision.”
@@ -89,10 +94,11 @@
         </p>
         <p>
           The negative therefore has to be split. A <strong>formation negative</strong> would hold if
-          an investigator without the trajectory could reliably derive the same or a better
-          operational method from the final evidence and problem state alone; in that case the
-          trajectory would not have demonstrated incremental value for method formation beyond
-          provenance and auditability. A <strong>revision negative</strong> would hold if archived
+          an investigator without the project-specific trajectory could reliably derive the same or
+          a better operational method from prior knowledge, explicit literature or documentation,
+          and a well-described current state; in that case the trajectory would not have
+          demonstrated incremental value for method formation beyond provenance and auditability.
+          A <strong>revision negative</strong> would hold if archived
           provenance also provided no material advantage when diagnosing and repairing later method
           failures; in that case its durable role would be primarily provenance. The two bundle cases
           studied here do not experimentally test either counterfactual. Nor would routine execution
@@ -116,6 +122,24 @@
 
       <section class="article-section">
         <h2>Why this matters</h2>
+        <p>
+          No observer starts from zero. A human arrives with education, experience, disciplinary
+          conventions, tacit knowledge, assumptions, and biases. An AI system arrives with a
+          different and largely implicit body of learned regularities and capabilities, plus the
+          explicit prompt, context, retrieved sources, tools, and instructions it is given. That
+          background is real history, but it is not the same thing as the recorded trajectory of this
+          particular project.
+        </p>
+        <p>
+          Three layers therefore need to be separated. <strong>Implicit accumulated history</strong>
+          lives in the observer: human learning and judgment, or model training and capability.
+          <strong>Explicit scholarly compression</strong> lives in transferable forms such as
+          literature reviews, papers, textbooks, standards, specifications, documentation, code, and
+          accepted methods. <strong>Local project trajectory</strong> records how this investigation
+          changed: assumptions, frames, evidence, errors, corrections, supersessions, method changes,
+          and unresolved questions. The first two are ordinary conditions of inquiry. The third is
+          what this article is experimentally evaluating as an additional explicit research object.
+        </p>
         <p>
           Both human and AI inquiry are bounded, and they are bounded in ways that compound. Sensors
           and datasets capture only part of the world. Scientific knowledge is itself incomplete. A
@@ -160,19 +184,25 @@
       <section class="article-section">
         <h2>Research question</h2>
         <p>
-          Can a recorded human–AI inquiry trajectory improve the formation and later revision of an
-          operational research method beyond what can be derived from the current evidence and
-          problem state alone, while allowing successfully reduced lessons to leave active historical
-          context and persist instead as code, tests, specifications, instructions, evidence
-          semantics, and explicit unresolved questions?
+          <strong>What additional value does an explicit inquiry trajectory provide beyond prior
+          knowledge and a well-specified current state?</strong> Prior knowledge here includes both
+          observer background and explicitly communicated literature, standards, documentation,
+          code, and accepted methods.
         </p>
         <p>
-          Four subsidiary questions sharpen it. First: does history-aware method formation produce a
-          better operational method than history-blind derivation from the final state? Second: when
-          can history leave the AI's active operational context because its lessons have been
-          compiled elsewhere? Third: when should archived provenance be reactivated for method
-          revision? Fourth: can scope and frame errors be converted into durable guardrails without
-          overgeneralising the local circumstances that produced them?
+          Operationally: under what conditions does <code>H_{0:t}</code> improve formation,
+          continuation, correction, revision, interpretation, or transfer beyond what another
+          observer can achieve from their own <code>B_j</code>, shared explicit knowledge
+          <code>L</code>, and the current project state?
+        </p>
+        <p>
+          Four subsidiary questions sharpen it. First: does trajectory-aware method formation
+          produce a better operational method than trajectory-blind derivation from an explicit
+          current-state handoff? Second: when can trajectory leave the AI's active operational
+          context because its lessons have been compiled elsewhere? Third: when should archived
+          provenance be reactivated for method revision? Fourth: when does the trajectory help
+          expose hidden frame differences across observers, and when is current-state documentation
+          already sufficient?
         </p>
       </section>
 
@@ -246,6 +276,37 @@
           needs to know whether <code>E</code>, <code>F</code>, or <code>P</code> changed.
         </p>
         <p>
+          To keep the observer-background correction explicit, use <code>S_t</code> for the broader
+          project or problem state, not <code>P_t</code>. For observer <code>i</code>, the starting
+          knowledge available at handoff can be written as:
+        </p>
+        <p class="statement-block"><code>K_i^0 = B_i + L + S_0</code></p>
+        <p>
+          Here <code>B_i</code> is observer-specific background knowledge and prior learning,
+          including tacit competence, assumptions, and biases; <code>L</code> is explicitly
+          communicated prior knowledge such as literature, standards, documentation, source archives,
+          code, and accepted methods; and <code>S_0</code> is the current project or problem state at
+          handoff. <code>B_i</code> is partly latent. The bundle is not expected to record it
+          exhaustively; it can externalize only assumptions, frames, decisions, or consequences that
+          become observable in the project.
+        </p>
+        <p>
+          The local project-specific trajectory is:
+        </p>
+        <p class="statement-block"><code>H_{0:t}: S_0 &rarr; S_1 &rarr; ... &rarr; S_t</code></p>
+        <p>
+          The comparison is therefore not history versus no history. It is:
+        </p>
+        <p class="statement-block">
+          <code>B_i + L + S_t</code><br>
+          versus<br>
+          <code>B_i + L + S_t + H_{0:t}</code>
+        </p>
+        <p>
+          A history-blind participant is not literally history-blind; they are blind only to the
+          project-specific trajectory.
+        </p>
+        <p>
           The candidate minimum reconstructible state from this inquiry is:
         </p>
         <p class="statement-block"><code>R_t = {C_t, E_t, F_t, P_t, V_t, Δ_t}</code></p>
@@ -267,6 +328,20 @@
           links digital twins to integrated data-driven representations with synchronization at a
           specified frequency and fidelity; no claim is made here that an OKF bundle satisfies that
           industrial definition, and no automatic real-time synchronization is assumed.
+        </p>
+        <p>
+          The bundle is also not a substitute for observer knowledge. Observer <code>i</code>
+          interacts with the shared external representation using their own <code>B_i</code> and
+          frame <code>F_i</code>; observer <code>j</code> may later approach the same representation
+          with different <code>B_j</code> and <code>F_j</code>. In a compact form, a reconstructible
+          state might be updated as:
+        </p>
+        <p class="statement-block"><code>R_{t+1} = g(R_t, E_{t+1}; B_i, F_i)</code></p>
+        <p>
+          The point is not that the Digital Twin-like representation contains <code>B_i</code>. It
+          does not. One possible value of recorded evolution is that some consequences of observer
+          differences become inspectable in the external record instead of remaining entirely
+          latent.
         </p>
         <p>
           The versioned sequence connecting such states is closer to a
@@ -384,8 +459,9 @@
         <p>
           The evidence therefore supports a narrow claim: certain findings recorded in history were
           later represented in operational artifacts. It does not establish the stronger
-          counterfactual claim that the same artifacts could not have been derived from the final
-          evidence and problem state without the recorded trajectory.
+          counterfactual claim that the same artifacts could not have been derived from observer
+          background, explicit prior knowledge, and a sufficiently explicit current state without
+          the recorded trajectory.
         </p>
       </section>
 
@@ -441,15 +517,51 @@
           later failure makes the origin of the method relevant again.
         </p>
         <p>
+          Conventional scholarship is a strong comparison class because it already relies on radical
+          compression of research history:
+        </p>
+        <p class="statement-block">
+          collective research history<br>
+          &rarr; current state of knowledge<br>
+          &rarr; gap<br>
+          &rarr; method/result
+        </p>
+        <p>
+          A paper normally omits most failed hypotheses, abandoned analyses, intermediate
+          misunderstandings, exploratory conversations, and local mistakes. That omission is not
+          normally considered a methodological defect if the final evidence, method, assumptions,
+          limitations, code, data, provenance where required, and current state of knowledge are
+          adequately communicated. This is not proof that trajectories are useless. It sets the
+          burden of proof: what does the explicit inquiry trajectory preserve that a sufficiently
+          good paper, specification, source archive, codebase, test suite, provenance record, and
+          unresolved-issues list do not?
+        </p>
+        <p>
+          The candidate answer is not "more history" in general, but epistemic transitions that are
+          easy to erase through compression. In a transition such as <code>A &rarr; not-A</code>,
+          knowing only <code>not-A</code> may not reveal why <code>A</code> originally appeared
+          reasonable, what falsified it, which assumptions changed, whether the correction was local
+          or general, or why another observer might reconstruct <code>A</code>. That remains a
+          hypothesis to test, not a settled justification for keeping every historical detail active.
+        </p>
+        <p>
           This resolves an ambiguity in the earlier draft. The question is not whether the trajectory
           is provenance or method. It is provenance. The question is whether a disciplined process
           can use that provenance to form or revise a better operational method than could be
-          produced from the current final state alone.
+          produced from prior knowledge and a rich current-state handoff alone.
         </p>
       </section>
 
       <section class="article-section">
         <h2>Critical synthesis</h2>
+        <p>
+          This article is not testing whether accumulated history and prior knowledge matter to
+          research. That is already built into human education, AI training, literature, methods,
+          and scientific communication. The unresolved empirical question is narrower: whether local
+          project-specific epistemic evolution deserves to become an additional explicit research
+          object, and under what conditions it can remain archival provenance rather than active
+          method.
+        </p>
         <p>
           The recorded trajectories support a narrower, more defensible version of the proposition
           than the earlier article implied. The two bundles show that recorded inquiry can document
@@ -510,11 +622,12 @@
         </p>
         <p>
           The same evidence does not show that recording the trajectory produces a better method than
-          could be derived from final evidence alone. It also does not show that archived provenance
-          will materially improve later diagnosis or repair. The existing evidence therefore does not
-          discriminate between the formation proposition and its counterfactual negative. That is a
-          limit, but it is a productive one: the negative becomes empirically testable instead of
-          only rhetorically available.
+          could be derived from observer background, explicit prior knowledge, and a rich
+          current-state handoff. It also does not show that archived provenance will materially
+          improve later diagnosis or repair. The existing evidence therefore does not discriminate
+          between the formation proposition and its counterfactual negative. That is a limit, but it
+          is a productive one: the negative becomes empirically testable instead of only rhetorically
+          available.
         </p>
         <p>
           The conclusion is therefore modest. The trajectory should be understood primarily as
@@ -538,7 +651,10 @@
           interpretation. That is why a deterministic pipeline is not enough: if the wrong frame has
           been made reproducible, reproducibility stabilizes the error. Evidence infrastructure
           constrains what governance can responsibly decide, while inquiry and correction constrain
-          what the evidence infrastructure itself is permitted to assume.
+          what the evidence infrastructure itself is permitted to assume. Object-level evidence may
+          converge toward an independent reference where that is possible; contested evidence should
+          remain structured rather than falsely collapsed; method-level trajectory concerns how the
+          evidence architecture itself is corrected and transferred.
         </p>
         <p>
           The architecture also keeps different forms of “settled” outcome apart. An empirical issue
@@ -557,14 +673,26 @@
       <section class="article-section">
         <h2>Counterfactual tests</h2>
         <p>
-          The COIN research folder defines three future tests for the history effect. They have not
-          yet been run.
+          The COIN research folder defines future tests for the trajectory effect. They have not yet
+          been run. A minimal handoff might be <code>X_min = {L, S_t}</code>. A richer current-state
+          handoff can be written as <code>X_state = {L, S_t, A_t, U_t, M_t}</code>, where
+          <code>A_t</code> is explicit assumptions and frame constraints, <code>U_t</code> is
+          unresolved issues, and <code>M_t</code> is the current operational method. The trajectory
+          condition is <code>X_traj = X_state + H_{0:t}</code>.
+        </p>
+        <p>
+          Conceptually, the question is whether <code>Q_j(X_traj) &gt; Q_j(X_state)</code> for
+          observer <code>j</code>. <code>Q</code> may refer to continuation quality, error detection,
+          correction, transfer, robustness to frame differences, or, where a defensible
+          <code>G</code> exists, movement toward an external reference. It is not proposed as one
+          universal scalar metric.
         </p>
         <ul>
           <li>
-            <strong>History-aware versus history-blind method formation.</strong> Give comparable
-            investigators the same problem and final evidence, but give only one condition the
-            recorded trajectory. Compare the decomposition, procedures, validation rules,
+            <strong>Trajectory-aware versus trajectory-blind method formation.</strong> Give
+            comparable investigators the same problem, explicit prior knowledge, and project state,
+            while recognizing that each observer still has their own <code>B_i</code>. Give only one
+            condition <code>H_{0:t}</code>. Compare the decomposition, procedures, validation rules,
             instructions, guardrails, and open questions they derive.
           </li>
           <li>
@@ -579,16 +707,26 @@
             of case. Compare revision using only the current method against revision using the
             current method plus archived provenance.
           </li>
+          <li>
+            <strong>Cross-observer handoff.</strong> Suppose <code>B_A != B_B</code>. Can a
+            sufficiently explicit current-state handoff allow observer B to continue observer A's
+            work reliably without <code>H</code>? Does adding <code>H</code> materially improve
+            continuation, detection of hidden frame differences, correction, avoidance of
+            reconstructed superseded assumptions, or transfer across disciplinary backgrounds? Or is
+            <code>X_state</code> already sufficient?
+          </li>
         </ul>
         <p>
           These tests address one validation target only: whether access to the recorded trajectory
-          changes or improves method formation and revision compared with a history-blind condition.
-          They do not by themselves establish observer generality. Multiple Claude, Codex, or GPT
-          runs selected, framed, prompted, and evaluated by one human investigator can show
-          within-investigator robustness, but they are not independent human-observer replication.
-          A stronger design would use different human investigators, <code>H_1, H_2, ..., H_n</code>,
-          ideally allowing them to generate or frame their own trajectories rather than merely
-          execute prompts authored by the framework's originator.
+          changes or improves method formation, continuation, transfer, or revision compared with a
+          trajectory-blind condition. A history-blind participant is not literally history-blind;
+          they are blind only to the project-specific trajectory. These tests do not by themselves
+          establish observer generality. Multiple Claude, Codex, or GPT runs selected, framed,
+          prompted, and evaluated by one human investigator can show within-investigator robustness,
+          but they are not independent human-observer replication. A stronger design would use
+          different human investigators, <code>H_1, H_2, ..., H_n</code>, ideally allowing them to
+          generate or frame their own trajectories rather than merely execute prompts authored by
+          the framework's originator.
         </p>
         <p>
           A separate validation axis is external-reference correspondence. Where a defensible
@@ -609,11 +747,18 @@
           appropriate.
         </p>
         <p>
-          This distinction connects directly back to Evidence First, Consensus Later. External
-          reference convergence is available only for some classes of claims. For an empirical
-          geospatial claim, such as whether land cover changed at a location during a specified
-          period, an independent reference observation may sometimes exist. For normative, legal,
-          governance, or value conflicts, there may be no equivalent observer-independent
+          This distinction connects directly back to Evidence First, Consensus Later, and it keeps
+          three axes separate. <strong>Trajectory value</strong> asks whether <code>X_traj</code>
+          improves inquiry relative to <code>X_state</code>. <strong>Empirical correctness</strong>
+          asks whether determinations converge toward <code>G</code> where an appropriate
+          <code>G</code> exists. <strong>Observer consensus</strong> asks whether different observers
+          converge toward each other. A trajectory may improve transfer without improving truth
+          convergence. Observers may agree while remaining wrong relative to <code>G</code>. A
+          project may converge toward <code>G</code> without needing its full historical trajectory.
+          External reference convergence is available only for some classes of claims. For an
+          empirical geospatial claim, such as whether land cover changed at a location during a
+          specified period, an independent reference observation may sometimes exist. For normative,
+          legal, governance, or value conflicts, there may be no equivalent observer-independent
           <code>G</code>. Consensus later therefore does not mean never converge. It means converge
           where discriminating evidence supports convergence, and preserve structured disagreement
           where it does not. One important failure mode is false consolidation: several observers
@@ -667,12 +812,13 @@
       <section class="article-section">
         <h2>Limits</h2>
         <p>
-          This article does not measure whether access to recorded history improves method formation
-          over history-blind derivation, whether archived provenance improves later method revision,
-          how many historical rounds an AI still needs once good instructions exist, whether
-          instructions derived from one trajectory transfer to another, or whether the observed
-          pattern generalises across domains. It rests on two cases and cannot generalise from them
-          to a law of method.
+          This article does not measure whether access to recorded project-specific trajectory
+          improves method formation over trajectory-blind derivation from prior knowledge and a rich
+          current-state handoff, whether archived provenance improves later method revision, how many
+          historical rounds an AI still needs once good instructions exist, whether instructions
+          derived from one trajectory transfer to another, or whether the observed pattern
+          generalises across domains. It rests on two cases and cannot generalise from them to a law
+          of method.
         </p>
         <p>
           The cases also do not establish generality across independent human observers, convergence
@@ -683,6 +829,16 @@
           where such a reference exists. A reference state is not metaphysically infallible either:
           field and validation observations can carry positional, temporal, measurement, sampling,
           and classification uncertainty.
+        </p>
+        <p>
+          Observer background is a central limitation, not a nuisance detail. <code>B_i</code> is
+          partly latent and not exhaustively measurable. Human expertise and AI learned priors cannot
+          simply be held equal. Comparing H+ and H− across people introduces observer-background
+          variation; using the same human twice introduces carryover. A well-written current-state
+          document, specification, codebase, test suite, provenance record, and unresolved-issues
+          list may eliminate much of the apparent value of loading the trajectory. Conversely, a
+          trajectory can introduce stale assumptions, anchoring, context overload, or authority bias.
+          The current two bundles still do not prove incremental trajectory value.
         </p>
         <p>
           It also keeps a deliberate distance from Wolfram's vocabulary. Terms such as computational
@@ -698,27 +854,27 @@
       <section class="article-section">
         <h2>Open questions</h2>
         <p>
-          Can history-aware method formation outperform history-blind derivation from the final
-          evidence and problem state?
+          What additional value does project-specific trajectory provide beyond
+          <code>B_i + L + current state</code>?
+        </p>
+        <p>
+          When is a well-specified current state sufficient for continuation, execution, or method
+          revision?
+        </p>
+        <p>
+          When does trajectory compensate for observer-background differences, and when does it add
+          noise?
+        </p>
+        <p>
+          Which epistemic transitions require reconstruction rather than summary?
+        </p>
+        <p>
+          When does loading history hurt by introducing stale assumptions, anchoring, context
+          overload, or authority bias?
         </p>
         <p>
           Once the operational method exists, which historical materials can leave active AI context
           without lowering execution quality?
-        </p>
-        <p>
-          When a method fails, does archived provenance materially improve diagnosis and repair?
-        </p>
-        <p>
-          Do instructions distilled from one trajectory transfer usefully to a different problem, or
-          do they encode context that does not travel?
-        </p>
-        <p>
-          How can accumulated instructions themselves be detected when they have begun to encode
-          obsolete assumptions?
-        </p>
-        <p>
-          Can an agent reliably propose that a recurring reasoning operation should now become
-          deterministic code — and be trusted to judge when it should not?
         </p>
         <p>
           When a later inquiry materially contradicts, invalidates, or reframes an earlier conclusion,
@@ -727,14 +883,13 @@
           trajectory?
         </p>
         <p>
-          Do effects observed in history-aware/history-blind experiments persist when trajectories,
-          prompts, decompositions, and evaluations are generated by independent human investigators
-          rather than one investigator using multiple AI agents?
+          Can the minimum reconstructible state preserve the needed transition without retaining the
+          whole trajectory?
         </p>
         <p>
-          Where an independent reference state exists, does the recorded bundle trajectory converge
-          toward it, and which evidence, frame, or procedure changes produce improvement, regression,
-          or recovery?
+          Does trajectory-aware handoff improve convergence toward <code>G</code> where
+          <code>G</code> exists, and which evidence, frame, or procedure changes produce improvement,
+          regression, or recovery?
         </p>
         <p>
           How should the framework distinguish empirical convergence toward a reference state from
@@ -890,8 +1045,8 @@
               </a>
             </dd>
             <dd class="research-trail-note">
-              Proposed, not-yet-run tests for history-aware formation, operational sufficiency, and
-              revision with archived provenance.
+              Proposed, not-yet-run tests for trajectory-aware formation, operational sufficiency,
+              cross-observer handoff, and revision with archived provenance.
             </dd>
           </div>
 
@@ -910,7 +1065,7 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-23">23 August 2026</time>
+              <time datetime="2026-08-24">24 August 2026</time>
             </dd>
             <dd class="research-trail-note">
               The latest visible revision date for this draft version.
