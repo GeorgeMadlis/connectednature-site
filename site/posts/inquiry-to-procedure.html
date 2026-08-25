@@ -67,8 +67,8 @@
           formation. Its possible methodological value lies in whether the project-specific
           evolution of an inquiry provides information needed for reliable continuation,
           correction, interpretation, revision, or transfer that is not already supplied by
-          participants' prior knowledge, established literature and other explicitly communicated
-          prior knowledge, and a sufficiently explicit current project state. Where that value
+          participants' prior knowledge, shared explicit knowledge, and a sufficiently explicit
+          current project state. Where that value
           exists, a disciplined method-evolution process should compile selected findings into a
           current operational method: code, tests, validators, specifications, AI instructions,
           evidence semantics, and explicit unresolved questions. Successful reductions should allow
@@ -95,20 +95,22 @@
         <p>
           The negative therefore has to be split. A <strong>formation negative</strong> would hold if
           an investigator without the project-specific trajectory could reliably derive the same or
-          a better operational method from prior knowledge, explicit literature or documentation,
-          and a well-described current state; in that case the trajectory would not have
+          a better operational method from prior knowledge, shared explicit knowledge, and a
+          well-described current state; in that case the trajectory would not have
           demonstrated incremental value for method formation beyond provenance and auditability.
           A <strong>revision negative</strong> would hold if archived
           provenance also provided no material advantage when diagnosing and repairing later method
-          failures; in that case its durable role would be primarily provenance. The two bundle cases
-          studied here do not experimentally test either counterfactual. Nor would routine execution
+          failures; in that case its durable role would be primarily provenance. The case-study
+          evidence used below does not experimentally test either counterfactual. Nor would routine execution
           without history be a negative result. It is the expected shape of a successful reduction:
           current operational method plus new evidence should be enough to produce a result, with
           archived provenance reopened when revision becomes necessary.
         </p>
         <p>
-          This article does not start from a blank evidence architecture. The preceding inquiry in
-          this sequence, Evidence First, Consensus Later, examined the object- or world-facing
+          This article does not start from a blank evidence architecture. The preceding
+          <strong>Fifth Inquiry</strong> in this series,
+          <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>,
+          examined the object- or world-facing
           level: how environmental observations, evidence, claims, disagreement, review, and
           governance can be represented without prematurely converting contestation into authority
           or consensus. This inquiry moves one level upstream. The evidence architecture that
@@ -166,18 +168,23 @@
           output, and it can contain framing errors, scope drift, inappropriate bundle boundaries,
           mistaken source classifications, or invalid decision rules — an explicit evidence schema
           is not thereby a correct one. It must therefore be corrigible, versionable, and
-          contestable in the same way the claims it structures are. The two bundles show this kind
-          of correction is not confined to fixing data: it includes discovering that a boundary,
-          observer category, or claim class was incorrectly specified — as when the
-          self-referential bundle's own object of study had to be widened at round four, demoting
-          disagreement to one stage among five — and discovering that reproducible, hash-verified
-          provenance had been mistaken for source authenticity, as the fabricated-input episode
-          discussed later shows. Neither was an error in applying a correct schema; each was an
-          error in the schema itself. The implication is specific: before evidence infrastructure
-          can support contestable governance, the machinery used to structure that evidence must
-          itself be open to correction. This does not require that every such correction remain
-          permanently active; the architecture remains provisional where it has not yet survived
-          scrutiny, not indefinitely by default.
+          contestable in the same way the claims it structures are. The two case-study bundles
+          examined here—the self-referential
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer"><code>framework-self</code></a>
+          bundle and the applied
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer"><code>eudr-coffee-brazil-fazenda-sucuri</code></a>
+          bundle—show that this kind of correction is not confined to fixing data: it includes
+          identifying that a boundary, observer category, or claim class was incorrectly specified —
+          as when the self-referential bundle's own object of study had to be widened at
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">round four</a>,
+          demoting disagreement to one stage among five. Separately, the fabricated-input episode
+          discussed later shows that reproducible, hash-verified provenance can still preserve an
+          invalid evidence state when source authenticity has not been established. Neither was an
+          error in applying a correct schema; each was an error in the schema itself. The implication
+          is specific: before evidence infrastructure can support contestable governance, the
+          machinery used to structure that evidence must itself be open to correction. This does not
+          require that every such correction remain permanently active; the architecture remains
+          provisional where it has not yet survived scrutiny, not indefinitely by default.
         </p>
       </section>
 
@@ -186,8 +193,8 @@
         <p>
           <strong>What additional value does an explicit inquiry trajectory provide beyond prior
           knowledge and a well-specified current state?</strong> Prior knowledge here includes both
-          observer background and explicitly communicated literature, standards, documentation,
-          code, and accepted methods.
+          observer background and shared explicit knowledge, including literature, standards,
+          documentation, code, and accepted methods.
         </p>
         <p>
           Operationally: under what conditions does access to the recorded project-specific
@@ -229,6 +236,13 @@
           <code>fc-round</code>, <code>fc-stage</code>, <code>fc-party</code>,
           <code>fc-supersedes</code>, contestation stages, observer-disagreement semantics, or the
           project’s method-evolution protocol.
+        </p>
+        <p>
+          Here <code>fc-</code> is the project-specific namespace prefix for its fact-checking and
+          statement-evolution metadata; these fields are project extensions, not fields defined by
+          upstream OKF. <code>fc-round</code> records the bundle round, <code>fc-stage</code> the
+          research-evolution stage, <code>fc-party</code> the contributing party, and
+          <code>fc-supersedes</code> the earlier concept version replaced by the current one.
         </p>
         <p>
           <strong>Layer 2 — version/provenance substrate.</strong> Git supplies
@@ -277,14 +291,14 @@
         </p>
         <p>
           To keep the observer-background correction explicit, use <code>S_t</code> for the broader
-          project or problem state, not <code>P_t</code>. For observer <code>i</code>, the starting
-          knowledge available at handoff can be written as:
+          project or problem state, not <code>P_t</code>. Let <code>i</code> index an observer. For
+          observer <code>i</code>, the starting knowledge available at handoff can be written as:
         </p>
         <p class="statement-block"><code>K_i^0 = B_i + L + S_0</code></p>
         <p>
-          Here <code>B_i</code> is observer-specific background knowledge and prior learning,
-          including tacit competence, assumptions, and biases; <code>L</code> is explicitly
-          communicated prior knowledge such as literature, standards, documentation, source archives,
+          Here <code>B_i</code> is observer <code>i</code>'s background knowledge and prior
+          learning, including tacit competence, assumptions, and biases; <code>L</code> is shared
+          explicit prior knowledge, including literature, standards, documentation, source archives,
           code, and accepted methods; and <code>S_0</code> is the current project or problem state at
           handoff. <code>B_i</code> is partly latent. The bundle is not expected to record it
           exhaustively; it can externalize only assumptions, frames, decisions, or consequences that
@@ -303,8 +317,9 @@
           <code>B_i + L + S_t + H_{0:t}</code>
         </p>
         <p>
-          In this notation, the operational research question becomes: under what conditions does
-          access to <code>H_{0:t}</code> improve what observer <code>j</code> can achieve beyond
+          In this notation, let <code>j</code> denote another, potentially different observer. The
+          operational research question becomes: under what conditions does access to
+          <code>H_{0:t}</code> improve what observer <code>j</code> can achieve beyond
           <code>B_j + L + S_t</code>?
         </p>
         <p>
@@ -358,8 +373,8 @@
           but to name the representational pattern that motivated the question.
         </p>
         <p>
-          This also clarifies the bridge from the Fifth Inquiry to this one. The world-facing
-          evidence representation and the research-facing method representation are coupled:
+          This also clarifies the relationship between the preceding inquiry and the present one.
+          The world-facing evidence representation and the research-facing method representation are coupled:
           object-level evidence conflicts or validation failures can reopen method-level inquiry,
           while method-level corrections change how later object-level evidence is selected,
           processed, represented, and interpreted.
@@ -393,10 +408,11 @@
           instructions, evidence semantics, or explicit uncertainty.
         </p>
         <p>
-          The self-referential bundle records provenance of method formation directly. At round
-          four, the log states that a human instruction widened the object of study from observer
-          disagreement to statement evolution, demoting disagreement to one stage of a five-stage
-          trajectory; the change is written as a frame transition with content hashes and
+          The self-referential bundle records provenance of method formation directly. At
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">round
+          four</a>, the log states that a human instruction widened the object of study from
+          observer disagreement to statement evolution, demoting disagreement to one stage of a
+          five-stage trajectory; the change is written as a frame transition with content hashes and
           supersession links on every affected file. The human's own framing was not a fixed input
           but something the inquiry had to revise, and the revision is inspectable rather than merely
           narrated. Later rounds show findings routed into operational destinations: provisional
@@ -406,7 +422,9 @@
           rejection conditions rather than left to good intentions.
         </p>
         <p>
-          The EUDR bundle offers a public worked example of corrected decomposition inside an
+          The
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">EUDR
+          bundle</a> offers a public worked example of corrected decomposition inside an
           applied screening task. Its rounds show review findings becoming concrete repairs: a
           Sentinel-2 visual defect is fixed, AOI administrative labels and report-map behavior are
           corrected, the coffee temporal mask is repaired so current coffee preserves the baseline
@@ -430,9 +448,18 @@
             occurred somewhere is not sufficient on its own.
           </li>
           <li>
-            <strong>Layer C — commodity-specific evidence.</strong> For coffee, the source-specific
-            commodity evidence matters: FDP-only, MapBiomas-only, and both-source agreement cannot
-            be collapsed into the same warrant merely because they all describe coffee.
+            <strong>Layer C — commodity-specific evidence.</strong> For coffee, source-specific
+            evidence matters. Here <strong>FDP</strong> refers to the
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">Forest
+            Data Partnership coffee-probability evidence</a> used by the bundle, while
+            <strong>MapBiomas</strong> refers to the
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">MapBiomas
+            coffee land-use/classification evidence</a>. <strong>FDP-only</strong> means that the
+            relevant coffee condition is supported by FDP but not by MapBiomas;
+            <strong>MapBiomas-only</strong> means the reverse; and
+            <strong>both-source agreement</strong> means that both sources support it. These
+            evidence states cannot be treated as having the same warrant merely because they all
+            concern coffee.
           </li>
         </ul>
         <p>
@@ -440,12 +467,16 @@
           the evidence supports. The recorded sequence lets one inspect how a source-specific coffee
           assumption was corrected, why visual and report defects mattered, and how those findings
           were converted into more durable operational constraints. The correction is visible in the
-          bundle's own artefacts: FDP reports 0.27 hectares of post-2020 baseline-forest loss
+          bundle's own <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md" target="_blank" rel="noopener noreferrer">source-specific
+          overlap results</a>: FDP reports 0.27 hectares of post-2020 baseline-forest loss
           intersecting new coffee, while MapBiomas and the both-source agreement layer report
-          0.0 hectares for the same conversion intersection. The bundle keeps those as source
-          disagreement, not as a number to average away. Its current answer remains
-          <code>human_review_required</code> and <code>pinned-not-reproduced</code>, and it states
-          plainly that the result is a screening flag, not a legal non-compliance determination.
+          0.0 hectares for the same conversion intersection. The bundle keeps these as separate
+          source-specific overlap results and preserves their disagreement, not as alternative names
+          for one metric or as numbers to average away. Its
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md" target="_blank" rel="noopener noreferrer">current
+          answer</a> remains <code>human_review_required</code> and
+          <code>pinned-not-reproduced</code>, and it states plainly that the result is a screening
+          flag, not a legal non-compliance determination.
         </p>
         <p>
           This is where the inquiry takes up a requirement motivated by the earlier inquiry rather
@@ -465,7 +496,7 @@
           The evidence therefore supports a narrow claim: certain findings recorded in history were
           later represented in operational artifacts. It does not establish the stronger
           counterfactual claim that the same artifacts could not have been derived from observer
-          background, explicit prior knowledge, and a sufficiently explicit current state without
+          background, shared explicit knowledge, and a sufficiently explicit current state without
           the recorded trajectory.
         </p>
       </section>
@@ -569,7 +600,7 @@
         </p>
         <p>
           The recorded trajectories support a narrower, more defensible version of the proposition
-          than the earlier article implied. The two bundles show that recorded inquiry can document
+          than the earlier article implied. The two case-study bundles show that recorded inquiry can document
           the formation and correction of a method, and that findings from that history can be
           represented later as code, tests, specifications, validators, instructions, evidence
           semantics, and explicit uncertainty. The EUDR sequence contributes a substantive
@@ -627,7 +658,7 @@
         </p>
         <p>
           The same evidence does not show that recording the trajectory produces a better method than
-          could be derived from observer background, explicit prior knowledge, and a rich
+          could be derived from observer background, shared explicit knowledge, and a rich
           current-state handoff. It also does not show that archived provenance will materially
           improve later diagnosis or repair. The existing evidence therefore does not discriminate
           between the formation proposition and its counterfactual negative. That is a limit, but it
@@ -695,7 +726,7 @@
         <ul>
           <li>
             <strong>Trajectory-aware versus trajectory-blind method formation.</strong> Give
-            comparable investigators the same problem, explicit prior knowledge, and project state,
+            comparable investigators the same problem, shared explicit knowledge, and project state,
             while recognizing that each observer still has their own <code>B_i</code>. Give only one
             condition <code>H_{0:t}</code>. Compare the decomposition, procedures, validation rules,
             instructions, guardrails, and open questions they derive.
@@ -796,7 +827,8 @@
           Frame and schema corrections deserve special care inside this lifecycle. They change what
           the system treats as a bundle, source, claim, observer, evidence layer, validation boundary,
           or screening category, rather than merely changing a value inside an existing category.
-          Round four's widening of the self-referential bundle's object of study qualifies. The coffee
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">Round
+          four's widening</a> of the self-referential bundle's object of study qualifies. The coffee
           temporal-mask repair qualifies only in this narrower sense: it changed the relation among
           baseline coffee, current coffee, and new coffee since the baseline. Such corrections should
           remain inspectable in the research trail when they materially explain why the current
@@ -843,7 +875,7 @@
           document, specification, codebase, test suite, provenance record, and unresolved-issues
           list may eliminate much of the apparent value of loading the trajectory. Conversely, a
           trajectory can introduce stale assumptions, anchoring, context overload, or authority bias.
-          The current two bundles still do not prove incremental trajectory value.
+          The current two case-study bundles still do not prove incremental trajectory value.
         </p>
         <p>
           It also keeps a deliberate distance from Wolfram's vocabulary. Terms such as computational
@@ -1070,7 +1102,7 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-24">24 August 2026</time>
+              <time datetime="2026-08-25">25 August 2026</time>
             </dd>
             <dd class="research-trail-note">
               The latest visible revision date for this draft version.

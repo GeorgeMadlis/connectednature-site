@@ -67,8 +67,8 @@
           meetodi kujunemise päritolujälg. Selle võimalik metodoloogiline väärtus seisneb selles,
           kas uurimise projektispetsiifiline arenemine annab usaldusväärseks jätkamiseks,
           parandamiseks, tõlgendamiseks, revisjoniks või ülekandmiseks vajalikku teavet, mida ei
-          paku juba osaliste eelteadmised, olemasolev kirjandus ja muu selgesõnaliselt edasi antud
-          eelteadmine ega piisavalt selge praegune projektiseis. Kui selline väärtus on olemas,
+          paku juba osaliste eelteadmised, jagatud selgesõnaline teadmus ega piisavalt selge
+          praegune projektiseis. Kui selline väärtus on olemas,
           peaks distsiplineeritud meetodi arenemise protsess koondama valitud leiud praegusesse
           operatiivsesse meetodisse: koodi, testidesse, validaatoritesse, spetsifikatsioonidesse,
           tehisintellekti juhistesse, tõenduse semantikasse ja selgelt sõnastatud lahendamata
@@ -96,8 +96,8 @@
         <p>
           Seetõttu tuleb negatiivne tulemus lahutada kaheks. <strong>Kujunemise negatiivne</strong>
           kehtiks siis, kui uurija, kellel projektispetsiifilist trajektoori ei ole, suudaks
-          eelteadmistest, selgesõnalisest kirjandusest või dokumentatsioonist ja hästi kirjeldatud
-          praegusest seisundist usaldusväärselt tuletada sama või parema operatiivse meetodi; sel
+          eelteadmistest, jagatud selgesõnalisest teadmusest ja hästi kirjeldatud praegusest
+          seisundist usaldusväärselt tuletada sama või parema operatiivse meetodi; sel
           juhul ei oleks trajektoor näidanud lisaväärtust meetodi kujunemisel peale päritolu ja
           auditeeritavuse. <strong>Revisjoni negatiivne</strong> kehtiks siis, kui arhiveeritud
           päritolujälg ei annaks ka hilisemate meetoditõrgete diagnoosimisel ja parandamisel
@@ -109,8 +109,10 @@
           vajalikuks.
         </p>
         <p>
-          See artikkel ei alusta tühjast tõendiarhitektuurist. Selle uurimissarja eelmine uurimus,
-          „Tõendus kõigepealt, konsensus hiljem”, uuris objekti- ehk maailmasuunalist tasandit:
+          See artikkel ei alusta tühjast tõendiarhitektuurist. Selle uurimissarja eelmine ehk
+          <strong>viies uurimus</strong>,
+          <a href="evidence-first-consensus-later.html">„Tõendus kõigepealt, konsensus hiljem”</a>,
+          käsitles objekti- ehk maailmasuunalist tasandit:
           kuidas keskkonnavaatlusi, tõendust, väiteid, erimeelsust, ülevaatust ja valitsemist saab
           esitada ilma vaidlustatust enneaegu autoriteediks või konsensuseks teisendamata. Käesolev
           uurimus liigub ühe tasandi võrra kõrgemale — tõendiarhitektuuri enda kujunemise tasandile.
@@ -172,17 +174,23 @@
           sobimatuid kogumipiire, ekslikke allikaliigitusi või kehtetuid otsustusreegleid —
           selgesõnaline tõendusskeem ei ole seetõttu veel õige skeem. Seetõttu peab see olema
           parandatav, versioonitav ja vaidlustatav samamoodi nagu väited, mida see struktureerib.
-          Kaks kogumit näitavad, et niisugune parandamine ei piirdu andmete parandamisega: see
-          hõlmab ka avastust, et piir, vaatlejakategooria või väiteklass oli valesti määratud —
-          nagu siis, kui enesele viitava kogumi uurimisobjekti tuli neljandas voorus laiendada,
-          alandades erimeelsuse üheks viiest etapist — ning avastust, et korratav, räsiga
-          kontrollitud päritolu oli ekslikult samastatud allika autentsusega, nagu näitab hiljem
-          käsitletav fabritseeritud sisendi episood. Kumbki ei olnud õige skeemi rakendamise viga;
-          mõlemad olid skeemi enda vead. Järeldus on konkreetne: enne kui tõenditaristu saab
-          toetada vaidlustatavat valitsemist, peab ka masinavärk, millega tõendust struktureeritakse,
-          olema parandustele avatud. See ei nõua, et iga selline parandus jääks püsivalt aktiivseks;
-          arhitektuur jääb ajutiseks seal, kus see ei ole veel kontrollile vastu pidanud, mitte
-          vaikimisi lõputult.
+          Kaks siin käsitletavat juhtumikogumit — enesele viitav
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer"><code>framework-self</code></a>
+          ja rakenduslik
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer"><code>eudr-coffee-brazil-fazenda-sucuri</code></a>
+          — näitavad, et selline parandamine ei piirdu andmete parandamisega: see hõlmab ka selle
+          tuvastamist, et piir, vaatlejakategooria või väiteklass oli valesti määratletud — nagu
+          siis, kui enesele viitava kogumi uurimisobjekti laiendati
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">neljandas
+          voorus</a> vaatlejate erimeelsuselt väidete arengule, nii et erimeelsusest sai üks
+          viiest etapist. Eraldi näitab hiljem käsitletav fabritseeritud sisendite episood, et
+          korratav ja räsiga kontrollitud päritolukirje võib siiski säilitada kehtetu
+          tõendusseisundi, kui allika autentsust ei ole kindlaks tehtud. Kumbki ei olnud õige skeemi
+          rakendamise viga; mõlemad olid skeemi enda vead. Järeldus on konkreetne: enne kui
+          tõenditaristu saab toetada vaidlustatavat valitsemist, peab ka masinavärk, millega
+          tõendust struktureeritakse, olema parandustele avatud. See ei nõua, et iga selline
+          parandus jääks püsivalt aktiivseks; arhitektuur jääb ajutiseks seal, kus see ei ole veel
+          kontrollile vastu pidanud, mitte vaikimisi lõputult.
         </p>
       </section>
 
@@ -191,14 +199,14 @@
         <p>
           <strong>Millist lisaväärtust annab selgesõnaline uurimistrajektoor võrreldes vaatleja
           eelteadmiste ja hästi kirjeldatud praeguse seisundiga?</strong> Eelteadmised hõlmavad siin
-          nii vaatleja tausta kui ka selgesõnaliselt edasi antud kirjandust, standardeid,
-          dokumentatsiooni, koodi ja omaksvõetud meetodeid.
+          nii vaatleja tausta kui ka jagatud selgesõnalist teadmust, sealhulgas kirjandust,
+          standardeid, dokumentatsiooni, koodi ja omaksvõetud meetodeid.
         </p>
         <p>
           Operatiivselt: millistel tingimustel parandab juurdepääs salvestatud projektispetsiifilisele
           trajektoorile meetodi kujunemist, jätkamist, parandamist, revisjoni, tõlgendamist või
           ülekandmist võrreldes sellega, mida teine vaatleja suudab saavutada oma taustteadmiste,
-          jagatud selgesõnalise teadmise ja praeguse projektiseisu põhjal?
+          jagatud selgesõnalise teadmuse ja praeguse projektiseisu põhjal?
         </p>
         <p>
           Neli alaküsimust teravdavad seda. Esiteks: kas trajektooriteadlik meetodikujundus annab
@@ -234,6 +242,14 @@
           <code>fc-stage</code>, <code>fc-party</code>, <code>fc-supersedes</code>,
           vaidlustusetappe, vaatleja-erimeelsuse semantikat või projekti meetodi arenemise
           protokolli.
+        </p>
+        <p>
+          <code>fc-</code> on siin projekti faktikontrolli ja väidete arengu metaandmete nimeruumi
+          prefiks; need väljad on projekti laiendused, mitte OKF-i enda määratletud väljad.
+          <code>fc-round</code> tähistab kogumi vooru, <code>fc-stage</code> uurimise
+          arenguetappi, <code>fc-party</code> vooru panustanud osapoolt ning
+          <code>fc-supersedes</code> varasemat kontseptsiooniversiooni, mille praegune versioon
+          asendab.
         </p>
         <p>
           <strong>Kiht 2 — versiooni- ja päritolualus.</strong> Git annab
@@ -283,15 +299,16 @@
         </p>
         <p>
           Vaatleja tausta puudutava paranduse selgena hoidmiseks kasutab artikkel laiema projekti-
-          või probleemiseisundi jaoks tähist <code>S_t</code>, mitte <code>P_t</code>. Vaatleja
-          <code>i</code> üleandmise algteadmuse saab kirjutada nii:
+          või probleemiseisundi jaoks tähist <code>S_t</code>, mitte <code>P_t</code>. Olgu
+          <code>i</code> vaatlejat tähistav indeks. Vaatleja <code>i</code> käsutuses oleva
+          algteadmuse saab üleandmise hetkel kirjutada nii:
         </p>
         <p class="statement-block"><code>K_i^0 = B_i + L + S_0</code></p>
         <p>
-          Siin on <code>B_i</code> vaatlejaspetsiifiline taustteadmine ja varasem õppimine,
-          sealhulgas vaikiv pädevus, eeldused ja kallutatused; <code>L</code> on selgesõnaliselt
-          edasi antud eelteadmine, näiteks kirjandus, standardid, dokumentatsioon, allikaarhiivid,
-          kood ja omaksvõetud meetodid; ning <code>S_0</code> on üleandmise hetkel olemasolev
+          Siin on <code>B_i</code> vaatleja <code>i</code> taustteadmine ja varasem õppimine,
+          sealhulgas vaikiv pädevus, eeldused ja kallutatused; <code>L</code> on jagatud
+          selgesõnaline eelteadmine, sealhulgas kirjandus, standardid, dokumentatsioon,
+          allikaarhiivid, kood ja omaksvõetud meetodid; ning <code>S_0</code> on üleandmise hetkel olemasolev
           projekti- või probleemiseisund. <code>B_i</code> on osaliselt varjatud. Kogumilt ei
           eeldata selle ammendavat salvestamist; väliseks saab teha vaid need eeldused, raamid,
           otsused või tagajärjed, mis projektis nähtavaks muutuvad.
@@ -309,9 +326,10 @@
           <code>B_i + L + S_t + H_{0:t}</code>
         </p>
         <p>
-          Selles tähistuses saab operatiivse uurimisküsimuse sõnastada nii: millistel tingimustel
-          parandab juurdepääs <code>H_{0:t}</code>-le seda, mida vaatleja <code>j</code> suudab
-          saavutada võrreldes üksnes <code>B_j + L + S_t</code> põhjal saavutatavaga?
+          Selles tähistuses tähistagu <code>j</code> teist, potentsiaalselt erinevat vaatlejat.
+          Operatiivse uurimisküsimuse saab sõnastada nii: millistel tingimustel parandab juurdepääs
+          <code>H_{0:t}</code>-le seda, mida vaatleja <code>j</code> suudab saavutada võrreldes
+          üksnes <code>B_j + L + S_t</code> põhjal saavutatavaga?
         </p>
         <p>
           Ajaloopime osaline ei ole sõna otseses mõttes ajaloopime; ta on pime ainult
@@ -363,8 +381,8 @@
           uurimuse uueks aluseks, vaid nimetada esituslikku mustrit, mis küsimust motiveeris.
         </p>
         <p>
-          See selgitab ka silla Viienda uurimuse ja käesoleva vahel. Maailmasuunaline tõenduse
-          esitus ja uurimissuunaline meetodiesitus on omavahel seotud: objektitasandi
+          See selgitab ka eelmise ja käesoleva uurimuse seost. Maailmasuunaline tõenduse esitus ja
+          uurimissuunaline meetodiesitus on omavahel seotud: objektitasandi
           tõenduskonfliktid või valideerimistõrked võivad avada meetoditasandi uurimise uuesti,
           samas kui meetoditasandi parandused muudavad seda, kuidas hilisemat objektitasandi
           tõendust valitakse, töödeldakse, esitatakse ja tõlgendatakse.
@@ -400,9 +418,10 @@
           määramatusena.
         </p>
         <p>
-          Enesele viitav kogum salvestab meetodi kujunemise päritolu otse. Neljandas voorus ütleb
-          logi, et inimjuhis laiendas uurimisobjekti vaatleja erimeelsuselt väite arenemisele,
-          muutes erimeelsuse viieastmelise trajektoori üheks etapiks; muudatus on kirja pandud
+          Enesele viitav kogum salvestab meetodi kujunemise päritolu otse.
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">Neljandas
+          voorus</a> ütleb logi, et inimjuhis laiendas uurimisobjekti vaatlejate erimeelsuselt
+          väidete arengule, muutes erimeelsuse viieastmelise trajektoori üheks etapiks; muudatus on kirja pandud
           raamisiirdena koos sisu räsiväärtuste ja asenduslinkidega igal mõjutatud failil. Inimese enda
           raam ei olnud fikseeritud sisend, vaid miski, mida uurimus pidi parandama, ning see
           parandus on kontrollitav, mitte lihtsalt jutustatud. Hilisemad voorud näitavad, kuidas
@@ -413,7 +432,8 @@
           mitte hea tahe.
         </p>
         <p>
-          EUDR-i kogum pakub avaliku töönäite parandatud dekompositsioonist rakenduslikus nõuetele
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">EUDR-i
+          kogum</a> pakub avaliku töönäite parandatud dekompositsioonist rakenduslikus nõuetele
           vastavuse eelhindamise ülesandes. Selle voorud näitavad, kuidas ülevaatuseleiud muutuvad
           konkreetseteks parandusteks: Sentinel-2 visuaalne defekt parandatakse, AOI haldussildid ja
           raportikaardi käitumine korrigeeritakse, kohvi ajaline mask parandatakse nii, et praegune
@@ -437,10 +457,17 @@
             raadamine.
           </li>
           <li>
-            <strong>Kiht C — kaubaspetsiifiline tõendus.</strong> Kohvi puhul on allikaspetsiifiline
-            kaubatõendus oluline: ainult FDP-le, ainult MapBiomasele ja mõlema allika kokkulangevusele
-            tuginevat tõendust ei saa käsitleda sama tõendusjõuga pelgalt seetõttu, et kõik
-            kirjeldavad kohvi.
+            <strong>Kiht C — kaubaspetsiifiline tõendus.</strong> Kohvi puhul on oluline, milline
+            allikas tõendust toetab. <strong>FDP</strong> tähendab siin kogumis kasutatavat
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">Forest
+            Data Partnershipi kohvi tõenäosustõendust</a>, <strong>MapBiomas</strong> aga
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">MapBiomase
+            kohvi maakasutus- või klassifikatsioonitõendust</a>. <strong>„Ainult FDP”</strong>
+            tähendab, et asjaomast kohvitingimust toetab FDP, kuid mitte MapBiomas;
+            <strong>„ainult MapBiomas”</strong> tähendab vastupidist;
+            <strong>„mõlema allika kokkulangevus”</strong> tähendab, et tingimust toetavad mõlemad
+            allikad. Neid tõendusseisundeid ei saa käsitleda sama tõendusjõuga pelgalt seetõttu, et
+            kõik puudutavad kohvi.
           </li>
         </ul>
         <p>
@@ -448,13 +475,16 @@
           signaali enamaks, kui tõendus toetab. Salvestatud jada laseb kontrollida, kuidas
           allikaspetsiifilist kohvieeldust parandati, miks visuaalsed ja raportivead olid olulised ning kuidas need
           leiud teisendati püsivamateks operatiivseteks piiranguteks. Parandus on nähtav kogumi
-          enda artefaktides: FDP teatab 0,27 hektarist pärast 2020. aastat tekkinud lähteperioodi
-          metsa kadu, mis lõikub uue kohviga, samas kui MapBiomas ja mõlema allika kokkulangevuse
-          kiht teatavad sama teisenduslõike puhul 0,0 hektarit. Kogum hoiab neid allikate
-          erimeelsusena, mitte arvuna, mis keskmistatakse ära. Selle praegune vastus jääb
-          <code>human_review_required</code> ja <code>pinned-not-reproduced</code> ning see ütleb
-          otse, et tulemus on nõuetele vastavuse eelhindamise märge, mitte õiguslik otsus nõuetele
-          mittevastavuse kohta.
+          enda <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md" target="_blank" rel="noopener noreferrer">allikaspetsiifilistes
+          kattuvustulemustes</a>: FDP teatab 0,27 hektarist pärast 2020. aastat tekkinud
+          lähteperioodi metsa kadu, mis lõikub uue kohviga, samas kui MapBiomas ja mõlema allika
+          kokkulangevuse kiht teatavad sama teisenduslõike puhul 0,0 hektarit. Kogum hoiab neid
+          eraldi allikaspetsiifiliste kattuvustulemustena ja säilitab erimeelsuse, mitte ei käsitle
+          neid ühe mõõdiku alternatiivsete nimede ega arvudena, mis keskmistatakse ära. Selle
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md" target="_blank" rel="noopener noreferrer">praegune
+          vastus</a> jääb <code>human_review_required</code> ja <code>pinned-not-reproduced</code>
+          ning see ütleb otse, et tulemus on nõuetele vastavuse eelhindamise märge, mitte õiguslik
+          otsus nõuetele mittevastavuse kohta.
         </p>
         <p>
           Siin võtab uurimus üle nõude, mille ajendas varasem uurimus, mitte ei leiuta seda uuesti.
@@ -473,7 +503,7 @@
         <p>
           Seega toetab tõendus kitsast väidet: teatud ajalukku salvestatud leiud esitati hiljem
           operatiivsetes artefaktides. See ei tõesta tugevamat kontrafaktilist väidet, et samu
-          artefakte ei oleks saanud tuletada vaatleja taustast, selgesõnalisest eelteadmisest ja
+          artefakte ei oleks saanud tuletada vaatleja taustast, jagatud selgesõnalisest eelteadmisest ja
           piisavalt selgest praegusest seisundist ilma salvestatud trajektoorita.
         </p>
       </section>
@@ -580,7 +610,7 @@
         </p>
         <p>
           Salvestatud trajektoorid toetavad väite kitsamat ja kaitstavamat versiooni, kui varasem
-          artikkel eeldas. Kaks kogumit näitavad, et salvestatud uurimine saab dokumenteerida
+          artikkel eeldas. Need kaks juhtumikogumit näitavad, et salvestatud uurimine saab dokumenteerida
           meetodi kujunemist ja parandamist ning et selle ajaloo leide saab hiljem esitada koodi,
           testide, spetsifikatsioonide, validaatorite, juhiste, tõenduse semantika ja selge
           määramatusena. EUDR-i jada annab sisulise operatiivse tulemuse: allikate eraldamise,
@@ -641,7 +671,7 @@
         </p>
         <p>
           Sama tõendus ei näita, et trajektoori salvestamine annab parema meetodi, kui oleks
-          võimalik tuletada vaatleja taustast, selgesõnalisest eelteadmisest ja rikkast praeguse
+          võimalik tuletada vaatleja taustast, jagatud selgesõnalisest eelteadmisest ja rikkast praeguse
           seisundi üleandmisest. Samuti ei näita see, et arhiveeritud päritolujälg aitaks oluliselt
           kaasa hilisemale diagnoosimisele või parandamisele. Olemasolev tõendus ei erista seega kujunemisväidet selle
           kontrafaktilisest negatiivsest vastest. See on piir, kuid viljakas piir: negatiivne muutub
@@ -709,7 +739,7 @@
         <ul>
           <li>
             <strong>Trajektooriteadlik versus trajektooripime meetodikujundus.</strong> Anda
-            võrreldavatele uurijatele sama probleem, selgesõnaline eelteadmine ja projektiseis,
+            võrreldavatele uurijatele sama probleem, jagatud selgesõnaline eelteadmine ja projektiseis,
             tunnistades samal ajal, et igal vaatlejal on oma <code>B_i</code>. Ainult ühele
             tingimusele antakse <code>H_{0:t}</code>. Võrrelda dekompositsiooni, protseduure,
             valideerimisreegleid, juhiseid, kaitsepiirdeid ja avatud küsimusi, mida nad tuletavad.
@@ -810,7 +840,9 @@
           Raami- ja skeemiparandused vajavad selles elutsüklis erilist hoolt. Need muudavad seda,
           mida süsteem käsitleb kogumi, allika, väite, vaatleja, tõenduskihi, valideerimispiiri või
           nõuetele vastavuse eelhindamise kategooriana, mitte ei muuda pelgalt väärtust olemasolevas kategoorias. Enesele
-          viitava kogumi neljanda vooru uurimisobjekti laiendamine kvalifitseerub. Kohvi ajalise
+          viitava kogumi
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">neljanda
+          vooru</a> uurimisobjekti laiendamine kvalifitseerub. Kohvi ajalise
           maski parandus kvalifitseerub ainult selles kitsamas tähenduses: see muutis suhet
           lähteperioodi kohvi, praeguse kohvi ja pärast lähteperioodi tekkinud uue kohvi vahel.
           Sellised parandused peaksid jääma uurimisjäljes kontrollitavaks, kui need selgitavad
@@ -1082,7 +1114,7 @@
           <div class="research-trail-item">
             <dt>Viimati uuendatud</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-24">24. august 2026</time>
+              <time datetime="2026-08-25">25. august 2026</time>
             </dd>
             <dd class="research-trail-note">
               Selle mustandversiooni viimane nähtav muutmiskuupäev.

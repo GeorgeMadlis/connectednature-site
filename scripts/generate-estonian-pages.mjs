@@ -559,13 +559,15 @@ write("et/about.html", aboutPage());
 write("et/method.html", methodPage());
 
 currentPostSlug = "inquiry-to-procedure";
-write("et/posts/inquiry-to-procedure.html", pageTemplate({
-  title: "Uurimusest protseduurini",
-  description: "Uurimusest protseduurini - eestikeelne tõlge ilmub peagi.",
-  current: "posts",
-  depth: 1,
-  footerNote: "Avalik süntees, mis on seotud oma tööjäljega.",
-  main: `  <main id="main" class="page-main article-main">
+const inquiryToProcedureEtPath = path.join(etPostsRoot, "inquiry-to-procedure.html");
+if (!fs.existsSync(inquiryToProcedureEtPath)) {
+  write("et/posts/inquiry-to-procedure.html", pageTemplate({
+    title: "Uurimusest protseduurini",
+    description: "Uurimusest protseduurini - eestikeelne tõlge ilmub peagi.",
+    current: "posts",
+    depth: 1,
+    footerNote: "Avalik süntees, mis on seotud oma tööjäljega.",
+    main: `  <main id="main" class="page-main article-main">
     <article class="wrap article">
       <header class="article-header">
         <p class="eyebrow">Kuues uurimus</p>
@@ -574,7 +576,8 @@ write("et/posts/inquiry-to-procedure.html", pageTemplate({
       </header>
     </article>
   </main>`,
-}));
+  }));
+}
 
 for (const post of posts) {
   currentPostSlug = post.slug;
