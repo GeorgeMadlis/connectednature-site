@@ -1,0 +1,8 @@
+{
+  "name": "connectednature-site",
+  "compatibility_date": "2026-08-29",
+  "assets": {
+    "directory": "./site",
+    "html_handling": "auto-trailing-slash"
+  }
+}
