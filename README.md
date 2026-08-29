@@ -4,7 +4,8 @@ Public website for **ConnectedNature**.
 
 ConnectedNature is an experimental website for AI-assisted validation of selected statements and ideas about connectedness across nature, ecology, society, knowledge, history, and human systems. It is designed as a public-facing layer for structured inquiry rather than opinion writing.
 
-The website is separate from **COIN**, which serves as the research engine and provenance workflow behind the project.
+The website is separate from **COIN**, which serves as the shared research and provenance workflow
+behind ConnectedNature and its focused fact-checking sibling, **ConnectedInfo**.
 
 ## Purpose
 
@@ -24,10 +25,15 @@ Each article should begin with an originating statement or question, then move t
 
 The goal is not to assert a worldview, but to make human inquiry visible and readable using AI-based tools with care and transparency.
 
-## Relationship to COIN
+## Relationship to ConnectedInfo and COIN
 
-- **ConnectedNature** is the public website
-- **COIN** is the research process, tooling, and provenance trail behind it
+- **ConnectedNature** is the public site for broad and systemic inquiries
+- **ConnectedInfo** is the sibling public site for focused claim-by-claim fact-checks
+- **COIN** is the shared research process, tooling, and provenance trail behind both
+
+The boundary between the two public sites is functional rather than absolute. A broad
+ConnectedNature inquiry can generate a focused fact-checking question, and a focused ConnectedInfo
+fact-check can expose a larger systems question. Not every COIN inquiry is published on both sites.
 
 Where relevant, the site should link readers back to GitHub repositories, research folders, source logs, prompts, notes, and compiled outputs.
 

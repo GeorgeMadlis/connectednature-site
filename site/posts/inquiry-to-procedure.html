@@ -52,11 +52,10 @@
         <p class="eyebrow">Sixth Inquiry</p>
         <h1>From Inquiry to Procedure: Human–AI Research as Progressive Reduction</h1>
         <p class="lead">
-          How a recorded project-specific inquiry trajectory can add an external layer to prior
-          knowledge, literature, documentation, and current project state; how selected lessons can
-          be converted into code, tests, specifications, instructions, and explicit uncertainty; and
-          why the resulting operational method should normally work without replaying the whole
-          history that helped produce it.
+          How a recorded project-specific inquiry trajectory can be represented at the right
+          granularity; how selected lessons can be converted into code, tests, specifications,
+          instructions, and explicit uncertainty; and why the resulting operational method should
+          normally work without replaying the whole history that helped produce it.
         </p>
       </header>
 
@@ -77,13 +76,26 @@
         </p>
         <p>
           The statement is deliberately more careful than the earlier version of this article. It
-          separates three objects that are easy to collapse. The recorded trajectory is the history:
-          corrections, supersessions, frame changes, evidence changes, failed assumptions, and
-          historically observed transformations. A method-evolution protocol is the procedure that
-          evaluates findings in that history and decides whether they should become operational
-          artifacts or remain provenance only. The operational method is the present set of
-          specifications, procedures, code, tests, validators, instructions, evidence semantics, and
-          explicit unresolved questions needed to perform the research task now.
+          separates objects that are easy to collapse. The underlying trajectory is the historical
+          movement of questions, understanding, claims, evidence, frames, procedures, and
+          determinations. A recorded inquiry is one proportional representation of that movement: a
+          source-grounded ordered record sufficient to reconstruct materially relevant changes
+          without claiming formal OKF-FC bundle conformance. A lightweight formal bundle and a full
+          formal bundle are stronger representations with additional machinery. A method-evolution
+          protocol is the procedure that evaluates findings in the record and decides whether they
+          should become operational artifacts or remain provenance only. The operational method is
+          the present set of specifications, procedures, code, tests, validators, instructions,
+          evidence semantics, and explicit unresolved questions needed to perform the research task
+          now.
+        </p>
+        <p>
+          The meaningful choice is therefore not simply <em>no record</em> versus
+          <em>formal bundle</em>. It is a representation choice: ordinary notes, recorded inquiry,
+          lightweight formal bundle, or full formal bundle. The governing design principle is
+          representation proportionality: preserve enough structure for the intended future use, and
+          require additional formal machinery only when expected epistemic, audit,
+          reproducibility, experimental, or repeated-use value justifies it. This article does not
+          claim that a universal promotion threshold has been validated.
         </p>
         <p>
           The crucial distinction is this: historical dependence of method discovery is not the same
@@ -248,7 +260,10 @@
           change, or new case make archived trajectory information valuable again? Fifth: when does
           trajectory information help different human–AI combinations compensate for differences in
           background knowledge and framing, and when does it instead create anchoring, stale
-          assumptions, or context overload?
+          assumptions, or context overload? Across those questions runs a further design problem:
+          how much structure should be retained for different classes of inquiry, and when does
+          expected future value justify promotion from a recorded inquiry to a lightweight or full
+          formal bundle?
         </p>
         <p>
           The answer must keep three claim levels separate. The <strong>descriptive claim</strong>
@@ -267,9 +282,13 @@
         <h2>What exactly is being recorded?</h2>
         <p>
           The phrase “recorded trajectory” hides several layers that need to be kept distinct. The
-          bundle is not a transcript of cognition, and it is not something supplied by Google OKF
-          alone. It is a layered record in which different technical and conceptual substrates do
-          different work.
+          underlying trajectory is the movement of the inquiry itself. A recorded inquiry is a
+          proportional representation of that movement below formal bundle conformance. A formal
+          bundle, whether lightweight or full, is a stronger representation with explicit OKF-FC
+          profile machinery. Git and OKF provide versioning and representation substrates, while
+          the method-evolution protocol decides what later use should be made of the retained
+          record. None of these is a transcript of cognition, and none is supplied by Google OKF
+          alone.
         </p>
         <p>
           <strong>Layer 1 — representation substrate.</strong>
@@ -303,11 +322,14 @@
         </p>
         <p>
           <strong>Layer 3 — research-evolution semantics.</strong> The observer-disagreement and
-          OKF-FC framework adds research-specific semantics on top of OKF and Git. Existing project
-          conventions include, where applicable, <code>fc-round</code>, <code>fc-stage</code>,
-          <code>fc-party</code>, <code>fc-supersedes</code>, per-round inquiry records,
-          bundle/repository ledgers, agent participation rules, explicit frame changes, and
-          supersession. The current bundle-evolution analysis further proposes a richer relation
+          OKF-FC framework adds research-specific semantics on top of OKF and Git. Existing formal
+          bundle conventions include, where applicable, <code>fc-round</code>,
+          <code>fc-stage</code>, <code>fc-party</code>, <code>fc-supersedes</code>, per-round
+          inquiry records, bundle/repository ledgers, agent participation rules, explicit frame
+          changes, and supersession. Recorded inquiries deliberately use less machinery: neutral
+          metadata, ordered source-grounded records, and enough source-role and transition detail
+          to reconstruct the materially relevant path. The current bundle-evolution analysis further
+          proposes a richer relation
           vocabulary distinguishing at least <em>supersedes</em>, <em>contradicts</em>,
           <em>reframes</em>, <em>reopens</em>, and <em>supersedes-under-assumptions</em>. That typed
           relation set is a proposal from the current inquiry, not a fully implemented convention
@@ -527,39 +549,44 @@
         </p>
         <p>
           The objective is not to preserve every prompt, transcript, intermediate thought, or
-          temporary artifact. It is to preserve enough state to reconstruct a materially important
-          transition later, especially where one conclusion contradicts, invalidates, or reframes
-          another. OKF supplies the representation substrate; Git supplies versioned history; the
-          project-specific bundle profile supplies research-evolution semantics; and the
-          method-evolution protocol supplies the rules for using that history. The historical
-          record is provenance; the disciplined use of that record to reconstruct, compare,
-          discriminate, supersede, retain conflict, or reopen is method.
+          temporary artifact. It is to preserve enough state for the intended future use:
+          reconstruction, audit, later source weighting, method revision, reproducibility, or
+          experiment. A recorded inquiry may be enough. Promotion to a lightweight or full formal
+          bundle is optional and conditional, not a reward for being interesting. OKF supplies the
+          representation substrate; Git supplies versioned history; the project-specific recorded
+          inquiry and bundle conventions supply research-evolution semantics at different
+          granularities; and the method-evolution protocol supplies the rules for using that
+          history. The historical record is provenance; the disciplined use of that record to
+          reconstruct, compare, discriminate, supersede, retain conflict, or reopen is method.
         </p>
       </section>
 
       <section class="article-section">
         <h2>Evidence base</h2>
         <p>
-          The evidence here is not a literature but two recorded human–AI trajectories held under
-          version control. They are published as two self-contained bundles committed into the COIN
-          research folder — each a flattened export carrying its own round ledger, per-round
-          records, and, in the first case, a metrics table and a retrospective classification. The
-          first bundle describes the observer-disagreement framework itself: a general and partly
-          self-referential case in which the inquiry examines its own recording, across twenty rounds
-          contributed by two agents. The second is a public reading snapshot of an applied
-          geospatial bundle for Fazenda Sucuri coffee screening under the EU Deforestation Regulation
-          (EUDR), with generated PDF, JSON, GeoJSON, and report artefacts omitted from COIN. What
-          matters in each is not the number of rounds but the observable transformations: historically
-          recorded findings later represented as code, tests, specifications, validators, agent
-          instructions, evidence semantics, or explicit uncertainty.
+          The strongest evidence here is not a literature but two formal human–AI trajectory cases
+          held under version control. They are published as two self-contained bundles committed
+          into the COIN research folder — each a flattened export carrying its own round ledger,
+          per-round records, and, in the first case, a metrics table and a retrospective
+          classification. The first bundle describes the observer-disagreement framework itself: a
+          general and partly self-referential case in which the inquiry examines its own recording,
+          across twenty rounds contributed by two agents. The second is a public reading snapshot of
+          an applied geospatial bundle for Fazenda Sucuri coffee screening under the EU
+          Deforestation Regulation (EUDR), with generated PDF, JSON, GeoJSON, and report artefacts
+          omitted from COIN. What matters in each is not the number of rounds but the observable
+          transformations: historically recorded findings later represented as code, tests,
+          specifications, validators, agent instructions, evidence semantics, or explicit
+          uncertainty.
         </p>
         <p>
           The evidence scope is uneven by design. Of the trajectories discussed here, two are
-          committed as public bundles in COIN; the remaining EUDR episodes are drawn from the
-          versioned private-framework development record discussed in the underlying analysis, and
-          the MHS exchange was never a formal COIN bundle. Those additional episodes are used only
-          to clarify the public article's method claim. They are not presented as public COIN bundle
-          evidence, and no public bundle URLs are inferred for them.
+          committed as formal public bundles in COIN. The MHS/world-models episode is preserved
+          separately as a supporting
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">recorded inquiry</a>,
+          not as a third formal bundle. The remaining EUDR episodes are drawn from the versioned
+          private-framework development record discussed in the underlying analysis. Those
+          additional episodes clarify the method claim; they are not presented as equivalent public
+          bundle evidence, and no public bundle URLs are inferred for them.
         </p>
         <p>
           The self-referential bundle records provenance of method formation directly. At
@@ -576,28 +603,39 @@
           rejection conditions rather than left to good intentions.
         </p>
         <p>
-          A deliberately low-stakes MHS episode illustrates a different failure mode: source
-          weighting rather than geospatial evidence engineering. On 27 August 2026 Anthropic
-          announced a research preview of the
+          The MHS recorded inquiry illustrates a different recording granularity: knowledge
+          enrichment before focused fact-checking. On 27 August 2026 Anthropic announced a research
+          preview of the
           <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener noreferrer">Model Hardware Standard</a>,
           describing it narrowly as a shared, model-agnostic specification and standardized driver
           through which AI agents can discover, read from, write to, and safely operate programmable
-          physical devices. A newsletter framed the announcement with the headline
-          <a href="https://aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">“Claude Just Killed The World Models”</a>.
-          The saved human–AI exchange moved from that headline through a Digital Twin comparison,
-          then an interface/control-infrastructure interpretation, then a Free Energy Principle
-          frame, before the stronger claim that MHS eliminates world models was rejected.
+          physical devices. The source-backed sequence now preserved in COIN is:
+          initial MHS inquiry, MHS/Digital Twin understanding, Free Energy Principle and
+          active-inference enrichment, the stronger world-model claim becoming questionable,
+          explicit fact-check, and consolidation. The first two questions were
+          knowledge-enrichment questions. Only afterward did the stronger headline claim —
+          represented by AI Secret's
+          <a href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">“Claude Just Killed The World Models”</a> —
+          become the explicit claim object under examination.
         </p>
         <p>
-          Its methodological value is small but precise. Source classification and marketing
-          incentive became salient late, after the human explicitly raised sensationalism, rather
-          than at the beginning. A differently instructed human–AI configuration could plausibly
-          have started by classifying the newsletter as secondary promotional material, comparing it
-          with Anthropic's primary announcement, and allocating less effort to the technical
-          speculation. The episode therefore cannot prove trajectory value. It shows only that a
-          retained sequence can make a late frame/source-weighting correction inspectable and can be
-          reduced into a future rule: classify the originating source and compare it with the
-          primary source before committing substantial effort to conceptual analysis.
+          Its methodological value is small but precise. A final-state-only reconstruction could
+          begin directly with “Did MHS make world models unnecessary?” and still perform a competent
+          fact-check against the primary MHS material and the external headline. What it would omit
+          is how the human first developed enough conceptual structure through MHS, Digital Twin,
+          and FEP inquiry for the stronger claim to become questionable. The episode therefore
+          cannot prove that recorded history improves research outcomes. It shows only why a
+          recorded inquiry can be useful for studying fact-check formation: it preserves how a
+          focused checking question emerged from earlier understanding work. The AI Secret headline
+          is an external claim/source object, not a participating observer in the human–AI inquiry.
+        </p>
+        <p>
+          The source insertion also exposes the migration problem in miniature. Before the
+          <code>mhs-world-models-claude-qa</code> attachment was committed into COIN, this public
+          post interpreted an underlying Q/A trajectory that readers could not inspect in the public
+          repositories. The chain is now saved Q/A, recorded inquiry, retrospective analysis, public
+          article. That gives the article a primary COIN artifact to point back to, instead of
+          asking the article to serve as evidence for its own MHS interpretation.
         </p>
         <p>
           The
@@ -831,11 +869,11 @@
           already embodies the relevant lessons.
         </p>
         <p>
-          The MHS episode has a parallel source-evaluation lesson. A sensational newsletter headline
-          was a weak originating source for a broad technical conclusion. The disciplined move is to
-          classify the source type, compare it with the primary announcement, identify the incentive
-          structure of the claim, and only then decide whether deeper conceptual analysis is
-          warranted.
+          The MHS recorded inquiry has a parallel source-evaluation lesson. A secondary newsletter
+          headline was the eventual object of a focused check, not supporting evidence for the claim
+          that MHS made world models unnecessary. The disciplined move is to classify the source
+          role, compare the claim with the primary announcement, and only then decide whether deeper
+          conceptual analysis is warranted.
         </p>
       </section>
 
@@ -923,25 +961,30 @@
         </p>
         <p>
           The recorded trajectories support a narrower, more defensible version of the proposition
-          than the earlier article implied. The two case-study bundles show that recorded inquiry can document
-          the formation and correction of a method, and that findings from that history can be
-          represented later as code, tests, specifications, validators, instructions, evidence
-          semantics, and explicit uncertainty. The EUDR sequence contributes a substantive
-          operational result: source separation, temporal-mask rules, report validation,
-          human-review gates, and the Layer A / Layer B / Layer C decomposition.
+          than the earlier article implied. The two formal case-study bundles show that bundle
+          history can document the formation and correction of a method, and that findings from that
+          history can be represented later as code, tests, specifications, validators, instructions,
+          evidence semantics, and explicit uncertainty. The MHS recorded inquiry contributes a
+          smaller lesson about formation: a focused fact-checking question can emerge after
+          conceptual enrichment without needing formal bundle machinery. The EUDR sequence
+          contributes a substantive operational result: source separation, temporal-mask rules,
+          report validation, human-review gates, and the Layer A / Layer B / Layer C decomposition.
         </p>
         <p class="statement-block">
-          inquiry &rarr; recorded provenance &rarr; method-evolution/revision &rarr; operational
-          method<br>
+          observe inquiry transition &rarr; judge future reconstruction/audit needs &rarr; record
+          minimum sufficient state &rarr; recorded inquiry<br>
+          promote to lightweight/full bundle only when justified &rarr;
+          method-evolution/revision &rarr; operational method<br>
           operational method + new evidence &rarr; result
         </p>
         <p>
           This sequence is the central model. The recorded trajectory belongs to provenance of method
-          formation. The method-evolution or revision step decides what can responsibly migrate into
-          the operational method. Routine execution should normally run from the operational method
-          and the current or new evidence, not from a replay of the whole inquiry. Archived
-          provenance remains available when a contradiction, frame change, source-authenticity
-          failure, unexplained constraint, or new class of case makes revision necessary.
+          formation, but its representation level is selected by intended future use. The
+          method-evolution or revision step decides what can responsibly migrate into the operational
+          method. Routine execution should normally run from the operational method and the current
+          or new evidence, not from a replay of the whole inquiry. Archived provenance remains
+          available when a contradiction, frame change, source-authenticity failure, unexplained
+          constraint, or new class of case makes revision necessary.
         </p>
         <p class="statement-block">
           <code>H_full &rarr;(π) H_{traj} &rarr;(C_{o,a,τ}) (M_t, V_t) &rarr;(E_new) T_new</code>
@@ -1161,20 +1204,27 @@
       <section class="article-section">
         <h2>Implementation path</h2>
         <p>
-          The proposition implies an operational lifecycle. First, record the state transition.
-          Second, classify the finding: evidence, frame, assumption, procedure, source semantics,
-          instruction, uncertainty, or source-authenticity concern. Third, decide whether it
-          generalises, remains local, or is unsafe to generalise. Fourth, map it to an operational
+          The proposition implies an operational lifecycle. First, observe an inquiry transition.
+          Second, judge the future reconstruction, audit, reproducibility, or experimental need.
+          Third, record the minimum sufficient state. That may be an ordinary note, a recorded
+          inquiry, a lightweight formal bundle, or a full formal bundle. Promotion from recorded
+          inquiry to bundle is optional and conditional, not the default destination of every useful
+          research trail.
+        </p>
+        <p>
+          Fourth, classify the finding: evidence, frame, assumption, procedure, source semantics,
+          instruction, uncertainty, or source-authenticity concern. Fifth, decide whether it
+          generalises, remains local, or is unsafe to generalise. Sixth, map it to an operational
           destination: code, test, validator, specification, AI instruction, evidence-semantic rule,
           explicit unresolved question, or provenance-only record.
         </p>
         <p>
-          Fifth, verify before making the reduction normative. Deterministic compilation does not
-          establish epistemic correctness; the fabricated-input/source-authenticity lesson is exactly
-          that reproducibility can preserve an invalid evidence state. Sixth, remove successfully
-          compiled history from routine AI context where possible. Seventh, archive the trajectory as
-          provenance. Eighth, reopen it when failures, frame changes, contradictions, source
-          authenticity problems, or unexplained operational constraints justify method revision.
+          Verify before making the reduction normative. Deterministic compilation does not establish
+          epistemic correctness; the fabricated-input/source-authenticity lesson is exactly that
+          reproducibility can preserve an invalid evidence state. Remove successfully compiled
+          history from routine AI context where possible. Archive the trajectory as provenance.
+          Reopen it when failures, frame changes, contradictions, source authenticity problems, or
+          unexplained operational constraints justify method revision.
         </p>
         <p>
           Frame and schema corrections deserve special care inside this lifecycle. They change what
@@ -1413,9 +1463,10 @@
             inquiry the trail exposes not only the rounds but what each important sequence eventually
             produced: code, tests, specifications, agent rules, retained uncertainty, or rejection of
             an earlier framing. It also records the counterfactual tests that would be needed to
-            distinguish provenance from demonstrated method-formation advantage. The trajectories
-            are committed here as self-contained bundles; the applied EUDR copy intentionally omits
-            generated PDF, JSON, GeoJSON, and report artefacts.
+            distinguish provenance from demonstrated method-formation advantage. The two formal
+            bundle cases are committed here as self-contained bundles; MHS is preserved separately
+            as a supporting recorded inquiry. The applied EUDR copy intentionally omits generated
+            PDF, JSON, GeoJSON, and report artefacts.
           </p>
         </div>
 
@@ -1476,6 +1527,18 @@
           </div>
 
           <div class="research-trail-item">
+            <dt>Recorded inquiries</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries" target="_blank" rel="noopener noreferrer">
+                recorded-inquiries/
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Proportional, source-grounded inquiry records below formal bundle conformance.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
             <dt>General trajectory (bundle)</dt>
             <dd class="research-trail-value">
               <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer">
@@ -1501,6 +1564,19 @@
               temporal-mask correction, and retained human review. This COIN copy mirrors the public
               source bundle's reading files while omitting generated PDF, JSON, GeoJSON, and
               canonical report files.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Supporting recorded inquiry</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">
+                mhs-world-models recorded inquiry
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              A source-backed recorded inquiry showing knowledge enrichment before the focused
+              MHS/world-models fact-checking question became salient; not a formal bundle.
             </dd>
           </div>
 
@@ -1570,15 +1646,15 @@
           </div>
 
           <div class="research-trail-item">
-            <dt>MHS originating headline</dt>
+            <dt>MHS external claim</dt>
             <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">
+              <a class="research-trail-link" href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">
                 “Claude Just Killed The World Models”
               </a>
             </dd>
             <dd class="research-trail-note">
-              The secondary newsletter source used only as the originating claim in the MHS
-              source-weighting illustration.
+              The secondary newsletter source used as the stronger external claim object in the
+              MHS source-weighting illustration, not as evidence supporting itself.
             </dd>
           </div>
 
@@ -1610,7 +1686,7 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-28">28 August 2026</time>
+              <time datetime="2026-08-29">29 August 2026</time>
             </dd>
             <dd class="research-trail-note">
               The latest visible revision date for this draft version.
