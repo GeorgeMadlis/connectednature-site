@@ -87,7 +87,7 @@ For the first version:
 - easy manual editing
 - static deployment
 
-This keeps the site lightweight and easy to deploy on Cloudflare Pages.
+This keeps the site lightweight and easy to deploy on Cloudflare Workers Static Assets.
 
 ## Development Workflow
 
@@ -99,9 +99,9 @@ Recommended workflow:
 4. let Cloudflare Pages generate preview deployments
 5. publish from the main branch when ready
 
-## Deploying to Cloudflare Pages
+## Deploying to Cloudflare Workers
 
-This repository is already structured for a simple Cloudflare Pages deployment:
+This repository is already structured for a simple Cloudflare Workers Static Assets deployment:
 
 ```text
 README.md
@@ -114,7 +114,20 @@ site/
   style.css
 ```
 
-Use these Cloudflare Pages settings:
+The repo includes `wrangler.jsonc` as the Workers build source of truth:
+
+```json
+{
+  "name": "connectednature-site",
+  "compatibility_date": "2026-08-29",
+  "assets": {
+    "directory": "./site",
+    "html_handling": "auto-trailing-slash"
+  }
+}
+```
+
+For legacy Cloudflare Pages deployments, the equivalent settings are:
 
 - source: GitHub
 - root directory: `/` (repository root)
@@ -132,7 +145,7 @@ For static hosting, keep internal links and asset references relative:
 - pages inside `site/posts/` should link back up like `../index.html` and `../style.css`
 
 The current site follows that pattern, so it can be deployed directly from GitHub to Cloudflare
-Pages without a build step.
+Workers without a framework build step.
 
 ## Editorial Principles
 
