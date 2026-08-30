@@ -176,3 +176,7 @@ A good first build includes:
 - one GitHub research-trail section
 
 After that, the site can expand into topic pages, additional posts, and stronger links to COIN-generated research artifacts.
+
+## License
+
+MIT (matching ConnectedInformation/COIN). See [LICENSE](LICENSE).
