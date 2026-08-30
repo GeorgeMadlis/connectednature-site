@@ -99,8 +99,10 @@
           movement of questions, understanding, claims, evidence, frames, procedures, and
           determinations. A recorded inquiry is one proportional representation of that movement: a
           source-grounded ordered record sufficient to reconstruct materially relevant changes
-          without claiming formal OKF-FC bundle conformance. A lightweight formal bundle and a full
-          formal bundle are stronger representations with additional machinery. A method-evolution
+          without claiming formal bundle conformance under OKF-FC (this project's fact-checking
+          and statement-evolution profile and extension of the Open Knowledge Format (OKF)). A
+          lightweight formal bundle and a full formal bundle are stronger representations with
+          additional machinery. A method-evolution
           protocol is the procedure that evaluates findings in the record and decides whether they
           should become operational artifacts or remain provenance only. The operational method is
           the present set of specifications, procedures, code, tests, validators, instructions,
@@ -863,7 +865,7 @@
           method. Routine execution should normally run from the operational method and the current
           or new evidence, not from a replay of the whole inquiry. Archived provenance remains
           available when a contradiction, frame change, source-authenticity failure, unexplained
-          constraint, or new class of case makes revision necessary.
+          constraint, material external contestation, or new class of case makes revision necessary.
         </p>
         <p>
           The compiled-method chain introduced above clarifies the desired endpoint: routine
@@ -893,6 +895,19 @@
           Without that condition the history is merely a sequence in which the latest state overwrites
           the epistemic meaning of the earlier one, and neither form then prevents a later consensus or
           deterministic implementation from erasing the arguments from which it emerged.
+        </p>
+        <p>
+          Contestation provides a further test of this reconstructibility. A party challenging a
+          technical or evidentiary determination \(T_t\), or where applicable a downstream
+          disposition \(D_t\), may be able to evaluate the result adequately from an
+          information-rich current state \(X_{\mathrm{state}}\). A generic decision should not be
+          collapsed automatically into \(D_t\). Where the result depends
+          materially on an earlier disagreement, rejected interpretation, frame change, procedure
+          change, or superseded evidence state, however, compression into the current state may
+          preserve the conclusion without preserving enough information to reconstruct why an
+          alternative was previously defensible or why it was rejected. Explicit trajectory access
+          has incremental value for contestation only if it enables a materially stronger,
+          better-grounded challenge than an equivalently rich \(X_{\mathrm{state}}\) handoff.
         </p>
         <p>
           Retention alone does not convert bundle history into method. A bare sequence of superseded
@@ -933,9 +948,11 @@
         </p>
         <p>
           The two levels are feedback-coupled rather than merely sequential. Object-level conflict,
-          new evidence, or validation failure can reopen method-level inquiry. Method-level
-          correction then changes future object-level evidence construction, processing, and
-          interpretation. That is why a deterministic pipeline is not enough: if the wrong frame has
+          material contestation of a determination or disposition, new evidence, or validation
+          failure can reopen method-level inquiry. A challenge may reveal a reason to diagnose or
+          revise the method, but contestation is not itself proof that the method is wrong.
+          Method-level correction then changes future object-level evidence construction, processing,
+          and interpretation. That is why a deterministic pipeline is not enough: if the wrong frame has
           been made reproducible, reproducibility stabilizes the error. Evidence infrastructure
           constrains what governance can responsibly decide, while inquiry and correction constrain
           what the evidence infrastructure itself is permitted to assume. Object-level evidence may
@@ -989,6 +1006,27 @@
           that the test intends to withhold.
         </p>
         <p>
+          Contestation quality is one possible outcome for the \(X_{\mathrm{state}}\) versus
+          \(X_{\mathrm{traj}}\) contrast:
+        </p>
+        <div class="math-display">\[
+          H_C:\quad Q_C(X_{\mathrm{traj}}) > Q_C(X_{\mathrm{state}})
+        \]</div>
+        <p>
+          Here \(Q_C\) denotes contestation quality and need not be one universal scalar score. A
+          future controlled contestation test could give independent challengers the same contested
+          \(T_t\), or where applicable \(D_t\), with one receiving \(X_{\mathrm{state}}\) and the
+          other receiving \(X_{\mathrm{traj}}\). Relevant dimensions include identification of
+          material error or omitted evidence; recovery of a rejected but previously defensible
+          interpretation; identification of frame or procedure dependence; location of the decisive
+          state transition; distinction between evidence, frame, and procedure change; for
+          \(D_t\), distinction between changes arising from \(T_t\), \(L_t\), or \(J_t\); and
+          identification of discriminating evidence that could resolve the dispute. The negative is
+          \(Q_C(X_{\mathrm{traj}}) \le Q_C(X_{\mathrm{state}})\): if an equivalently rich
+          \(X_{\mathrm{state}}\) supports an equally strong challenge, trajectory access has not
+          demonstrated incremental contestation value. This test has not been run.
+        </p>
+        <p>
           The tests address one validation target: incremental trajectory value. Does explicit
           trajectory access improve a relevant outcome beyond a sufficiently rich current-state
           handoff? A separate axis is external-reference correspondence. Where a defensible
@@ -1031,8 +1069,9 @@
           epistemic correctness; the fabricated-input/source-authenticity lesson is exactly that
           reproducibility can preserve an invalid evidence state. Remove successfully compiled
           history from routine AI context where possible. Archive the trajectory as provenance.
-          Reopen it when failures, frame changes, contradictions, source authenticity problems, or
-          unexplained operational constraints justify method revision.
+          Reopen it when failures, frame changes, contradictions, source authenticity problems,
+          material external contestation, or unexplained operational constraints justify method
+          revision.
         </p>
         <p>
           Frame and schema corrections deserve special care inside this lifecycle. They change what
@@ -1129,7 +1168,9 @@
         <p>
           This article does not measure whether access to recorded project-specific trajectory
           improves method formation over trajectory-blind derivation from prior knowledge and a rich
-          current-state handoff, whether archived provenance improves later method revision, how many
+          current-state handoff, whether archived provenance improves later method revision, whether
+          trajectory access improves independent contestation of a technical determination or
+          downstream disposition relative to an equivalently rich current-state handoff, how many
           historical rounds an AI still needs once good instructions exist, whether instructions
           derived from one trajectory transfer to another, or whether the observed pattern
           generalises across domains. It rests on two cases and cannot generalise from them to a law
@@ -1170,7 +1211,8 @@
         <p>
           The central hypothesis should be weakened or rejected if compiled-state handoffs
           \(X_{\mathrm{state}}\) consistently perform as well as or better than explicit-trajectory
-          handoffs \(X_{\mathrm{traj}}\); if apparent trajectory benefits disappear after controlling for
+          handoffs \(X_{\mathrm{traj}}\), including in contestation tests; if apparent trajectory
+          benefits disappear after controlling for
           information already encoded in prompts, instructions, tests, validators, and code; if
           trajectory-aware teams show more anchoring or slower correction; if archived history adds
           substantial maintenance cost without measurable repair, verification, or transfer
@@ -1206,6 +1248,11 @@
         </p>
         <p>
           Which epistemic transitions require reconstruction rather than summary?
+        </p>
+        <p>
+          When does contesting a technical determination \(T_t\), or where applicable a downstream
+          disposition \(D_t\), require access to materially relevant trajectory beyond an
+          equivalently rich current-state handoff \(X_{\mathrm{state}}\)?
         </p>
         <p>
           When does loading history hurt by introducing stale assumptions, anchoring, context
@@ -1264,8 +1311,9 @@
             inquiry the trail exposes not only the rounds but what each important sequence eventually
             produced: code, tests, specifications, agent rules, retained uncertainty, or rejection of
             an earlier framing. It also records the counterfactual tests that would be needed to
-            distinguish provenance from demonstrated method-formation advantage. The two formal
-            bundle cases are committed here as self-contained bundles; MHS is preserved separately
+            distinguish provenance from demonstrated method-formation advantage, including
+            contestation quality. The two formal bundle cases are committed here as self-contained
+            bundles; MHS is preserved separately
             as a supporting recorded inquiry. The applied EUDR copy intentionally omits generated
             PDF, JSON, GeoJSON, and report artefacts.
           </p>
@@ -1429,7 +1477,7 @@
             </dd>
             <dd class="research-trail-note">
               Proposed, not-yet-run tests for trajectory-aware formation, operational sufficiency,
-              cross-observer handoff, and revision with archived provenance.
+              cross-observer handoff, revision with archived provenance, and contestation quality.
             </dd>
           </div>
 
