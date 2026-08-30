@@ -11,6 +11,25 @@
   <link rel="alternate" hreflang="en" href="../../posts/inquiry-to-procedure.html">
   <link rel="alternate" hreflang="et" href="inquiry-to-procedure.html">
   <link rel="stylesheet" href="../../style.css" onerror="this.onerror=null;this.href='https://connectednature.org/style.css';">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css"
+    integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ"
+    crossorigin="anonymous"
+  >
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"
+    integrity="sha384-ykMNcWQhhTUb0YV9SPpPUFURHZ+tWmubkakGBP+OgNK/UXdO2gtzglWx0Rj9hnO3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body, { throwOnError: false });"
+  ></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Liigu sisu juurde</a>
@@ -356,216 +375,130 @@
           arenemise protokolli ja operatiivse meetodi vahel operatiivselt tähenduslikuks.
         </p>
         <p>
+          Ajalooline kirje on päritolu; selle kirje distsiplineeritud kasutamine rekonstrueerimiseks,
+          võrdlemiseks, eristamiseks, asendamiseks, konflikti säilitamiseks või uuesti avamiseks on
+          meetod.
+        </p>
+        <div class="core-notation" aria-label="Põhitähistus">
+          <p class="core-notation-title">Allpool kasutatav põhitähistus</p>
+          <dl>
+            <div>
+              <dt>\(H_{\mathrm{full}}\)</dt>
+              <dd>laiem sisuliselt asjakohane uurimisprotsess, sealhulgas avalikult salvestamata osad</dd>
+            </div>
+            <div>
+              <dt>\(H_{\mathrm{traj}}\)</dt>
+              <dd>salvestatud projektispetsiifiline trajektoor, mis on hiljem rekonstrueerimiseks kättesaadav</dd>
+            </div>
+            <div>
+              <dt>\(E_t\), \(F_t\), \(P_t\)</dt>
+              <dd>tõendus, raam ja operatiivne protseduur seisundis \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(T_t\)</dt>
+              <dd>tehniline või tõenduslik määrang, mis tekib seisundis \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(M_t\), \(V_t\)</dt>
+              <dd>praegune operatiivne meetod ja päringuga avatav kontrollipäritolu</dd>
+            </div>
+          </dl>
+        </div>
+        <p>
           Sisuliselt asjakohane arenguprotsess on rikkam kui salvestatud artikkel, kogum või Giti
-          ajalugu. Nimetagem seda suuremat protsessi <code>H_full</code>. See hõlmab nähtavaid
-          repositooriumimuudatusi, kuid võib hõlmata ka inimese arutlust, ajutist agendikonteksti,
-          teises keskkonnas toimunud promptide kujundamist, commit'imata katseid ja mudelipõhiseid
-          eelteadmisi. Salvestatud trajektoor on seetõttu projektsioon:
+          ajalugu. See hõlmab nähtavaid repositooriumimuudatusi, kuid võib hõlmata ka inimese
+          arutlust, ajutist agendikonteksti, teises keskkonnas toimunud promptide kujundamist,
+          commit'imata katseid ja mudelipõhiseid eelteadmisi. Salvestatud trajektoor on seetõttu
+          projektsioon:
         </p>
-        <p class="statement-block"><code>H_{traj} = π(H_full)</code></p>
+        <div class="math-display">\[
+          H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)
+        \]</div>
         <p>
-          Projektsiooni sümbol on oluline. See ei lase artiklil teeselda, et avalik kirje on täielik
-          kognitiivne ajalugu. Trajektoor on kasulik ainult niivõrd, kuivõrd see salvestab piisavalt
-          väliselt nähtavat seisundit, et hiljem sisulisi siirdeid rekonstrueerida.
-        </p>
-        <p>
-          Sisuliselt olulist siiret saab esitada vaadeldava sündmusena:
-        </p>
-        <p class="statement-block"><code>e_t = (R_t, O_t, A_t, I_t, Q_t, X_t, R_{t+1})</code></p>
-        <p>
-          Siin on <code>O_t</code> osalev inimvaatleja; <code>A_t</code> täitev tehisintellekti või
-          agendi konfiguratsioon; <code>I_t</code> selgesõnaline juhiseseisund; <code>Q_t</code>
-          agendile antud ülesande- või promptispetsifikatsioon; <code>X_t</code> sisaldab sisulisi
-          väliseid sisendeid, sealhulgas teises tehisintellektikeskkonnas loodud väljundeid; ning
-          <code>R_t</code> ja <code>R_{t+1}</code> on uurimisseisundid enne ja pärast. See on
-          põhjuslik päritolujälg ilma mõttekäigu transkriptsioonita. Näiteks promptide kujunemine
-          ühes keskkonnas, inimese tehtud ülekanne, agendi käivitamine teises keskkonnas ja
-          repositooriumimuudatus on epistemiliselt teistsugune protsess kui see, kus agent tuletab
-          sama nõude repositooriumist iseseisvalt, isegi kui lõplik diff on identne.
+          Projektsioonisümbol ei lase avalikul kirjel teeselda, et see on täielik kognitiivne
+          ajalugu. See on kasulik ainult niivõrd, kuivõrd salvestab piisavalt väliselt nähtavat
+          seisundit, et hiljem sisulisi siirdeid rekonstrueerida: uurimisseisundid enne ja pärast,
+          inimvaatleja ja agendi konfiguratsioon, juhise- ja ülesandespetsifikatsioon ning kõik
+          sisuliselt olulised välised sisendid.
         </p>
         <p>
           Konkreetse seisundi sees on tehniline määrang:
         </p>
-        <p class="statement-block"><code>T_t = f(E_t, F_t, P_t)</code></p>
+        <div class="math-display">\[
+          T_t = f(E_t,F_t,P_t)
+        \]</div>
         <p>
-          Siin on <code>T_t</code> tõenduslik või tehniline määrang uurimisseisundis <code>t</code>;
-          <code>E_t</code> on tõendus ja asjakohased tõendusversioonid; <code>F_t</code> on raam,
-          eeldused, ulatus ja definitsioonid; ning <code>P_t</code> on protseduuri-, meetodi- või
-          juhiseseisund, millega määrang toodeti. Tähistusliku kokkupõrke vältimiseks:
-          <code>P_t</code> selles võrrandis tähendab operatiivset protseduuri- või juhiseseisundit
-          ajal <code>t</code>, mitte kõrgema tasandi meetodi arenemise protokolli, mis otsustab,
-          kuidas kirje peaks operatiivset meetodit muutma.
+          Siin on \(E_t\) viidatud tõendus ja selle versioonid, \(F_t\) raam, eeldused, ulatus ja
+          definitsioonid ning \(P_t\) operatiivne protseduuri- või juhiseseisund. See \(P_t\) ei ole
+          kõrgema tasandi meetodi arenemise protokoll; see on selles seisundis täidetav protseduur.
         </p>
         <p>
           Allavoolu õiguslik või operatiivne dispositsioon, kui projektil on volitus ja tõendus seda
           esitada, on eraldi objekt:
         </p>
-        <p class="statement-block"><code>D_t = g(T_t, L_t, J_t)</code></p>
+        <div class="math-display">\[
+          D_t = g(T_t,L_t,J_t)
+        \]</div>
         <p>
-          Siin on <code>D_t</code> allavoolu dispositsioon, mitte tehniline tulemus ise.
-          <code>L_t</code> on kohaldatav õiguslik või regulatiivne seisund ning <code>J_t</code> on
-          rakenduskontekst: osalise roll, tarneahela topoloogia, jälgitavuskorraldus,
+          \(D_t\) ei ole tehniline tulemus ise. \(L_t\) on õiguslik või regulatiivne seisund ning
+          \(J_t\) on rakenduskontekst: osalise roll, tarneahela topoloogia, jälgitavus,
           jurisdiktsiooniline taristu ja pädeva asutuse kontekst seal, kus see on asjakohane.
-          Varasemad mustandid ja kokkusurutud sõnastused kirjutavad määrangu ühe avaldisena
-          <code>D_t = f(E_t, F_t, P_t)</code>, voltides tehnilise määrangu ja võimaliku allavoolu
-          õigusliku või operatiivse dispositsiooni ühte sümbolisse; laiendatud kuju eristab need,
-          nii et tõenduse, raami või protseduuri muutust (<code>ΔT</code>) ei aetaks segi õigusliku
-          seisundi või rakenduskonteksti ajendatud muutusega (<code>ΔD</code>).
+          EUDR-i töös võib \(L_t\) hõlmata siduvat ELi teksti, juhiseid, võrdlusaluseid,
+          liikmesriigi rakendamist ja tootjariigi õigust. Selle eristuse nähtaval hoidmine takistab
+          regulatiivset või rakenduslikku nihet valesti diagnoosimast teadusliku muutusena.
         </p>
         <p>
-          EUDR-i töös on õiguslik seisund ise struktureeritud:
-        </p>
-        <p class="statement-block">
-          <code>L_t = {L_t^{EU}, L_t^{guidance}, L_t^{benchmark}, L_t^{MS}, L_t^{producer}}</code>
-        </p>
-        <p>
-          Komponendid tähistavad vastavalt siduvat ELi õigusakti, toimivat juhist või tõlgendust,
-          riigi või piirkonna võrdlusalust, liikmesriigi rakendus- või jõustamisseisundit ning
-          asjakohast tootjariigi õigust. Tehniline georuumiline tulemus võib jääda muutumatuks,
-          samal ajal kui allavoolu dispositsioon muutub õiguse, juhiste, rakenduskonteksti või
-          osalise rolli muutumise tõttu. See eristus takistab regulatiivset nihet valesti tõlgendamast
-          teadusliku erimeelsusena.
+          Tõenduse rollid tuleks samuti proosas deklareerida. Nõuetele vastavuse eelhindamiseks
+          kasutatav allikas ei ole automaatselt õigusliku autoriteedi, kauba omistamise,
+          jälgitavuse või maapealse valideerimise allikas. Rolli deklareerimine on meetodi osa,
+          sest see takistab tõenduskihi olemasolu segiajamist otsustamiseks piisava alusega.
         </p>
         <p>
-          Uurimisseisundi saab siis kirjutada nii:
-        </p>
-        <p class="statement-block"><code>R_t = {C_t, E_t, F_t, P_t, T_t, D_t, Δ_t}</code></p>
-        <p>
-          Selles kandidaatses kirjes on <code>C_t</code> väide, küsimus või probleemimääratlus;
-          <code>E_t</code> viidatud ja versioonitud tõendus; <code>F_t</code> asjakohane raam,
-          eeldused, ulatus ja definitsioonid; <code>P_t</code> protseduuri- või juhiseseisund;
-          <code>T_t</code> tehniline määrang; <code>D_t</code> mis tahes tegelikult ulatuses olev
-          allavoolu operatiivne või õiguslik dispositsioon; ning <code>Δ_t</code> siirde sõnastatud
-          põhjus. See on käesoleva uurimuse kandidaatne minimaalne rekonstrueeritav seisund, mitte
-          valideeritud universaalne standard.
+          Võrdlus ei ole seega ajalugu versus ajaloo puudumine. Küsimus on selles, mida teine
+          vaatleja saab saavutada oma taustteadmiste, jagatud selgesõnalise teadmuse ja rikkaliku
+          praeguse seisundi põhjal, võrreldes sellega, mida ta saab saavutada siis, kui lisatakse
+          salvestatud trajektoor. Ajaloopime osaline on pime ainult projektispetsiifilise
+          trajektoori suhtes, mitte kogunenud inimõppe, mudelitreeningu, kirjanduse, standardite,
+          koodi ega koondatud projektiartefaktide suhtes.
         </p>
         <p>
-          Tõendusel peaksid olema ka deklareeritud rollid, mitte ainult failide loend:
+          Siht on kompaktne operatiivne meetod \(M_t\) koos päringuga avatava kontrollipäritoluga
+          \(V_t\). Rutiinne täitmine peaks toetuma peamiselt valideeritud koodile, testidele,
+          spetsifikatsioonidele, tõenduse semantikale, juhistele ja selgetele piirangutele, samal
+          ajal kui \(V_t\) säilitab piisavalt põhjendust ja allikapäritolu, et hilisemad uurijad
+          saaksid küsida, miks meetod on praegusel kujul.
         </p>
-        <p class="statement-block">
-          <code>ρ(e) ∈ {screening, corroborating, commodity-attribution, legality, traceability, ground-validation, decision-support}</code>
+        <div class="math-display">\[
+          H_{\mathrm{full}}
+          \xrightarrow{\pi}
+          H_{\mathrm{traj}}
+          \xrightarrow{C_{o,a,\tau}}
+          (M_t,V_t)
+          \xrightarrow{E_{\mathrm{new}}}
+          T_{\mathrm{new}}
+        \]</div>
+        <p>
+          Kui uus tõendus või uus juhtum tekitab seletamata vastuolu, kehtetu väljundi,
+          määratlemata seisundi või struktuurse sobimatuse, saab arhiveeritud trajektoori
+          meetodirevisjoniks taasaktiveerida. Mõte ei ole hoida iga ajaloolist üksikasja aktiivsena;
+          mõte on säilitada piisavalt taastatavat päritolu, et diagnoosida, miks praegune meetod
+          ebaõnnestus.
         </p>
         <p>
-          Nõuetele vastavuse eelhindamiseks kasutatav allikas ei ole automaatselt õigusliku
-          autoriteedi, kauba omistamise, jälgitavuse või maapealse valideerimise allikas. Rolli
-          deklareerimine on meetodi osa, sest see takistab tõenduskihi olemasolu segiajamist
-          otsustamiseks piisava alusega.
+          Praegust uurimusesitust võib siin kasutatud sihilikult ettevaatlikus mõttes lugeda
+          kaksiku-laadse seisundi ja lõime-laadse trajektoorina. See on struktuurne analoogia, mitte
+          väide, et salvestatud uurimus või OKF-kogum täidab sõna-sõnalt tööstusliku Digital Twin'i
+          definitsiooni. Praegune seisund esitab väidet, tõendust, raami, protseduuri, määrangut ja
+          siirde põhjendust; selle versioonitud arenemine näitab, kuidas inimese ja tehisintellekti
+          uurimus seda esitust ajas uuendab.
         </p>
         <p>
-          Vaatleja tausta puudutava paranduse selgena hoidmiseks kasutab artikkel laiema projekti-
-          või probleemiseisundi jaoks tähist <code>S_t</code>, mitte <code>P_t</code>. Olgu
-          <code>i</code> vaatlejat tähistav indeks. Vaatleja <code>i</code> käsutuses oleva
-          algteadmuse saab üleandmise hetkel kirjutada nii:
-        </p>
-        <p class="statement-block"><code>K_i^0 = B_i + L + S_0</code></p>
-        <p>
-          Siin on <code>B_i</code> vaatleja <code>i</code> taustteadmine ja varasem õppimine,
-          sealhulgas vaikiv pädevus, eeldused ja kallutatused; <code>L</code> on jagatud
-          selgesõnaline eelteadmine, sealhulgas kirjandus, standardid, dokumentatsioon,
-          allikaarhiivid, kood ja omaksvõetud meetodid; ning <code>S_0</code> on üleandmise hetkel olemasolev
-          projekti- või probleemiseisund. <code>B_i</code> on osaliselt varjatud. Kogumilt ei
-          eeldata selle ammendavat salvestamist; väliseks saab teha vaid need eeldused, raamid,
-          otsused või tagajärjed, mis projektis nähtavaks muutuvad.
-        </p>
-        <p>
-          Kohalik projektispetsiifiline trajektoor, salvestatud kujul, on:
-        </p>
-        <p class="statement-block"><code>H_{traj}: S_0 &rarr; S_1 &rarr; ... &rarr; S_t</code></p>
-        <p>
-          Võrdlus ei ole seega ajalugu versus ajaloo puudumine. See on:
-        </p>
-        <p class="statement-block">
-          <code>B_i + L + S_t</code><br>
-          versus<br>
-          <code>B_i + L + S_t + H_{traj}</code>
-        </p>
-        <p>
-          Selles tähistuses tähistagu <code>j</code> teist, potentsiaalselt erinevat vaatlejat.
-          Operatiivse uurimisküsimuse saab sõnastada nii: millistel tingimustel parandab juurdepääs
-          <code>H_{traj}</code>-le seda, mida vaatleja <code>j</code> suudab saavutada võrreldes
-          üksnes <code>B_j + L + S_t</code> põhjal saavutatavaga?
-        </p>
-        <p>
-          Ajaloopime osaline ei ole sõna otseses mõttes ajaloopime; ta on pime ainult
-          projektispetsiifilise trajektoori suhtes.
-        </p>
-        <p>
-          Sellise trajektoori koondatud tulemus on samuti vaatlejasuhteline. Kaugseire spetsialist,
-          jurist, tarkvarainsener, Claude'i konfiguratsioon, Codexi konfiguratsioon või GPT
-          konfiguratsioon võib sama kirje erinevalt kokku suruda, sest nende taustteadmised ja
-          tõrketundlikkused on erinevad:
-        </p>
-        <p class="statement-block"><code>C_i(H_{traj}) ≠ C_j(H_{traj})</code></p>
-        <p>
-          Siht ei ole seega minimaalne ajalugu. Siht on kompaktne operatiivne meetod
-          <code>M_t</code> koos päringuga avatava kontrollipäritoluga <code>V_t</code>. Rutiinne
-          täitmine peaks toetuma peamiselt valideeritud koodile, testidele, spetsifikatsioonidele,
-          tõenduse semantikale, juhistele ja selgetele piirangutele, samal ajal kui <code>V_t</code>
-          säilitab piisavalt põhjendust ja allikapäritolu, et hilisemad uurijad saaksid küsida, miks
-          meetod on praegusel kujul.
-        </p>
-        <p class="statement-block">
-          <code>H_full &rarr;(π) H_{traj} &rarr;(C_{o,a,τ}) (M_t, V_t) &rarr;(E_new) T_new</code>
-        </p>
-        <p>
-          Kui uus tõendus või uus juhtum tekitab seletamata vastuolu, kehtetu väljundi, määratlemata
-          seisundi või struktuurse sobimatuse, saab arhiveeritud trajektoori taasaktiveerida:
-        </p>
-        <p class="statement-block">
-          <code>(M_t, V_t, E*, H_{traj}) &rarr; R_{t+1} &rarr; (M_{t+1}, V_{t+1})</code>
-        </p>
-        <p>
-          Praegust kogumiseisundit saab seetõttu lugeda selles artiklis kasutatud sihilikult
-          ettevaatlikus ja mitte-reaalajalises tähenduses uurimuse selle hetke kaksiku-laadse
-          esitusena. See esitab uurimisseisundit: väidet, tõendust, raami, protseduuri, määrangut
-          ja siirde põhjendust. See ei ole mõtlemisprotsessi sõnasõnaline koopia ega füüsilise maailma
-          koopia. Analoogia on struktuurne.
-          <a href="https://www.digitaltwinconsortium.org/initiatives/the-definition-of-a-digital-twin/" target="_blank" rel="noopener noreferrer">Digital Twin Consortiumi definitsioon</a>
-          seob digitaalsed kaksikud integreeritud andmepõhiste esitustega, mida sünkroniseeritakse
-          kindla sageduse ja täpsusega; siin ei väideta, et OKF-kogum täidab seda tööstuslikku
-          definitsiooni, ning automaatset reaalajalist sünkroniseerimist ei eeldata.
-        </p>
-        <p>
-          Kogum ei asenda ka vaatleja teadmisi. Vaatleja <code>i</code> suhtleb jagatud välise
-          esitusega oma <code>B_i</code> ja raamiga <code>F_i</code>; vaatleja <code>j</code> võib
-          hiljem läheneda samale esitusele teistsuguste <code>B_j</code> ja <code>F_j</code>-ga.
-          Kokkuvõtlikult võib rekonstrueeritava seisundi uuendust kirjeldada nii:
-        </p>
-        <p class="statement-block"><code>R_{t+1} = g(R_t, E_{t+1}; B_i, F_i)</code></p>
-        <p>
-          Mõte ei ole selles, et digitaalse kaksiku laadne esitus sisaldaks <code>B_i</code>-d. Ei
-          sisalda. Salvestatud arenemise võimalik väärtus on hoopis see, et mõned vaatlejate
-          erinevuste tagajärjed muutuvad välises kirjes kontrollitavaks, mitte ei jää täielikult
-          varjatuks.
-        </p>
-        <p>
-          Selliseid seisundeid ühendav versioonitud jada sarnaneb pigem
-          <a href="https://www.digitaltwinconsortium.org/2020/12/the-case-for-the-digital-thread/" target="_blank" rel="noopener noreferrer">digitaalse lõime laadse trajektooriga</a>:
-          see säilitab, kuidas esitus muutub järjestikuste inimese ja tehisintellekti suhtluste
-          kaudu. Inimese ja tehisintellekti uurimine on osa uuendusmehhanismist. See võib avastada
-          uusi andmeid, muuta meetodit, paljastada raamivea, muuta allikasemantikat või avada
-          varasema järelduse uuesti. Eesmärk ei ole lisada digitaalse kaksiku teooriat selle
-          uurimuse uueks aluseks, vaid nimetada esituslikku mustrit, mis küsimust motiveeris.
-        </p>
-        <p>
-          See selgitab ka eelmise ja käesoleva uurimuse seost. Maailmasuunaline tõenduse esitus ja
-          uurimissuunaline meetodiesitus on omavahel seotud: objektitasandi
-          tõenduskonfliktid või valideerimistõrked võivad avada meetoditasandi uurimise uuesti,
-          samas kui meetoditasandi parandused muudavad seda, kuidas hilisemat objektitasandi
-          tõendust valitakse, töödeldakse, esitatakse ja tõlgendatakse.
-        </p>
-        <p>
-          Eesmärk ei ole säilitada iga prompti, transkripti, vahemõtet või ajutist artefakti.
-          Eesmärk on säilitada piisavalt seisundit kavandatud tulevase kasutuse jaoks:
-          rekonstrueerimiseks, auditiks, hilisemaks allikakaalumiseks, meetodirevisjoniks,
-          reprodutseeritavuseks või eksperimendiks. Salvestatud uurimus võib olla piisav.
-          Edutamine kergeks või täielikuks formaalseks kogumiks on valikuline ja tingimuslik, mitte
-          tasu selle eest, et uurimistee on huvitav. OKF annab esitusliku aluse; Git annab
-          versioonitud ajaloo; projektispetsiifilised salvestatud uurimuse ja kogumi tavad annavad
-          uurimuse arenemise semantika eri detailsusastmetel; ning meetodi arenemise protokoll
-          annab reeglid selle ajaloo kasutamiseks. Ajalooline kirje on päritolu; selle kirje
-          distsiplineeritud kasutamine rekonstrueerimiseks, võrdlemiseks, eristamiseks,
-          asendamiseks, konflikti säilitamiseks või uuesti avamiseks on meetod.
+          Analoogia aitab nähtavaks teha kaks seotud esitust: maailma- või tõendussuunalise esituse,
+          mida käsitleb <a href="evidence-first-consensus-later.html">„Tõendus kõigepealt, konsensus
+          hiljem”</a>, ja siin käsitletava uurimis- või meetodisuunalise esituse. Objektitasandi
+          konfliktid võivad avada meetoditasandi uurimise uuesti ning meetoditasandi parandused
+          muudavad hilisemat tõenduse ehitamist. Kumbagi esitust ei tohiks käsitleda ökoloogilise,
+          õigusliku, poliitilise ega valitsemisalase tõe automaatse otsustajana.
         </p>
       </section>
 
@@ -717,8 +650,8 @@
           väärtuselt <code>0.1</code> väärtusele <code>0.01</code> tehnilise nõuetele vastavuse
           eelhindamise tulemuse seisundist <code>insufficient_evidence</code> seisundiks
           <code>possible_relevant_deforestation</code>. Mõte ei ole selles, et kohv ilmus äkki
-          füüsilisse maailma, vaid selles, et muutunud protseduur <code>P</code> võib nihutada
-          <code>T = f(E,F,P)</code>, samal ajal kui suur osa tõendusest <code>E</code> jääb samaks.
+          füüsilisse maailma, vaid selles, et muutunud protseduur \(P\) võib nihutada
+          \(T=f(E,F,P)\), samal ajal kui suur osa tõendusest \(E\) jääb samaks.
           Küps taandus ei ole „kasuta madalamat lävendit”, vaid selged parameetrisemantika,
           tundlikkusanalüüs, valideerimisnõuded ja reeglid, mis takistavad tõenäosuslävendi
           käsitlemist maapealse tõena.
@@ -737,69 +670,16 @@
           Tugevaim privaatse raamistiku parandus puudutas allika autentsust. Varasemad Brasiilia
           rasterandmed olid kinnitatud ja deterministlikult taasesitatud, kuid hilisem uurimine
           leidis, et kinnitatud sisendid ei olnud autentsed teenusepakkujalt pärinevad hanked.
-          Räsid taasesitasid valed sisendid. Operatiivne õppetund on, et <code>V_t</code> peab
+          Räsid taasesitasid valed sisendid. Operatiivne õppetund on, et \(V_t\) peab
           sisaldama kontrollipäritolu, mis eristab teenusepakkuja sündmust, hangitud kirjet,
           kinnitatud artefakti, arvutust ja tõlgendust. Korratavus kontrollib kinnitatud artefakti
           ja arvutust; see ei tõenda iseenesest allika autentsust.
         </p>
         <p>
-          Ülekandmine puidule lisas järgmise raamiparanduse. Kohvi järgi kujundatud meetodist ei
-          piisanud Libeeria puidutõenduse jaoks, sest kontsessioon ei ole tootmis- või
-          raiumisplokk, puu või palgi allikas ega saadetise allikas. Meetod pidi eristama raadamist
-          ja degradeerumist, säilitama tootmis- ja allikageomeetria seisundi ning käsitlema JRC
-          TMF-i ja RADD-i tõendust tootvate allika- või protsessikomponentidena, mitte eraldi
-          kogumipiiridena. Õppetund puudutab ülekandmist: meetod võib olla ühe kaubajuhtumite
-          klassi jaoks taandatud, jäädes teise jaoks struktuurselt ebapiisavaks.
-        </p>
-        <p>
-          Libeeria Area K kirje säilitab ka erimeelsuse mitteekvivalentsete tõendusprotsesside
-          vahel, selle asemel et käsitleda neid ühe suuruse korduvate hinnangutena:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Tõendusprotsess</th>
-              <th>Raporteeritud pindala (ha)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>JRC metsa lähtekiht 2020</td>
-              <td>261,004.86</td>
-            </tr>
-            <tr>
-              <td>Hansen/JRC 2020. aasta järgne kadu lähtekihil</td>
-              <td>10,914.48</td>
-            </tr>
-            <tr>
-              <td>Hanseni 10% võrastiku lähtekihi 2020. aasta järgne kadu</td>
-              <td>11,216.61</td>
-            </tr>
-            <tr>
-              <td>JRC TMF raadamine, 2021–2025</td>
-              <td>5,386.32</td>
-            </tr>
-            <tr>
-              <td>JRC TMF degradeerumine, 2021–2025</td>
-              <td>7,088.13</td>
-            </tr>
-            <tr>
-              <td>RADD kinnitatud hoiatuste ala</td>
-              <td>13,502.16</td>
-            </tr>
-            <tr>
-              <td>RADD madala usaldusastmega hoiatuste ala</td>
-              <td>4,569.93</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Need arvud erinevad, sest protsessid erinevad sensori mehhanismi, sündmuse definitsiooni,
-          ajalise loogika, ruumilise töötluse ja ülesvoolu sõltuvuste poolest. Erimeelsus on osa
-          tõendusseisundist. See võib õigustada sihitud kinnitamist, mitte põhjendamatut keskmist.
-          Kontsessiooni mõõtkavas tulemus jääb inimülevaatust nõudvaks nõuetele vastavuse
-          eelhindamise seisundiks, sest see ei tõenda raiumisploki, puu või palgi, saadetise ega
-          tarneahela jälgitavuse seost.
+          Ülekanne teise kaubaklassi lisas veel ühe raamiparanduse. Meetod, mis on ühe
+          juhtumiklassi jaoks edukalt taandatud, võib siiski sisaldada raami, mis teise klassi
+          ülekandmisel ebaõnnestub. See õppetund kuulub üldiselt meetodi ülekandmise juurde; avalik
+          artikkel ei vaja selle tõendamiseks teist üksikasjalikku tõendustabelit.
         </p>
         <p>
           Siin võtab uurimus üle nõude, mille ajendas varasem uurimus, mitte ei leiuta seda uuesti.
@@ -844,7 +724,7 @@
           näidata, et parandused toimusid, et hilisemad seisundid erinesid varasematest sisuliselt
           ning et praegune meetod sisaldab neist parandustest tuletatud artefakte. See ei saa
           tõendada, et salvestatud trajektoor põhjustas paranduse, et ajaline järgnevus on
-          põhjustatud-seos või et <code>H_full</code>-i salvestamata osad olid ebaolulised. Tulemuseks
+          põhjustatud-seos või et \(H_{\mathrm{full}}\)-i salvestamata osad olid ebaolulised. Tulemuseks
           on seos koos rekonstrueeritava päritoluga, mitte põhjusliku vajalikkuse tõestus.
         </p>
         <p>
@@ -929,23 +809,22 @@
         </p>
         <p>
           Kandidaatne vastus ei ole üldine „rohkem ajalugu”, vaid epistemilised siirded, mida
-          kokkusurumine võib hõlpsasti kustutada. Siirdes <code>A &rarr; not-A</code> ei pruugi
-          ainult <code>not-A</code> teadmine näidata, miks <code>A</code> alguses mõistlik paistis,
-          mis selle ümber lükkas, millised eeldused muutusid, kas parandus oli kohalik või üldine
-          või miks teine vaatleja võiks <code>A</code> uuesti rekonstrueerida. See jääb testitavaks
+          kokkusurumine võib hõlpsasti kustutada. Kui alguses usutav väide hiljem tagasi lükatakse,
+          ei pruugi lõplik tagasilükkamine näidata, miks väide alguses mõistlik paistis, mis selle
+          ümber lükkas, millised eeldused muutusid, kas parandus oli kohalik või üldine või miks
+          teine vaatleja võiks asendatud väite uuesti rekonstrueerida. See jääb testitavaks
           hüpoteesiks, mitte valmis õigustuseks iga ajaloolise üksikasja aktiivsena hoidmiseks.
         </p>
         <p>
           MHS-i näide lisab nõrgema, kuid tavalise mustri. Trajektoori väärtus ei pea eeldama täielikku
-          pöördumist seisundist <code>A</code> seisundisse <code>not-A</code>. See võib ilmneda ka
-          siis, kui otsus jääb ligikaudu samaks, kuid põhjendus muutub sisuliselt:
-          <code>A' &rarr; A''</code>. Hilisem vaatleja võib nõustuda, et pealkiri oli liialdatud,
-          kuid lükata tagasi osa vahepealsest arutlusest või otsustada, et allikahindamine oleks
-          pidanud tulema esimesena.
+          pöördumist. See võib ilmneda ka siis, kui otsus jääb ligikaudu samaks, kuid põhjendus
+          muutub sisuliselt. Hilisem vaatleja võib nõustuda, et pealkiri oli liialdatud, kuid
+          lükata tagasi osa vahepealsest arutlusest või otsustada, et allikahindamine oleks pidanud
+          tulema esimesena.
         </p>
         <p>
           Veel üks tõlgendus on vaatlejasuhteline kokkusurumine. Ühele vaatlejale üleliigne detail
-          võib teise jaoks olla eristav vihje. Sama <code>H_{traj}</code> võib seetõttu anda eri
+          võib teise jaoks olla eristav vihje. Sama \(H_{\mathrm{traj}}\) võib seetõttu anda eri
           inimvaldkondade või tehisintellekti konfiguratsioonide jaoks erinevaid kaitstavaid
           koondusi. See muudab kokkusurumise enda uurimisobjektiks: küsimus ei ole selles, kui palju
           ajalugu saab kustutada, vaid milline minimaalne rekonstrueeritav seisund säilitab hilisema
@@ -997,15 +876,11 @@
           päritolu jääb kättesaadavaks siis, kui vastuolu, raamimuutus, allika autentsuse tõrge,
           seletamata piirang või uus juhtumiklass muudab revisjoni vajalikuks.
         </p>
-        <p class="statement-block">
-          <code>H_full &rarr;(π) H_{traj} &rarr;(C_{o,a,τ}) (M_t, V_t) &rarr;(E_new) T_new</code>
-        </p>
         <p>
-          See kompaktne ahel selgitab soovitud lõppseisundit. Rutiinne täitmine lähtub koondatud
-          operatiivsest meetodist ja kontrollipäritolust, mitte kogu trajektoori püsivast
-          taasläbimängimisest. Trajektoor muutub taas operatiivselt oluliseks siis, kui hilisem
-          tõrge, vastuolu, allikauuendus, uus vaatleja või uus juhtum muudab praeguse meetodi
-          ebapiisavalt seletavaks.
+          Eespool sisse toodud koondatud meetodi ahel selgitab soovitud lõppseisundit: rutiinne
+          täitmine lähtub operatiivsest meetodist ja kontrollipäritolust, samal ajal kui arhiveeritud
+          trajektoor muutub taas operatiivselt oluliseks siis, kui praegune meetod ei seleta olukorda
+          piisavalt.
         </p>
         <p>
           Arhiveerimiseks tekib täiendav põhjus siis, kui hilisem uurimus varasema järeldusega
@@ -1101,117 +976,48 @@
           COINi uurimiskaust määratleb tulevased testid trajektoori mõju kohta. Neid ei ole veel
           käivitatud. Lihtne „ajalugu versus ajaloo puudumine” disain oleks eksitav, sest praegused
           promptid, testid, validaatorid, lugemisjuhendid ja repositooriumitavad võivad juba kanda
-          kokkusurutud ajaloolist õppimist. Puhtam disain eristab kolme tingimust.
+          kokkusurutud ajaloolist õppimist. Täielik disain on failis
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">counterfactual-tests.md</a>.
         </p>
-        <p class="statement-block"><code>X_0 = {problem, sources, generic instructions}</code></p>
-        <p class="statement-block"><code>X_1 = X_0 ∪ {S_t, Φ_t, U_t, M_t, V_t}</code></p>
-        <p class="statement-block"><code>X_2 = X_1 ∪ H_{traj}</code></p>
+        <div class="math-display">\[
+          X_{\min}
+          \subset
+          X_{\mathrm{state}}
+          \subset
+          X_{\mathrm{traj}}
+        \]</div>
         <p>
-          Siin on <code>X_0</code> minimaalselt kirjeldatud tingimus; <code>X_1</code> on koondatud
-          seisundi üleandmine, mis sisaldab praegust projektiseisu <code>S_t</code>, selgesõnalisi
-          eeldusi ja raamipiiranguid <code>Φ_t</code>, lahendamata küsimusi <code>U_t</code>,
-          koondatud operatiivset meetodit <code>M_t</code> ning päringuga avatavat kontrollipäritolu
-          <code>V_t</code>; <code>X_2</code> lisab selgesõnalise ligipääsu salvestatud
-          trajektoorile. Kontrast <code>X_0 &rarr; X_1</code> hindab koondatud ajaloolise õppimise
-          väärtust. Kontrast <code>X_1 &rarr; X_2</code> hindab selgesõnalise trajektoori allesjäänud
-          lisaväärtust.
-        </p>
-        <p>
-          Mõisteliselt küsitakse, kas vaatleja <code>j</code> puhul kehtib
-          <code>Q_j(X_2) &gt; Q_j(X_1)</code>. <code>Q</code> võib tähendada jätkamise kvaliteeti,
-          veatuvastust, parandamist, ülekandmist, vastupidavust raamierinevustele, diagnostilist
-          täpsust, kulu või seal, kus kaitstav <code>G</code> on olemas, liikumist välise
-          võrdlusseisundi poole. Seda ei pakuta ühe universaalse skalaarse mõõdikuna.
-        </p>
-        <ul>
-          <li>
-            <strong>Trajektooriteadlik versus trajektooripime meetodikujundus.</strong> Anda
-            võrreldavatele uurijatele sama probleem, jagatud selgesõnaline eelteadmine ja projektiseis,
-            tunnistades samal ajal, et igal vaatlejal on oma <code>B_i</code>. Võrrelda
-            <code>X_1</code> ja <code>X_2</code> tingimusi selle järgi, millise dekompositsiooni,
-            protseduurid, valideerimisreeglid, juhised, kaitsepiirded ja avatud küsimused nad
-            tuletavad.
-          </li>
-          <li>
-            <strong>Ainult praeguse meetodiga operatiivne täitmine.</strong> Anda agendile praegune
-            operatiivne meetod koos uue tõendusega, ilma ajalooliste voorudeta, ja testida, kas
-            ülesannet saab õigesti täita. Positiivne tulemus näitaks õnnestunud koondamist, mitte
-            seda, et ajalugu ei omanud avastamisväärtust.
-          </li>
-          <li>
-            <strong>Meetodirevisjon arhiveeritud päritoluga ja ilma selleta.</strong> Tuua sisse
-            vastuolu, raamitõrge, allika autentsuse probleem, seletamata reegel,
-            regulatsioonimuutus, muutunud agendikonfiguratsioon või uus juhtumiklass. Võrrelda
-            revisjoni <code>X_1</code>-st revisjoniga <code>X_2</code>-st.
-          </li>
-          <li>
-            <strong>Vaatlejatevaheline üleandmine.</strong> Oletame, et <code>B_A != B_B</code>. Kas
-            piisavalt selge praeguse seisundi üleandmine lubab vaatlejal B jätkata vaatleja A tööd
-            usaldusväärselt ilma <code>H_{traj}</code>-ta? Kas <code>H_{traj}</code> lisamine parandab sisuliselt
-            jätkamist, varjatud raamierinevuste avastamist, parandamist, asendatud eelduste
-            taastamise vältimist või ülekannet valdkondlike taustade vahel? Või on
-            <code>X_1</code> juba piisav?
-          </li>
-          <li>
-            <strong>Kontrollipäritolu uuesti avatavus.</strong> Hoida rutiinse väljundi kvaliteet
-            samana, kuid tuua sisse hilisem lahknevus. Küsida, kas osalised suudavad tuvastada, kas
-            see tekkis muutusest <code>ΔE</code>, <code>ΔF</code>, <code>ΔP</code>,
-            <code>ΔL</code>, <code>ΔJ</code>, <code>ΔA</code> või <code>ΔQ</code>. See testib, kas
-            <code>V_t</code> ja vajaduse korral <code>H_{traj}</code> säilitavad piisavalt
-            põhjuslikku päritolu, et tõrget diagnoosida ilma kogu projekti uuesti üles ehitamata.
-          </li>
-        </ul>
-        <p>
-          Need testid käsitlevad ainult üht valideerimissihti: kas ligipääs salvestatud
-          trajektoorile muudab või parandab meetodi kujunemist, jätkamist, ülekandmist või
-          revisjoni võrreldes trajektooripimeda tingimusega. Ajaloopime osaline ei ole sõna otseses
-          mõttes ajaloopime; ta on pime ainult projektispetsiifilise trajektoori suhtes. Need ei
-          tõenda iseenesest vaatlejaüldisust. Mitu Claude'i, Codexi või GPT katset, mille
-          juhtumivaliku, raamistuse, promptid ja hindamise teeb üks inimuurija, võivad näidata ühe
-          uurija piires püsivust, kuid need ei ole sõltumatu inimvaatleja replikatsioon. Tugevam
-          disain kasutaks eri inimuurijaid, <code>H_1, H_2, ..., H_n</code>, võimaluse korral nii,
-          et nad saavad ise trajektoore luua või raamida, mitte üksnes täita raamistiku algataja
-          kirjutatud prompte. Tehisintellekti konfiguratsiooni tuleks samuti käsitleda
-          eksperimentaalse tegurina: trajektooritingimus × tehisintellekti konfiguratsioon ×
-          inimuurija.
+          \(X_{\min}\) on minimaalselt määratletud üleandmine: probleem, allikad ja üldised
+          juhised. \(X_{\mathrm{state}}\) lisab piisavalt selgelt kirjeldatud praeguse
+          projektiseisu, koondatud operatiivse õppimise, lahendamata küsimused ja
+          kontrollipäritolu. \(X_{\mathrm{traj}}\) annab lisaks ligipääsu salvestatud
+          projektispetsiifilisele trajektoorile.
         </p>
         <p>
-          Eraldi valideerimistelg on vastavus välisele võrdlusseisundile. Kui kaitstav sõltumatu
-          võrdlusseisund on olemas, saab järjestikuseid kogumimääranguid sellega võrrelda:
-        </p>
-        <p class="statement-block"><code>δ_t = d(T_t, G)</code></p>
-        <p>
-          Siin on <code>T_t</code> tehniline määrang uurimisseisundis <code>t</code>, <code>G</code>
-          sõltumatult saadud võrdlusseisund või -vaatlus ning <code>d</code> ülesandele sobiv
-          kaugus- või veamõõt. Siire, mille puhul <code>δ_(t+1) &lt; δ_t</code>, on tõend
-          liikumisest võrdlusseisundi poole, arvestades nii kogumimäärangu kui ka võrdluse
-          määramatust. Tegelik uurimistöö ei pea paranema monotoonselt: võimalikud on lähenemine,
-          ajutine tagasiminek, taastumine ja lahknemine. Georuumilises juhtumis võib võrdluseks
-          olla sõltumatult kogutud in-situ mõõtmine või sõltumatult valideeritud välivaatlus, kus
-          sobival juhul kasutatakse pindalaviga, klassifikatsioonitäpsust, precision/recall/F1
-          mõõte või ruumilist kattuvust.
+          Põhjuslik eristus on kitsas. Kontrast \(X_{\min}\)-ist \(X_{\mathrm{state}}\)-ini puudutab
+          koondatud praeguse seisundi õppimise väärtust. Kontrast \(X_{\mathrm{state}}\)-ist
+          \(X_{\mathrm{traj}}\)-ini testib selgesõnalise trajektooriligipääsu allesjäänud
+          lisaväärtust. Trajektooripime tingimus on saastunud, kui antud praegused artefaktid
+          kodeerivad juba trajektoorist tuletatud õppetunde, mida test peaks varjama.
         </p>
         <p>
-          See eristus seob arutluse otse tagasi artikliga „Tõendus kõigepealt, konsensus hiljem” ja
-          hoiab lahus kolm telge. <strong>Trajektoori väärtus</strong> küsib, kas
-          <code>X_2</code> parandab uurimist võrreldes <code>X_1</code>-ga.
-          <strong>Empiiriline korrektsus</strong> küsib, kas määrangud lähenevad <code>G</code>-le
-          seal, kus sobiv <code>G</code> on olemas. <strong>Vaatlejate konsensus</strong> küsib,
-          kas eri vaatlejad lähenevad üksteisele. Trajektoor võib parandada ülekandmist ilma
-          tõe poole lähenemist parandamata. Vaatlejad võivad nõustuda, jäädes <code>G</code> suhtes
-          ekslikuks. Projekt võib läheneda <code>G</code>-le ilma kogu ajaloolist trajektoori
-          vajamata. Välise võrdlusseisundi poole lähenemist saab kasutada ainult mõne väiteklassi
-          puhul. Empiirilise georuumilise väite puhul, näiteks kas kindlas kohas ja ajavahemikus
-          toimus maakattetüübi muutus, võib sõltumatu võrdlusvaatlus mõnikord olemas olla.
-          Normatiivsete, õiguslike, valitsemisega seotud või väärtuskonfliktide puhul ei pruugi samaväärset
-          vaatlejast sõltumatut <code>G</code>-d olla. „Konsensus hiljem” ei tähenda seega „mitte
-          kunagi lähene”. See tähendab: lähene seal, kus eristav tõendus lähenemist toetab, ning
-          säilita struktureeritud erimeelsus seal, kus see seda ei tee. Oluline tõrkerežiim on vale
-          koondumine: mitu vaatlejat võivad jõuda sama määranguni, samal ajal kui sõltumatu
-          võrdlusnäitaja osutab, et määrang jääb sellest sisuliselt kaugele. Tähistuses võivad
-          vaatlejad koonduda määrangule <code>T*</code>, samal ajal kui <code>d(T*, G)</code> jääb
-          sisuliselt nullist erinevaks. Vaatlejate koondumine ei ole sama mis võrdlusseisundile
-          lähenemine.
+          Testid käsitlevad üht valideerimissihti: trajektoori lisaväärtust. Kas selgesõnaline
+          ligipääs trajektoorile parandab asjakohast tulemust võrreldes piisavalt rikkaliku praeguse
+          seisundi üleandmisega? Eraldi telg on vastavus välisele võrdlusseisundile. Kui kaitstav
+          sõltumatu empiiriline võrdlusseisund \(G\) on olemas, saab järjestikuseid tehnilisi
+          määranguid sellega võrrelda:
+        </p>
+        <div class="math-display">\[
+          \delta_t = d(T_t,G)
+        \]</div>
+        <p>
+          Kahanev \(\delta_t\) võib näidata liikumist võrdlusseisundi poole \(G\) ja valitud
+          kaugusmõõdu kehtivuse piires; see ei ole universaalne korrektsuse tõend. Vaatlejatevaheline
+          kokkulepe on kolmas telg. Eri vaatlejad võivad läheneda või eriarvamusele jääda ning
+          kokkulepe ei ole iseenesest korrektsuse tõend. Need eristused säilitavad silla artikliga
+          <a href="evidence-first-consensus-later.html">„Tõendus kõigepealt, konsensus hiljem”</a>:
+          lähene seal, kus eristav tõendus lähenemist toetab, ning säilita struktureeritud
+          erimeelsus seal, kus see seda ei tee.
         </p>
       </section>
 
@@ -1276,12 +1082,12 @@
           <tbody>
             <tr>
               <td>Korduv tarkvaraviga</td>
-              <td>Test või validaator <code>M_t</code>-s</td>
+              <td>Test või validaator \(M_t\)-s</td>
               <td>Madal pärast valideerimist</td>
             </tr>
             <tr>
               <td>Stabiilne protseduurireegel</td>
-              <td>Spetsifikatsioon või kood <code>M_t</code>-s</td>
+              <td>Spetsifikatsioon või kood \(M_t\)-s</td>
               <td>Madal</td>
             </tr>
             <tr>
@@ -1291,12 +1097,12 @@
             </tr>
             <tr>
               <td>Allikapiirang</td>
-              <td>Andmeallikate register ja <code>V_t</code> põhjendus</td>
+              <td>Andmeallikate register ja \(V_t\) põhjendus</td>
               <td>Mõõdukas pärast allikamuutust</td>
             </tr>
             <tr>
               <td>Raami- või skeemiparandus</td>
-              <td>Spetsifikatsioon koos säilitatud põhjendusega <code>V_t</code>-s</td>
+              <td>Spetsifikatsioon koos säilitatud põhjendusega \(V_t\)-s</td>
               <td>Mõõdukas/kõrge ülekande ajal</td>
             </tr>
             <tr>
@@ -1318,23 +1124,16 @@
         </table>
         <p>
           Andmete ruumiline lahutus, ajaline sagedus ja kulu on pakutud laiendused, mitte praegused
-          tulemused. Lihtsustatud eesmärgi saab kirjutada kujul
-          <code>J = Q(r,τ,Ω,m) − λC(r,τ,Ω,m)</code>, kus <code>Q</code> tähistab ülesandepõhist
-          tõenduskvaliteeti, <code>C</code> kogu operatiivkulu, <code>r</code> ruumilist lahutust,
-          <code>τ</code> ajalist proovivõttu, <code>Ω</code> geograafilist ala ja <code>m</code>
-          meetodit. See alaindeksita <code>J</code> on pakutud kulu-kvaliteedi eesmärk; see on
-          eraldi <code>J_t</code>-st, mis tähistab rakenduskonteksti avaldises
-          <code>D_t = g(T_t,L_t,J_t)</code>. Trajektoor peaks salvestama mitte ainult selle, milline
-          meetod valiti, vaid ka selle, miks kallim või odavam haru tagasi lükati, et vastupidav
-          kulu-kvaliteedi reegel saaks hiljem taanduda <code>M_t</code>-sse.
+          tulemused. Tulevane meetodihindamine võib vajada tõenduskvaliteedi kaalumist ruumilise,
+          ajalise, arvutusliku ja operatiivse kulu suhtes ning trajektoor peaks salvestama, miks
+          kõrgema või madalama kuluga haru tagasi lükati, kui see valik kujundab sisuliselt \(M_t\).
         </p>
         <p>
-          Regulatiivne areng on samuti meetodi sisend. Tehnilise seisundi muutuse saab kirjutada
-          kujul <code>ΔT = h(ΔE,ΔF,ΔP)</code>; allavoolu dispositsiooni muutuse kujul
-          <code>ΔD = g_Δ(ΔT,ΔL,ΔJ)</code>. Selle eristuse säilitamine takistab juhistest,
-          võrdlusalustest, liikmesriigi rakendusest, tootjariigi õigusest, osalise rollist,
-          tarneahela topoloogiast või jälgitavuskontekstist tingitud tulemuserinevust valesti
-          lugemast ökoloogilise tõenduse muutuseks.
+          Regulatiivne areng on samuti meetodi sisend. Tehniline tulemus võib muutuda seetõttu, et
+          muutub tõendus, raam või protseduur; allavoolu dispositsioon võib muutuda seetõttu, et
+          muutuvad õigus, juhised, võrdlusalused, osalise roll, jälgitavuskontekst või
+          rakendustaristu. Selle eristuse säilitamine takistab regulatiivset nihet valesti lugemast
+          ökoloogiliseks erimeelsuseks.
         </p>
       </section>
 
@@ -1359,7 +1158,7 @@
           asukoha-, aja-, mõõtmis-, valimi- ja klassifikatsioonimääramatus.
         </p>
         <p>
-          Vaatleja taust on keskne piirang, mitte kõrvaline segaja. <code>B_i</code> on osaliselt
+          Vaatleja taust on keskne piirang, mitte kõrvaline segaja. \(B_i\) on osaliselt
           varjatud ega ole ammendavalt mõõdetav. Inimese ekspertiisi ja tehisintellekti õpitud
           eeldusi ei saa lihtsalt võrdseks hoida. H+ ja H− võrdlemine eri inimeste vahel toob sisse
           vaatlejatausta varieerumise; sama inimese kasutamine kaks korda toob kaasa ülekandumise.
@@ -1370,21 +1169,21 @@
           tõenda endiselt trajektoori lisaväärtust.
         </p>
         <p>
-          Salvestatud repositooriumiajalugu on samuti ainult <code>H_{traj} = π(H_full)</code>.
-          Millise osa sisuliselt asjakohasest ajaloost <code>π</code> kinni püüab, ei ole teada.
-          Kolme tingimusega eksperiment võib infot lekitada: <code>X_1</code> peabki kodeerima
-          koondatud ajaloolist õppimist, kuid tõeliselt minimaalne <code>X_0</code> ei tohi kaasa
+          Salvestatud repositooriumiajalugu on samuti ainult \(H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)\).
+          Millise osa sisuliselt asjakohasest ajaloost \(\pi\) kinni püüab, ei ole teada.
+          Kolme tingimusega eksperiment võib infot lekitada: \(X_{\mathrm{state}}\) peabki kodeerima
+          koondatud ajaloolist õppimist, kuid tõeliselt minimaalne \(X_{\min}\) ei tohi kaasa
           smugeldada trajektoorist tuletatud prompte, teste ega lugemisjuhendeid. Uurimusel puuduvad
           ka süsteemsed kulumõõtmised alternatiivsete ruumiliste lahutuste, ajaliste sageduste ja
           kinnitamisstrateegiate kohta; sellel puudub esinduslik andmestik praktilistest EUDR-i
           tulemustest operaatorite, kauplejate, asutuste, tolliprotsesside või alternatiivsete
-          turukanalite lõikes; ning sõltumatult kaitstavad võrdlusseisundid <code>G</code> on
+          turukanalite lõikes; ning sõltumatult kaitstavad võrdlusseisundid \(G\) on
           olemas ainult mõne piiritletud empiirilise alamprobleemi jaoks.
         </p>
         <p>
           Keskset hüpoteesi tuleks nõrgendada või see tagasi lükata, kui koondatud seisundi
-          üleandmised <code>X_1</code> toimivad järjekindlalt sama hästi või paremini kui
-          selgesõnalise trajektooriga üleandmised <code>X_2</code>; kui näilised trajektoorikasud
+          üleandmised \(X_{\mathrm{state}}\) toimivad järjekindlalt sama hästi või paremini kui
+          selgesõnalise trajektooriga üleandmised \(X_{\mathrm{traj}}\); kui näilised trajektoorikasud
           kaovad pärast seda, kui kontrollitakse promptidesse, juhistesse, testidesse,
           validaatoritesse ja koodi juba kodeeritud teavet; kui trajektooriteadlikud meeskonnad
           näitavad rohkem ankurdamist või aeglasemat parandamist; kui arhiveeritud ajalugu lisab
@@ -1409,7 +1208,7 @@
         <h2>Avatud küsimused</h2>
         <p>
           Millist lisaväärtust annab projektispetsiifiline trajektoor võrreldes
-          <code>B_i + L + praeguse seisundiga</code>?
+          \(B_i + L +\) praeguse seisundiga?
         </p>
         <p>
           Millal piisab hästi kirjeldatud praegusest seisundist jätkamiseks, täitmiseks või
@@ -1440,8 +1239,8 @@
           trajektoori alles hoidmata?
         </p>
         <p>
-          Kas trajektooriteadlik üleandmine parandab lähenemist <code>G</code>-le seal, kus
-          <code>G</code> on olemas, ning millised tõenduse, raami või protseduuri muutused tekitavad
+          Kas trajektooriteadlik üleandmine parandab lähenemist \(G\)-le seal, kus
+          \(G\) on olemas, ning millised tõenduse, raami või protseduuri muutused tekitavad
           paranemist, tagasiminekut või taastumist?
         </p>
         <p>
@@ -1464,8 +1263,8 @@
           konfiguratsiooni artefaktid?
         </p>
         <p>
-          Millal piisab kompaktsest põhjendusest koos päringuga avatava <code>V_t</code>-ga ja
-          millal on vaja sügavamat ligipääsu <code>H_{traj}</code>-le, et näiliselt tõhus
+          Millal piisab kompaktsest põhjendusest koos päringuga avatava \(V_t\)-ga ja
+          millal on vaja sügavamat ligipääsu \(H_{\mathrm{traj}}\)-le, et näiliselt tõhus
           kokkusurumine ei muutuks läbipaistmatuks?
         </p>
       </section>
@@ -1701,7 +1500,7 @@
           <div class="research-trail-item">
             <dt>Viimati uuendatud</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-08-29">29. august 2026</time>
+              <time datetime="2026-08-30">30. august 2026</time>
             </dd>
             <dd class="research-trail-note">
               Selle mustandversiooni viimane nähtav muutmiskuupäev.
