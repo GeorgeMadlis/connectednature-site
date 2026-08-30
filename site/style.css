@@ -630,12 +630,69 @@ li {
   line-height: 1.55;
 }
 
+.math-display {
+  max-width: 100%;
+  margin: 1.25rem 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.math-display .katex-display {
+  margin: 0;
+}
+
+.core-notation {
+  max-width: var(--content-width);
+  margin: 1.2rem 0 1.3rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(70, 88, 67, 0.16);
+  border-radius: 0.65rem;
+  background: rgba(255, 252, 246, 0.58);
+}
+
+.core-notation-title {
+  margin-bottom: 0.72rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.core-notation dl {
+  display: grid;
+  gap: 0.62rem;
+  margin: 0;
+}
+
+.core-notation div {
+  display: grid;
+  grid-template-columns: minmax(6.6rem, 0.35fr) minmax(0, 1fr);
+  gap: 0.8rem;
+}
+
+.core-notation dt,
+.core-notation dd {
+  margin: 0;
+}
+
+.core-notation dt {
+  color: var(--text);
+  font-family: var(--heading-font);
+}
+
+.core-notation dd {
+  color: var(--text-soft);
+  line-height: 1.58;
+}
+
 .article ul {
   padding-left: 1.2rem;
 }
 
 .article-header > *:not(.eyebrow):not(h1),
-.article-section > *:not(h2):not(.statement-block):not(.research-trail-list),
+.article-section > *:not(h2):not(.statement-block):not(.math-display):not(.core-notation):not(.research-trail-list),
 .panel > *:not(h2):not(.trail-list),
 .feature-copy > *:not(h3):not(.meta),
 .trail-grid > div > *:not(h2):not(.eyebrow),
@@ -715,6 +772,11 @@ li {
 
   .research-trail-list {
     grid-template-columns: 1fr;
+  }
+
+  .core-notation div {
+    grid-template-columns: 1fr;
+    gap: 0.18rem;
   }
 
   .footer-nav {

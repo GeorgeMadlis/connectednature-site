@@ -11,6 +11,25 @@
   <link rel="alternate" hreflang="en" href="inquiry-to-procedure.html">
   <link rel="alternate" hreflang="et" href="../et/posts/inquiry-to-procedure.html">
   <link rel="stylesheet" href="../style.css" onerror="this.onerror=null;this.href='https://connectednature.org/style.css';">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css"
+    integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ"
+    crossorigin="anonymous"
+  >
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"
+    integrity="sha384-ykMNcWQhhTUb0YV9SPpPUFURHZ+tWmubkakGBP+OgNK/UXdO2gtzglWx0Rj9hnO3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body, { throwOnError: false });"
+  ></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -347,217 +366,130 @@
           method-evolution protocol, and operational method becomes operationally meaningful.
         </p>
         <p>
+          The historical record is provenance; the disciplined use of that record to reconstruct,
+          compare, discriminate, supersede, retain conflict, or reopen is method.
+        </p>
+        <div class="core-notation" aria-label="Core notation">
+          <p class="core-notation-title">Core notation used below</p>
+          <dl>
+            <div>
+              <dt>\(H_{\mathrm{full}}\)</dt>
+              <dd>the larger materially relevant inquiry process, including parts not public or recorded</dd>
+            </div>
+            <div>
+              <dt>\(H_{\mathrm{traj}}\)</dt>
+              <dd>the recorded project-specific trajectory available for later reconstruction</dd>
+            </div>
+            <div>
+              <dt>\(E_t\), \(F_t\), \(P_t\)</dt>
+              <dd>evidence, frame, and operational procedure at state \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(T_t\)</dt>
+              <dd>the technical or evidentiary determination produced at state \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(M_t\), \(V_t\)</dt>
+              <dd>the current operational method and queryable verification provenance</dd>
+            </div>
+          </dl>
+        </div>
+        <p>
           The materially relevant development process is richer than the recorded article, bundle,
-          or Git history. Call that larger process <code>H_full</code>. It includes observable
-          repository changes, but it may also include human reasoning, temporary agent context,
-          prompt development in another environment, uncommitted experiments, and model-specific
-          prior knowledge. The recorded trajectory is therefore a projection:
+          or Git history. It includes observable repository changes, but it may also include human
+          reasoning, temporary agent context, prompt development in another environment, uncommitted
+          experiments, and model-specific prior knowledge. The recorded trajectory is therefore a
+          projection:
         </p>
-        <p class="statement-block"><code>H_{traj} = π(H_full)</code></p>
+        <div class="math-display">\[
+          H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)
+        \]</div>
         <p>
-          The projection symbol matters. It prevents the article from pretending that the public
-          record is a complete cognitive history. The trajectory is useful only to the extent that
-          it records enough externally visible state to reconstruct material transitions later.
-        </p>
-        <p>
-          A materially important transition can be represented as an observable event:
-        </p>
-        <p class="statement-block"><code>e_t = (R_t, O_t, A_t, I_t, Q_t, X_t, R_{t+1})</code></p>
-        <p>
-          Here <code>O_t</code> is the participating human observer; <code>A_t</code> is the
-          executing AI or agent configuration; <code>I_t</code> is the explicit instruction state;
-          <code>Q_t</code> is the task or prompt specification supplied to the agent;
-          <code>X_t</code> contains material external inputs, including outputs produced in another
-          AI environment; and <code>R_t</code> and <code>R_{t+1}</code> are the before and after
-          research states. This is causal provenance without chain-of-thought. For example, prompt
-          development in one environment, human transfer, an agent invocation in another
-          environment, and a repository change are epistemically different from an agent deriving
-          the same requirement from the repository alone, even if the final diff is identical.
+          The projection symbol keeps the public record from pretending to be a complete cognitive
+          history. It is useful only to the extent that it records enough externally visible state to
+          reconstruct material transitions later: the before and after research states, the human
+          observer and agent configuration, the instruction and task specification, and any material
+          external inputs.
         </p>
         <p>
           Within a given state, the technical determination is:
         </p>
-        <p class="statement-block"><code>T_t = f(E_t, F_t, P_t)</code></p>
+        <div class="math-display">\[
+          T_t = f(E_t,F_t,P_t)
+        \]</div>
         <p>
-          Here <code>T_t</code> is the evidentiary or technical determination at research state
-          <code>t</code>; <code>E_t</code> is the evidence and relevant evidence versions;
-          <code>F_t</code> is the frame, assumptions, scope, and definitions; and
-          <code>P_t</code> is the procedure, method, or instruction state used to produce the
-          determination. To avoid a notation collision: <code>P_t</code> in this equation means the
-          operational procedure/instruction state at time <code>t</code>, not the higher-level
-          method-evolution protocol that decides how the record should change the operational
-          method.
+          Here \(E_t\) is the referenced evidence and versions, \(F_t\) is the frame, assumptions,
+          scope, and definitions, and \(P_t\) is the operational procedure or instruction state.
+          This \(P_t\) is not the higher-level method-evolution protocol; it is the procedure being
+          executed at that state.
         </p>
         <p>
           A downstream legal or operational disposition, where the project has authority and
           evidence to represent one, is separate:
         </p>
-        <p class="statement-block"><code>D_t = g(T_t, L_t, J_t)</code></p>
+        <div class="math-display">\[
+          D_t = g(T_t,L_t,J_t)
+        \]</div>
         <p>
-          Here <code>D_t</code> is a downstream disposition rather than the technical result itself.
-          <code>L_t</code> is the applicable legal or regulatory state, and <code>J_t</code> is the
-          implementation context: actor role, supply-chain topology, traceability arrangements,
-          jurisdictional infrastructure, and competent-authority context where relevant. Earlier
-          drafts and compressed formulations write the determination as a single
-          <code>D_t = f(E_t, F_t, P_t)</code>, folding the technical determination and any
-          downstream legal or operational disposition into one symbol; this expanded form separates
-          them, so that a change in evidence, frame, or procedure (<code>ΔT</code>) is not confused
-          with a change driven by the legal state or implementation context (<code>ΔD</code>).
-        </p>
-        <p>
-          For EUDR work, the legal state is itself structured:
-        </p>
-        <p class="statement-block">
-          <code>L_t = {L_t^{EU}, L_t^{guidance}, L_t^{benchmark}, L_t^{MS}, L_t^{producer}}</code>
+          \(D_t\) is not the technical result itself. \(L_t\) is the legal or regulatory state, and
+          \(J_t\) is the implementation context: actor role, supply-chain topology, traceability,
+          jurisdictional infrastructure, and competent-authority context where relevant. For EUDR
+          work, \(L_t\) may include binding EU text, guidance, benchmarking, Member-State
+          implementation, and producer-country law. Keeping this distinction visible prevents
+          regulatory or implementation drift from being misdiagnosed as a scientific change.
         </p>
         <p>
-          The components denote, respectively, binding EU legal text, operative guidance or
-          interpretation, country or region benchmarking, Member-State implementation or
-          enforcement state, and relevant producer-country law. A technical geospatial result may
-          remain unchanged while a downstream disposition changes because law, guidance,
-          implementation context, or actor role changes. That separation prevents regulatory drift
-          from being misdiagnosed as scientific disagreement.
+          Evidence roles should also be declared in prose. A source used for compliance screening is
+          not automatically a source of legal authority, commodity attribution, traceability, or
+          ground validation. Role declaration is part of the method because it prevents the
+          existence of an evidence layer from being mistaken for decision sufficiency.
         </p>
         <p>
-          The research state can then be written as:
-        </p>
-        <p class="statement-block"><code>R_t = {C_t, E_t, F_t, P_t, T_t, D_t, Δ_t}</code></p>
-        <p>
-          In that candidate record, <code>C_t</code> is the claim, question, or problem definition;
-          <code>E_t</code> is the referenced and versioned evidence; <code>F_t</code> is the
-          relevant frame, assumptions, scope, and definitions; <code>P_t</code> is the procedure or
-          instruction state; <code>T_t</code> is the technical determination; <code>D_t</code> is
-          any downstream operational or legal disposition actually in scope; and <code>Δ_t</code> is
-          the stated reason for transition. This is a candidate minimum reconstructible state from
-          the current inquiry, not a validated universal standard.
+          The comparison is therefore not history versus no history. It is what another observer can
+          achieve from their background knowledge, shared explicit knowledge, and a rich current
+          state, compared with what they can achieve when the recorded trajectory is added. A
+          history-blind participant is blind only to the project-specific trajectory, not to
+          accumulated human learning, model training, literature, standards, code, or compiled
+          project artifacts.
         </p>
         <p>
-          Evidence should also carry declared roles rather than appearing merely as a list of
-          files:
+          The target is a compact operational method \(M_t\) paired with queryable verification
+          provenance \(V_t\). Routine execution should depend primarily on validated code, tests,
+          specifications, evidence semantics, instructions, and explicit constraints, while
+          \(V_t\) preserves enough rationale and source provenance for later investigators to ask why
+          the method has its present form.
         </p>
-        <p class="statement-block">
-          <code>ρ(e) ∈ {screening, corroborating, commodity-attribution, legality, traceability, ground-validation, decision-support}</code>
-        </p>
-        <p>
-          A source used for compliance screening is not automatically a source of legal authority,
-          commodity attribution, traceability, or ground validation. Role declaration is part of the
-          method because it prevents the existence of an evidence layer from being mistaken for
-          decision sufficiency.
-        </p>
-        <p>
-          To keep the observer-background correction explicit, use <code>S_t</code> for the broader
-          project or problem state, not <code>P_t</code>. Let <code>i</code> index an observer. For
-          observer <code>i</code>, the starting knowledge available at handoff can be written as:
-        </p>
-        <p class="statement-block"><code>K_i^0 = B_i + L + S_0</code></p>
-        <p>
-          Here <code>B_i</code> is observer <code>i</code>'s background knowledge and prior
-          learning, including tacit competence, assumptions, and biases; <code>L</code> is shared
-          explicit prior knowledge, including literature, standards, documentation, source archives,
-          code, and accepted methods; and <code>S_0</code> is the current project or problem state at
-          handoff. <code>B_i</code> is partly latent. The bundle is not expected to record it
-          exhaustively; it can externalize only assumptions, frames, decisions, or consequences that
-          become observable in the project.
-        </p>
-        <p>
-          The local project-specific trajectory, as recorded, is:
-        </p>
-        <p class="statement-block"><code>H_{traj}: S_0 &rarr; S_1 &rarr; ... &rarr; S_t</code></p>
-        <p>
-          The comparison is therefore not history versus no history. It is:
-        </p>
-        <p class="statement-block">
-          <code>B_i + L + S_t</code><br>
-          versus<br>
-          <code>B_i + L + S_t + H_{traj}</code>
-        </p>
-        <p>
-          In this notation, let <code>j</code> denote another, potentially different observer. The
-          operational research question becomes: under what conditions does access to
-          <code>H_{traj}</code> improve what observer <code>j</code> can achieve beyond
-          <code>B_j + L + S_t</code>?
-        </p>
-        <p>
-          A history-blind participant is not literally history-blind; they are blind only to the
-          project-specific trajectory.
-        </p>
-        <p>
-          The compiled product of such a trajectory is also observer-relative. A remote-sensing
-          specialist, lawyer, software engineer, Claude configuration, Codex configuration, or GPT
-          configuration may compress the same record differently because their background knowledge
-          and failure sensitivities differ:
-        </p>
-        <p class="statement-block"><code>C_i(H_{traj}) ≠ C_j(H_{traj})</code></p>
-        <p>
-          The target is therefore not minimum history. It is a compact operational method
-          <code>M_t</code> paired with queryable verification provenance <code>V_t</code>. Routine
-          execution should depend primarily on validated code, tests, specifications, evidence
-          semantics, instructions, and explicit constraints, while <code>V_t</code> preserves enough
-          rationale and source provenance for later investigators to ask why the method has its
-          present form.
-        </p>
-        <p class="statement-block">
-          <code>H_full &rarr;(π) H_{traj} &rarr;(C_{o,a,τ}) (M_t, V_t) &rarr;(E_new) T_new</code>
-        </p>
+        <div class="math-display">\[
+          H_{\mathrm{full}}
+          \xrightarrow{\pi}
+          H_{\mathrm{traj}}
+          \xrightarrow{C_{o,a,\tau}}
+          (M_t,V_t)
+          \xrightarrow{E_{\mathrm{new}}}
+          T_{\mathrm{new}}
+        \]</div>
         <p>
           When new evidence or a new case produces an unexplained contradiction, invalid output,
-          undefined state, or structural mismatch, the archived trajectory can be reactivated:
-        </p>
-        <p class="statement-block">
-          <code>(M_t, V_t, E*, H_{traj}) &rarr; R_{t+1} &rarr; (M_{t+1}, V_{t+1})</code>
-        </p>
-        <p>
-          A current bundle state can therefore be read, in the deliberately cautious and
-          non-real-time sense used here, as a twin-like representation of the inquiry at that point.
-          It represents a research state: claim, evidence, frame, procedure, determination, and
-          transition rationale. It is not a literal copy of cognition, and it is not a copy of the
-          physical world. The analogy is structural. The
-          <a href="https://www.digitaltwinconsortium.org/initiatives/the-definition-of-a-digital-twin/" target="_blank" rel="noopener noreferrer">Digital Twin Consortium's definition</a>
-          links digital twins to integrated data-driven representations with synchronization at a
-          specified frequency and fidelity; no claim is made here that an OKF bundle satisfies that
-          industrial definition, and no automatic real-time synchronization is assumed.
+          undefined state, or structural mismatch, the archived trajectory can be reactivated for
+          method revision. The point is not to keep every historical detail active; it is to keep
+          enough recoverable provenance to diagnose why the present method has failed.
         </p>
         <p>
-          The bundle is also not a substitute for observer knowledge. Observer <code>i</code>
-          interacts with the shared external representation using their own <code>B_i</code> and
-          frame <code>F_i</code>; observer <code>j</code> may later approach the same representation
-          with different <code>B_j</code> and <code>F_j</code>. In a compact form, a reconstructible
-          state might be updated as:
-        </p>
-        <p class="statement-block"><code>R_{t+1} = g(R_t, E_{t+1}; B_i, F_i)</code></p>
-        <p>
-          The point is not that the Digital Twin-like representation contains <code>B_i</code>. It
-          does not. One possible value of recorded evolution is that some consequences of observer
-          differences become inspectable in the external record instead of remaining entirely
-          latent.
+          A current research representation can be read, in the deliberately cautious sense used
+          here, as twin-like state plus thread-like trajectory. This is a structural analogy, not a
+          claim that a recorded inquiry or OKF bundle literally satisfies an industrial Digital Twin
+          definition. The current state represents claim, evidence, frame, procedure, determination,
+          and transition rationale; its versioned evolution shows how human-AI inquiry updates that
+          representation over time.
         </p>
         <p>
-          The versioned sequence connecting such states is closer to a
-          <a href="https://www.digitaltwinconsortium.org/2020/12/the-case-for-the-digital-thread/" target="_blank" rel="noopener noreferrer">digital-thread-like trajectory</a>:
-          it preserves how the representation changes across successive human–AI interactions.
-          Human–AI inquiry is part of the update mechanism. It can discover new data, revise a
-          method, expose a frame error, alter source semantics, or reopen a previous conclusion.
-          The point is not to introduce Digital Twin theory as another foundation of this inquiry,
-          but to name the representational pattern that motivated the question.
-        </p>
-        <p>
-          This also clarifies the relationship between the preceding inquiry and the present one.
-          The world-facing evidence representation and the research-facing method representation are coupled:
-          object-level evidence conflicts or validation failures can reopen method-level inquiry,
-          while method-level corrections change how later object-level evidence is selected,
-          processed, represented, and interpreted.
-        </p>
-        <p>
-          The objective is not to preserve every prompt, transcript, intermediate thought, or
-          temporary artifact. It is to preserve enough state for the intended future use:
-          reconstruction, audit, later source weighting, method revision, reproducibility, or
-          experiment. A recorded inquiry may be enough. Promotion to a lightweight or full formal
-          bundle is optional and conditional, not a reward for being interesting. OKF supplies the
-          representation substrate; Git supplies versioned history; the project-specific recorded
-          inquiry and bundle conventions supply research-evolution semantics at different
-          granularities; and the method-evolution protocol supplies the rules for using that
-          history. The historical record is provenance; the disciplined use of that record to
-          reconstruct, compare, discriminate, supersede, retain conflict, or reopen is method.
+          The analogy helps expose two coupled representations: the world- or evidence-facing
+          representation discussed in
+          <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>, and the
+          research- or method-facing representation discussed here. Object-level conflicts can
+          reopen method-level inquiry, and method-level corrections change later evidence
+          construction. Neither representation should be treated as an automatic arbiter of
+          ecological, legal, or political truth.
         </p>
       </section>
 
@@ -710,8 +642,8 @@
           <code>0.1</code> to <code>0.01</code> changed the technical screening result from
           <code>insufficient_evidence</code> to <code>possible_relevant_deforestation</code>. The
           point is not that coffee suddenly appeared in the physical world, but that a changed
-          procedure <code>P</code> can move <code>T = f(E,F,P)</code> while much of the evidence
-          <code>E</code> remains fixed. The mature reduction is not “use the lower threshold”; it is
+          procedure \(P\) can move \(T=f(E,F,P)\) while much of the evidence
+          \(E\) remains fixed. The mature reduction is not “use the lower threshold”; it is
           explicit parameter semantics, sensitivity analysis, validation requirements, and rules
           preventing a probability threshold from being treated as ground truth.
         </p>
@@ -729,68 +661,16 @@
           The strongest private-framework correction concerned source authenticity. Earlier Brazil
           rasters were pinned and deterministically reproduced, but later investigation found that
           the pinned inputs were not authentic provider-derived acquisitions. Hashes reproduced the
-          wrong inputs. The operational lesson is that <code>V_t</code> must include verification
+          wrong inputs. The operational lesson is that \(V_t\) must include verification
           provenance capable of distinguishing provider event, acquired record, pinned artifact,
           computation, and interpretation. Reproducibility controls the pinned artifact and
           computation; it does not by itself prove source authenticity.
         </p>
         <p>
-          Transfer to wood added a further frame correction. A coffee-shaped method was not
-          sufficient for Liberia wood evidence because a concession is not a production or
-          harvesting block, a tree or log source, or a shipment source. The method had to separate
-          deforestation from degradation, preserve production/source geometry status, and treat
-          JRC TMF and RADD as evidence-producing source/process components rather than standalone
-          bundle boundaries. The lesson is about transfer: a method may be reduced for one class of
-          commodity cases while remaining structurally inadequate for another.
-        </p>
-        <p>
-          The Liberia Area K record also preserves disagreement among non-equivalent evidence
-          processes rather than treating them as repeated estimates of one quantity:
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th>Evidence process</th>
-              <th>Reported area (ha)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>JRC forest baseline 2020</td>
-              <td>261,004.86</td>
-            </tr>
-            <tr>
-              <td>Hansen/JRC post-2020 loss on baseline</td>
-              <td>10,914.48</td>
-            </tr>
-            <tr>
-              <td>Hansen 10% canopy-baseline post-2020 loss</td>
-              <td>11,216.61</td>
-            </tr>
-            <tr>
-              <td>JRC TMF deforestation, 2021–2025</td>
-              <td>5,386.32</td>
-            </tr>
-            <tr>
-              <td>JRC TMF degradation, 2021–2025</td>
-              <td>7,088.13</td>
-            </tr>
-            <tr>
-              <td>RADD confirmed-alert area</td>
-              <td>13,502.16</td>
-            </tr>
-            <tr>
-              <td>RADD low-confidence alert area</td>
-              <td>4,569.93</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          These figures differ because the processes differ in sensing mechanism, event definition,
-          temporal logic, spatial processing, and upstream dependencies. The disagreement is part of
-          the evidence state. It can motivate targeted confirmation, not an unjustified average.
-          The concession-scale result remains a human-review screening state because it does not
-          establish harvesting-block, tree/log, shipment, or chain-of-custody linkage.
+          Transfer to a different commodity class added a further frame correction. A method reduced
+          successfully for one case class may still contain a frame that fails when transferred to
+          another. That lesson belongs to method transfer generally; the public article does not need
+          a second worked evidence table to establish it.
         </p>
         <p>
           This is where the inquiry takes up a requirement motivated by the earlier inquiry rather
@@ -836,7 +716,7 @@
           that corrections occurred, that later states differed materially from earlier states, and
           that the current method contains artifacts derived from those corrections. It cannot
           establish that the recorded trajectory caused the correction, that chronological
-          succession is caused-by relation, or that unrecorded parts of <code>H_full</code> were
+          succession is caused-by relation, or that unrecorded parts of \(H_{\mathrm{full}}\) were
           irrelevant. The result is association plus reconstructible provenance, not proof of
           causal necessity.
         </p>
@@ -919,23 +799,22 @@
         </p>
         <p>
           The candidate answer is not "more history" in general, but epistemic transitions that are
-          easy to erase through compression. In a transition such as <code>A &rarr; not-A</code>,
-          knowing only <code>not-A</code> may not reveal why <code>A</code> originally appeared
-          reasonable, what falsified it, which assumptions changed, whether the correction was local
-          or general, or why another observer might reconstruct <code>A</code>. That remains a
-          hypothesis to test, not a settled justification for keeping every historical detail active.
+          easy to erase through compression. When an initially plausible claim is later rejected,
+          the final rejection may not reveal why the claim once appeared reasonable, what falsified
+          it, which assumptions changed, whether the correction was local or general, or why another
+          observer might reconstruct the superseded claim. That remains a hypothesis to test, not a
+          settled justification for keeping every historical detail active.
         </p>
         <p>
           The MHS example adds a weaker but common pattern. Trajectory value need not require a full
-          reversal from <code>A</code> to <code>not-A</code>. It may also arise when the verdict
-          remains approximately stable while the rationale changes materially:
-          <code>A' &rarr; A''</code>. A later observer can agree that the headline was overstated
+          reversal. It may also arise when the verdict remains approximately stable while the
+          rationale changes materially. A later observer can agree that the headline was overstated
           while rejecting part of the intermediate reasoning or deciding that source evaluation
           should have come first.
         </p>
         <p>
           A further interpretation is observer-relative compression. A detail that is redundant to
-          one observer may be the discriminating clue for another. The same <code>H_{traj}</code>
+          one observer may be the discriminating clue for another. The same \(H_{\mathrm{traj}}\)
           can therefore yield different defensible compressions for different human disciplines or
           AI configurations. This makes compression itself an object of inquiry: the issue is not
           how much history can be deleted, but what minimum reconstructible state preserves enough
@@ -986,15 +865,11 @@
           available when a contradiction, frame change, source-authenticity failure, unexplained
           constraint, or new class of case makes revision necessary.
         </p>
-        <p class="statement-block">
-          <code>H_full &rarr;(π) H_{traj} &rarr;(C_{o,a,τ}) (M_t, V_t) &rarr;(E_new) T_new</code>
-        </p>
         <p>
-          This compact chain clarifies the desired endpoint. Routine execution runs from the
-          compiled operational method and verification provenance, not from permanent replay of the
-          entire trajectory. The trajectory becomes operationally relevant again when a later
-          failure, contradiction, source update, new observer, or new case makes the present method
-          insufficiently explanatory.
+          The compiled-method chain introduced above clarifies the desired endpoint: routine
+          execution runs from the operational method and verification provenance, while the archived
+          trajectory becomes operationally relevant again when the present method is insufficiently
+          explanatory.
         </p>
         <p>
           A further reason for archival retention arises when a later inquiry materially contradicts,
@@ -1029,8 +904,8 @@
           history distinguish supersession from contradiction and reframing rather than collapse them
           into a single linear chain, as the proposed typed relation vocabulary is meant to do. A
           bare <code>supersedes</code> link silently encodes the latest state's frame as progress.
-          The historical record is provenance; the disciplined use of that record to reconstruct,
-          compare, discriminate, supersede, retain conflict, or reopen is method.
+          The discipline lies in deciding when to confirm supersession, retain conflict, or reopen
+          the earlier state.
         </p>
         <p>
           The same evidence does not show that recording the trajectory produces a better method than
@@ -1088,116 +963,49 @@
           The COIN research folder defines future tests for the trajectory effect. They have not yet
           been run. A simple “history versus no history” design would be misleading because current
           prompts, tests, validators, reading guides, and repository conventions may already carry
-          compressed historical learning. The cleaner design separates three conditions.
+          compressed historical learning. The full design is in
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">counterfactual-tests.md</a>.
         </p>
-        <p class="statement-block"><code>X_0 = {problem, sources, generic instructions}</code></p>
-        <p class="statement-block"><code>X_1 = X_0 ∪ {S_t, Φ_t, U_t, M_t, V_t}</code></p>
-        <p class="statement-block"><code>X_2 = X_1 ∪ H_{traj}</code></p>
+        <div class="math-display">\[
+          X_{\min}
+          \subset
+          X_{\mathrm{state}}
+          \subset
+          X_{\mathrm{traj}}
+        \]</div>
         <p>
-          Here <code>X_0</code> is the minimally specified condition; <code>X_1</code> is the
-          compiled-state handoff, including the current project state <code>S_t</code>, explicit
-          assumptions and frame constraints <code>Φ_t</code>, unresolved issues <code>U_t</code>,
-          compiled operational method <code>M_t</code>, and queryable verification provenance
-          <code>V_t</code>; and <code>X_2</code> adds explicit access to the recorded trajectory.
-          The contrast <code>X_0 &rarr; X_1</code> estimates the value of compiled historical
-          learning. The contrast <code>X_1 &rarr; X_2</code> estimates the remaining incremental
-          value of explicit trajectory.
-        </p>
-        <p>
-          Conceptually, the question is whether <code>Q_j(X_2) &gt; Q_j(X_1)</code> for observer
-          <code>j</code>. <code>Q</code> may refer to continuation quality, error detection,
-          correction, transfer, robustness to frame differences, diagnostic accuracy, cost, or,
-          where a defensible <code>G</code> exists, movement toward an external reference. It is not
-          proposed as one universal scalar metric.
-        </p>
-        <ul>
-          <li>
-            <strong>Trajectory-aware versus trajectory-blind method formation.</strong> Give
-            comparable investigators the same problem, shared explicit knowledge, and project state,
-            while recognizing that each observer still has their own <code>B_i</code>. Compare
-            <code>X_1</code> and <code>X_2</code> on the decomposition, procedures, validation
-            rules, instructions, guardrails, and open questions they derive.
-          </li>
-          <li>
-            <strong>Current-method-only operational execution.</strong> Give an agent the current
-            operational method plus new evidence, without historical rounds, and test whether the
-            task can be executed correctly. A positive result would show successful compilation, not
-            that history lacked discovery value.
-          </li>
-          <li>
-            <strong>Method revision with versus without archived provenance.</strong> Introduce a
-            contradiction, frame failure, source-authenticity problem, unexplained rule, regulation
-            change, changed agent configuration, or new class of case. Compare revision from
-            <code>X_1</code> with revision from <code>X_2</code>.
-          </li>
-          <li>
-            <strong>Cross-observer handoff.</strong> Suppose <code>B_A != B_B</code>. Can a
-            sufficiently explicit current-state handoff allow observer B to continue observer A's
-            work reliably without <code>H_{traj}</code>? Does adding <code>H_{traj}</code> materially improve
-            continuation, detection of hidden frame differences, correction, avoidance of
-            reconstructed superseded assumptions, or transfer across disciplinary backgrounds? Or is
-            <code>X_1</code> already sufficient?
-          </li>
-          <li>
-            <strong>Verification reopenability.</strong> Hold routine output quality constant while
-            introducing a later discrepancy. Ask whether participants can identify whether it arose
-            from <code>ΔE</code>, <code>ΔF</code>, <code>ΔP</code>, <code>ΔL</code>,
-            <code>ΔJ</code>, <code>ΔA</code>, or <code>ΔQ</code>. This tests whether
-            <code>V_t</code> and, where needed, <code>H_{traj}</code> preserve enough causal
-            provenance to diagnose failure without rebuilding the entire project.
-          </li>
-        </ul>
-        <p>
-          These tests address one validation target only: whether access to the recorded trajectory
-          changes or improves method formation, continuation, transfer, or revision compared with a
-          trajectory-blind condition. A history-blind participant is not literally history-blind;
-          they are blind only to the project-specific trajectory. These tests do not by themselves
-          establish observer generality. Multiple Claude, Codex, or GPT runs selected, framed,
-          prompted, and evaluated by one human investigator can show within-investigator robustness,
-          but they are not independent human-observer replication. A stronger design would use
-          different human investigators, <code>H_1, H_2, ..., H_n</code>, ideally allowing them to
-          generate or frame their own trajectories rather than merely execute prompts authored by
-          the framework's originator. AI configuration should also be treated as an experimental
-          factor: trajectory condition × AI configuration × human investigator.
+          \(X_{\min}\) is a minimally specified handoff: problem, sources, and generic
+          instructions. \(X_{\mathrm{state}}\) adds a sufficiently explicit current project state,
+          compiled operational learning, unresolved issues, and verification provenance.
+          \(X_{\mathrm{traj}}\) additionally gives access to the recorded project-specific
+          trajectory.
         </p>
         <p>
-          A separate validation axis is external-reference correspondence. Where a defensible
-          independent reference state exists, successive bundle determinations can be compared
-          against it:
-        </p>
-        <p class="statement-block"><code>δ_t = d(T_t, G)</code></p>
-        <p>
-          Here <code>T_t</code> is the technical determination at research state <code>t</code>,
-          <code>G</code> is an independently obtained reference state or observation, and
-          <code>d</code> is a task-appropriate distance or error measure. A transition for which
-          <code>δ_(t+1) &lt; δ_t</code> is evidence of movement toward the reference state, subject
-          to the uncertainty of both the bundle determination and the reference. Real research need
-          not improve monotonically: convergence, temporary regression, recovery, and divergence are
-          all possible. In a geospatial case, the reference might be independently collected
-          in-situ measurements or independently validated field observations, with quantities such as
-          area error, classification accuracy, precision, recall, F1, or spatial overlap used where
-          appropriate.
+          The causal distinction is narrow. The contrast from \(X_{\min}\) to
+          \(X_{\mathrm{state}}\) concerns the value of compiled current-state learning. The
+          contrast from \(X_{\mathrm{state}}\) to \(X_{\mathrm{traj}}\) tests the remaining
+          incremental value of explicit trajectory access. A trajectory-blind condition is
+          contaminated if the supplied current artifacts already encode trajectory-derived lessons
+          that the test intends to withhold.
         </p>
         <p>
-          This distinction connects directly back to Evidence First, Consensus Later, and it keeps
-          three axes separate. <strong>Trajectory value</strong> asks whether <code>X_2</code>
-          improves inquiry relative to <code>X_1</code>. <strong>Empirical correctness</strong>
-          asks whether determinations converge toward <code>G</code> where an appropriate
-          <code>G</code> exists. <strong>Observer consensus</strong> asks whether different observers
-          converge toward each other. A trajectory may improve transfer without improving truth
-          convergence. Observers may agree while remaining wrong relative to <code>G</code>. A
-          project may converge toward <code>G</code> without needing its full historical trajectory.
-          External reference convergence is available only for some classes of claims. For an
-          empirical geospatial claim, such as whether land cover changed at a location during a
-          specified period, an independent reference observation may sometimes exist. For normative,
-          legal, governance, or value conflicts, there may be no equivalent observer-independent
-          <code>G</code>. Consensus later therefore does not mean never converge. It means converge
-          where discriminating evidence supports convergence, and preserve structured disagreement
-          where it does not. One important failure mode is false consolidation: several observers
-          may converge on the same determination while an independent reference indicates that the
-          determination remains materially off. In notation, observers can converge on
-          <code>T*</code> while <code>d(T*, G)</code> remains materially non-zero. Observer
-          convergence is not the same as reference-state convergence.
+          The tests address one validation target: incremental trajectory value. Does explicit
+          trajectory access improve a relevant outcome beyond a sufficiently rich current-state
+          handoff? A separate axis is external-reference correspondence. Where a defensible
+          independent empirical reference \(G\) exists, successive technical determinations can be
+          compared against it:
+        </p>
+        <div class="math-display">\[
+          \delta_t = d(T_t,G)
+        \]</div>
+        <p>
+          Decreasing \(\delta_t\) can indicate movement toward the reference within the validity of
+          \(G\) and the selected distance measure; it is not a universal proof of correctness.
+          Inter-observer agreement is a third axis. Different observers may converge or disagree,
+          and agreement is not by itself evidence of correctness. These distinctions preserve the
+          bridge to <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>:
+          converge where discriminating evidence supports convergence, and preserve structured
+          disagreement where it does not.
         </p>
       </section>
 
@@ -1261,12 +1069,12 @@
           <tbody>
             <tr>
               <td>Repeated software defect</td>
-              <td>Test or validator in <code>M_t</code></td>
+              <td>Test or validator in \(M_t\)</td>
               <td>Low after validation</td>
             </tr>
             <tr>
               <td>Stable procedural rule</td>
-              <td>Specification or code in <code>M_t</code></td>
+              <td>Specification or code in \(M_t\)</td>
               <td>Low</td>
             </tr>
             <tr>
@@ -1276,12 +1084,12 @@
             </tr>
             <tr>
               <td>Source limitation</td>
-              <td>Data-source registry and <code>V_t</code> rationale</td>
+              <td>Data-source registry and \(V_t\) rationale</td>
               <td>Moderate after source change</td>
             </tr>
             <tr>
               <td>Frame or schema correction</td>
-              <td>Specification plus retained rationale in <code>V_t</code></td>
+              <td>Specification plus retained rationale in \(V_t\)</td>
               <td>Moderate/high during transfer</td>
             </tr>
             <tr>
@@ -1303,23 +1111,16 @@
         </table>
         <p>
           Data resolution, temporal frequency, and cost are proposed extensions rather than present
-          results. A simplified objective can be written as
-          <code>J = Q(r,τ,Ω,m) − λC(r,τ,Ω,m)</code>, where <code>Q</code> denotes task-specific
-          evidence quality, <code>C</code> total operational cost, <code>r</code> spatial
-          resolution, <code>τ</code> temporal sampling, <code>Ω</code> geographic area, and
-          <code>m</code> method. This un-subscripted <code>J</code> is a proposed
-          cost-performance objective; it is distinct from <code>J_t</code>, the implementation
-          context in <code>D_t = g(T_t,L_t,J_t)</code>. The trajectory should record not only which
-          method was selected, but why a higher- or lower-cost branch was rejected, so that a robust
-          cost-performance rule can later be reduced into <code>M_t</code>.
+          results. Future method evaluation may need to weigh evidence quality against spatial,
+          temporal, computational, and operational cost, and the trajectory should record why a
+          higher- or lower-cost branch was rejected when that choice materially shapes \(M_t\).
         </p>
         <p>
-          Regulatory evolution is also a method input. A change in technical state can be written
-          as <code>ΔT = h(ΔE,ΔF,ΔP)</code>; a change in downstream disposition can be written as
-          <code>ΔD = g_Δ(ΔT,ΔL,ΔJ)</code>. Preserving that distinction prevents a result difference
-          caused by guidance, benchmarking, Member-State implementation, producer-country law,
-          actor role, supply-chain topology, or traceability context from being misread as a change
-          in ecological evidence.
+          Regulatory evolution is also a method input. A technical result can change because
+          evidence, frame, or procedure changes; a downstream disposition can change because law,
+          guidance, benchmarking, actor role, traceability context, or implementation infrastructure
+          changes. Preserving that distinction prevents regulatory drift from being misread as
+          ecological disagreement.
         </p>
       </section>
 
@@ -1345,7 +1146,7 @@
           and classification uncertainty.
         </p>
         <p>
-          Observer background is a central limitation, not a nuisance detail. <code>B_i</code> is
+          Observer background is a central limitation, not a nuisance detail. \(B_i\) is
           partly latent and not exhaustively measurable. Human expertise and AI learned priors cannot
           simply be held equal. Comparing H+ and H− across people introduces observer-background
           variation; using the same human twice introduces carryover. A well-written current-state
@@ -1355,21 +1156,21 @@
           The current two case-study bundles still do not prove incremental trajectory value.
         </p>
         <p>
-          The recorded repository history is also only <code>H_{traj} = π(H_full)</code>. The
-          fraction of materially relevant history captured by <code>π</code> is unknown. The
-          three-condition experiment can leak information: <code>X_1</code> is intended to encode
-          compiled historical learning, but a genuinely minimal <code>X_0</code> must not smuggle in
+          The recorded repository history is also only \(H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)\). The
+          fraction of materially relevant history captured by \(\pi\) is unknown. The
+          three-condition experiment can leak information: \(X_{\mathrm{state}}\) is intended to encode
+          compiled historical learning, but a genuinely minimal \(X_{\min}\) must not smuggle in
           trajectory-derived prompts, tests, or reading guides. The inquiry also lacks systematic
           cost measurements for alternative spatial resolutions, temporal frequencies, and
           confirmation strategies; it lacks a representative dataset of practical EUDR outcomes
           from operators, traders, authorities, customs processes, or alternative market channels;
-          and independently defensible reference states <code>G</code> exist only for some bounded
+          and independently defensible reference states \(G\) exist only for some bounded
           empirical subproblems.
         </p>
         <p>
           The central hypothesis should be weakened or rejected if compiled-state handoffs
-          <code>X_1</code> consistently perform as well as or better than explicit-trajectory
-          handoffs <code>X_2</code>; if apparent trajectory benefits disappear after controlling for
+          \(X_{\mathrm{state}}\) consistently perform as well as or better than explicit-trajectory
+          handoffs \(X_{\mathrm{traj}}\); if apparent trajectory benefits disappear after controlling for
           information already encoded in prompts, instructions, tests, validators, and code; if
           trajectory-aware teams show more anchoring or slower correction; if archived history adds
           substantial maintenance cost without measurable repair, verification, or transfer
@@ -1393,7 +1194,7 @@
         <h2>Open questions</h2>
         <p>
           What additional value does project-specific trajectory provide beyond
-          <code>B_i + L + current state</code>?
+          observer background, shared explicit knowledge, and the current state?
         </p>
         <p>
           When is a well-specified current state sufficient for continuation, execution, or method
@@ -1425,8 +1226,8 @@
           whole trajectory?
         </p>
         <p>
-          Does trajectory-aware handoff improve convergence toward <code>G</code> where
-          <code>G</code> exists, and which evidence, frame, or procedure changes produce improvement,
+          Does trajectory-aware handoff improve convergence toward \(G\) where
+          \(G\) exists, and which evidence, frame, or procedure changes produce improvement,
           regression, or recovery?
         </p>
         <p>
@@ -1448,8 +1249,8 @@
           geospatial evidence, one investigator's framing, or a particular AI configuration?
         </p>
         <p>
-          When is a compact rationale plus queryable <code>V_t</code> sufficient, and when is
-          deeper access to <code>H_{traj}</code> needed to prevent an apparently efficient
+          When is a compact rationale plus queryable \(V_t\) sufficient, and when is
+          deeper access to \(H_{\mathrm{traj}}\) needed to prevent an apparently efficient
           compression from becoming opaque?
         </p>
       </section>
