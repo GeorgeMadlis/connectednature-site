@@ -642,6 +642,31 @@ li {
   margin: 0;
 }
 
+.article-figure {
+  width: 100%;
+  margin: 1.45rem 0 1.6rem;
+  padding: 0.7rem;
+  border: 1px solid rgba(70, 88, 67, 0.16);
+  border-radius: 0.75rem;
+  background: rgba(255, 252, 246, 0.58);
+  box-shadow: var(--shadow-soft);
+}
+
+.article-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.article-figure figcaption {
+  max-width: var(--content-width);
+  margin: 0.75rem auto 0;
+  color: var(--text-soft);
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
 .core-notation {
   max-width: var(--content-width);
   margin: 1.2rem 0 1.3rem;
@@ -692,7 +717,7 @@ li {
 }
 
 .article-header > *:not(.eyebrow):not(h1),
-.article-section > *:not(h2):not(.statement-block):not(.math-display):not(.core-notation):not(.research-trail-list),
+.article-section > *:not(h2):not(.statement-block):not(.math-display):not(.article-figure):not(.core-notation):not(.research-trail-list),
 .panel > *:not(h2):not(.trail-list),
 .feature-copy > *:not(h3):not(.meta),
 .trail-grid > div > *:not(h2):not(.eyebrow),
