@@ -102,7 +102,11 @@
           without claiming formal bundle conformance under OKF-FC (this project's fact-checking
           and statement-evolution profile and extension of the Open Knowledge Format (OKF)). A
           lightweight formal bundle and a full formal bundle are stronger representations with
-          additional machinery. A method-evolution
+          additional machinery. In this work, a <strong>bundle</strong> is a versioned, structured
+          research or evidence package, not merely an archive file: it can bring together the
+          current question or claim, method or specification, results, reproduction and provenance
+          information, an append-only inquiry record, and metadata linking these elements across
+          recorded rounds and human-readable views. A method-evolution
           protocol is the procedure that evaluates findings in the record and decides whether they
           should become operational artifacts or remain provenance only. The operational method is
           the present set of specifications, procedures, code, tests, validators, instructions,
@@ -223,7 +227,7 @@
           A small MHS/world-models recorded inquiry later in the article is included only as an
           illustration, not as proof: it records how a sharper fact-checking question became salient
           after conceptual enrichment. The detailed source evaluation belongs in the Evidence base
-          rather than competing here with the two formal bundle cases.
+          as auxiliary material, rather than competing with the article's three principal examples.
         </p>
         <p>
           These bounds interact. A human supplies an initial decomposition that carries implicit
@@ -242,7 +246,7 @@
           output, and it can contain framing errors, scope drift, inappropriate bundle boundaries,
           mistaken source classifications, or invalid decision rules — an explicit evidence schema
           is not thereby a correct one. It must therefore be corrigible, versionable, and
-          contestable in the same way the claims it structures are. The two case-study bundles
+          contestable in the same way the claims it structures are. The two bundle-backed cases
           examined here—the self-referential
           <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer"><code>framework-self</code></a>
           bundle and the applied
@@ -257,9 +261,23 @@
           invalid evidence state when source authenticity has not been established. Neither was an
           error in applying a correct schema; each was an error in the schema itself. The implication
           is specific: before evidence infrastructure can support contestable governance, the
-          machinery used to structure that evidence must itself be open to correction. This does not
-          require that every such correction remain permanently active; the architecture remains
-          provisional where it has not yet survived scrutiny, not indefinitely by default.
+          machinery used to structure that evidence must itself be open to correction. The two
+          bundle-backed cases examined here show that this kind of correction is not confined to
+          fixing data. This does not require that every such correction remain permanently active;
+          the architecture remains provisional where it has not yet survived scrutiny, not
+          indefinitely by default.
+        </p>
+        <p>
+          The article's main examples are therefore asymmetric. The Fazenda Sucuri coffee case is a
+          bundle-backed EUDR screening example. The <code>framework-self</code> case is a
+          bundle-backed methodological self-case about how the framework's object changed from
+          observer disagreement to statement evolution. The Estonian forest-management example,
+          drawn from <a href="evidence-first-consensus-later.html#example-estonian-forest-management">Evidence First, Consensus Later</a>,
+          is deliberately not bundle-backed in this study: it is a published conflict-analysis
+          example assembled from external sources, used here to show how different accounting
+          objects, boundaries, and time horizons can produce apparently conflicting sustainability
+          conclusions. The MHS trail remains useful supporting material, but it is not one of those
+          three principal examples.
         </p>
       </section>
 
@@ -377,8 +395,8 @@
           to reconstruct the materially relevant path. The current bundle-evolution analysis further
           proposes a richer relation
           vocabulary distinguishing at least <em>supersedes</em>, <em>contradicts</em>,
-          <em>reframes</em>, <em>reopens</em>, and <em>supersedes-under-assumptions</em>. That typed
-          relation set is a proposal from the current inquiry, not a fully implemented convention
+          <em>reframes</em>, <em>reopens</em>, and <em>supersedes-under-assumptions</em>. That
+          relation vocabulary is a proposal from the current inquiry, not a fully implemented convention
           across all bundles. The distinction matters because a linear <code>supersedes</code> chain
           can hide whether a later state changed because the evidence changed, because assumptions
           or scope changed, or because the procedure itself changed.
@@ -409,6 +427,20 @@
             method-evolution protocol that determines how retained findings are used.
           </figcaption>
         </figure>
+        <p>
+          Fazenda Sucuri makes the current-state/trajectory distinction concrete before any formal
+          notation is needed. The <strong>current state</strong> is the bundle's canonical current
+          representation: the current question, method/specification, screening result, latest
+          metrics and limitations, and the provenance needed to identify the evidence and source
+          versions used. The <strong>trajectory</strong> is the retained append-only sequence of
+          inquiry rounds showing how that state was reached. In the inspected public snapshot, the
+          current state says the screening class remains
+          <code>possible_relevant_deforestation</code>; the trajectory additionally records, for
+          example, that round 6 corrected the temporal coffee-mask semantics and round 8 added
+          FDP/JRC morphology and threshold-sensitivity diagnostics without changing the screening
+          class. In short: current state answers “what is the method/result now?”; trajectory
+          answers “what materially changed, when, and why?”
+        </p>
         <div class="core-notation" aria-label="Core notation">
           <p class="core-notation-title">Core notation used below</p>
           <dl>
@@ -419,6 +451,10 @@
             <div>
               <dt>\(H_{\mathrm{traj}}\)</dt>
               <dd>the recorded project-specific trajectory available for later reconstruction</dd>
+            </div>
+            <div>
+              <dt>\(B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)\)</dt>
+              <dd>the complete bundle state at selected current state \(T\): compiled current understanding, retained trajectory, and provenance/metadata</dd>
             </div>
             <div>
               <dt>\(E_t\), \(F_t\), \(P_t\)</dt>
@@ -452,7 +488,30 @@
           external inputs.
         </p>
         <p>
-          Within a given state, the technical determination is:
+          At a selected current recorded state \(T\), the complete bundle state can be written as:
+        </p>
+        <div class="math-display">\[
+          B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)
+        \]</div>
+        <p>
+          Here \(X_T\) is the compiled current understanding, \(H_{\mathrm{traj},T}\) is the retained
+          recorded trajectory through state \(T\), and \(\Pi_T\) is the provenance and metadata
+          needed to identify and verify the state. For Fazenda Sucuri at round 9, \(X_T\) includes
+          the current question, screening class, method/specification, metrics, limitations, and
+          source-disagreement interpretation; \(H_{\mathrm{traj},T}\) includes the recorded round
+          history through round 9; and \(\Pi_T\) includes bundle and repository round identifiers,
+          commit pins, dataset/model versions, manifests, checksums, supersession links, and
+          generation metadata where available. Upper-case \(T\) names the selected current state;
+          lower-case \(t\) below names a generic state along the trajectory.
+        </p>
+        <p>
+          Within a given state, the technical-determination dependency has the type signature:
+        </p>
+        <div class="math-display">\[
+          f:\mathcal E\times\mathcal F\times\mathcal P\to\mathcal T
+        \]</div>
+        <p>
+          Its realized value at state \(t\) is:
         </p>
         <div class="math-display">\[
           T_t = f(E_t,F_t,P_t)
@@ -460,8 +519,14 @@
         <p>
           Here \(E_t\) is the referenced evidence and versions, \(F_t\) is the frame, assumptions,
           scope, and definitions, and \(P_t\) is the operational procedure or instruction state.
-          This \(P_t\) is not the higher-level method-evolution protocol; it is the procedure being
-          executed at that state.
+          In Fazenda Sucuri, \(E_t\) includes the JRC 2020 forest baseline, Hansen post-2020 loss,
+          FDP 2026a coffee evidence, and MapBiomas coffee evidence; \(F_t\) treats these as
+          screening evidence and preserves source disagreement instead of promoting co-location into
+          a legal conclusion; and \(P_t\) contains temporal masks, thresholds, spatial intersections,
+          and reporting rules. \(T_t\) is the resulting technical/evidentiary state, including the
+          screening class and supporting metrics. It is not a legal disposition. This \(P_t\) is not
+          the higher-level method-evolution protocol; it is the procedure being executed at that
+          state.
         </p>
         <p>
           A downstream legal or operational disposition, where the project has authority and
@@ -484,6 +549,22 @@
           not automatically a source of legal authority, commodity attribution, traceability, or
           ground validation. Role declaration is part of the method because it prevents the
           existence of an evidence layer from being mistaken for decision sufficiency.
+        </p>
+        <p>
+          The current-state comparison can be expressed as two projections of the complete bundle:
+        </p>
+        <div class="math-display">\[
+          X_1=\pi_{\mathrm{cur}}(B_T)
+        \]</div>
+        <div class="math-display">\[
+          X_2=\pi_{\mathrm{cur}}(B_T)\cup\pi_{\mathrm{traj}}(B_T)
+        \]</div>
+        <p>
+          \(X_1\) can be sufficient for a task such as reporting the current Fazenda Sucuri
+          screening class. \(X_2\) adds trajectory information that may be needed for a different
+          task, such as explaining why the present coffee-mask semantics differ from the earlier
+          implementation: the round-6 transition is visible only when the retained trajectory is
+          available.
         </p>
         <p>
           The comparison is therefore not history versus no history. It is what another observer can
@@ -550,24 +631,34 @@
       <section class="article-section">
         <h2>Evidence base</h2>
         <p>
-          The strongest evidence here is not a literature but two formal human–AI trajectory cases
-          held under version control. They are published as two self-contained bundles committed
-          into the COIN research folder — each a flattened export carrying its own round ledger,
-          per-round records, and, in the first case, a metrics table and a retrospective
-          classification. The first bundle describes the observer-disagreement framework itself: a
-          general and partly self-referential case in which the inquiry examines its own recording,
-          across twenty rounds contributed by two agents. The second is a public reading snapshot of
-          an applied geospatial bundle for Fazenda Sucuri coffee screening under EUDR, with
-          generated PDF, JSON, GeoJSON, and report artefacts
-          omitted from COIN. What matters in each is not the number of rounds but the observable
-          transformations: historically recorded findings later represented as code, tests,
-          specifications, validators, agent instructions, evidence semantics, or explicit
+          The evidence base has three principal examples with different evidentiary roles, not one
+          uniform set of formal case studies. Fazenda Sucuri is a bundle-backed EUDR screening case:
+          its technical class remains stable while its evidentiary state changes. The
+          <code>framework-self</code> bundle is a bundle-backed methodological self-case: its history
+          changes the interpretation of what the current framework is. Estonian forest management is
+          different again: in this study it is not represented by a versioned bundle trajectory, but
+          by the published conflict analysis in
+          <a href="evidence-first-consensus-later.html#example-estonian-forest-management">Evidence First, Consensus Later</a>,
+          which shows how competing sustainability conclusions can follow from different accounting
+          objects, boundaries, and time horizons.
+        </p>
+        <p>
+          The two bundle-backed examples are published as self-contained bundles committed into the
+          COIN research folder, with round ledgers and per-round records. The
+          <code>framework-self</code> bundle describes the framework itself: a general and partly
+          self-referential case in which the inquiry examines its own recording and later
+          bookkeeping repair. The Fazenda Sucuri bundle is a public reading snapshot of an applied
+          geospatial coffee-screening case under EUDR, with generated PDF, JSON, GeoJSON, and report
+          artefacts omitted from COIN. What matters in each is not the number of rounds but the
+          observable transformations: historically recorded findings later represented as code,
+          tests, specifications, validators, agent instructions, evidence semantics, or explicit
           uncertainty.
         </p>
         <p>
           The evidence scope is uneven by design. Of the trajectories discussed here, two are
-          committed as formal public bundles in COIN. The MHS/world-models episode is preserved
-          separately as a supporting
+          committed as formal public bundles in COIN. The Estonian forestry example is source-linked
+          public conflict analysis, not a bundle trajectory. The MHS/world-models episode is
+          preserved separately as a supporting
           <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">recorded inquiry</a>,
           not as a third formal bundle. The remaining EUDR episodes are drawn from the versioned
           private-framework development record discussed in the underlying analysis. Those
@@ -589,6 +680,17 @@
           rejection conditions rather than left to good intentions.
         </p>
         <p>
+          The Estonian forest-management example plays a different role. It is a published
+          conflict-analysis example assembled from external sources, not a versioned bundle in the
+          present study. The earlier article shows that the apparent verdict changes with the
+          accounting object: EU-comparable wood balance can compare removals with net annual
+          increment on forest available for wood supply, while other arguments use managed-forest
+          growing-stock increment, gross national increment, carbon-stock stability, or LULUCF
+          accounting. A single scalar endpoint would hide the boundary choices and time horizons
+          that make the controversy intelligible. For that reason this article uses the case to
+          motivate frame preservation, not as evidence of a recorded bundle trajectory.
+        </p>
+        <p>
           The MHS recorded inquiry illustrates a different recording granularity: knowledge
           enrichment before focused fact-checking. On 27 August 2026 Anthropic announced a research
           preview of the
@@ -596,9 +698,9 @@
           describing it narrowly as a shared, model-agnostic specification and standardized driver
           through which AI agents can discover, read from, write to, and safely operate programmable
           physical devices. The source-backed sequence now preserved in COIN is:
-          initial MHS inquiry, MHS/Digital Twin understanding, Free Energy Principle and
-          active-inference enrichment, the stronger world-model claim becoming questionable,
-          explicit fact-check, and consolidation. The first two questions were
+          initial MHS inquiry, MHS/Digital Twin understanding, broader conceptual enrichment, the
+          stronger world-model claim becoming questionable, explicit fact-check, and consolidation.
+          The first two questions were
           knowledge-enrichment questions. Only afterward did the stronger headline claim —
           represented by AI Secret's
           <a href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">“Claude Just Killed The World Models”</a> —
@@ -608,8 +710,8 @@
           Its methodological value is small but precise. A final-state-only reconstruction could
           begin directly with “Did MHS make world models unnecessary?” and still perform a competent
           fact-check against the primary MHS material and the external headline. What it would omit
-          is how the human first developed enough conceptual structure through MHS, Digital Twin,
-          and FEP inquiry for the stronger claim to become questionable. The episode therefore
+          is how the human first developed enough conceptual structure through MHS and Digital Twin
+          inquiry for the stronger claim to become questionable. The episode therefore
           cannot prove that recorded history improves research outcomes. It shows only why a
           recorded inquiry can be useful for studying fact-check formation: it preserves how a
           focused checking question emerged from earlier understanding work. The AI Secret headline
@@ -680,15 +782,22 @@
           assumption was corrected, why visual and report defects mattered, and how those findings
           were converted into more durable operational constraints. The correction is visible in the
           bundle's own <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md" target="_blank" rel="noopener noreferrer">source-specific
-          overlap results</a>: FDP reports 0.27 hectares of post-2020 baseline-forest loss
-          intersecting new coffee, while MapBiomas and the both-source agreement layer report
-          0.0 hectares for the same conversion intersection. The bundle keeps these as separate
-          source-specific overlap results and preserves their disagreement, not as alternative names
-          for one metric or as numbers to average away. Its
+          overlap results</a>. In the latest inspected public snapshot used by the manuscript
+          (bundle round 9, snapshot <code>2026-09-12-r0009-4eccee8</code>), the AOI is
+          1722.07&nbsp;ha; the JRC 2020 forest baseline is 219.26&nbsp;ha; post-2020 loss on that
+          baseline is 23.77&nbsp;ha; configured current coffee evidence is 482.28&nbsp;ha; and new
+          coffee since baseline is 225.29&nbsp;ha. Current coffee overlaps post-2020 loss by
+          5.14&nbsp;ha. New coffee overlaps post-2020 loss by 1.17&nbsp;ha under FDP 2026a,
+          0.0&nbsp;ha under MapBiomas, and 0.0&nbsp;ha under both-source agreement. A Hansen
+          10% canopy baseline gives 95.48&nbsp;ha of baseline forest and 5.98&nbsp;ha of post-2020
+          loss. The bundle keeps these as separate source-specific overlap results and preserves
+          their disagreement, not as alternative names for one metric or as numbers to average away.
+          Its
           <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md" target="_blank" rel="noopener noreferrer">current
-          answer</a> remains <code>human_review_required</code> and
-          <code>pinned-not-reproduced</code>, and it states plainly that the result is a screening
-          flag, not a legal non-compliance determination.
+          answer</a> records <code>gsp-verdict-class: possible_relevant_deforestation</code> and
+          <code>gsp-provenance: pinned-not-reproduced</code>, matching the counterpart report's
+          <code>human_review_required</code> status. These are technical/evidentiary states and a
+          human-review routing state, not legal EUDR compliance determinations.
         </p>
         <p>
           The same distinction appears in private-framework episodes used here only as method
@@ -895,15 +1004,19 @@
           method.
         </p>
         <p>
-          The recorded trajectories support a narrower, more defensible version of the proposition
-          than the earlier article implied. The two formal case-study bundles show that bundle
-          history can document the formation and correction of a method, and that findings from that
-          history can be represented later as code, tests, specifications, validators, instructions,
-          evidence semantics, and explicit uncertainty. The MHS recorded inquiry contributes a
-          smaller lesson about formation: a focused fact-checking question can emerge after
-          conceptual enrichment without needing formal bundle machinery. The EUDR sequence
-          contributes a substantive operational result: source separation, temporal-mask rules,
-          report validation, human-review gates, and the Layer A / Layer B / Layer C decomposition.
+          The evidence supports a narrower, more defensible version of the proposition than the
+          earlier article implied. The two bundle-backed cases show that bundle history can document
+          method formation and correction, and that findings from that history can be represented
+          later as code, tests, specifications, validators, instructions, evidence semantics, and
+          explicit uncertainty. Fazenda Sucuri contributes the stable-class/changing-evidence
+          pattern: source separation, temporal-mask rules, report validation, human-review gates,
+          threshold and morphology diagnostics, and the Layer A / Layer B / Layer C decomposition.
+          <code>framework-self</code> contributes the frame-change pattern: history changes the
+          interpretation of what the current object is. The Estonian forestry example contributes a
+          non-bundle conflict pattern: preserving explicit competing frames matters because a single
+          endpoint would misrepresent the accounting objects and time horizons in dispute. The MHS
+          recorded inquiry remains a supporting formation example: a focused fact-checking question
+          can emerge after conceptual enrichment without needing formal bundle machinery.
         </p>
         <h3>Status of the five subsidiary questions</h3>
         <table>
@@ -979,10 +1092,14 @@
           contested transitions.
         </p>
         <p>
-          This gives bundle history a function the current head cannot supply. A conflict bundle can
-          preserve unresolved disagreement among observers within a single research state; a versioned
-          bundle history can preserve materially relevant disagreement between research states,
-          provided the superseded states and the reasons for transition remain reconstructible.
+          This gives bundle history a function the canonical current revision cannot supply by
+          itself. In these repositories the canonical current revision normally corresponds to the
+          latest committed revision on the canonical <code>main</code> branch, but the concept is not
+          the Git <code>HEAD</code> pointer, which can name another branch or a detached commit. A
+          conflict bundle can preserve unresolved disagreement among observers within a single
+          research state; a versioned bundle history can preserve materially relevant disagreement
+          between research states, provided the superseded states and the reasons for transition
+          remain reconstructible.
           Without that condition the history is merely a sequence in which the latest state overwrites
           the epistemic meaning of the earlier one, and neither form then prevents a later consensus or
           deterministic implementation from erasing the arguments from which it emerged.
@@ -1008,7 +1125,7 @@
           procedure, seek evidence capable of discriminating between them, and then confirm
           supersession, retain the conflict, or reopen the earlier state. This requires that preserved
           history distinguish supersession from contradiction and reframing rather than collapse them
-          into a single linear chain, as the proposed typed relation vocabulary is meant to do. A
+          into a single linear chain, as the proposed relation vocabulary is meant to do. A
           bare <code>supersedes</code> link silently encodes the latest state's frame as progress.
           The discipline lies in deciding when to confirm supersession, retain conflict, or reopen
           the earlier state.
@@ -1029,7 +1146,7 @@
           reopens that history when revision becomes necessary.
         </p>
         <p>
-          Read alongside Evidence First, Consensus Later, the two cases point to two related but
+          Read alongside Evidence First, Consensus Later, the examples point to two related but
           distinct levels rather than one. At the object level, the sequence is world or
           environmental claim → observations and evidence → inspectable evidence state →
           disagreement and contestation → review → governance decision or possible consensus. At
@@ -1058,10 +1175,12 @@
           been compiled into a sufficiently reliable operational procedure. A governance question
           may be institutionally or normatively settled when a decision is adopted despite residual
           value trade-offs or underdetermination. Method reduction, empirical convergence, and
-          governance consensus are related, but they are not the same process. The EUDR bundle's own
-          current position — <code>human_review_required</code> and
-          <code>pinned-not-reproduced</code> — shows the sequence deliberately stalled at review
-          rather than carried through to a decision.
+          governance consensus are related, but they are not the same process. The Fazenda Sucuri
+          bundle's own current technical and evidentiary state —
+          <code>gsp-verdict-class: possible_relevant_deforestation</code> and
+          <code>gsp-provenance: pinned-not-reproduced</code>, alongside the counterpart report's
+          <code>human_review_required</code> state — shows the sequence deliberately stopped at
+          human review rather than being carried through to a legal EUDR compliance decision.
         </p>
       </section>
 
@@ -1264,8 +1383,8 @@
           downstream disposition relative to an equivalently rich current-state handoff, how many
           historical rounds an AI still needs once good instructions exist, whether instructions
           derived from one trajectory transfer to another, or whether the observed pattern
-          generalises across domains. It rests on two cases and cannot generalise from them to a law
-          of method.
+          generalises across domains. It rests on two bundle-backed cases plus one non-bundle
+          external-evidence controversy and cannot generalise from them to a law of method.
         </p>
         <p>
           The cases also do not establish generality across independent human observers, convergence
@@ -1285,7 +1404,8 @@
           document, specification, codebase, test suite, provenance record, and unresolved-issues
           list may eliminate much of the apparent value of loading the trajectory. Conversely, a
           trajectory can introduce stale assumptions, anchoring, context overload, or authority bias.
-          The current two case-study bundles still do not prove incremental trajectory value.
+          The current two bundle-backed case studies still do not prove incremental trajectory
+          value, and the Estonian forestry example is not a trajectory case.
         </p>
         <p>
           The recorded repository history is also only \(H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)\). The
@@ -1403,10 +1523,11 @@
             produced: code, tests, specifications, agent rules, retained uncertainty, or rejection of
             an earlier framing. It also records the counterfactual tests that would be needed to
             distinguish provenance from demonstrated method-formation advantage, including
-            contestation quality. The two formal bundle cases are committed here as self-contained
-            bundles; MHS is preserved separately
-            as a supporting recorded inquiry. The applied EUDR copy intentionally omits generated
-            PDF, JSON, GeoJSON, and report artefacts.
+            contestation quality. The two bundle-backed cases are committed here as self-contained
+            bundles; the Estonian forestry example is linked as a non-bundle external-evidence
+            controversy; and MHS is preserved separately as a supporting recorded inquiry. The
+            applied EUDR copy intentionally omits generated PDF, JSON, GeoJSON, and report
+            artefacts.
           </p>
         </div>
 
@@ -1542,7 +1663,7 @@
               </a>
             </dd>
             <dd class="research-trail-note">
-              The per-bundle reading of the two trajectories: which transitions produced code, which
+              The per-bundle reading of the two bundle-backed trajectories: which transitions produced code, which
               produced durable instructions, and which remain unresolved.
             </dd>
           </div>
@@ -1568,8 +1689,8 @@
               </a>
             </dd>
             <dd class="research-trail-note">
-              The working evaluation of what the two cases support, where the proposition overstates,
-              and which parts of the case remain contested.
+              The working evaluation of what the bundle-backed cases and supporting examples
+              support, where the proposition overstates, and which parts remain contested.
             </dd>
           </div>
 

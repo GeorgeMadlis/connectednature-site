@@ -103,7 +103,11 @@
           formaalse kogumi vastavust OKF-FC-le (selle projekti Open Knowledge Formatil ehk OKF-il
           põhinevale faktikontrolli ja väidete arengu profiilile ning laiendusele) väitmata.
           Lihtsustatud formaalne kogum ja täielik formaalne kogum on tugevamad esitused, millel on
-          täiendav formaalne struktuur. Meetodi arenemise protokoll on
+          täiendav formaalne struktuur. Siinses töös on <strong>kogum</strong> versioonitud ja
+          struktureeritud uurimis- või tõenduspakett, mitte pelgalt arhiivifail: see võib koondada
+          praeguse küsimuse või väite, meetodi või spetsifikatsiooni, tulemused, taasesituse ja
+          päritolu teabe, lisanduva uurimiskirje ning metaandmed, mis seovad need elemendid
+          salvestatud voorude ja inimesele loetavate vaadete vahel. Meetodi arenemise protokoll on
           protseduur, mis hindab kirjes olevaid leide ja otsustab, kas neist peaksid saama
           operatiivsed artefaktid või jäävad nad ainult päritolujäljeks. Operatiivne meetod on
           praegune spetsifikatsioonide, protseduuride, koodi, testide, validaatorite, juhiste,
@@ -229,8 +233,8 @@
           Artikli hilisemas osas toodud väike MHS-i ja maailmamudelite salvestatud uurimus on
           kaasatud üksnes illustratsioonina, mitte tõendina: see näitab, kuidas teravam
           faktikontrolli küsimus muutus nähtavaks pärast mõistelist rikastamist. Üksikasjalik
-          allikahindamine kuulub tõendusbaasi, mitte ei konkureeri siin kahe formaalse
-          kogumijuhtumiga.
+          allikahindamine kuulub tõendusbaasi toetava materjalina, mitte ei konkureeri artikli
+          kolme põhinäitega.
         </p>
         <p>
           Need piirid mõjutavad üksteist. Inimene annab esialgse jaotuse, mis kannab sõnastamata
@@ -267,9 +271,22 @@
           tõendusseisundi, kui allika autentsust ei ole kindlaks tehtud. Kumbki ei olnud õige skeemi
           rakendamise viga; mõlemad olid skeemi enda vead. Järeldus on konkreetne: enne kui
           tõenditaristu saab toetada vaidlustatavat valitsemist, peab ka struktuur, millega
-          tõendust korrastatakse, olema parandustele avatud. See ei nõua, et iga selline
-          parandus jääks püsivalt aktiivseks; arhitektuur jääb ajutiseks seal, kus see ei ole veel
-          kontrollile vastu pidanud, mitte vaikimisi lõputult.
+          tõendust korrastatakse, olema parandustele avatud. Kaks siin käsitletavat kogumipõhist
+          juhtumit näitavad, et selline parandus ei piirdu andmete parandamisega. See ei nõua, et
+          iga selline parandus jääks püsivalt aktiivseks; arhitektuur jääb ajutiseks seal, kus see
+          ei ole veel kontrollile vastu pidanud, mitte vaikimisi lõputult.
+        </p>
+        <p>
+          Artikli kolm põhinäidet on seetõttu ebasümmeetrilised. Fazenda Sucuri kohvijuhtum on
+          kogumipõhine EUDR-i eelhindamise näide. <code>framework-self</code> on kogumipõhine
+          metodoloogiline enesejuhtum selle kohta, kuidas raamistiku objekt liikus vaatlejate
+          erimeelsuselt väidete arengule. Eesti metsamajanduse näide, mis pärineb artiklist
+          <a href="evidence-first-consensus-later.html#example-estonian-forest-management">„Tõendus kõigepealt, konsensus hiljem”</a>,
+          ei ole selles uuringus sihilikult kogumipõhine: see on välistest allikatest kokku pandud
+          avaldatud konfliktianalüüsi näide, mida kasutatakse siin näitamaks, kuidas erinevad
+          arvestusobjektid, piirid ja ajahorisondid võivad anda näiliselt vastuolulisi kestlikkuse
+          järeldusi. MHS-i uurimisjälg jääb kasulikuks toetavaks materjaliks, kuid ei ole üks neist
+          kolmest põhinäitest.
         </p>
       </section>
 
@@ -391,7 +408,7 @@
           ja siirde kirjeldust, et sisuliselt oluline tee oleks rekonstrueeritav. Praegune kogumi
           arengu analüüs pakub lisaks rikkamat seoste sõnavara, mis eristab vähemalt
           seoseid <em>asendab</em>, <em>on vastuolus</em>, <em>muudab raamistikku</em>,
-          <em>avab uuesti</em> ja <em>asendab eelduste alusel</em>. See tüübitud seoste sõnavara on
+          <em>avab uuesti</em> ja <em>asendab eelduste alusel</em>. See seoste sõnavara on
           käesoleva uurimuse ettepanek, mitte kõigis kogumites täielikult rakendatud tava. Eristus
           on oluline, sest lineaarne <code>supersedes</code>-ahel võib varjata, kas hilisem seisund
           muutus seetõttu, et tõendus muutus, eeldused või ulatus muutusid või protseduur ise
@@ -424,6 +441,20 @@
             meetodi arenemise protokolli, mis määrab, kuidas säilitatud leide kasutatakse.
           </figcaption>
         </figure>
+        <p>
+          Fazenda Sucuri teeb praeguse seisundi ja trajektoori eristuse konkreetseks enne, kui on
+          vaja formaalset tähistust. <strong>Praegune seisund</strong> on kogumi kanooniline praegune
+          esitus: praegune küsimus, meetod või spetsifikatsioon, eelhindamise tulemus, viimased
+          mõõdikud ja piirangud ning päritolu, mida on vaja kasutatud tõenduse ja allikaversioonide
+          tuvastamiseks. <strong>Trajektoor</strong> on säilitatud lisanduv uurimisvoorude jada,
+          mis näitab, kuidas selle seisundini jõuti. Kontrollitud avalikus hetktõmmises ütleb
+          praegune seisund, et eelhindamise klass jääb
+          <code>possible_relevant_deforestation</code>; trajektoor lisab näiteks, et 6. voor
+          parandas kohvimaski ajalise semantika ning 8. voor lisas FDP/JRC morfoloogia ja
+          lävenditundlikkuse diagnostika ilma eelhindamise klassi muutmata. Lühidalt: praegune
+          seisund vastab küsimusele „mis on meetod/tulemus nüüd?”, trajektoor aga küsimusele „mis
+          sisuliselt muutus, millal ja miks?”.
+        </p>
         <div class="core-notation" aria-label="Põhitähistus">
           <p class="core-notation-title">Allpool kasutatav põhitähistus</p>
           <dl>
@@ -434,6 +465,10 @@
             <div>
               <dt>\(H_{\mathrm{traj}}\)</dt>
               <dd>salvestatud projektispetsiifiline trajektoor, mis on hiljem rekonstrueerimiseks kättesaadav</dd>
+            </div>
+            <div>
+              <dt>\(B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)\)</dt>
+              <dd>täielik kogumiseisund valitud praeguses seisundis \(T\): koondatud praegune arusaam, säilitatud trajektoor ning päritolu/metaandmed</dd>
             </div>
             <div>
               <dt>\(E_t\), \(F_t\), \(P_t\)</dt>
@@ -467,15 +502,46 @@
           sisuliselt olulised välised sisendid.
         </p>
         <p>
-          Konkreetse seisundi sees on tehniline määrang:
+          Valitud praeguses salvestatud seisundis \(T\) saab täieliku kogumiseisundi kirjutada nii:
+        </p>
+        <div class="math-display">\[
+          B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)
+        \]</div>
+        <p>
+          Siin on \(X_T\) koondatud praegune arusaam, \(H_{\mathrm{traj},T}\) kuni seisundini \(T\)
+          säilitatud salvestatud trajektoor ning \(\Pi_T\) päritolu ja metaandmed, mida on vaja
+          seisundi tuvastamiseks ja kontrollimiseks. Fazenda Sucuri 9. vooru seisundis hõlmab
+          \(X_T\) praegust küsimust, eelhindamise klassi, meetodit/spetsifikatsiooni, mõõdikuid,
+          piiranguid ja allikate erimeelsuse tõlgendust; \(H_{\mathrm{traj},T}\) hõlmab voorude
+          ajalugu kuni 9. vooruni; ning \(\Pi_T\) hõlmab kogumi- ja repositooriumivooride tunnuseid,
+          commit-viiteid, andmestiku- ja mudeliversioone, manifeste, kontrollsummasid,
+          asenduslinke ning genereerimise metaandmeid seal, kus need on olemas. Suur \(T\) tähistab
+          valitud praegust seisundit; allpool kasutatav väike \(t\) tähistab üldist seisundit
+          trajektoori sees.
+        </p>
+        <p>
+          Konkreetse seisundi sees on tehnilise määrangu sõltuvusel järgmine tüübikuju:
+        </p>
+        <div class="math-display">\[
+          f:\mathcal E\times\mathcal F\times\mathcal P\to\mathcal T
+        \]</div>
+        <p>
+          Selle realiseeritud väärtus seisundis \(t\) on:
         </p>
         <div class="math-display">\[
           T_t = f(E_t,F_t,P_t)
         \]</div>
         <p>
           Siin on \(E_t\) viidatud tõendus ja selle versioonid, \(F_t\) raamistik, eeldused, ulatus ja
-          definitsioonid ning \(P_t\) operatiivne protseduuri- või juhiseseisund. See \(P_t\) ei ole
-          kõrgema tasandi meetodi arenemise protokoll; see on selles seisundis täidetav protseduur.
+          definitsioonid ning \(P_t\) operatiivne protseduuri- või juhiseseisund. Fazenda Sucuri
+          puhul hõlmab \(E_t\) JRC 2020. aasta metsa lähtekihti, Hanseni 2020. aasta järgse kao
+          tõendust, FDP 2026a kohvitõendust ja MapBiomase kohvitõendust; \(F_t\) käsitleb neid
+          eelhindamise tõendusena ja säilitab allikate erimeelsuse, mitte ei tõsta ruumilist
+          kattuvust õiguslikuks järelduseks; ning \(P_t\) sisaldab ajalisi maske, lävendeid,
+          ruumilisi ühisosi ja raporteerimisreegleid. \(T_t\) on sellest tulenev tehniline või
+          tõenduslik seisund, sealhulgas eelhindamise klass ja toetavad mõõdikud. See ei ole
+          õiguslik dispositsioon. See \(P_t\) ei ole kõrgema tasandi meetodi arenemise protokoll;
+          see on selles seisundis täidetav protseduur.
         </p>
         <p>
           Allavoolu õiguslik või operatiivne dispositsioon, kui projektil on volitus ja tõendus seda
@@ -500,6 +566,21 @@
           jälgitavuse ega kohapealse (in situ) valideerimise allikas. Rollide määratlemine on
           meetodi osa, sest see takistab tõenduskihi olemasolu segiajamist otsustamiseks piisava
           alusega.
+        </p>
+        <p>
+          Praeguse seisundi võrdlust saab väljendada täieliku kogumi kahe projektsioonina:
+        </p>
+        <div class="math-display">\[
+          X_1=\pi_{\mathrm{cur}}(B_T)
+        \]</div>
+        <div class="math-display">\[
+          X_2=\pi_{\mathrm{cur}}(B_T)\cup\pi_{\mathrm{traj}}(B_T)
+        \]</div>
+        <p>
+          \(X_1\) võib olla piisav selliseks ülesandeks nagu Fazenda Sucuri praeguse eelhindamise
+          klassi raporteerimine. \(X_2\) lisab trajektooriteabe, mida võib vaja minna teistsuguse
+          ülesande jaoks, näiteks selgitamaks, miks praegune kohvimaski semantika erineb varasemast
+          rakendusest: 6. vooru siire on nähtav ainult siis, kui säilitatud trajektoor on olemas.
         </p>
         <p>
           Võrdlus ei ole seega ajalugu versus ajaloo puudumine. Küsimus on selles, mida teine
@@ -567,24 +648,33 @@
       <section class="article-section">
         <h2>Tõendusbaas</h2>
         <p>
-          Siinse uurimuse tugevaim tõendus ei ole kirjandusülevaade, vaid kaks versioonihalduses
-          hoitud formaalset inimese ja tehisintellekti trajektoorijuhtumit. Need on avaldatud kahe
-          iseseisva kogumina COINi uurimiskaustas — mõlemad lamendatud eksportidena, millel on oma
-          vooruregister ja voorupõhised kirjed, esimesel juhul ka mõõdikute tabel ja retrospektiivne
-          liigitus. Esimene kogum kirjeldab vaatleja-erimeelsuse raamistikku ennast: üldist ja
-          osaliselt enesele viitavat juhtumit, kus uurimus vaatleb omaenda salvestamist kahekümne
-          vooru jooksul, millesse panustasid kaks agenti. Teine on avalik lugemishetktõmmis
-          rakenduslikust georuumilisest kogumist Fazenda Sucuri kohvi nõuetele vastavuse
-          eelhindamiseks EUDR-i alusel; COINi koopiast
-          on välja jäetud genereeritud PDF-, JSON-, GeoJSON- ja raportiartefaktid. Oluline ei ole
-          kummaski voorude arv, vaid nähtavad teisendused: ajalooliselt salvestatud leiud, mida
-          hiljem esitatakse koodi, testide, spetsifikatsioonide, validaatorite, agendijuhiste,
-          tõenduse semantika või selge määramatusena.
+          Tõendusbaasil on kolm põhinäidet, mille rollid on erinevad, mitte üks ühtlane formaalsete
+          juhtumiuuringute kogum. Fazenda Sucuri on kogumipõhine EUDR-i eelhindamise juhtum: selle
+          tehniline klass jääb stabiilseks, kuid tõendusseisund muutub. <code>framework-self</code>
+          on kogumipõhine metodoloogiline enesejuhtum: selle ajalugu muudab arusaama sellest, mis
+          praegune raamistik on. Eesti metsamajandus on taas teistsugune: selles uuringus ei esinda
+          seda versioonitud kogumitrajektoor, vaid artiklis
+          <a href="evidence-first-consensus-later.html#example-estonian-forest-management">„Tõendus kõigepealt, konsensus hiljem”</a>
+          avaldatud konfliktianalüüs, mis näitab, kuidas konkureerivad kestlikkuse järeldused
+          võivad tuleneda erinevatest arvestusobjektidest, piiridest ja ajahorisontidest.
+        </p>
+        <p>
+          Kaks kogumipõhist näidet on avaldatud iseseisvate kogumitena COINi uurimiskaustas, oma
+          vooruregistrite ja voorupõhiste kirjetega. <code>framework-self</code> kirjeldab
+          raamistikku ennast: üldist ja osaliselt enesele viitavat juhtumit, kus uurimus vaatleb oma
+          salvestamist ja hilisemat raamatupidamisparandust. Fazenda Sucuri kogum on avalik
+          lugemishetktõmmis rakenduslikust georuumilisest kohvi eelhindamise juhtumist EUDR-i
+          alusel; COINi koopiast on välja jäetud genereeritud PDF-, JSON-, GeoJSON- ja
+          raportiartefaktid. Oluline ei ole kummaski voorude arv, vaid nähtavad teisendused:
+          ajalooliselt salvestatud leiud, mida hiljem esitatakse koodi, testide,
+          spetsifikatsioonide, validaatorite, agendijuhiste, tõenduse semantika või selge
+          määramatusena.
         </p>
         <p>
           Tõenduse ulatus on sihilikult ebaühtlane. Siin käsitletavatest trajektooridest kaks on
-          COINis formaalsete avalike kogumitena commit'itud. MHS-i ja maailmamudelite episood on
-          säilitatud eraldi toetava
+          COINis formaalsete avalike kogumitena commit'itud. Eesti metsamajanduse näide on
+          allikaviidetega avalik konfliktianalüüs, mitte kogumitrajektoor. MHS-i ja maailmamudelite
+          episood on säilitatud eraldi toetava
           <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">salvestatud
           uurimusena</a>, mitte kolmanda formaalse kogumina. Ülejäänud EUDR-i episoodid pärinevad
           aluseks oleva analüüsi käsitletud privaatse raamistiku versioonitud arenduskirjest. Need
@@ -606,6 +696,17 @@
           mitte hea tahe.
         </p>
         <p>
+          Eesti metsamajanduse näitel on teistsugune roll. See on välistest allikatest kokku pandud
+          avaldatud konfliktianalüüsi näide, mitte selles uuringus versioonitud kogum. Varasem
+          artikkel näitab, et näiline järeldus muutub koos arvestusobjektiga: ELiga võrreldav
+          puidubilanss võib võrrelda raiemahtu metsa kasutamiseks kättesaadava netojuurdekasvuga,
+          samas kui teised argumendid kasutavad majandatavate metsade tagavara juurdekasvu,
+          rahvuslikku kogujurdekasvu, süsinikuvaru stabiilsust või LULUCF-arvestust. Üksainus
+          skalaartulemus peidaks piirivalikud ja ajahorisondid, mis teevad vaidluse mõistetavaks.
+          Seetõttu kasutab see artikkel juhtumit raamistike säilitamise põhjendamiseks, mitte
+          salvestatud kogumitrajektoori tõendusena.
+        </p>
+        <p>
           MHS-i salvestatud uurimus illustreerib teistsugust salvestusdetailsust: teadmise
           rikastamist enne fookustatud faktikontrolli. 27. augustil 2026 teatas Anthropic
           uurimiseelvaatena
@@ -614,8 +715,8 @@
           draiverina, mille kaudu tehisintellekti agendid saavad programmeeritavaid füüsilisi
           seadmeid avastada, lugeda, kirjutada ja ohutult kasutada. COINis säilitatud
           allikapõhine jada on järgmine: esmane MHS-i uurimus, MHS-i ja digitaalse kaksiku
-          mõistmine, vaba energia printsiibi ja aktiivse inferentsi lisatud raamistik, tugevama
-          maailmamudelite väite küsitavaks muutumine, selgesõnaline faktikontroll ja koondamine.
+          mõistmine, laiem mõisteline rikastamine, tugevama maailmamudelite väite küsitavaks
+          muutumine, selgesõnaline faktikontroll ja koondamine.
           Esimesed kaks küsimust olid teadmise rikastamise küsimused. Alles seejärel sai tugevam
           pealkirjaväide — AI Secreti
           <a href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">„Claude Just Killed The World Models”</a> —
@@ -625,8 +726,8 @@
           Selle metodoloogiline väärtus on väike, kuid täpne. Ainult lõppseisust lähtuv
           rekonstruktsioon võiks alustada otse küsimusega „Kas MHS muutis maailmamudelid
           ebavajalikuks?” ja teha ikkagi pädeva faktikontrolli esmase MHS-i materjali ning välise
-          pealkirja suhtes. Puudu jääks aga see, kuidas inimene omandas esmalt MHS-i, digitaalse
-          kaksiku ja FEP-i uurimise kaudu piisava mõistelise struktuuri, et tugevam väide muutus
+          pealkirja suhtes. Puudu jääks aga see, kuidas inimene omandas esmalt MHS-i ja digitaalse
+          kaksiku uurimise kaudu piisava mõistelise struktuuri, et tugevam väide muutus
           küsitavaks. Seetõttu ei saa episood tõendada, et salvestatud ajalugu parandab
           uurimistulemusi. See näitab ainult, miks salvestatud uurimus võib faktikontrolli kujunemise
           uurimisel kasulik olla: see säilitab, kuidas fookustatud kontrolliküsimus tekkis varasemast
@@ -696,15 +797,22 @@
           allikaspetsiifilist kohvieeldust parandati, miks visuaalsed ja raportivead olid olulised ning kuidas need
           leiud teisendati püsivamateks operatiivseteks piiranguteks. Parandus on nähtav kogumi
           enda <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md" target="_blank" rel="noopener noreferrer">allikaspetsiifilistes
-          kattuvustulemustes</a>: FDP teatab 0,27 hektarist pärast 2020. aastat tekkinud
-          lähteperioodi metsa kadu, mis kattub uue kohviga, samas kui MapBiomas ja mõlema allika
-          kokkulangevuse kiht teatavad sama teisendusliku ühisosa puhul 0,0 hektarit. Kogum hoiab neid
-          eraldi allikaspetsiifiliste kattuvustulemustena ja säilitab erimeelsuse, mitte ei käsitle
-          neid ühe mõõdiku alternatiivsete nimede ega arvudena, mis keskmistatakse ära. Selle
+          kattuvustulemustes</a>. Manuskriptis kasutatud viimases kontrollitud avalikus
+          hetktõmmises (kogumi 9. voor, hetktõmmis <code>2026-09-12-r0009-4eccee8</code>) on AOI
+          pindala 1722,07&nbsp;ha; JRC 2020. aasta metsa lähtekiht on 219,26&nbsp;ha; 2020. aasta
+          järgne kadu sellel lähtekihil on 23,77&nbsp;ha; seadistatud praegune kohvitõendus on
+          482,28&nbsp;ha; ning uus kohv pärast lähteperioodi on 225,29&nbsp;ha. Praeguse kohvi
+          kattuvus 2020. aasta järgse kaoga on 5,14&nbsp;ha. Uue kohvi kattuvus 2020. aasta järgse
+          kaoga on FDP 2026a järgi 1,17&nbsp;ha, MapBiomase järgi 0,0&nbsp;ha ning mõlema allika
+          kokkulangevuse järgi 0,0&nbsp;ha. Hanseni 10% võrakatvuse lähtekiht annab 95,48&nbsp;ha
+          lähteperioodi metsa ja 5,98&nbsp;ha 2020. aasta järgset kadu. Kogum hoiab neid eraldi
+          allikaspetsiifiliste kattuvustulemustena ja säilitab erimeelsuse, mitte ei käsitle neid
+          ühe mõõdiku alternatiivsete nimede ega arvudena, mis keskmistatakse ära. Selle
           <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md" target="_blank" rel="noopener noreferrer">praegune
-          vastus</a> jääb <code>human_review_required</code> ja <code>pinned-not-reproduced</code>
-          ning see ütleb otse, et tulemus on nõuetele vastavuse eelhindamise märge, mitte õiguslik
-          otsus nõuetele mittevastavuse kohta.
+          vastus</a> salvestab <code>gsp-verdict-class: possible_relevant_deforestation</code> ja
+          <code>gsp-provenance: pinned-not-reproduced</code>, vastates vastasraporti seisundile
+          <code>human_review_required</code>. Need on tehnilised või tõenduslikud seisundid ja
+          inimülevaatuse suunamise seisund, mitte õiguslikud EUDR-i nõuetele vastavuse määrangud.
         </p>
         <p>
           Sama eristus ilmneb privaatse raamistiku episoodides, mida kasutatakse siin ainult
@@ -915,15 +1023,19 @@
           meetodi asemel arhiveeritud päritoluks.
         </p>
         <p>
-          Salvestatud trajektoorid toetavad väite kitsamat ja kaitstavamat versiooni, kui varasem
-          artikkel eeldas. Need kaks formaalset juhtumikogumit näitavad, et kogumiajalugu saab
-          dokumenteerida meetodi kujunemist ja parandamist ning et selle ajaloo leide saab hiljem
-          esitada koodi, testide, spetsifikatsioonide, validaatorite, juhiste, tõenduse semantika ja
-          selge määramatusena. MHS-i salvestatud uurimus annab väiksema kujunemisõppetunni:
-          fookustatud faktikontrolli küsimus võib tekkida pärast mõistelist rikastamist, ilma et
-          oleks vaja formaalse kogumi struktuuri. EUDR-i jada annab sisulise operatiivse tulemuse:
-          allikate eraldamise, ajalise maski reeglid, raportivalideerimise, inimülevaatuse väravad
-          ning kihi A / kihi B / kihi C dekompositsiooni.
+          Tõendus toetab väite kitsamat ja kaitstavamat versiooni, kui varasem artikkel eeldas.
+          Kaks kogumipõhist juhtumit näitavad, et kogumiajalugu saab dokumenteerida meetodi
+          kujunemist ja parandamist ning et selle ajaloo leide saab hiljem esitada koodi, testide,
+          spetsifikatsioonide, validaatorite, juhiste, tõenduse semantika ja selge määramatusena.
+          Fazenda Sucuri annab stabiilse klassi ja muutuva tõendusseisundi mustri: allikate
+          eraldamise, ajalise maski reeglid, raportivalideerimise, inimülevaatuse väravad, lävendi-
+          ja morfoloogiadiagnostika ning kihi A / kihi B / kihi C dekompositsiooni.
+          <code>framework-self</code> annab raamistikuvahetuse mustri: ajalugu muudab tõlgendust,
+          mis praegune objekt on. Eesti metsamajanduse näide annab mitte-kogumipõhise konflikti
+          mustri: selgesõnaliste konkureerivate raamistike säilitamine on vajalik, sest üksainus
+          lõpptulemus moonutaks vaidluse arvestusobjekte ja ajahorisonte. MHS-i salvestatud uurimus
+          jääb toetavaks kujunemisnäiteks: fookustatud faktikontrolli küsimus võib tekkida pärast
+          mõistelist rikastamist ilma formaalse kogumi struktuurita.
         </p>
         <h3>Viie alaküsimuse staatus</h3>
         <table>
@@ -1001,10 +1113,13 @@
           üleminekute taastatavat kirjet.
         </p>
         <p>
-          See annab kogumiajaloo funktsiooni, mida kogumi praegune HEAD-seisund ei saa pakkuda. Konfliktikogum
-          saab säilitada lahendamata erimeelsuse vaatlejate vahel ühes uurimisseisundis;
-          versioonitud kogumiajalugu saab säilitada sisuliselt asjakohase erimeelsuse
-          uurimisseisundite vahel, kui asendatud seisundid ja ülemineku põhjused jäävad
+          See annab kogumiajaloo funktsiooni, mida kanooniline praegune revisjon üksinda ei saa
+          pakkuda. Nendes repositooriumides vastab kanooniline praegune revisjon tavaliselt
+          kanoonilise <code>main</code>-haru viimasele commit'itud revisjonile, kuid mõiste ei ole
+          Giti <code>HEAD</code>-viit, mis võib tähistada teist haru või lahti ühendatud commit'i.
+          Konfliktikogum saab säilitada lahendamata erimeelsuse vaatlejate vahel ühes
+          uurimisseisundis; versioonitud kogumiajalugu saab säilitada sisuliselt asjakohase
+          erimeelsuse uurimisseisundite vahel, kui asendatud seisundid ja ülemineku põhjused jäävad
           rekonstrueeritavaks. Ilma selle tingimuseta on ajalugu lihtsalt jada, milles viimane
           seisund kirjutab varasema epistemilise tähenduse üle, ning siis ei takista kumbki vorm
           hilisemat konsensust või deterministlikku rakendust kustutamast argumente, millest see
@@ -1032,7 +1147,7 @@
           mis suudaks nende vahel eristada, ning seejärel kinnitada asendus, säilitada konflikt või
           avada varasem seisund uuesti. See nõuab, et säilitatud ajalugu eristaks asendust
           vastuolust ja raamistiku muutmisest, mitte ei suruks neid kokku ühte lineaarsesse ahelasse,
-          nagu pakutud tüübitud seoste sõnavara on mõeldud tegema. Paljas <code>supersedes</code>-link
+          nagu pakutud seoste sõnavara on mõeldud tegema. Paljas <code>supersedes</code>-link
           kodeerib vaikimisi viimase seisundi raamistiku edenemisena. Ajalooline kirje on päritolu;
           selle kirje distsiplineeritud kasutamine rekonstrueerimiseks, võrdlemiseks, eristamiseks,
           asendamiseks, konflikti säilitamiseks või uuesti avamiseks on meetod.
@@ -1052,8 +1167,8 @@
           kui revisjon muutub vajalikuks.
         </p>
         <p>
-          Koos „Tõendus kõigepealt, konsensus hiljem” artikliga loetuna osutavad kaks juhtumit
-          kahele seotud, kuid eristatud tasandile, mitte ühele. Objektitasand, mida too uurimus
+          Koos „Tõendus kõigepealt, konsensus hiljem” artikliga loetuna osutavad näited kahele
+          seotud, kuid eristatud tasandile, mitte ühele. Objektitasand, mida too uurimus
           määratleb, kulgeb nii: maailm või keskkonnaväide → vaatlused ja tõendus →
           kontrollitav tõendusseisund → erimeelsus ja vaidlustamine → ülevaatus → valitsemisotsus
           või võimalik konsensus. Meetoditasand, mida uuritakse siin, kulgeb nii: inimese ja
@@ -1083,9 +1198,11 @@
           olla institutsionaalselt või normatiivselt otsustatud, kui otsus võetakse vastu hoolimata
           allesjäävatest väärtuskompromissidest või alammääratusest. Meetodi taandamine,
           empiiriline lähenemine võrdlusseisundile ja valitsemiskonsensus on seotud, kuid need ei ole
-          sama protsess. EUDR-i kogumi enda praegune seis — <code>human_review_required</code> ja
-          <code>pinned-not-reproduced</code> — näitab, et jada peatati teadlikult ülevaatusel,
-          mitte ei viidud otsuseni.
+          sama protsess. Fazenda Sucuri kogumi enda praegune tehniline ja tõenduslik seis —
+          <code>gsp-verdict-class: possible_relevant_deforestation</code> ja
+          <code>gsp-provenance: pinned-not-reproduced</code> koos vastasraporti
+          <code>human_review_required</code> seisundiga — näitab, et jada peatati teadlikult
+          inimülevaatusel, mitte ei viidud õigusliku EUDR-i nõuetele vastavuse otsuseni.
         </p>
       </section>
 
@@ -1309,8 +1426,9 @@
           Hästi kirjutatud praeguse seisundi dokumentatsioon, spetsifikatsioon, koodibaas,
           testikomplekt, päritolukirje ja lahendamata küsimuste loend võivad kõrvaldada suure osa
           trajektoori näilisest väärtusest. Teisalt võib trajektoor sisse tuua aegunud eeldusi,
-          ankurdamist, konteksti ülekoormust või autoriteedikallutatust. Praegused kaks kogumit ei
-          tõenda endiselt trajektoori lisaväärtust.
+          ankurdamist, konteksti ülekoormust või autoriteedikallutatust. Praegused kaks
+          kogumipõhist juhtumit ei tõenda endiselt trajektoori lisaväärtust ning Eesti
+          metsamajanduse näide ei ole trajektoorijuhtum.
         </p>
         <p>
           Salvestatud repositooriumiajalugu on samuti ainult \(H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)\).
@@ -1429,10 +1547,11 @@
             tekitas: koodi, teste, spetsifikatsioone, agendireegleid, säilitatud määramatust või
             varasema raamistiku tagasilükkamist. Samuti salvestab see kontrafaktilised testid, mida
             oleks vaja päritolu eristamiseks tõendatud meetodikujunduslikust eelisest, sealhulgas
-            vaidlustuse kvaliteedist. Kaks formaalset kogumijuhtumit on siin commit'itud
-            iseseisvate kogumitena; MHS on säilitatud
-            eraldi toetava salvestatud uurimusena. Rakenduslik EUDR-i koopia jätab teadlikult välja
-            genereeritud PDF-, JSON-, GeoJSON- ja raportiartefaktid.
+            vaidlustuse kvaliteedist. Kaks kogumipõhist juhtumit on siin commit'itud iseseisvate
+            kogumitena; Eesti metsamajanduse näide on lingitud mitte-kogumipõhise välise tõenduse
+            vaidlusena; MHS on säilitatud eraldi toetava salvestatud uurimusena. Rakenduslik
+            EUDR-i koopia jätab teadlikult välja genereeritud PDF-, JSON-, GeoJSON- ja
+            raportiartefaktid.
           </p>
         </div>
 
@@ -1568,7 +1687,7 @@
               </a>
             </dd>
             <dd class="research-trail-note">
-              Kahe trajektoori kogumipõhine lugemine: millised siirded tekitasid koodi, millised
+              Kahe kogumipõhise trajektoori lugemine: millised siirded tekitasid koodi, millised
               püsivaid juhiseid ja millised jäävad lahendamata.
             </dd>
           </div>
@@ -1594,8 +1713,8 @@
               </a>
             </dd>
             <dd class="research-trail-note">
-              Tööhinnang sellele, mida kaks juhtumit toetavad, kus väide liialdab ja millised
-              juhtumi osad jäävad vaidlustatuks.
+              Tööhinnang sellele, mida kogumipõhised juhtumid ja toetavad näited toetavad, kus
+              väide liialdab ja millised osad jäävad vaidlustatuks.
             </dd>
           </div>
 
