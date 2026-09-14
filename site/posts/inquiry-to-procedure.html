@@ -3,21 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>From Inquiry to Procedure: What Should We Keep From Human-AI Research? | ConnectedNature</title>
+  <title>From Inquiry to Procedure: Human–AI Research as Progressive Reduction | ConnectedNature</title>
   <meta
     name="description"
-    content="A plain-language ConnectedNature synthesis on what to preserve from human-AI research history, what to compile into current procedure, and what remains unresolved."
+    content="A ConnectedNature article distinguishing recorded inquiry provenance, method-evolution protocols, and operational research methods in human-AI evidence work."
   >
   <link rel="alternate" hreflang="en" href="inquiry-to-procedure.html">
   <link rel="alternate" hreflang="et" href="../et/posts/inquiry-to-procedure.html">
   <link rel="stylesheet" href="../style.css" onerror="this.onerror=null;this.href='https://connectednature.org/style.css';">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.css"
+    integrity="sha384-u1zONI5gPXUx0UKI62c75/zww972y0v2rSK5ZYlVdS6xEuWDeZWUI66v6t1gvlXJ"
+    crossorigin="anonymous"
+  >
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/katex.min.js"
+    integrity="sha384-ykMNcWQhhTUb0YV9SPpPUFURHZ+tWmubkakGBP+OgNK/UXdO2gtzglWx0Rj9hnO3"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/katex@0.18.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-bjyGPfbij8/NDKJhSGZNP/khQVgtHUE5exjm4Ydllo42FwIgYsdLO2lXGmRBf5Mz"
+    crossorigin="anonymous"
+    onload="renderMathInElement(document.body, { throwOnError: false });"
+  ></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap site-header-inner">
       <div class="brand-block">
-        <p class="eyebrow">Public Article</p>
+        <p class="eyebrow">Working Article</p>
         <a class="site-title" href="../index.html">ConnectedNature</a>
       </div>
       <nav class="site-nav" aria-label="Primary">
@@ -49,283 +68,1704 @@
   <main id="main" class="page-main article-main">
     <article class="wrap article">
       <header class="article-header">
-        <p class="eyebrow">Sixth Inquiry &middot; Public synthesis</p>
-        <h1>From Inquiry to Procedure: What Should We Keep From Human-AI Research?</h1>
+        <p class="eyebrow">Sixth Inquiry</p>
+        <h1>From Inquiry to Procedure: Human–AI Research as Progressive Reduction</h1>
         <p class="lead">
-          Human-AI research changes as evidence improves, mistakes are found, assumptions are
-          challenged, and methods are repaired. The useful question is not whether to save every
-          step. It is what should be kept, what should be turned into the current method, and when
-          older history becomes useful again.
+          How a recorded project-specific inquiry trajectory can be represented at the right
+          granularity; how selected lessons can be converted into code, tests, specifications,
+          instructions, and explicit uncertainty; and why the resulting operational method should
+          normally work without replaying the whole history that helped produce it.
         </p>
       </header>
 
       <section class="article-section">
-        <h2>The short answer</h2>
-        <p>
-          Keep enough of the research history to explain important corrections, disagreements, and
-          changes of method. Turn stable lessons into the tools people actually use now: code,
-          tests, specifications, instructions, source rules, and clearly stated uncertainties. The
-          current method should normally work without replaying the whole history. Keep the history
-          available so it can be reopened when the method is challenged, breaks, or needs to be
-          changed.
+        <h2>Originating statement</h2>
+        <p class="statement-block">
+          “In human–AI research, a recorded inquiry trajectory is primarily provenance of method
+          formation. Its possible methodological value lies in whether the project-specific
+          evolution of an inquiry provides information needed for reliable continuation,
+          correction, interpretation, revision, or transfer that is not already supplied by
+          participants' prior knowledge, shared explicit knowledge, and a sufficiently explicit
+          current project state. Where that value
+          exists, a disciplined method-evolution process should compile selected findings into a
+          current operational method: code, tests, validators, specifications, AI instructions,
+          evidence semantics, and explicit unresolved questions. Successful reductions should allow
+          reduced lessons to leave active historical context where possible, while the archived
+          history remains available for audit and later method revision.”
         </p>
         <p>
-          That is what "compiled output" should mean here. It should not be the same research
-          article reorganised under different headings. A public synthesis should carry forward the
-          main question, the strongest evidence, the important uncertainties, and the practical
-          conclusion, while leaving the technical detail in the linked research trail.
+          The statement is deliberately more careful than the earlier version of this article. It
+          separates several concepts that are easy to conflate. The underlying trajectory is the historical
+          movement of questions, understanding, claims, evidence, frames, procedures, and
+          determinations. A recorded inquiry is one proportional representation of that movement: a
+          source-grounded ordered record sufficient to reconstruct materially relevant changes
+          without claiming formal bundle conformance under OKF-FC (this project's fact-checking
+          and statement-evolution profile and extension of the Open Knowledge Format (OKF)). A
+          lightweight formal bundle and a full formal bundle are stronger representations with
+          additional machinery. In this work, a <strong>bundle</strong> is a versioned, structured
+          research or evidence package, not merely an archive file: it can bring together the
+          current question or claim, method or specification, results, reproduction and provenance
+          information, an append-only inquiry record, and metadata linking these elements across
+          recorded rounds and human-readable views. A method-evolution
+          protocol is the procedure that evaluates findings in the record and decides whether they
+          should become operational artifacts or remain provenance only. The operational method is
+          the present set of specifications, procedures, code, tests, validators, instructions,
+          evidence semantics, and explicit unresolved questions needed to perform the research task
+          now.
+        </p>
+        <p>
+          The meaningful choice is therefore not simply <em>no record</em> versus
+          <em>formal bundle</em>. It is a representation choice: ordinary notes, recorded inquiry,
+          lightweight formal bundle, or full formal bundle. The governing design principle is
+          representation proportionality: preserve enough structure for the intended future use, and
+          require additional formal machinery only when expected epistemic, audit,
+          reproducibility, experimental, or repeated-use value justifies it. This article does not
+          claim that a universal promotion threshold has been validated.
+        </p>
+        <p>
+          The crucial distinction is this: historical dependence of method discovery is not the same
+          as operational dependence of method execution. A history may have contributed materially
+          to discovering a procedure while no longer being needed to apply that procedure. Conversely,
+          showing that a final procedure can run without its historical log does not prove that the
+          history was useless in discovering it.
+        </p>
+        <p>
+          The central proposition is therefore deliberately falsifiable. A recorded
+          project-specific inquiry trajectory has incremental value only when access to it enables
+          materially better method formation, continuation, diagnosis, correction, transfer, or
+          revision than can be achieved from observer background knowledge, shared explicit
+          knowledge, and a sufficiently explicit current project state alone. If another capable
+          human–AI team can reliably derive the same or a better method from the current state
+          without explicit trajectory access, then the trajectory has not demonstrated an
+          incremental operational advantage for that task.
+        </p>
+        <p>
+          The negative therefore has to be split. A <strong>formation negative</strong> would hold if
+          an investigator without the project-specific trajectory could reliably derive the same or
+          a better operational method from prior knowledge, shared explicit knowledge, and a
+          well-described current state; in that case the trajectory would not have
+          demonstrated incremental value for method formation beyond provenance and auditability.
+          A <strong>revision negative</strong> would hold if archived
+          provenance also provided no material advantage when diagnosing and repairing later method
+          failures; in that case its durable role would be primarily provenance. The case-study
+          evidence used below does not experimentally test either counterfactual. Nor would routine execution
+          without history be a negative result. It is the expected shape of a successful reduction:
+          current operational method plus new evidence should be enough to produce a result, with
+          archived provenance reopened when revision becomes necessary.
+        </p>
+        <p>
+          “Trajectory-blind” must also be interpreted causally, not only at the moment a later
+          agent is run. A prompt, test, validator, reading guide, source hierarchy, or agent
+          instruction may already embody lessons compressed from earlier trajectory. An agent that
+          never sees the historical rounds may still benefit from them indirectly if those lessons
+          have become part of the current operational method.
+        </p>
+        <p>
+          This article does not start from a blank evidence architecture. The preceding
+          <strong>Fifth Inquiry</strong> in this series,
+          <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>,
+          examined the object- or world-facing
+          level: how environmental observations, evidence, claims, disagreement, review, and
+          governance can be represented without prematurely converting contestation into authority
+          or consensus. This inquiry moves one level upstream. The evidence architecture that
+          produces that representation is itself provisional and corrigible. Categories, bundle
+          boundaries, validation rules, source roles, and agent instructions may initially be wrong,
+          and making an incorrect architecture reproducible, deterministic, or inspectable does not
+          make it correct. This article therefore asks how human–AI inquiry can discover, repair,
+          and formalise that architecture as operational method.
         </p>
       </section>
 
       <section class="article-section">
-        <h2>Why this problem appears</h2>
+        <h2>Why this matters</h2>
         <p>
-          A long technical project is rarely one continuous conversation. A person may frame a
-          question in ChatGPT, turn it into a coding task for Claude Code or Codex, inspect the
-          resulting maps or calculations, notice a problem, and then revise the method. Weeks later,
-          another person or AI system may see only the latest code and documentation.
+          Generative AI lets one person operate across a larger fraction of a technical project's
+          lifecycle: requirements, data discovery, software development, tests, documentation,
+          statistical interpretation, regulatory analysis, and domain-specific research. That
+          breadth can be productive, but it does not create equal expertise at every layer. As one
+          person covers more of the lifecycle, parts of the work are performed farther from that
+          person's deepest competence, and the AI system's apparent fluency can hide the boundary
+          between genuine method and plausible execution inside a weak frame.
         </p>
         <p>
-          In many cases that is exactly what we want. Good research should not require every new
-          participant to reread months of old discussion before doing useful work. If an important
-          lesson has been reduced to a test, a validation rule, or a clear instruction, the lesson is
-          already present in the current method.
+          No observer starts from zero. A human arrives with education, experience, disciplinary
+          conventions, tacit knowledge, assumptions, and biases. An AI system arrives with a
+          different and largely implicit body of learned regularities and capabilities, plus the
+          explicit prompt, context, retrieved sources, tools, and instructions it is given. That
+          background is real history, but it is not the same thing as the recorded trajectory of this
+          particular project.
         </p>
         <p>
-          But compression can also hide something important. The final method may show what is done
-          without showing why an earlier approach looked reasonable, what evidence overturned it,
-          which assumption changed, or whether a rejected interpretation could become relevant again
-          under different conditions.
+          Three layers therefore need to be separated. <strong>Implicit accumulated history</strong>
+          lives in the observer: human learning and judgment, or model training and capability.
+          <strong>Explicit scholarly compression</strong> lives in transferable forms such as
+          literature reviews, papers, textbooks, standards, specifications, documentation, code, and
+          accepted methods. <strong>Local project trajectory</strong> records how this investigation
+          changed: assumptions, frames, evidence, errors, corrections, supersessions, method changes,
+          and unresolved questions. The first two are ordinary conditions of inquiry. The third is
+          what this article is experimentally evaluating as an additional explicit research object.
         </p>
         <p>
-          The research history is therefore useful mainly as a record of how the method formed and
-          changed. It becomes methodologically important when reopening that record helps us find or
-          repair something that the current state alone does not explain well enough.
+          Both human and AI inquiry are bounded, and they are bounded in ways that compound. Sensors
+          and datasets capture only part of the world. Scientific knowledge is itself incomplete. A
+          given researcher commands only a fraction of the relevant science: someone fluent in
+          geospatial processing may be unfamiliar with a specific regulatory distinction, while
+          someone who knows the law may misjudge remote-sensing uncertainty. An AI system works
+          within the context, tools, and sources it is handed, and within the limits of its own
+          reasoning.
+        </p>
+        <p>
+          Long-running projects are also not one continuous conversation. A task specification may
+          be developed in one ChatGPT project, transferred by a human into Claude Code, materialised
+          as a repository change, and later inherited by Codex or another model that sees the
+          changed repository but not the earlier prompt-development process. The project is
+          therefore a partially observed, multi-agent, multi-framework process. The recorded
+          trajectory is only a projection of the materially relevant development process, not the
+          whole process itself.
+        </p>
+        <p>
+          A small MHS/world-models recorded inquiry later in the article is included only as an
+          illustration, not as proof: it records how a sharper fact-checking question became salient
+          after conceptual enrichment. The detailed source evaluation belongs in the Evidence base
+          as auxiliary material, rather than competing with the article's three principal examples.
+        </p>
+        <p>
+          These bounds interact. A human supplies an initial decomposition that carries implicit
+          assumptions, an imperfect breakdown, or ambiguous terminology. The model executes inside
+          that frame and can amplify it rather than question it. The result is systematic scope
+          drift that neither party introduced alone. If this is the common failure mode, then
+          recording an inquiry has methodological value for formation or revision only when a
+          process can use the record to expose and repair the framing — not when the record merely
+          stores it. The distinction between a log that documents error and a log that helps correct
+          it is the practical stake of this article.
+        </p>
+        <p>
+          The consequence for evidence-first governance is a constraint, not a proof. “Evidence
+          first” does not mean that the evidence schema is given first. The architecture used to
+          classify, bundle, validate, compare, and contest evidence is itself a provisional research
+          output, and it can contain framing errors, scope drift, inappropriate bundle boundaries,
+          mistaken source classifications, or invalid decision rules — an explicit evidence schema
+          is not thereby a correct one. It must therefore be corrigible, versionable, and
+          contestable in the same way the claims it structures are. The two bundle-backed cases
+          examined here—the self-referential
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer"><code>framework-self</code></a>
+          bundle and the applied
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer"><code>eudr-coffee-brazil-fazenda-sucuri</code></a>
+          bundle—show that this kind of correction is not confined to fixing data: it includes
+          identifying that a boundary, observer category, or claim class was incorrectly specified —
+          as when the self-referential bundle's own object of study had to be widened at
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">round four</a>,
+          demoting disagreement to one stage among five. Separately, the
+          <a href="#fabricated-input-episode">fabricated-input episode</a>
+          discussed later shows that reproducible, hash-verified provenance can still preserve an
+          invalid evidence state when source authenticity has not been established. Neither was an
+          error in applying a correct schema; each was an error in the schema itself. The implication
+          is specific: before evidence infrastructure can support contestable governance, the
+          machinery used to structure that evidence must itself be open to correction. The two
+          bundle-backed cases examined here show that this kind of correction is not confined to
+          fixing data. This does not require that every such correction remain permanently active;
+          the architecture remains provisional where it has not yet survived scrutiny, not
+          indefinitely by default.
+        </p>
+        <p>
+          The article's main examples are therefore asymmetric. The Fazenda Sucuri coffee case is a
+          bundle-backed EUDR screening example. The <code>framework-self</code> case is a
+          bundle-backed methodological self-case about how the framework's object changed from
+          observer disagreement to statement evolution. The Estonian forest-management example,
+          drawn from <a href="evidence-first-consensus-later.html#example-estonian-forest-management">Evidence First, Consensus Later</a>,
+          is deliberately not bundle-backed in this study: it is a published conflict-analysis
+          example assembled from external sources, used here to show how different accounting
+          objects, boundaries, and time horizons can produce apparently conflicting sustainability
+          conclusions. The MHS trail remains useful supporting material, but it is not one of those
+          three principal examples.
         </p>
       </section>
 
       <section class="article-section">
-        <h2>Three examples, three different uses of research history</h2>
+        <h2>Research question</h2>
         <p>
-          The article uses three deliberately different examples. They are useful together because
-          they show that a research history can matter at more than one level. Sometimes the problem
-          is in the data or processing. Sometimes it is in the framework used to organise the
-          problem. And sometimes there is no single technical error at all: different observers can
-          reach different conclusions because they are measuring different things, drawing different
-          boundaries, or looking over different time periods.
+          <strong>What additional value does an explicit inquiry trajectory provide beyond prior
+          knowledge and a well-specified current state?</strong> Prior knowledge here includes both
+          observer background and shared explicit knowledge, including literature, standards,
+          documentation, code, and accepted methods.
         </p>
         <p>
-          Fazenda Sucuri is the applied technical case. It is a versioned research bundle concerned
-          with coffee and possible post-2020 deforestation in Brazil under the European Union
-          Deforestation Regulation (EUDR). Here the history records changes in an operational
-          evidence process: forest baselines, forest-loss layers, coffee maps, thresholds, temporal
-          masks, map rendering, source-specific disagreement, and the rules used to turn these
-          inputs into a screening result. The important question is practical: when a processing
-          assumption or implementation is corrected, which lesson should become part of the current
-          code, test, validation rule, or human-review requirement?
+          Operationally: under what conditions does access to the recorded project-specific
+          trajectory improve method formation, continuation, correction, revision, interpretation,
+          or transfer beyond what another observer can achieve from their own background knowledge,
+          shared explicit knowledge, and the current project state?
         </p>
         <p>
-          The current bundle illustrates why this matters. Different forest datasets do not produce
-          identical forest areas or loss estimates, and different coffee datasets do not produce
-          identical overlap estimates. The appropriate response is not to hide those differences or
-          average them into one apparently precise number. The current method keeps the sources
-          distinguishable and treats the result as a screening claim requiring human interpretation,
-          rather than as an automatic legal compliance decision. In this case, recorded history is
-          mainly useful for understanding how an applied method was corrected and how those
-          corrections were compressed into the present workflow.
+          Five subsidiary questions sharpen it. First: how much useful historical learning is
+          already carried by current code, tests, specifications, prompts, instructions, source
+          semantics, reading guides, and other compiled artifacts? Second: does explicit trajectory
+          access add further value beyond those compiled carriers? Third: when have historical
+          lessons been reduced sufficiently that the trajectory can leave routine AI context while
+          still remaining reopenable for verification and repair? Fourth: when does a later
+          contradiction, source failure, frame change, regulation change, agent-configuration
+          change, or new case make archived trajectory information valuable again? Fifth: when does
+          trajectory information help different human–AI combinations compensate for differences in
+          background knowledge and framing, and when does it instead create anchoring, stale
+          assumptions, or context overload? Across those questions runs a further design problem:
+          how much structure should be retained for different classes of inquiry, and when does
+          expected future value justify promotion from a recorded inquiry to a lightweight or full
+          formal bundle?
+        </p>
+        <figure class="article-figure">
+          <img
+            src="../assets/inquiry-to-procedure/research-question.png"
+            alt="Diagram summarizing the main research question and five subsidiary questions about when explicit trajectory access adds methodological value."
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>
+            Figure 1. Research question and five subsidiary questions. The figure summarizes how
+            the inquiry tests the incremental value of explicit access to a project-specific
+            trajectory.
+          </figcaption>
+        </figure>
+        <p>
+          These five questions are not five settled propositions. The evidence below reaches them at
+          different levels: some descriptively, some only provisionally, and some not yet
+          experimentally.
         </p>
         <p>
-          The framework-self bundle is different: the object being corrected is the framework
-          itself. The inquiry initially gave observer disagreement a more central role. During the
-          recorded development, the project widened its object to the broader evolution of
-          statements: questions and claims can change through new evidence, correction, reframing,
-          disagreement, and later reduction into procedure. This is not just a better calculation
-          inside an unchanged method. It is a change in what the method says the relevant process
-          actually is.
+          The answer must keep three claim levels separate. The <strong>descriptive claim</strong>
+          is that recorded cases show observable changes in evidence models, assumptions, frames,
+          agent configurations, operational constraints, and later artifacts. That claim is
+          supported by the present record. The <strong>methodological hypothesis</strong> is that a
+          disciplined process can sometimes use such records to derive, transfer, verify, or repair
+          a better operational method. That is plausible and testable. The <strong>stronger causal
+          hypothesis</strong> is that explicit trajectory access itself causes better method
+          formation or revision than an equivalently rich current-state handoff whose compiled
+          artifacts already contain prior learning. That stronger claim is not established here.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>What exactly is being recorded?</h2>
+        <p>
+          The phrase “recorded trajectory” hides several layers that need to be kept distinct. The
+          underlying trajectory is the movement of the inquiry itself. A recorded inquiry is a
+          proportional representation of that movement below formal bundle conformance. A formal
+          bundle, whether lightweight or full, is a stronger representation with explicit OKF-FC
+          profile machinery. Git and OKF provide versioning and representation substrates, while
+          the method-evolution protocol decides what later use should be made of the retained
+          record. None of these is a transcript of cognition, and none is supplied by Google OKF
+          alone.
         </p>
         <p>
-          That self-case covers a second class of failure. A research system can be reproducible,
-          deterministic, and carefully versioned yet still organise the problem badly. Its
-          categories may be too narrow; a boundary may be misplaced; a source role may be wrong; or
-          the decision classes may force distinctions that the evidence does not support. History is
-          useful here because it can preserve the point at which the frame itself was challenged and
-          explain why the current framework differs from an earlier one.
+          <strong>Layer 1 — representation substrate.</strong>
+          <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+            Open Knowledge Format
+          </a>
+          supplies the portable representation substrate: human- and agent-readable Markdown
+          concepts, YAML frontmatter, hierarchy, and links. This project’s OKF-FC and bundle
+          conventions originated as a profile and extension of OKF v0.1. Upstream Google OKF is now
+          v0.2, which makes provenance, trust, lifecycle, and attestation more explicit and
+          first-class while remaining deliberately minimally opinionated. It also permits
+          producer-specific extensions. OKF therefore structures a portable knowledge object, but it
+          does not define this project’s theory of research evolution, nor does it define
+          <code>fc-round</code>, <code>fc-stage</code>, <code>fc-party</code>,
+          <code>fc-supersedes</code>, contestation stages, observer-disagreement semantics, or the
+          project’s method-evolution protocol.
         </p>
         <p>
-          Estonian forest management is different again. In this study it is not a versioned bundle
-          with a recorded internal development trajectory. It is a published conflict-analysis
-          example, drawn from
+          Here <code>fc-</code> is the project-specific namespace prefix for its fact-checking and
+          statement-evolution metadata; these fields are project extensions, not fields defined by
+          upstream OKF. <code>fc-round</code> records the bundle round, <code>fc-stage</code> the
+          research-evolution stage, <code>fc-party</code> the contributing party, and
+          <code>fc-supersedes</code> the earlier concept version replaced by the current one.
+        </p>
+        <p>
+          <strong>Layer 2 — version/provenance substrate.</strong> Git supplies
+          version-addressable states, attribution, diffs, and history. Hashes and published snapshots
+          make particular states inspectable and pin what later readers or agents are referring to.
+          Put simply: OKF structures the knowledge object; Git records and version-addresses changes
+          to that object. Neither alone explains the epistemic meaning of a change.
+        </p>
+        <p>
+          <strong>Layer 3 — research-evolution semantics.</strong> The observer-disagreement and
+          OKF-FC framework adds research-specific semantics on top of OKF and Git. Existing formal
+          bundle conventions include, where applicable, <code>fc-round</code>,
+          <code>fc-stage</code>, <code>fc-party</code>, <code>fc-supersedes</code>, per-round
+          inquiry records, bundle/repository ledgers, agent participation rules, explicit frame
+          changes, and supersession. Recorded inquiries deliberately use less machinery: neutral
+          metadata, ordered source-grounded records, and enough source-role and transition detail
+          to reconstruct the materially relevant path. The current bundle-evolution analysis further
+          proposes a richer relation
+          vocabulary distinguishing at least <em>supersedes</em>, <em>contradicts</em>,
+          <em>reframes</em>, <em>reopens</em>, and <em>supersedes-under-assumptions</em>. That
+          relation vocabulary is a proposal from the current inquiry, not a fully implemented convention
+          across all bundles. The distinction matters because a linear <code>supersedes</code> chain
+          can hide whether a later state changed because the evidence changed, because assumptions
+          or scope changed, or because the procedure itself changed.
+        </p>
+        <p>
+          <strong>Layer 4 — method-evolution protocol.</strong> The final layer is procedural rather
+          than representational. The method-evolution protocol decides what to do with recorded
+          findings: retain them as provenance, compile them into code, compile them into a test or
+          validator, change a specification, change an AI instruction, retain explicit uncertainty,
+          retain a conflict, reopen an earlier issue, or make some other justified operational
+          revision. This is where the article’s distinction among recorded trajectory,
+          method-evolution protocol, and operational method becomes operationally meaningful.
+        </p>
+        <p>
+          The historical record is provenance; the disciplined use of that record to reconstruct,
+          compare, discriminate, supersede, retain conflict, or reopen is method.
+        </p>
+        <figure class="article-figure">
+          <img
+            src="../assets/inquiry-to-procedure/recorded-inquiry-layers.png"
+            alt="Diagram showing how a recorded trajectory projects a fuller inquiry into a reusable record supported by representation, versioning, research semantics, and method protocol layers."
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>
+            Figure 2. Layers of the recorded research architecture. Representation and versioning
+            substrates support project-specific research-evolution semantics and the
+            method-evolution protocol that determines how retained findings are used.
+          </figcaption>
+        </figure>
+        <p>
+          Fazenda Sucuri makes the current-state/trajectory distinction concrete before any formal
+          notation is needed. The <strong>current state</strong> is the bundle's canonical current
+          representation: the current question, method/specification, screening result, latest
+          metrics and limitations, and the provenance needed to identify the evidence and source
+          versions used. The <strong>trajectory</strong> is the retained append-only sequence of
+          inquiry rounds showing how that state was reached. In the inspected public snapshot, the
+          current state says the screening class remains
+          <code>possible_relevant_deforestation</code>; the trajectory additionally records, for
+          example, that round 6 corrected the temporal coffee-mask semantics and round 8 added
+          FDP/JRC morphology and threshold-sensitivity diagnostics without changing the screening
+          class. In short: current state answers “what is the method/result now?”; trajectory
+          answers “what materially changed, when, and why?”
+        </p>
+        <div class="core-notation" aria-label="Core notation">
+          <p class="core-notation-title">Core notation used below</p>
+          <dl>
+            <div>
+              <dt>\(H_{\mathrm{full}}\)</dt>
+              <dd>the larger materially relevant inquiry process, including parts not public or recorded</dd>
+            </div>
+            <div>
+              <dt>\(H_{\mathrm{traj}}\)</dt>
+              <dd>the recorded project-specific trajectory available for later reconstruction</dd>
+            </div>
+            <div>
+              <dt>\(B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)\)</dt>
+              <dd>the complete bundle state at selected current state \(T\): compiled current understanding, retained trajectory, and provenance/metadata</dd>
+            </div>
+            <div>
+              <dt>\(E_t\), \(F_t\), \(P_t\)</dt>
+              <dd>evidence, frame, and operational procedure at state \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(T_t\)</dt>
+              <dd>the technical or evidentiary determination produced at state \(t\)</dd>
+            </div>
+            <div>
+              <dt>\(M_t\), \(V_t\)</dt>
+              <dd>the current operational method and queryable verification provenance</dd>
+            </div>
+          </dl>
+        </div>
+        <p>
+          The materially relevant development process is richer than the recorded article, bundle,
+          or Git history. It includes observable repository changes, but it may also include human
+          reasoning, temporary agent context, prompt development in another environment, uncommitted
+          experiments, and model-specific prior knowledge. The recorded trajectory is therefore a
+          projection:
+        </p>
+        <div class="math-display">\[
+          H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)
+        \]</div>
+        <p>
+          The projection symbol keeps the public record from pretending to be a complete cognitive
+          history. It is useful only to the extent that it records enough externally visible state to
+          reconstruct material transitions later: the before and after research states, the human
+          observer and agent configuration, the instruction and task specification, and any material
+          external inputs.
+        </p>
+        <p>
+          At a selected current recorded state \(T\), the complete bundle state can be written as:
+        </p>
+        <div class="math-display">\[
+          B_T=(X_T,H_{\mathrm{traj},T},\Pi_T)
+        \]</div>
+        <p>
+          Here \(X_T\) is the compiled current understanding, \(H_{\mathrm{traj},T}\) is the retained
+          recorded trajectory through state \(T\), and \(\Pi_T\) is the provenance and metadata
+          needed to identify and verify the state. For Fazenda Sucuri at round 9, \(X_T\) includes
+          the current question, screening class, method/specification, metrics, limitations, and
+          source-disagreement interpretation; \(H_{\mathrm{traj},T}\) includes the recorded round
+          history through round 9; and \(\Pi_T\) includes bundle and repository round identifiers,
+          commit pins, dataset/model versions, manifests, checksums, supersession links, and
+          generation metadata where available. Upper-case \(T\) names the selected current state;
+          lower-case \(t\) below names a generic state along the trajectory.
+        </p>
+        <p>
+          Within a given state, the technical-determination dependency has the type signature:
+        </p>
+        <div class="math-display">\[
+          f:\mathcal E\times\mathcal F\times\mathcal P\to\mathcal T
+        \]</div>
+        <p>
+          Its realized value at state \(t\) is:
+        </p>
+        <div class="math-display">\[
+          T_t = f(E_t,F_t,P_t)
+        \]</div>
+        <p>
+          Here \(E_t\) is the referenced evidence and versions, \(F_t\) is the frame, assumptions,
+          scope, and definitions, and \(P_t\) is the operational procedure or instruction state.
+          In Fazenda Sucuri, \(E_t\) includes the JRC 2020 forest baseline, Hansen post-2020 loss,
+          FDP 2026a coffee evidence, and MapBiomas coffee evidence; \(F_t\) treats these as
+          screening evidence and preserves source disagreement instead of promoting co-location into
+          a legal conclusion; and \(P_t\) contains temporal masks, thresholds, spatial intersections,
+          and reporting rules. \(T_t\) is the resulting technical/evidentiary state, including the
+          screening class and supporting metrics. It is not a legal disposition. This \(P_t\) is not
+          the higher-level method-evolution protocol; it is the procedure being executed at that
+          state.
+        </p>
+        <p>
+          A downstream legal or operational disposition, where the project has authority and
+          evidence to represent one, is separate:
+        </p>
+        <div class="math-display">\[
+          D_t = g(T_t,L_t,J_t)
+        \]</div>
+        <p>
+          \(D_t\) is not the technical result itself. \(L_t\) is the legal or regulatory state, and
+          \(J_t\) is the implementation context: actor role, supply-chain topology, traceability,
+          jurisdictional infrastructure, and competent-authority context where relevant. For work
+          under the European Union Deforestation Regulation (EUDR), \(L_t\) may include binding EU
+          text, guidance, benchmarking, Member-State
+          implementation, and producer-country law. Keeping this distinction visible prevents
+          regulatory or implementation drift from being misdiagnosed as a scientific change.
+        </p>
+        <p>
+          Evidence roles should also be declared in prose. A source used for compliance screening is
+          not automatically a source of legal authority, commodity attribution, traceability, or
+          ground validation. Role declaration is part of the method because it prevents the
+          existence of an evidence layer from being mistaken for decision sufficiency.
+        </p>
+        <p>
+          The current-state comparison can be expressed as two projections of the complete bundle:
+        </p>
+        <div class="math-display">\[
+          X_1=\pi_{\mathrm{cur}}(B_T)
+        \]</div>
+        <div class="math-display">\[
+          X_2=\pi_{\mathrm{cur}}(B_T)\cup\pi_{\mathrm{traj}}(B_T)
+        \]</div>
+        <p>
+          \(X_1\) can be sufficient for a task such as reporting the current Fazenda Sucuri
+          screening class. \(X_2\) adds trajectory information that may be needed for a different
+          task, such as explaining why the present coffee-mask semantics differ from the earlier
+          implementation: the round-6 transition is visible only when the retained trajectory is
+          available.
+        </p>
+        <p>
+          The comparison is therefore not history versus no history. It is what another observer can
+          achieve from their background knowledge, shared explicit knowledge, and a rich current
+          state, compared with what they can achieve when the recorded trajectory is added. A
+          history-blind participant is blind only to the project-specific trajectory, not to
+          accumulated human learning, model training, literature, standards, code, or compiled
+          project artifacts.
+        </p>
+        <p>
+          The target is a compact operational method \(M_t\) paired with queryable verification
+          provenance \(V_t\). Routine execution should depend primarily on validated code, tests,
+          specifications, evidence semantics, instructions, and explicit constraints, while
+          \(V_t\) preserves enough rationale and source provenance for later investigators to ask why
+          the method has its present form.
+        </p>
+        <div class="math-display">\[
+          H_{\mathrm{full}}
+          \xrightarrow{\pi}
+          H_{\mathrm{traj}}
+          \xrightarrow{C_{o,a,\tau}}
+          (M_t,V_t)
+          \xrightarrow{E_{\mathrm{new}}}
+          T_{\mathrm{new}}
+        \]</div>
+        <p>
+          When new evidence or a new case produces an unexplained contradiction, invalid output,
+          undefined state, or structural mismatch, the archived trajectory can be reactivated for
+          method revision. The point is not to keep every historical detail active; it is to keep
+          enough recoverable provenance to diagnose why the present method has failed.
+        </p>
+        <figure class="article-figure">
+          <img
+            src="../assets/inquiry-to-procedure/progressive-reduction.png"
+            alt="Process diagram showing how inquiry history is reduced into an operational method while archived provenance can be reopened for diagnosis and revision."
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>
+            Figure 3. Progressive reduction with reopenable provenance. Selected historical
+            findings are compiled into the current operational method, while sufficient trajectory
+            provenance remains available for later diagnosis and method revision.
+          </figcaption>
+        </figure>
+        <p>
+          A current research representation can be read, in the deliberately cautious sense used
+          here, as twin-like state plus thread-like trajectory. This is a structural analogy, not a
+          claim that a recorded inquiry or OKF bundle literally satisfies an industrial Digital Twin
+          definition. The current state represents claim, evidence, frame, procedure, determination,
+          and transition rationale; its versioned evolution shows how human-AI inquiry updates that
+          representation over time.
+        </p>
+        <p>
+          The analogy helps expose two coupled representations: the world- or evidence-facing
+          representation discussed in
+          <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>, and the
+          research- or method-facing representation discussed here. Object-level conflicts can
+          reopen method-level inquiry, and method-level corrections change later evidence
+          construction. Neither representation should be treated as an automatic arbiter of
+          ecological, legal, or political truth.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Evidence base</h2>
+        <p>
+          The evidence base has three principal examples with different evidentiary roles, not one
+          uniform set of formal case studies. Fazenda Sucuri is a bundle-backed EUDR screening case:
+          its technical class remains stable while its evidentiary state changes. The
+          <code>framework-self</code> bundle is a bundle-backed methodological self-case: its history
+          changes the interpretation of what the current framework is. Estonian forest management is
+          different again: in this study it is not represented by a versioned bundle trajectory, but
+          by the published conflict analysis in
           <a href="evidence-first-consensus-later.html#example-estonian-forest-management">Evidence First, Consensus Later</a>,
-          in which apparently conflicting statements about sustainability can follow from different
-          accounting objects, system boundaries, indicators, and time horizons. One analysis may
-          emphasise annual forest increment relative to harvesting; another may emphasise the
-          long-term development of total growing stock, carbon, biodiversity, habitat, or other
-          ecological conditions. The disagreement cannot necessarily be repaired by finding one bad
-          line of code. First we have to ask whether the competing claims are answering the same
-          question.
+          which shows how competing sustainability conclusions can follow from different accounting
+          objects, boundaries, and time horizons.
         </p>
         <p>
-          This third case therefore represents interpretive and governance conflict. Its value lies
-          in keeping the assumptions behind competing conclusions visible enough that a later reader
-          can tell whether the claims genuinely contradict each other, apply at different scales, or
-          depend on different normative choices. It also shows why not every useful research history
-          needs to be promoted into a formal bundle. Sometimes a source-grounded record of claims,
-          definitions, boundaries, and revisions is sufficient.
+          The two bundle-backed examples are published as self-contained bundles committed into the
+          COIN research folder, with round ledgers and per-round records. The
+          <code>framework-self</code> bundle describes the framework itself: a general and partly
+          self-referential case in which the inquiry examines its own recording and later
+          bookkeeping repair. The Fazenda Sucuri bundle is a public reading snapshot of an applied
+          geospatial coffee-screening case under EUDR, with generated PDF, JSON, GeoJSON, and report
+          artefacts omitted from COIN. What matters in each is not the number of rounds but the
+          observable transformations: historically recorded findings later represented as code,
+          tests, specifications, validators, agent instructions, evidence semantics, or explicit
+          uncertainty.
         </p>
         <p>
-          Taken together, the three examples cover most of the roles that this article assigns to a
-          recorded inquiry. Fazenda Sucuri covers operational correction: repairing data handling,
-          calculations, visualisations, and decision rules and then compiling the repair into the
-          current method. framework-self covers conceptual correction: discovering that the
-          framework, categories, or object of study need to change. Estonian forest management
-          covers comparative interpretation and contestation: preserving enough context to
-          understand why credible analyses can diverge even when neither is simply a technical
-          mistake.
+          The evidence scope is uneven by design. Of the trajectories discussed here, two are
+          committed as formal public bundles in COIN. The Estonian forestry example is source-linked
+          public conflict analysis, not a bundle trajectory. The MHS/world-models episode is
+          preserved separately as a supporting
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">recorded inquiry</a>,
+          not as a third formal bundle. The remaining EUDR episodes are drawn from the versioned
+          private-framework development record discussed in the underlying analysis. Those
+          additional episodes clarify the method claim; they are not presented as equivalent public
+          bundle evidence, and no public bundle URLs are inferred for them.
         </p>
         <p>
-          These examples do not exhaust every possible use. A later project may face a regulatory
-          change, a new dataset, transfer to another commodity or region, a different AI agent, or a
-          newly discovered source problem. But those cases largely fall into the same three broad
-          families: something in the execution must be repaired, something in the frame must be
-          revised, or competing interpretations must be made comparable. Across all three, the same
-          principle holds: preserve enough history to diagnose and explain material change, but move
-          stable lessons into the current method so that routine work does not depend on replaying
-          the whole past.
+          The self-referential bundle records provenance of method formation directly. At
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">round
+          four</a>, the log states that a human instruction widened the object of study from
+          observer disagreement to statement evolution, demoting disagreement to one stage of a
+          five-stage trajectory; the change is written as a frame transition with content hashes and
+          supersession links on every affected file. The human's own framing was not a fixed input
+          but something the inquiry had to revise, and the revision is inspectable rather than merely
+          narrated. Later rounds show findings routed into operational destinations: provisional
+          conventions are made normative and then executable as a generator and validator, and —
+          after a foundation audit — the specification is repaired so that every future bundle must
+          disclose its use of Wolfram observer theory as a formal analogy, enforced by validator
+          rejection conditions rather than left to good intentions.
+        </p>
+        <p>
+          The Estonian forest-management example plays a different role. It is a published
+          conflict-analysis example assembled from external sources, not a versioned bundle in the
+          present study. The earlier article shows that the apparent verdict changes with the
+          accounting object: EU-comparable wood balance can compare removals with net annual
+          increment on forest available for wood supply, while other arguments use managed-forest
+          growing-stock increment, gross national increment, carbon-stock stability, or LULUCF
+          accounting. A single scalar endpoint would hide the boundary choices and time horizons
+          that make the controversy intelligible. For that reason this article uses the case to
+          motivate frame preservation, not as evidence of a recorded bundle trajectory.
+        </p>
+        <p>
+          The MHS recorded inquiry illustrates a different recording granularity: knowledge
+          enrichment before focused fact-checking. On 27 August 2026 Anthropic announced a research
+          preview of the
+          <a href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener noreferrer">Model Hardware Standard</a>,
+          describing it narrowly as a shared, model-agnostic specification and standardized driver
+          through which AI agents can discover, read from, write to, and safely operate programmable
+          physical devices. The source-backed sequence now preserved in COIN is:
+          initial MHS inquiry, MHS/Digital Twin understanding, broader conceptual enrichment, the
+          stronger world-model claim becoming questionable, explicit fact-check, and consolidation.
+          The first two questions were
+          knowledge-enrichment questions. Only afterward did the stronger headline claim —
+          represented by AI Secret's
+          <a href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">“Claude Just Killed The World Models”</a> —
+          become the explicit claim object under examination.
+        </p>
+        <p>
+          Its methodological value is small but precise. A final-state-only reconstruction could
+          begin directly with “Did MHS make world models unnecessary?” and still perform a competent
+          fact-check against the primary MHS material and the external headline. What it would omit
+          is how the human first developed enough conceptual structure through MHS and Digital Twin
+          inquiry for the stronger claim to become questionable. The episode therefore
+          cannot prove that recorded history improves research outcomes. It shows only why a
+          recorded inquiry can be useful for studying fact-check formation: it preserves how a
+          focused checking question emerged from earlier understanding work. The AI Secret headline
+          is an external claim/source object, not a participating observer in the human–AI inquiry.
+        </p>
+        <p>
+          The source insertion also exposes the migration problem in miniature. Before the
+          <code>mhs-world-models-claude-qa</code> attachment was committed into COIN, this public
+          post interpreted an underlying Q/A trajectory that readers could not inspect in the public
+          repositories. The chain is now saved Q/A, recorded inquiry, retrospective analysis, public
+          article. That gives the article a primary COIN artifact to point back to, instead of
+          asking the article to serve as evidence for its own MHS interpretation.
+        </p>
+        <p>
+          The
+          <a href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">EUDR
+          bundle</a> offers a public worked example of corrected decomposition inside an
+          applied screening task. Its rounds show review findings becoming concrete repairs: a
+          Sentinel-2 visual defect is fixed, AOI administrative labels and report-map behavior are
+          corrected, the coffee temporal mask is repaired so current coffee preserves the baseline
+          footprint while “new commodity since baseline” remains separate, and a recurring regional
+          overview gap is pushed down into the renderer and publish contract. A further question
+          exposes a level of reduction still available. The regulation defines a deforestation-free
+          condition common across the relevant commodities in terms of whether goods were produced on
+          land not subject to deforestation after 31&nbsp;December&nbsp;2020, and Article&nbsp;3
+          prohibits placing such commodities on the Union market unless that condition is met. Read
+          this way, the method decomposes more cleanly than a one-piece “coffee mask” allows:
+        </p>
+        <p>
+          The originating public claim also remains evidence rather than disposition. A
+          <a href="https://coffeewatch.org/documents/33/JDE_Peets_Company_Profile.pdf" target="_blank" rel="noopener noreferrer">Coffee Watch/AidEnvironment case profile</a>
+          described native-vegetation clearing at Fazenda Sucuri between August and December 2024
+          and reported that part of the affected area fell within an FAO forest definition. That
+          publication is relevant to screening, but it does not by itself settle the exact
+          production geometry, forest definition, commodity attribution, or relation between
+          detected clearing and coffee production. The bundle therefore treats the publication as an
+          input to evidence assessment, not as a legal conclusion.
+        </p>
+        <ul>
+          <li>
+            <strong>Layer A — commodity-independent land evidence.</strong> Was the land forest? Did
+            deforestation occur after the cutoff? Which datasets support or contradict this?
+          </li>
+          <li>
+            <strong>Layer B — production linkage.</strong> Is this the plot or establishment on
+            which the relevant commodity associated with the product was actually produced? EUDR due
+            diligence requires the geolocation of production, so an observation that deforestation
+            occurred somewhere is not sufficient on its own.
+          </li>
+          <li>
+            <strong>Layer C — commodity-specific evidence.</strong> For coffee, source-specific
+            evidence matters. Here <strong>FDP</strong> refers to the
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">Forest
+            Data Partnership coffee-probability evidence</a> used by the bundle, while
+            <strong>MapBiomas</strong> refers to the
+            <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/reproduction/data.md" target="_blank" rel="noopener noreferrer">MapBiomas
+            coffee land-use/classification evidence</a>. <strong>FDP-only</strong> means that the
+            relevant coffee condition is supported by FDP but not by MapBiomas;
+            <strong>MapBiomas-only</strong> means the reverse; and
+            <strong>both-source agreement</strong> means that both sources support it. These
+            evidence states cannot be treated as having the same warrant merely because they all
+            concern coffee.
+          </li>
+        </ul>
+        <p>
+          This is a good case precisely because it refuses to turn a screening signal into more than
+          the evidence supports. The recorded sequence lets one inspect how a source-specific coffee
+          assumption was corrected, why visual and report defects mattered, and how those findings
+          were converted into more durable operational constraints. The correction is visible in the
+          bundle's own <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/r/results.md" target="_blank" rel="noopener noreferrer">source-specific
+          overlap results</a>. In the latest inspected public snapshot used by the manuscript
+          (bundle round 9, snapshot <code>2026-09-12-r0009-4eccee8</code>), the AOI is
+          1722.07&nbsp;ha; the JRC 2020 forest baseline is 219.26&nbsp;ha; post-2020 loss on that
+          baseline is 23.77&nbsp;ha; configured current coffee evidence is 482.28&nbsp;ha; and new
+          coffee since baseline is 225.29&nbsp;ha. Current coffee overlaps post-2020 loss by
+          5.14&nbsp;ha. New coffee overlaps post-2020 loss by 1.17&nbsp;ha under FDP 2026a,
+          0.0&nbsp;ha under MapBiomas, and 0.0&nbsp;ha under both-source agreement. A Hansen
+          10% canopy baseline gives 95.48&nbsp;ha of baseline forest and 5.98&nbsp;ha of post-2020
+          loss. The bundle keeps these as separate source-specific overlap results and preserves
+          their disagreement, not as alternative names for one metric or as numbers to average away.
+          Its
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri/answer.md" target="_blank" rel="noopener noreferrer">current
+          answer</a> records <code>gsp-verdict-class: possible_relevant_deforestation</code> and
+          <code>gsp-provenance: pinned-not-reproduced</code>, matching the counterpart report's
+          <code>human_review_required</code> status. These are technical/evidentiary states and a
+          human-review routing state, not legal EUDR compliance determinations.
+        </p>
+        <p>
+          The same distinction appears in private-framework episodes used here only as method
+          observations. In a Ghana coffee task, lowering the FDP coffee-probability threshold from
+          <code>0.1</code> to <code>0.01</code> changed the technical screening result from
+          <code>insufficient_evidence</code> to <code>possible_relevant_deforestation</code>. The
+          point is not that coffee suddenly appeared in the physical world, but that a changed
+          procedure \(P\) can move \(T=f(E,F,P)\) while much of the evidence
+          \(E\) remains fixed. The mature reduction is not “use the lower threshold”; it is
+          explicit parameter semantics, sensitivity analysis, validation requirements, and rules
+          preventing a probability threshold from being treated as ground truth.
+        </p>
+        <p>
+          Another private-framework correction made explicit that accuracy is not inherited by
+          intersection. For a candidate overlap such as forest in 2020, post-2020 disturbance, and
+          commodity evidence, published component accuracies cannot simply be multiplied into an
+          AOI-specific decision-grade accuracy. That inference would require assumptions about
+          independent errors, compatible class definitions, common spatial support, comparable
+          reference periods, representative local validation, and fixed operating thresholds. Until
+          those assumptions are justified, the intersection remains screening evidence rather than a
+          decision-grade area estimate.
+        </p>
+        <p id="fabricated-input-episode">
+          The strongest private-framework correction concerned
+          source authenticity.
+          Earlier Brazil
+          rasters were pinned and deterministically reproduced, but later investigation found that
+          the pinned inputs were not authentic provider-derived acquisitions. Hashes reproduced the
+          wrong inputs. The operational lesson is that \(V_t\) must include verification
+          provenance capable of distinguishing provider event, acquired record, pinned artifact,
+          computation, and interpretation. Reproducibility controls the pinned artifact and
+          computation; it does not by itself prove source authenticity.
+        </p>
+        <p>
+          Transfer to a different commodity class added a further frame correction. A method reduced
+          successfully for one case class may still contain a frame that fails when transferred to
+          another. That lesson belongs to method transfer generally; the public article does not need
+          a second worked evidence table to establish it.
+        </p>
+        <p>
+          This is where the inquiry takes up a requirement motivated by the earlier inquiry rather
+          than invented here. Preserving the FDP, MapBiomas, and both-source layers as
+          disagreement — instead of averaging them into one number — and refusing to let a
+          screening flag stand in for a legal determination are examples of the documented,
+          uncollapsed disagreement Evidence First, Consensus Later argues a conflict bundle should
+          preserve. That inquiry supplies the epistemic pressure; this one examines how repeated
+          research can turn such pressure into executable method — source separation,
+          temporal-masking rules, validators, screening logic, human-review gates, and agent
+          instructions that keep the layers distinct by construction rather than by reminder. That
+          the resulting code runs deterministically does not, on its own, establish that the layers
+          were drawn correctly; a deterministic procedure and a correct evidence schema are
+          separate properties, and only the second is at stake when the frame itself is wrong.
+        </p>
+        <p>
+          The evidence therefore supports a narrow claim: certain findings recorded in history were
+          later represented in operational artifacts. It does not establish the stronger
+          counterfactual claim that the same artifacts could not have been derived from observer
+          background, shared explicit knowledge, and a sufficiently explicit current state without
+          the recorded trajectory.
         </p>
       </section>
 
       <section class="article-section">
-        <h2>What should remain in the current method?</h2>
+        <h2>Source evaluation</h2>
         <p>
-          A useful correction should move out of active historical context when it can be expressed
-          more reliably in the present system. A discovered source problem may become a provenance
-          check. A repeated visual defect may become a renderer test. An ambiguous term may become a
-          specification. A risky AI behaviour may become an explicit instruction or a human-review
-          gate.
+          The two committed bundles are strong evidence for some claims and weak evidence for others, and
+          the difference must be kept explicit. The logs record observable state transitions:
+          supersessions, corrections, boundary changes, and the artefacts each round produced. They
+          do not contain the entirety of the human's thought process or the model's internal
+          reasoning. They are records of research-state evolution, not transcripts of cognition.
         </p>
         <p>
-          The point is not to preserve history for its own sake. The point is to preserve enough
-          history to understand material changes, then reduce lessons into forms that are easier to
-          apply consistently.
+          This limits what the evidence can support. It can support claims about how a method changed
+          and what each change yielded. It cannot support a complete reconstruction of why either
+          party believed what they believed at each step, nor can it prove that access to the
+          trajectory was necessary to derive the current operational method. Any conclusion that
+          leans on those stronger claims is reading more into the log than the log contains.
         </p>
         <p>
-          Archived history becomes useful again when something changes: a result is challenged, a
-          source turns out to be unreliable, a new dataset contradicts the old one, a method is
-          transferred to a different commodity or region, a regulation changes, or a later failure
-          cannot be explained from the current state alone.
+          The method here is repository archaeology, not a randomized experiment. It can establish
+          that corrections occurred, that later states differed materially from earlier states, and
+          that the current method contains artifacts derived from those corrections. It cannot
+          establish that the recorded trajectory caused the correction, that chronological
+          succession is caused-by relation, or that unrecorded parts of \(H_{\mathrm{full}}\) were
+          irrelevant. The result is association plus reconstructible provenance, not proof of
+          causal necessity.
+        </p>
+        <p>
+          The self-referential bundle is unusually candid about this boundary, which strengthens
+          rather than weakens it as evidence. Its metrics table computes the transitions it can
+          measure and marks a whole family of observer-distance measures as not measurable, giving
+          the reason in each case: only one contestation round exists, no timestamped competing
+          predictions were recorded, no independent paired labels over a shared item set were kept.
+          It even excludes one round from its own measurement target to avoid measuring itself in a
+          circle. A record that refuses the claims it cannot support is more trustworthy on the
+          claims it does. The applied bundle shows the same discipline on a different axis: its
+          current answer is marked as requiring human review and its provenance as pinned but not
+          reproduced — the artefacts and hashes were checked, but no qualifying independent rerun was
+          performed — so the reader is told exactly how far the evidence has been verified.
+        </p>
+        <p>
+          External EUDR literature strengthens the descriptive premise without settling the causal
+          trajectory question. Work on GFC2020 presents a globally consistent 10&nbsp;m forest-land-use
+          layer aligned with the EUDR forest definition, while also reporting omission and
+          commission error and treating the product as non-exclusive and non-legally binding.
+          Agroforestry work warns that a forest/non-forest ontology can erase distinctions needed
+          for coffee, cocoa, rubber, and other tree-crop systems. Earth-observation work supports
+          EO as independent, verifiable, long-term evidence infrastructure. Compliance and legal
+          scholarship further shows that actor role, producer-country law, EU guidance,
+          benchmarking, Member-State implementation, traceability, smallholder land documentation,
+          market segmentation, leakage, and trade diversion can all matter. This literature shows
+          that materially consequential histories exist. It does not show that explicit access to
+          a recorded human–AI trajectory improves later method formation beyond a current state that
+          already embodies the relevant lessons.
+        </p>
+        <p>
+          The MHS recorded inquiry has a parallel source-evaluation lesson. A secondary newsletter
+          headline was the eventual object of a focused check, not supporting evidence for the claim
+          that MHS made world models unnecessary. The disciplined move is to classify the source
+          role, compare the claim with the primary announcement, and only then decide whether deeper
+          conceptual analysis is warranted.
         </p>
       </section>
 
       <section class="article-section">
-        <h2>What the evidence does not yet show</h2>
+        <h2>Competing interpretations</h2>
         <p>
-          The two bundle-backed cases show that corrections occurred and that some of those
-          corrections were later turned into code, tests, instructions, and evidence rules. The
-          Estonian forest-management case shows a different value: preserving the assumptions and
-          boundaries needed to compare competing conclusions. Together they show how provenance can
-          support reconstruction, diagnosis, and contestation.
+          Provenance, external memory, and compilation substrate should not be treated as mutually
+          exclusive interpretations of the same object. They describe different functions at
+          different levels. <strong>Provenance</strong> names what the recorded trajectory is: a
+          historical record of how the present state arose. <strong>External memory</strong> names
+          one way a later participant may use that record: consulting earlier states, assumptions,
+          rejected alternatives, or unresolved questions. <strong>Input to compilation or revision</strong>
+          names a further role: material consumed by a method-evolution process when deciding what
+          belongs in the current operational method.
         </p>
         <p>
-          They do not prove that access to the full recorded history is necessary to build or repair
-          a good method. Another capable team might reach the same or a better solution from the
-          current code, literature, documentation, and evidence alone.
+          The methodological object is therefore not the mere existence of the history. A long log is
+          not a method just because it can be reread. Nor is a deterministic pipeline validated
+          merely because some past round produced it. The candidate meta-method is the transformation
+          protocol: classify the finding, judge whether it generalises, choose its destination, test
+          it before making it normative, archive what remains, and reopen the provenance when a
+          later failure makes the origin of the method relevant again.
         </p>
         <p>
-          That stronger claim would require controlled comparisons between teams or agents given a
-          rich current state and otherwise similar teams or agents also given the recorded project
-          history. Those tests are proposed in the research folder but have not yet been run.
+          Conventional scholarship is a strong comparison class because it already relies on radical
+          compression of research history:
+        </p>
+        <p class="statement-block">
+          collective research history<br>
+          &rarr; current state of knowledge<br>
+          &rarr; gap<br>
+          &rarr; method/result
+        </p>
+        <p>
+          A paper normally omits most failed hypotheses, abandoned analyses, intermediate
+          misunderstandings, exploratory conversations, and local mistakes. That omission is not
+          normally considered a methodological defect if the final evidence, method, assumptions,
+          limitations, code, data, provenance where required, and current state of knowledge are
+          adequately communicated. This is not proof that trajectories are useless. It sets the
+          burden of proof: what does the explicit inquiry trajectory preserve that a sufficiently
+          good paper, specification, source archive, codebase, test suite, provenance record, and
+          unresolved-issues list do not?
+        </p>
+        <p>
+          The candidate answer is not "more history" in general, but epistemic transitions that are
+          easy to erase through compression. When an initially plausible claim is later rejected,
+          the final rejection may not reveal why the claim once appeared reasonable, what falsified
+          it, which assumptions changed, whether the correction was local or general, or why another
+          observer might reconstruct the superseded claim. That remains a hypothesis to test, not a
+          settled justification for keeping every historical detail active.
+        </p>
+        <p>
+          The MHS example adds a weaker but common pattern. Trajectory value need not require a full
+          reversal. It may also arise when the verdict remains approximately stable while the
+          rationale changes materially. A later observer can agree that the headline was overstated
+          while rejecting part of the intermediate reasoning or deciding that source evaluation
+          should have come first.
+        </p>
+        <p>
+          A further interpretation is observer-relative compression. A detail that is redundant to
+          one observer may be the discriminating clue for another. The same \(H_{\mathrm{traj}}\)
+          can therefore yield different defensible compressions for different human disciplines or
+          AI configurations. This makes compression itself an object of inquiry: the issue is not
+          how much history can be deleted, but what minimum reconstructible state preserves enough
+          rationale for later repair.
+        </p>
+        <p>
+          This resolves an ambiguity in the earlier draft. The question is not whether the trajectory
+          is provenance or method. It is provenance. The question is whether a disciplined process
+          can use that provenance to form or revise a better operational method than could be
+          produced from prior knowledge and a rich current-state handoff alone.
         </p>
       </section>
 
       <section class="article-section">
-        <h2>The practical rule</h2>
+        <h2>Critical synthesis</h2>
         <p>
-          Use the lightest record that is sufficient for the future task. Ordinary notes may be
-          enough for a local correction. A structured recorded inquiry is useful when the order of
-          changes matters. A more formal bundle is justified when reproduction, audit, repeated
-          review, comparison between versions, or external contestation requires stronger structure.
+          This article is not testing whether accumulated history and prior knowledge matter to
+          research. That is already built into human education, AI training, literature, methods,
+          and scientific communication. The unresolved empirical question is narrower: whether local
+          project-specific epistemic evolution deserves to become an additional explicit research
+          object, and under what conditions it can remain archival provenance rather than active
+          method.
         </p>
         <p>
-          Then reduce what has been learned. Put stable lessons into the current procedure. Keep
-          unresolved uncertainty visible. Archive the rest as research provenance.
+          The evidence supports a narrower, more defensible version of the proposition than the
+          earlier article implied. The two bundle-backed cases show that bundle history can document
+          method formation and correction, and that findings from that history can be represented
+          later as code, tests, specifications, validators, instructions, evidence semantics, and
+          explicit uncertainty. Fazenda Sucuri contributes the stable-class/changing-evidence
+          pattern: source separation, temporal-mask rules, report validation, human-review gates,
+          threshold and morphology diagnostics, and the Layer A / Layer B / Layer C decomposition.
+          <code>framework-self</code> contributes the frame-change pattern: history changes the
+          interpretation of what the current object is. The Estonian forestry example contributes a
+          non-bundle conflict pattern: preserving explicit competing frames matters because a single
+          endpoint would misrepresent the accounting objects and time horizons in dispute. The MHS
+          recorded inquiry remains a supporting formation example: a focused fact-checking question
+          can emerge after conceptual enrichment without needing formal bundle machinery.
+        </p>
+        <h3>Status of the five subsidiary questions</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Question</th>
+              <th>Present status</th>
+              <th>What the present evidence supports</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Q1 — How much historical learning is already carried by current artifacts?</td>
+              <td>Partially answered</td>
+              <td>The cases demonstrate that historical findings can migrate into code, tests, specifications, validators, instructions, and evidence semantics, but they do not measure how much relevant history those artifacts capture.</td>
+            </tr>
+            <tr>
+              <td>Q2 — Does explicit trajectory access add value beyond a rich current state?</td>
+              <td>Unanswered</td>
+              <td>This is the central causal question. No controlled \(X_{\mathrm{state}}\) versus \(X_{\mathrm{traj}}\) comparison has yet established incremental trajectory value.</td>
+            </tr>
+            <tr>
+              <td>Q3 — When can reduced history leave routine context?</td>
+              <td>Provisional</td>
+              <td>The article proposes that successfully compiled lessons should normally leave active context while remaining queryable as provenance, but no universal threshold has been validated.</td>
+            </tr>
+            <tr>
+              <td>Q4 — When should archived trajectory be reopened?</td>
+              <td>Provisional / unverified</td>
+              <td>Contradiction, source-authenticity failure, frame change, regulation change, transfer failure, and unexplained operational failure are candidate reopening conditions; whether trajectory access materially improves diagnosis or repair remains untested.</td>
+            </tr>
+            <tr>
+              <td>Q5 — When does trajectory compensate for observer differences rather than create anchoring or noise?</td>
+              <td>Unanswered</td>
+              <td>Cross-observer compensation, anchoring, stale assumptions, authority bias, and context overload have not been tested sufficiently to support a general answer.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="statement-block">
+          observe inquiry transition &rarr; judge future reconstruction/audit needs &rarr; record
+          minimum sufficient state &rarr; recorded inquiry<br>
+          promote to lightweight/full bundle only when justified &rarr;
+          method-evolution/revision &rarr; operational method<br>
+          operational method + new evidence &rarr; result
         </p>
         <p>
-          A good outcome is therefore not a system that remembers everything all the time. It is a
-          system that can work from a clear current state, while still being able to reopen the
-          relevant history when the present state is no longer enough.
+          This sequence is the central model. The recorded trajectory belongs to provenance of method
+          formation, but its representation level is selected by intended future use. The
+          method-evolution or revision step decides what can responsibly migrate into the operational
+          method. Routine execution should normally run from the operational method and the current
+          or new evidence, not from a replay of the whole inquiry. Archived provenance remains
+          available when a contradiction, frame change, source-authenticity failure, unexplained
+          constraint, material external contestation, or new class of case makes revision necessary.
+        </p>
+        <p>
+          The compiled-method chain introduced above clarifies the desired endpoint: routine
+          execution runs from the operational method and verification provenance, while the archived
+          trajectory becomes operationally relevant again when the present method is insufficiently
+          explanatory.
+        </p>
+        <p>
+          A further reason for archival retention arises when a later inquiry materially contradicts,
+          invalidates, or reframes an earlier conclusion. A chain may be reducible for routine
+          execution while remaining non-disposable for audit. The reconstructible-state model above
+          clarifies why: if one state accepted a claim under one configuration of evidence, frame,
+          and procedure, while a later state rejected it under another, the final state alone may not
+          reveal what drove the change. Preserving enough of the transition to reconstruct both
+          states permits epistemic reconstructibility: a later participant can rerun the fact-check
+          under the competing evidence, assumptions, and procedure, identify what drove the change,
+          and seek evidence capable of discriminating between the interpretations without restoring
+          the superseded conclusion to equal standing. This does not require every superseded
+          artefact to remain in active context. It requires a recoverable record of materially
+          contested transitions.
+        </p>
+        <p>
+          This gives bundle history a function the canonical current revision cannot supply by
+          itself. In these repositories the canonical current revision normally corresponds to the
+          latest committed revision on the canonical <code>main</code> branch, but the concept is not
+          the Git <code>HEAD</code> pointer, which can name another branch or a detached commit. A
+          conflict bundle can preserve unresolved disagreement among observers within a single
+          research state; a versioned bundle history can preserve materially relevant disagreement
+          between research states, provided the superseded states and the reasons for transition
+          remain reconstructible.
+          Without that condition the history is merely a sequence in which the latest state overwrites
+          the epistemic meaning of the earlier one, and neither form then prevents a later consensus or
+          deterministic implementation from erasing the arguments from which it emerged.
+        </p>
+        <p>
+          Contestation provides a further test of this reconstructibility. A party challenging a
+          technical or evidentiary determination \(T_t\), or where applicable a downstream
+          disposition \(D_t\), may be able to evaluate the result adequately from an
+          information-rich current state \(X_{\mathrm{state}}\). A generic decision should not be
+          collapsed automatically into \(D_t\). Where the result depends
+          materially on an earlier disagreement, rejected interpretation, frame change, procedure
+          change, or superseded evidence state, however, compression into the current state may
+          preserve the conclusion without preserving enough information to reconstruct why an
+          alternative was previously defensible or why it was rejected. Explicit trajectory access
+          has incremental value for contestation only if it enables a materially stronger,
+          better-grounded challenge than an equivalently rich \(X_{\mathrm{state}}\) handoff.
+        </p>
+        <p>
+          Retention alone does not convert bundle history into method. A bare sequence of superseded
+          states is provenance — it records how the current state came about. What makes it
+          methodological is a discipline governing what to do with a material contradiction between
+          states: reconstruct the competing claims, isolate the differing evidence, assumptions, and
+          procedure, seek evidence capable of discriminating between them, and then confirm
+          supersession, retain the conflict, or reopen the earlier state. This requires that preserved
+          history distinguish supersession from contradiction and reframing rather than collapse them
+          into a single linear chain, as the proposed relation vocabulary is meant to do. A
+          bare <code>supersedes</code> link silently encodes the latest state's frame as progress.
+          The discipline lies in deciding when to confirm supersession, retain conflict, or reopen
+          the earlier state.
+        </p>
+        <p>
+          The same evidence does not show that recording the trajectory produces a better method than
+          could be derived from observer background, shared explicit knowledge, and a rich
+          current-state handoff. It also does not show that archived provenance will materially
+          improve later diagnosis or repair. The existing evidence therefore does not discriminate
+          between the formation proposition and its counterfactual negative. That is a limit, but it
+          is a productive one: the negative becomes empirically testable instead of only rhetorically
+          available.
+        </p>
+        <p>
+          The conclusion is therefore modest. The trajectory should be understood primarily as
+          provenance of method formation. The candidate methodological contribution is the disciplined
+          process that turns selected historical findings into a current operational method and
+          reopens that history when revision becomes necessary.
+        </p>
+        <p>
+          Read alongside Evidence First, Consensus Later, the examples point to two related but
+          distinct levels rather than one. At the object level, the sequence is world or
+          environmental claim → observations and evidence → inspectable evidence state →
+          disagreement and contestation → review → governance decision or possible consensus. At
+          the method level, the sequence is human–AI inquiry → detection of evidence, frame, schema,
+          or procedure error → revised method or evidence architecture → tests, validators,
+          specifications, instructions, and deterministic procedures where justified.
+        </p>
+        <p>
+          The two levels are feedback-coupled rather than merely sequential. Object-level conflict,
+          material contestation of a determination or disposition, new evidence, or validation
+          failure can reopen method-level inquiry. A challenge may reveal a reason to diagnose or
+          revise the method, but contestation is not itself proof that the method is wrong.
+          Method-level correction then changes future object-level evidence construction, processing,
+          and interpretation. That is why a deterministic pipeline is not enough: if the wrong frame has
+          been made reproducible, reproducibility stabilizes the error. Evidence infrastructure
+          constrains what governance can responsibly decide, while inquiry and correction constrain
+          what the evidence infrastructure itself is permitted to assume. Object-level evidence may
+          converge toward an independent reference where that is possible; contested evidence should
+          remain structured rather than falsely collapsed; method-level trajectory concerns how the
+          evidence architecture itself is corrected and transferred.
+        </p>
+        <p>
+          The architecture also keeps different forms of “settled” outcome apart. An empirical issue
+          may be resolved when discriminating evidence or a defensible reference observation strongly
+          settles it. A reasoning pattern may be methodologically reduced when repeated inquiry has
+          been compiled into a sufficiently reliable operational procedure. A governance question
+          may be institutionally or normatively settled when a decision is adopted despite residual
+          value trade-offs or underdetermination. Method reduction, empirical convergence, and
+          governance consensus are related, but they are not the same process. The Fazenda Sucuri
+          bundle's own current technical and evidentiary state —
+          <code>gsp-verdict-class: possible_relevant_deforestation</code> and
+          <code>gsp-provenance: pinned-not-reproduced</code>, alongside the counterpart report's
+          <code>human_review_required</code> state — shows the sequence deliberately stopped at
+          human review rather than being carried through to a legal EUDR compliance decision.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Counterfactual tests</h2>
+        <p>
+          The COIN research folder defines future tests for the trajectory effect. They have not yet
+          been run. A simple “history versus no history” design would be misleading because current
+          prompts, tests, validators, reading guides, and repository conventions may already carry
+          compressed historical learning. The full design is in
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">counterfactual-tests.md</a>.
+        </p>
+        <div class="math-display">\[
+          X_{\min}
+          \subset
+          X_{\mathrm{state}}
+          \subset
+          X_{\mathrm{traj}}
+        \]</div>
+        <p>
+          \(X_{\min}\) is a minimally specified handoff: problem, sources, and generic
+          instructions. \(X_{\mathrm{state}}\) adds a sufficiently explicit current project state,
+          compiled operational learning, unresolved issues, and verification provenance.
+          \(X_{\mathrm{traj}}\) additionally gives access to the recorded project-specific
+          trajectory.
+        </p>
+        <p>
+          The causal distinction is narrow. The contrast from \(X_{\min}\) to
+          \(X_{\mathrm{state}}\) concerns the value of compiled current-state learning. The
+          contrast from \(X_{\mathrm{state}}\) to \(X_{\mathrm{traj}}\) tests the remaining
+          incremental value of explicit trajectory access. A trajectory-blind condition is
+          contaminated if the supplied current artifacts already encode trajectory-derived lessons
+          that the test intends to withhold.
+        </p>
+        <p>
+          Contestation quality is one possible outcome for the \(X_{\mathrm{state}}\) versus
+          \(X_{\mathrm{traj}}\) contrast:
+        </p>
+        <div class="math-display">\[
+          H_C:\quad Q_C(X_{\mathrm{traj}}) > Q_C(X_{\mathrm{state}})
+        \]</div>
+        <p>
+          Here \(Q_C\) denotes contestation quality and need not be one universal scalar score. A
+          future controlled contestation test could give independent challengers the same contested
+          \(T_t\), or where applicable \(D_t\), with one receiving \(X_{\mathrm{state}}\) and the
+          other receiving \(X_{\mathrm{traj}}\). Relevant dimensions include identification of
+          material error or omitted evidence; recovery of a rejected but previously defensible
+          interpretation; identification of frame or procedure dependence; location of the decisive
+          state transition; distinction between evidence, frame, and procedure change; for
+          \(D_t\), distinction between changes arising from \(T_t\), \(L_t\), or \(J_t\); and
+          identification of discriminating evidence that could resolve the dispute. The negative is
+          \(Q_C(X_{\mathrm{traj}}) \le Q_C(X_{\mathrm{state}})\): if an equivalently rich
+          \(X_{\mathrm{state}}\) supports an equally strong challenge, trajectory access has not
+          demonstrated incremental contestation value. This test has not been run.
+        </p>
+        <p>
+          The tests address one validation target: incremental trajectory value. Does explicit
+          trajectory access improve a relevant outcome beyond a sufficiently rich current-state
+          handoff? A separate axis is external-reference correspondence. Where a defensible
+          independent empirical reference \(G\) exists, successive technical determinations can be
+          compared against it:
+        </p>
+        <div class="math-display">\[
+          \delta_t = d(T_t,G)
+        \]</div>
+        <p>
+          Decreasing \(\delta_t\) can indicate movement toward the reference within the validity of
+          \(G\) and the selected distance measure; it is not a universal proof of correctness.
+          Inter-observer agreement is a third axis. Different observers may converge or disagree,
+          and agreement is not by itself evidence of correctness. These distinctions preserve the
+          bridge to <a href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>:
+          converge where discriminating evidence supports convergence, and preserve structured
+          disagreement where it does not.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Implementation path</h2>
+        <p>
+          The proposition implies an operational lifecycle. First, observe an inquiry transition.
+          Second, judge the future reconstruction, audit, reproducibility, or experimental need.
+          Third, record the minimum sufficient state. That may be an ordinary note, a recorded
+          inquiry, a lightweight formal bundle, or a full formal bundle. Promotion from recorded
+          inquiry to bundle is optional and conditional, not the default destination of every useful
+          research trail.
+        </p>
+        <p>
+          Fourth, classify the finding: evidence, frame, assumption, procedure, source semantics,
+          instruction, uncertainty, or source-authenticity concern. Fifth, decide whether it
+          generalises, remains local, or is unsafe to generalise. Sixth, map it to an operational
+          destination: code, test, validator, specification, AI instruction, evidence-semantic rule,
+          explicit unresolved question, or provenance-only record.
+        </p>
+        <p>
+          Verify before making the reduction normative. Deterministic compilation does not establish
+          epistemic correctness; the fabricated-input/source-authenticity lesson is exactly that
+          reproducibility can preserve an invalid evidence state. Remove successfully compiled
+          history from routine AI context where possible. Archive the trajectory as provenance.
+          Reopen it when failures, frame changes, contradictions, source authenticity problems,
+          material external contestation, or unexplained operational constraints justify method
+          revision.
+        </p>
+        <p>
+          Frame and schema corrections deserve special care inside this lifecycle. They change what
+          the system treats as a bundle, source, claim, observer, evidence layer, validation boundary,
+          or screening category, rather than merely changing a value inside an existing category.
+          <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/inquiry/round-0004.md" target="_blank" rel="noopener noreferrer">Round
+          four's widening</a> of the self-referential bundle's object of study qualifies. The coffee
+          temporal-mask repair qualifies only in this narrower sense: it changed the relation among
+          baseline coffee, current coffee, and new coffee since the baseline. Such corrections should
+          remain inspectable in the research trail when they materially explain why the current
+          method looks as it does, even after their lessons have migrated into current operational
+          artifacts.
+        </p>
+        <p>
+          A companion design principle follows for the AI's role. It should not be limited to solving
+          the problem as posed. It should also test whether the posed decomposition is supported by
+          the governing evidence, and whether a more general or more precise formulation is required.
+          The geospatial repository already moves this way: its agent contract requires review of
+          sibling history while prohibiting silent generalisation of dataset-specific thresholds,
+          commodity-specific inference, area-of-interest assumptions, source hierarchies, legal
+          interpretation, or evidence semantics.
+        </p>
+        <p>
+          A useful operational classification is:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Historical finding</th>
+              <th>Preferred destination</th>
+              <th>Routine need for explicit trajectory</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Repeated software defect</td>
+              <td>Test or validator in \(M_t\)</td>
+              <td>Low after validation</td>
+            </tr>
+            <tr>
+              <td>Stable procedural rule</td>
+              <td>Specification or code in \(M_t\)</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Agent failure mode</td>
+              <td>Agent instruction plus configuration note</td>
+              <td>Low to moderate</td>
+            </tr>
+            <tr>
+              <td>Source limitation</td>
+              <td>Data-source registry and \(V_t\) rationale</td>
+              <td>Moderate after source change</td>
+            </tr>
+            <tr>
+              <td>Frame or schema correction</td>
+              <td>Specification plus retained rationale in \(V_t\)</td>
+              <td>Moderate/high during transfer</td>
+            </tr>
+            <tr>
+              <td>Material contradiction</td>
+              <td>Reconstructible conflicting states</td>
+              <td>High during revision</td>
+            </tr>
+            <tr>
+              <td>Unresolved evidence conflict</td>
+              <td>Explicit conflict state or human-review gate</td>
+              <td>High until resolved</td>
+            </tr>
+            <tr>
+              <td>One-off cosmetic change</td>
+              <td>Archival provenance only</td>
+              <td>Very low</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Data resolution, temporal frequency, and cost are proposed extensions rather than present
+          results. Future method evaluation may need to weigh evidence quality against spatial,
+          temporal, computational, and operational cost, and the trajectory should record why a
+          higher- or lower-cost branch was rejected when that choice materially shapes \(M_t\).
+        </p>
+        <p>
+          Regulatory evolution is also a method input. A technical result can change because
+          evidence, frame, or procedure changes; a downstream disposition can change because law,
+          guidance, benchmarking, actor role, traceability context, or implementation infrastructure
+          changes. Preserving that distinction prevents regulatory drift from being misread as
+          ecological disagreement.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Limits</h2>
+        <p>
+          This article does not measure whether access to recorded project-specific trajectory
+          improves method formation over trajectory-blind derivation from prior knowledge and a rich
+          current-state handoff, whether archived provenance improves later method revision, whether
+          trajectory access improves independent contestation of a technical determination or
+          downstream disposition relative to an equivalently rich current-state handoff, how many
+          historical rounds an AI still needs once good instructions exist, whether instructions
+          derived from one trajectory transfer to another, or whether the observed pattern
+          generalises across domains. It rests on two bundle-backed cases plus one non-bundle
+          external-evidence controversy and cannot generalise from them to a law of method.
+        </p>
+        <p>
+          The cases also do not establish generality across independent human observers, convergence
+          toward an independently measured reference state, monotonic improvement, or the proposition
+          that consensus among observers implies factual correctness. Multiple agent runs under one
+          human's framing would remain weaker than independent human-observer replication, and a
+          shared determination would still need comparison with an independent reference observation
+          where such a reference exists. A reference state is not metaphysically infallible either:
+          field and validation observations can carry positional, temporal, measurement, sampling,
+          and classification uncertainty.
+        </p>
+        <p>
+          Observer background is a central limitation, not a nuisance detail. \(B_i\) is
+          partly latent and not exhaustively measurable. Human expertise and AI learned priors cannot
+          simply be held equal. Comparing H+ and H− across people introduces observer-background
+          variation; using the same human twice introduces carryover. A well-written current-state
+          document, specification, codebase, test suite, provenance record, and unresolved-issues
+          list may eliminate much of the apparent value of loading the trajectory. Conversely, a
+          trajectory can introduce stale assumptions, anchoring, context overload, or authority bias.
+          The current two bundle-backed case studies still do not prove incremental trajectory
+          value, and the Estonian forestry example is not a trajectory case.
+        </p>
+        <p>
+          The recorded repository history is also only \(H_{\mathrm{traj}} = \pi\!\left(H_{\mathrm{full}}\right)\). The
+          fraction of materially relevant history captured by \(\pi\) is unknown. The
+          three-condition experiment can leak information: \(X_{\mathrm{state}}\) is intended to encode
+          compiled historical learning, but a genuinely minimal \(X_{\min}\) must not smuggle in
+          trajectory-derived prompts, tests, or reading guides. The inquiry also lacks systematic
+          cost measurements for alternative spatial resolutions, temporal frequencies, and
+          confirmation strategies; it lacks a representative dataset of practical EUDR outcomes
+          from operators, traders, authorities, customs processes, or alternative market channels;
+          and independently defensible reference states \(G\) exist only for some bounded
+          empirical subproblems.
+        </p>
+        <p>
+          The central hypothesis should be weakened or rejected if compiled-state handoffs
+          \(X_{\mathrm{state}}\) consistently perform as well as or better than explicit-trajectory
+          handoffs \(X_{\mathrm{traj}}\), including in contestation tests; if apparent trajectory
+          benefits disappear after controlling for
+          information already encoded in prompts, instructions, tests, validators, and code; if
+          trajectory-aware teams show more anchoring or slower correction; if archived history adds
+          substantial maintenance cost without measurable repair, verification, or transfer
+          benefit; if the useful information can always be encoded into a compact current rationale
+          and verification record without retaining trajectory structure; or if differences
+          attributed to trajectory access disappear under independent human replication or reverse
+          unpredictably across AI configurations.
+        </p>
+        <p>
+          It also keeps a deliberate distance from Wolfram's vocabulary. Terms such as computational
+          irreducibility and the bounded observer are useful for naming why a process may resist
+          shortcutting and why a partial observer sees a coarse-grained world. They are used here as
+          vocabulary, not as a demonstrated explanation. In particular, the absence of a discovered
+          deterministic reduction is not evidence of genuine irreducibility; it may only mean the
+          reduction has not been found yet. Deterministic execution and epistemic correctness are
+          separate properties and are treated as such throughout.
+        </p>
+      </section>
+
+      <section class="article-section">
+        <h2>Open questions</h2>
+        <p>
+          What additional value does project-specific trajectory provide beyond
+          observer background, shared explicit knowledge, and the current state?
+        </p>
+        <p>
+          When is a well-specified current state sufficient for continuation, execution, or method
+          revision?
+        </p>
+        <p>
+          When does trajectory compensate for observer-background differences, and when does it add
+          noise?
+        </p>
+        <p>
+          Which epistemic transitions require reconstruction rather than summary?
+        </p>
+        <p>
+          When does contesting a technical determination \(T_t\), or where applicable a downstream
+          disposition \(D_t\), require access to materially relevant trajectory beyond an
+          equivalently rich current-state handoff \(X_{\mathrm{state}}\)?
+        </p>
+        <p>
+          When does loading history hurt by introducing stale assumptions, anchoring, context
+          overload, or authority bias?
+        </p>
+        <p>
+          Once the operational method exists, which historical materials can leave active AI context
+          without lowering execution quality?
+        </p>
+        <p>
+          When a later inquiry materially contradicts, invalidates, or reframes an earlier conclusion,
+          how should the candidate minimum reconstructible state be tested against real
+          evidence-driven, procedure-driven, and frame-driven change without preserving the entire
+          trajectory?
+        </p>
+        <p>
+          Can the minimum reconstructible state preserve the needed transition without retaining the
+          whole trajectory?
+        </p>
+        <p>
+          Does trajectory-aware handoff improve convergence toward \(G\) where
+          \(G\) exists, and which evidence, frame, or procedure changes produce improvement,
+          regression, or recovery?
+        </p>
+        <p>
+          How should the framework distinguish empirical convergence toward a reference state from
+          institutional or normative consolidation where no equivalent observer-independent reference
+          exists?
+        </p>
+        <p>
+          What cost-performance frontier governs spatial resolution, temporal sampling, sensor
+          choice, local validation, and review effort, and when should a more expensive evidence
+          path be justified?
+        </p>
+        <p>
+          When a result changes, how can the framework distinguish scientific or evidentiary
+          disagreement from regulatory drift, implementation-context change, or changed actor role?
+        </p>
+        <p>
+          Which trajectory-derived lessons transfer across domains, and which are artifacts of EUDR,
+          geospatial evidence, one investigator's framing, or a particular AI configuration?
+        </p>
+        <p>
+          When is a compact rationale plus queryable \(V_t\) sufficient, and when is
+          deeper access to \(H_{\mathrm{traj}}\) needed to prevent an apparently efficient
+          compression from becoming opaque?
         </p>
       </section>
 
       <section class="article-section research-trail" aria-labelledby="research-trail-title">
-        <h2 id="research-trail-title">Research trail</h2>
-        <p>
-          This page is the public synthesis. It intentionally leaves most technical notation,
-          source-by-source analysis, bundle mechanics, and proposed experiments in the working
-          record below.
-        </p>
+        <!-- Reusable Research trail pattern: update links, placeholders, and date for each article. -->
+        <div class="research-trail-header">
+          <h2 id="research-trail-title">Research trail</h2>
+          <p class="research-trail-intro">
+            This section keeps the published article connected to the materials behind it. For this
+            inquiry the trail exposes not only the rounds but what each important sequence eventually
+            produced: code, tests, specifications, agent rules, retained uncertainty, or rejection of
+            an earlier framing. It also records the counterfactual tests that would be needed to
+            distinguish provenance from demonstrated method-formation advantage, including
+            contestation quality. The two bundle-backed cases are committed here as self-contained
+            bundles; the Estonian forestry example is linked as a non-bundle external-evidence
+            controversy; and MHS is preserved separately as a supporting recorded inquiry. The
+            applied EUDR copy intentionally omits generated PDF, JSON, GeoJSON, and report
+            artefacts.
+          </p>
+        </div>
+
         <dl class="research-trail-list">
           <div class="research-trail-item">
-            <dt>Research folder</dt>
+            <dt>Repository</dt>
             <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure" target="_blank" rel="noopener noreferrer">COIN inquiry-to-procedure</a>
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin" target="_blank" rel="noopener noreferrer">
+                COIN on GitHub
+              </a>
             </dd>
-            <dd class="research-trail-note">The working directory containing claims, critical analysis, trajectory material, and supporting research files.</dd>
-          </div>
-          <div class="research-trail-item">
-            <dt>Applied EUDR case</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">Fazenda Sucuri bundle</a>
+            <dd class="research-trail-note">
+              The versioned record in which the inquiry, revisions, and related materials sit.
             </dd>
-            <dd class="research-trail-note">The public bundle used for the Brazil coffee and deforestation example.</dd>
           </div>
-          <div class="research-trail-item">
-            <dt>Framework case</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer">framework-self bundle</a>
-            </dd>
-            <dd class="research-trail-note">The self-referential case recording how the framework's own object and rules changed.</dd>
-          </div>
-          <div class="research-trail-item">
-            <dt>Conflict-analysis case</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="evidence-first-consensus-later.html#example-estonian-forest-management">Estonian forest management</a>
-            </dd>
-            <dd class="research-trail-note">The non-bundle case used to compare conclusions that depend on different accounting objects, boundaries, indicators, and time horizons.</dd>
-          </div>
-          <div class="research-trail-item">
-            <dt>Critical overview</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/critical-overview.md" target="_blank" rel="noopener noreferrer">critical-overview.md</a>
-            </dd>
-            <dd class="research-trail-note">The detailed assessment of what the examples support, what they do not establish, and which questions remain open.</dd>
-          </div>
-          <div class="research-trail-item">
-            <dt>Bundle evolution analysis</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundle-evolution-analysis.md" target="_blank" rel="noopener noreferrer">bundle-evolution-analysis.md</a>
-            </dd>
-            <dd class="research-trail-note">A closer reading of how recorded changes became current code, instructions, and unresolved questions.</dd>
-          </div>
-          <div class="research-trail-item">
-            <dt>Proposed tests</dt>
-            <dd class="research-trail-value">
-              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">counterfactual-tests.md</a>
-            </dd>
-            <dd class="research-trail-note">Proposed comparisons for testing whether explicit trajectory access adds value beyond a sufficiently rich current-state handoff.</dd>
-          </div>
+
           <div class="research-trail-item">
             <dt>Related inquiry</dt>
             <dd class="research-trail-value">
-              <a class="research-trail-link" href="evidence-first-consensus-later.html">Evidence First, Consensus Later</a>
+              <a class="research-trail-link" href="evidence-first-consensus-later.html">
+                Evidence First, Consensus Later
+              </a>
             </dd>
-            <dd class="research-trail-note">The preceding inquiry on keeping evidence, disagreement, review, and governance distinct rather than forcing premature consensus.</dd>
+            <dd class="research-trail-note">
+              Argues for the evidence-first governance requirement — inspectable evidence and
+              structured disagreement upstream of consensus — that motivates part of this inquiry's
+              methodological question: how the evidence architecture itself can be discovered,
+              corrected, and formalised through human–AI inquiry.
+            </dd>
           </div>
+
+          <div class="research-trail-item">
+            <dt>Research folder</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure" target="_blank" rel="noopener noreferrer">
+                inquiry-to-procedure folder
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The working directory holding the claims ledger, critical overview, and trajectory
+              notes for this inquiry.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Expanded analysis guide</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/expanded-analysis-guide.md" target="_blank" rel="noopener noreferrer">
+                expanded-analysis-guide.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Reading order and deeper source trail for the five subsidiary questions, EUDR
+              publications and uncertainty, MHS supporting inquiry, source-authenticity episode, and
+              unresolved counterfactual tests.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Representation format</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md" target="_blank" rel="noopener noreferrer">
+                Google Open Knowledge Format specification
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              OKF is the portable representation substrate. This project adds its own
+              research-evolution profile and extensions, summarized in the committed
+              <a href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundles/framework-self/s/specification.md" target="_blank" rel="noopener noreferrer">framework-self specification pointer</a>;
+              project-specific <code>fc-*</code> semantics should not be attributed to Google OKF.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Recorded inquiries</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries" target="_blank" rel="noopener noreferrer">
+                recorded-inquiries/
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Proportional, source-grounded inquiry records below formal bundle conformance.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>General trajectory (bundle)</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/framework-self" target="_blank" rel="noopener noreferrer">
+                framework-self bundle
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The general, partly self-referential case. The source repository is private, so the
+              twenty-round self-description bundle — ledger, per-round records, and metrics — is
+              committed here as the public evidence.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Applied trajectory (bundle)</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/bundles/eudr-coffee-brazil-fazenda-sucuri" target="_blank" rel="noopener noreferrer">
+                eudr-coffee-brazil-fazenda-sucuri bundle
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The applied case: Fazenda Sucuri coffee screening, source-specific overlap evidence,
+              temporal-mask correction, and retained human review. This COIN copy mirrors the public
+              source bundle's reading files while omitting generated PDF, JSON, GeoJSON, and
+              canonical report files.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Supporting recorded inquiry</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/tree/main/research/inquiry-to-procedure/recorded-inquiries/mhs-world-models" target="_blank" rel="noopener noreferrer">
+                mhs-world-models recorded inquiry
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              A source-backed recorded inquiry showing knowledge enrichment before the focused
+              MHS/world-models fact-checking question became salient; not a formal bundle.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Bundle evolution analysis</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/bundle-evolution-analysis.md" target="_blank" rel="noopener noreferrer">
+                bundle-evolution-analysis.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The per-bundle reading of the two bundle-backed trajectories: which transitions produced code, which
+              produced durable instructions, and which remain unresolved.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Claims ledger</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/claims.md" target="_blank" rel="noopener noreferrer">
+                claims.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              A structured list of the claims drawn from the inquiry, marked as sourced, inferential,
+              or flagged for further verification.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Critical overview</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/critical-overview.md" target="_blank" rel="noopener noreferrer">
+                critical-overview.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The working evaluation of what the bundle-backed cases and supporting examples
+              support, where the proposition overstates, and which parts remain contested.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Counterfactual tests</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://github.com/GeorgeMadlis/coin/blob/main/research/inquiry-to-procedure/counterfactual-tests.md" target="_blank" rel="noopener noreferrer">
+                counterfactual-tests.md
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              Proposed, not-yet-run tests for trajectory-aware formation, operational sufficiency,
+              cross-observer handoff, revision with archived provenance, and contestation quality.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>MHS primary source</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://www.anthropic.com/news/model-hardware-standard-research-preview" target="_blank" rel="noopener noreferrer">
+                Anthropic Model Hardware Standard announcement
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The primary source used for the low-stakes MHS illustration; it constrains the
+              technical claim before the article evaluates the secondary headline.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>MHS external claim</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://x.aisecret.us/claude-just-kill-the-world-models/" target="_blank" rel="noopener noreferrer">
+                “Claude Just Killed The World Models”
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The secondary newsletter source used as the stronger external claim object in the
+              MHS source-weighting illustration, not as evidence supporting itself.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Fazenda Sucuri public claim</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="https://coffeewatch.org/documents/33/JDE_Peets_Company_Profile.pdf" target="_blank" rel="noopener noreferrer">
+                Coffee Watch / AidEnvironment case profile
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The public publication treated as screening evidence for the Fazenda Sucuri
+              discussion, not as a legal disposition.
+            </dd>
+          </div>
+
+          <div class="research-trail-item">
+            <dt>Compiled output</dt>
+            <dd class="research-trail-value">
+              <a class="research-trail-link" href="inquiry-to-procedure-short-answer.html">
+                Short-answer synthesis
+              </a>
+            </dd>
+            <dd class="research-trail-note">
+              The short published synthesis prepared for general readers.
+            </dd>
+          </div>
+
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
               <time datetime="2026-09-14">14 September 2026</time>
             </dd>
-            <dd class="research-trail-note">Public synthesis rewritten for general readers from the current working article and linked research record.</dd>
+            <dd class="research-trail-note">
+              The latest visible revision date for this draft version.
+            </dd>
           </div>
         </dl>
       </section>
