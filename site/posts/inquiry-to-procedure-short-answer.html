@@ -98,9 +98,23 @@
           under different conditions.
         </p>
         <p>
+          There is also a difference between something being recorded at the time and something
+          surviving into today's method. An event that was never written down formally may still
+          leave a trace in current code, tests, source rules, acceptance criteria, or limitations.
+          Conversely, a recorded event may lose some of its original trigger, prior defect, or
+          validation detail when only the stable lesson survives. The current state is therefore not
+          just a compressed copy of the research history.
+        </p>
+        <p>
           The research history is therefore useful mainly as a record of how the method formed and
           changed. It becomes methodologically important when reopening that record helps us find or
           repair something that the current state alone does not explain well enough.
+        </p>
+        <p>
+          Provenance, workflow evolution, research packaging, and design-rationale capture are
+          already established research areas. The narrower question here is what recorded project
+          history still contributes after stable lessons have already been compiled into a rich
+          current handoff.
         </p>
       </section>
 
@@ -119,7 +133,9 @@
           bundle-backed cases with recorded development trajectories. Estonian forest management is
           a current-state illustration of conflict and frame plurality. It helps explain why the
           evolution of disagreement may sometimes need to be recorded, but it does not yet
-          demonstrate the value of trajectory access.
+          demonstrate the value of trajectory access. Here, a bundle is a versioned research package
+          that keeps the question, method, evidence and results, provenance, and recorded changes
+          inspectable together.
         </p>
         <p>
           Fazenda Sucuri is the applied technical case. It is a versioned research bundle concerned
@@ -137,9 +153,25 @@
           identical overlap estimates. The appropriate response is not to hide those differences or
           average them into one apparently precise number. The current method keeps the sources
           distinguishable and treats the result as a screening claim requiring human interpretation,
-          rather than as an automatic legal compliance decision. In this case, recorded history is
-          mainly useful for understanding how an applied method was corrected and how those
-          corrections were compressed into the present workflow.
+          rather than as an automatic legal compliance decision. Its screening class can also stay
+          the same while important things underneath it change: in this bundle the class remained
+          stable through material corrections and enrichments, while evidence semantics, procedure,
+          validation records, and provenance changed. An unchanged conclusion does not mean that
+          the evidence and method underneath it are unchanged.
+        </p>
+        <p>
+          The naming is deliberately cautious. "Fazenda Sucuri" is the public research-object
+          identifier, and the area of interest is an approximate screening polygon reconstructed
+          from published location and property information, not a surveyed cadastral farm boundary.
+          The analysis concerns the evidence-engineering method, not the conduct, intent,
+          ownership, legality, or compliance of an operator or landowner. At the configured
+          permissive threshold, the FDP-specific new-coffee/loss overlap is 1.17 ha, while
+          MapBiomas and the both-source-agreement layer show 0.0 ha for the same intersection.
+          That threshold- and source-dependent signal has no field-ground-truth attribution in this
+          study, is routed to human review, and is not an allegation of illegal clearing or EUDR
+          non-compliance. In this case, recorded history is mainly useful for understanding how an
+          applied method was corrected and how those corrections were compressed into the present
+          workflow.
         </p>
         <p>
           The framework-self bundle is different: the object being corrected is the framework
@@ -164,12 +196,21 @@
           example, drawn from
           <a href="evidence-first-consensus-later.html#example-estonian-forest-management">Evidence First, Consensus Later</a>,
           in which apparently conflicting statements about sustainability can follow from different
-          accounting objects, system boundaries, indicators, and time horizons. One analysis may
-          emphasise annual forest increment relative to harvesting; another may emphasise the
-          long-term development of total growing stock, carbon, biodiversity, habitat, or other
-          ecological conditions. The disagreement cannot necessarily be repaired by finding one bad
-          line of code. First we have to ask whether the competing claims are answering the same
-          question.
+          accounting objects, system boundaries, indicators, and time horizons. For example,
+          Eurostat's 2023 frame reports roughly 11.6 million cubic metres of removals against
+          9.1 million cubic metres of net annual increment. Estonia's Climate Ministry page gives
+          a different 2011-2019 comparison: about 10.7 million cubic metres of average felling and
+          16.2 million cubic metres of what that page calls average annual increment. Those ratios
+          are not automatically commensurate because the accounting populations, definitions, and
+          time periods are not shown to be identical. Estonia's Fifth Biennial Report adds a third
+          kind of object: scenario-based projections rather than an observed annual-flow
+          comparison.
+        </p>
+        <p>
+          Compression can manufacture a false contradiction if it drops the measure definition,
+          population, observed-versus-scenario status, or time horizon. The disagreement cannot
+          necessarily be repaired by finding one bad line of code. First we have to ask whether the
+          competing claims are answering the same question.
         </p>
         <p>
           This third case therefore represents interpretive and governance conflict. Its value lies
@@ -232,7 +273,11 @@
           The latest comparison adds a useful mixed result. A rich current-state handoff already
           contained enough information for some reopening tasks, including handling a source-version
           change and transferring the compiled method to another commodity. Replaying the recorded
-          history added no demonstrated documentary value for those tasks.
+          history added no demonstrated documentary value for those tasks. That null result matters
+          because the comparison deliberately gives the current state every reasonable advantage:
+          current method definitions, results, provenance, limitations, rules, tests and
+          specifications where available, and other current documentation all count before history
+          gets any extra credit.
         </p>
         <p>
           By contrast, when the task was to explain an otherwise unexplained difference between
@@ -241,6 +286,24 @@
           practical conclusion is sharper: use the current operational method by default, and reopen
           retained history only when the present state is insufficient for the diagnostic,
           reconstruction, audit, contestation, or revision task at hand.
+        </p>
+        <p>
+          The latest manuscript also checks the Fazenda Sucuri transitions more systematically. The
+          bundle has eight post-formation transitions, and each was tested against the same six
+          plain questions: what problem or trigger appeared, what prior state or defect existed,
+          what changed, what validation or acceptance evidence followed, whether the headline
+          technical result or screening class changed, and where the lesson now lives in the
+          current handoff. Only one of the eight is fully represented in the current files under all
+          six fields. Seven omit at least one field that remains recoverable from the trajectory.
+        </p>
+        <p>
+          That does not mean all seven transitions are important enough to reopen routinely. The
+          pattern is more practical: durable outputs such as rules, tests, specifications, and
+          artifacts survive more reliably than the original trigger, prior defect,
+          transition-specific validation, or explicit statement that the headline result did not
+          change. If the trigger, prior state, validation, or effect of a material change may matter
+          later, preserve those fields deliberately rather than assuming that the current code or
+          documentation will make them inferable.
         </p>
       </section>
 
@@ -251,13 +314,18 @@
           frame changes, and the migration of some lessons into present code, tests,
           specifications, validators, instructions, evidence semantics, and explicit uncertainty.
           The Estonian forest-management case adds a current-state conflict analysis rather than a
-          recorded trajectory.
+          recorded trajectory. Fazenda Sucuri is one EUDR screening bundle, not a representative
+          sample of EUDR cases, and framework-self is self-referential: it demonstrates that the
+          framework can represent its own changes, not that it has been externally validated.
         </p>
         <p>
           The documentary incremental value has been partially tested. Some reopening tasks were
           fully reconstructible from a rich current-state handoff. Selected transition-rationale
           tasks, especially diagnosing an otherwise unexplained rerun difference, retained
-          additional information in the trajectory.
+          additional information in the trajectory. But the reopening tasks, atomic decompositions,
+          and transition-retention census were selected and scored retrospectively by a participant
+          in the research program. No independent second coder, inter-rater replication,
+          preregistration, or genuinely held-out future transition has yet been reported.
         </p>
         <p>
           The causal performance advantage is not established. No controlled human or AI test has
@@ -265,6 +333,19 @@
           transfer, contestation, accuracy, speed, or other task outcomes relative to an
           equivalently rich current-state handoff. No universal threshold for how much history to
           preserve has been validated.
+        </p>
+        <p>
+          A future clean-context observer test should also separate two things that can look similar:
+          reconstruction supported by a cited historical record, and plausible but unsupported
+          inference about why a past decision was made. A later AI may produce a convincing
+          rationale, but plausibility alone is not contemporaneous historical evidence.
+        </p>
+        <p>
+          The main trajectory-backed EUDR provenance state is still
+          <code>pinned-not-reproduced</code>. The public package supports artifact checking and
+          provenance reconstruction, but the study does not claim an independently reproduced
+          underlying geospatial pipeline. Artifact verification, provenance reconstruction, and
+          computational reproduction are different claims.
         </p>
         <p>
           Another capable team may still be able to derive the same or a better method from
@@ -283,11 +364,21 @@
           review, comparison between versions, or external contestation requires stronger structure.
           What counts as sufficient can change when a result is later contested. A current-state
           record that was adequate for routine use may become insufficient if a later reader needs
-          to reconstruct how a contradiction arose.
+          to reconstruct how a contradiction arose. A material contradiction should remain
+          reconstructible rather than being silently overwritten, and an unresolved evidence
+          conflict should remain an explicit conflict or human-review state.
         </p>
         <p>
           Then reduce what has been learned. Put stable lessons into the current procedure. Keep
           unresolved uncertainty visible. Archive the rest as research provenance.
+        </p>
+        <p>
+          The governance boundary matters too. Provenance does not prove that a source or conclusion
+          is true. Combining datasets does not guarantee agreement between them. Knowing why a
+          method changed does not prove that the change was empirically correct, and reconstructing
+          the rationale for a change does not itself authorize another change to the authoritative
+          method. AI can inspect records and formulate proposals; authoritative changes still need
+          the project's human-confirmed governance and implementation process.
         </p>
         <p>
           A good outcome is therefore not a system that remembers everything all the time. It is a
@@ -363,9 +454,9 @@
           <div class="research-trail-item">
             <dt>Last updated</dt>
             <dd class="research-trail-value research-trail-date">
-              <time datetime="2026-09-15">15 September 2026</time>
+              <time datetime="2026-09-16">16 September 2026</time>
             </dd>
-            <dd class="research-trail-note">Public synthesis rewritten for general readers from the current working article and linked research record.</dd>
+            <dd class="research-trail-note">Public synthesis updated with the latest manuscript's current-state comparison, transition-retention census, and safeguards.</dd>
           </div>
         </dl>
       </section>
